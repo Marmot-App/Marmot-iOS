@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E06B510D7698DF09F5E5FC5EC7C6BB4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		36AAB7C4FE0A8BB368BE8D2CA8F6DADB /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92DEEA43954A98CEAF8AE32EB98365C /* ReplaceMe.swift */; };
+		535CAAC1C4935053F520E7F8C1CE10BA /* Marmot-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB5268093611E0629DBAF3C9AA774AA3 /* Marmot-dummy.m */; };
+		53A43740C0FA1F794F11F751D25ED20A /* Pods-Marmot_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C353F6A6A207C56F4FB410D1EE819BB1 /* Pods-Marmot_Example-dummy.m */; };
+		648F2D0F7E435237F4FFD6589D1ED1C2 /* Pods-Marmot_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED47F527AB3C79B7B95E44317533F186 /* Pods-Marmot_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A911AC2C2FC399382CAE89815F910AD /* Pods-Marmot_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 27BF5AF3BE3F6F11AB2FC26CCF841A30 /* Pods-Marmot_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDFDC38B485F8C865E8866AC571A5236 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		DE372AD1864BB4AC49C9998DC18E19A7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */; };
+		DF413CEF29953BD071C7647BE849391A /* Marmot-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 664C8A6C648A1C022C99C9C23A328D3B /* Marmot-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3BE2ED9727F623DB89B5FAFD0295738 /* Pods-Marmot_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7925BC3573369EF453D7E4E93FD92B91 /* Pods-Marmot_Tests-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96B559ECE6CDB3032E2CBBDE92FA6432 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D53C06B00213791A74F5240D8911DF9;
+			remoteInfo = "Pods-Marmot_Example";
+		};
+		B5D7D269386A8F25A3C5272F98DDAFDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0AF5491549E3B4BA4B44F6FEA646BFB;
+			remoteInfo = Marmot;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02E35270CCD60275BFB970C27B658878 /* Pods-Marmot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		04C2501D9353C40BD30C6CA9DA0FB938 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14D4873A5B29D8E0661091CD96838ECC /* Pods-Marmot_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Marmot_Example.modulemap"; sourceTree = "<group>"; };
+		159750079C50C007A53F3CAB22C4E6BB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		159D24C572E0EA68E49BF4E42D86977A /* Pods-Marmot_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot_Tests-resources.sh"; sourceTree = "<group>"; };
+		1E743193FDD06FD7819F68536E35773C /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
+		27BF5AF3BE3F6F11AB2FC26CCF841A30 /* Pods-Marmot_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Marmot_Tests-umbrella.h"; sourceTree = "<group>"; };
+		51B9CD05204C58F9D87B1947B3310182 /* Pods_Marmot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Marmot_Tests.framework; path = "Pods-Marmot_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B2CD16D752EBD7AA983E43FA55FD74 /* Pods-Marmot_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Marmot_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5CE7A943BE6EB42CCA9F4632098EE10D /* Pods-Marmot_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5E2C4F5C85329C187ADD029B15B27005 /* Marmot.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Marmot.modulemap; sourceTree = "<group>"; };
+		5EADF4F7DEDD1F541243CDCC0D763A08 /* Marmot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Marmot.framework; path = Marmot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64AB1701E49924FD1A810318E0465F15 /* Pods-Marmot_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Marmot_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		664C8A6C648A1C022C99C9C23A328D3B /* Marmot-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marmot-umbrella.h"; sourceTree = "<group>"; };
+		6ABF2F352BE1832C58E51D8E78634944 /* Pods_Marmot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Marmot_Example.framework; path = "Pods-Marmot_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7925BC3573369EF453D7E4E93FD92B91 /* Pods-Marmot_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Marmot_Tests-dummy.m"; sourceTree = "<group>"; };
+		7AA67572B356BE629D56CF44AD469997 /* Pods-Marmot_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Marmot_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		87F4EBF81A48221326824FB8068C6CB2 /* Marmot.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Marmot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		90A8E22B38E369CBA498A3A624A9A3E1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A15154A23FBF59C70FFCC6539EB7370B /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		A16D811202ACF6E8FDE436F1AC7FBCBC /* Pods-Marmot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A2CFAF6679B5EA5BD408C4A1084C31A8 /* Pods-Marmot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		ACC5F5F57AD13F35728504CB5FCBF56A /* Pods-Marmot_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Marmot_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C353F6A6A207C56F4FB410D1EE819BB1 /* Pods-Marmot_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Marmot_Example-dummy.m"; sourceTree = "<group>"; };
+		C92DEEA43954A98CEAF8AE32EB98365C /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = Marmot/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		DB5268093611E0629DBAF3C9AA774AA3 /* Marmot-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Marmot-dummy.m"; sourceTree = "<group>"; };
+		DDD8C9856112716C4389B172943B3609 /* Pods-Marmot_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Marmot_Tests.modulemap"; sourceTree = "<group>"; };
+		DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		E665AAA4B8FB3F5C78B5928977D7EF35 /* Marmot-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marmot-prefix.pch"; sourceTree = "<group>"; };
+		E96E9F050BE4838428E88DE9168F75A4 /* Marmot.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Marmot.xcconfig; sourceTree = "<group>"; };
+		EAA97EF1294F7609146DE278718DF066 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		ED47F527AB3C79B7B95E44317533F186 /* Pods-Marmot_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Marmot_Example-umbrella.h"; sourceTree = "<group>"; };
+		FAF2642D2D1203D9272A2F79E436E161 /* Pods-Marmot_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		FDF4D9D1DB5284EECE1DC9289822A0C2 /* Pods-Marmot_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot_Example-resources.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		23DFF776BFF846F908C18F50B3ED3285 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E06B510D7698DF09F5E5FC5EC7C6BB4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A3B23EB413AD2AE38F82D350A6D63242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE372AD1864BB4AC49C9998DC18E19A7 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB694E54F6D0F96C40A56435CB0B95CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDFDC38B485F8C865E8866AC571A5236 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03B0E9F0E43B7842B9E656E1B2C5D956 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				37C0940F9A6DDC428CB37531724DBE42 /* Pods-Marmot_Example */,
+				BAADA41D2D65A5445E18CD5580741427 /* Pods-Marmot_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		37C0940F9A6DDC428CB37531724DBE42 /* Pods-Marmot_Example */ = {
+			isa = PBXGroup;
+			children = (
+				04C2501D9353C40BD30C6CA9DA0FB938 /* Info.plist */,
+				14D4873A5B29D8E0661091CD96838ECC /* Pods-Marmot_Example.modulemap */,
+				64AB1701E49924FD1A810318E0465F15 /* Pods-Marmot_Example-acknowledgements.markdown */,
+				7AA67572B356BE629D56CF44AD469997 /* Pods-Marmot_Example-acknowledgements.plist */,
+				C353F6A6A207C56F4FB410D1EE819BB1 /* Pods-Marmot_Example-dummy.m */,
+				5CE7A943BE6EB42CCA9F4632098EE10D /* Pods-Marmot_Example-frameworks.sh */,
+				FDF4D9D1DB5284EECE1DC9289822A0C2 /* Pods-Marmot_Example-resources.sh */,
+				ED47F527AB3C79B7B95E44317533F186 /* Pods-Marmot_Example-umbrella.h */,
+				A16D811202ACF6E8FDE436F1AC7FBCBC /* Pods-Marmot_Example.debug.xcconfig */,
+				1E743193FDD06FD7819F68536E35773C /* Pods-Marmot_Example.release.xcconfig */,
+			);
+			name = "Pods-Marmot_Example";
+			path = "Target Support Files/Pods-Marmot_Example";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA7AC8429882A95AA0810A9DCDED54FF /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AE0FEEE0A3EB85139374D854582EB09 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D479C719B5FCB873EEDB241035302078 /* Marmot */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		59579BB99CD92486F4EC8C7A935930E6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				159750079C50C007A53F3CAB22C4E6BB /* Info.plist */,
+				5E2C4F5C85329C187ADD029B15B27005 /* Marmot.modulemap */,
+				E96E9F050BE4838428E88DE9168F75A4 /* Marmot.xcconfig */,
+				DB5268093611E0629DBAF3C9AA774AA3 /* Marmot-dummy.m */,
+				E665AAA4B8FB3F5C78B5928977D7EF35 /* Marmot-prefix.pch */,
+				664C8A6C648A1C022C99C9C23A328D3B /* Marmot-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Marmot";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				3AE0FEEE0A3EB85139374D854582EB09 /* Development Pods */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				9A3EB457C3043FA938CCC23949562E38 /* Products */,
+				03B0E9F0E43B7842B9E656E1B2C5D956 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8D0E38CB248797B5209FD8E5CC18092C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A15154A23FBF59C70FFCC6539EB7370B /* LICENSE */,
+				87F4EBF81A48221326824FB8068C6CB2 /* Marmot.podspec */,
+				EAA97EF1294F7609146DE278718DF066 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		9A3EB457C3043FA938CCC23949562E38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5EADF4F7DEDD1F541243CDCC0D763A08 /* Marmot.framework */,
+				6ABF2F352BE1832C58E51D8E78634944 /* Pods_Marmot_Example.framework */,
+				51B9CD05204C58F9D87B1947B3310182 /* Pods_Marmot_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAADA41D2D65A5445E18CD5580741427 /* Pods-Marmot_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				90A8E22B38E369CBA498A3A624A9A3E1 /* Info.plist */,
+				DDD8C9856112716C4389B172943B3609 /* Pods-Marmot_Tests.modulemap */,
+				52B2CD16D752EBD7AA983E43FA55FD74 /* Pods-Marmot_Tests-acknowledgements.markdown */,
+				ACC5F5F57AD13F35728504CB5FCBF56A /* Pods-Marmot_Tests-acknowledgements.plist */,
+				7925BC3573369EF453D7E4E93FD92B91 /* Pods-Marmot_Tests-dummy.m */,
+				FAF2642D2D1203D9272A2F79E436E161 /* Pods-Marmot_Tests-frameworks.sh */,
+				159D24C572E0EA68E49BF4E42D86977A /* Pods-Marmot_Tests-resources.sh */,
+				27BF5AF3BE3F6F11AB2FC26CCF841A30 /* Pods-Marmot_Tests-umbrella.h */,
+				A2CFAF6679B5EA5BD408C4A1084C31A8 /* Pods-Marmot_Tests.debug.xcconfig */,
+				02E35270CCD60275BFB970C27B658878 /* Pods-Marmot_Tests.release.xcconfig */,
+			);
+			name = "Pods-Marmot_Tests";
+			path = "Target Support Files/Pods-Marmot_Tests";
+			sourceTree = "<group>";
+		};
+		D479C719B5FCB873EEDB241035302078 /* Marmot */ = {
+			isa = PBXGroup;
+			children = (
+				C92DEEA43954A98CEAF8AE32EB98365C /* ReplaceMe.swift */,
+				8D0E38CB248797B5209FD8E5CC18092C /* Pod */,
+				59579BB99CD92486F4EC8C7A935930E6 /* Support Files */,
+			);
+			name = Marmot;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		FA7AC8429882A95AA0810A9DCDED54FF /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				DF428FC7C7A6555B2B02D8E238C8D8F2 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8069416737C92CE678981478E466DFF5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				648F2D0F7E435237F4FFD6589D1ED1C2 /* Pods-Marmot_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C821A197E0D6764B42D3899997ECA8B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A911AC2C2FC399382CAE89815F910AD /* Pods-Marmot_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD224FCF67A974F69A5BAE9EE825ACF2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF413CEF29953BD071C7647BE849391A /* Marmot-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4D53C06B00213791A74F5240D8911DF9 /* Pods-Marmot_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8293422773784E4181D5932B4F57BD /* Build configuration list for PBXNativeTarget "Pods-Marmot_Example" */;
+			buildPhases = (
+				FA53079E31F9F6D1604C6C346E07CED2 /* Sources */,
+				EB694E54F6D0F96C40A56435CB0B95CF /* Frameworks */,
+				8069416737C92CE678981478E466DFF5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B07A7E4F66FE0CAD6F4154C169A4DF0B /* PBXTargetDependency */,
+			);
+			name = "Pods-Marmot_Example";
+			productName = "Pods-Marmot_Example";
+			productReference = 6ABF2F352BE1832C58E51D8E78634944 /* Pods_Marmot_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F0AF5491549E3B4BA4B44F6FEA646BFB /* Marmot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01C0B06B3818F6BC18DDDB2EE281FBA6 /* Build configuration list for PBXNativeTarget "Marmot" */;
+			buildPhases = (
+				9A709D7F570AAE21A2C778BAEAAC4857 /* Sources */,
+				A3B23EB413AD2AE38F82D350A6D63242 /* Frameworks */,
+				AD224FCF67A974F69A5BAE9EE825ACF2 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Marmot;
+			productName = Marmot;
+			productReference = 5EADF4F7DEDD1F541243CDCC0D763A08 /* Marmot.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FAF18C6113C3E7D2793D56EF00546E7F /* Pods-Marmot_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C98781C9EE68115E62F4D59AA548EB86 /* Build configuration list for PBXNativeTarget "Pods-Marmot_Tests" */;
+			buildPhases = (
+				DABE5E6FAA951046DC07B9960B9BE3BC /* Sources */,
+				23DFF776BFF846F908C18F50B3ED3285 /* Frameworks */,
+				8C821A197E0D6764B42D3899997ECA8B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				370F70BA77EF26C8E34DAA33A9BC001E /* PBXTargetDependency */,
+			);
+			name = "Pods-Marmot_Tests";
+			productName = "Pods-Marmot_Tests";
+			productReference = 51B9CD05204C58F9D87B1947B3310182 /* Pods_Marmot_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9A3EB457C3043FA938CCC23949562E38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0AF5491549E3B4BA4B44F6FEA646BFB /* Marmot */,
+				4D53C06B00213791A74F5240D8911DF9 /* Pods-Marmot_Example */,
+				FAF18C6113C3E7D2793D56EF00546E7F /* Pods-Marmot_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A709D7F570AAE21A2C778BAEAAC4857 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				535CAAC1C4935053F520E7F8C1CE10BA /* Marmot-dummy.m in Sources */,
+				36AAB7C4FE0A8BB368BE8D2CA8F6DADB /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DABE5E6FAA951046DC07B9960B9BE3BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BE2ED9727F623DB89B5FAFD0295738 /* Pods-Marmot_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA53079E31F9F6D1604C6C346E07CED2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53A43740C0FA1F794F11F751D25ED20A /* Pods-Marmot_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		370F70BA77EF26C8E34DAA33A9BC001E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Marmot_Example";
+			target = 4D53C06B00213791A74F5240D8911DF9 /* Pods-Marmot_Example */;
+			targetProxy = 96B559ECE6CDB3032E2CBBDE92FA6432 /* PBXContainerItemProxy */;
+		};
+		B07A7E4F66FE0CAD6F4154C169A4DF0B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Marmot;
+			target = F0AF5491549E3B4BA4B44F6FEA646BFB /* Marmot */;
+			targetProxy = B5D7D269386A8F25A3C5272F98DDAFDC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		26D730E837A2394BC935DBE0E6A8551B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96E9F050BE4838428E88DE9168F75A4 /* Marmot.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Marmot/Marmot-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marmot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Marmot/Marmot.modulemap";
+				PRODUCT_MODULE_NAME = Marmot;
+				PRODUCT_NAME = Marmot;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		72112879131DF41BC62AFBA075158FDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A16D811202ACF6E8FDE436F1AC7FBCBC /* Pods-Marmot_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Marmot_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7BE6E82C1E17F76D9078A4A6A9F17B36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E35270CCD60275BFB970C27B658878 /* Pods-Marmot_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Marmot_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		885072FBE917853E9C621EA32511C1DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		93378DF37CAF89239A74976813CDDE16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96E9F050BE4838428E88DE9168F75A4 /* Marmot.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Marmot/Marmot-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marmot/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Marmot/Marmot.modulemap";
+				PRODUCT_MODULE_NAME = Marmot;
+				PRODUCT_NAME = Marmot;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D9913D134ECD73C3D5436898BC75FC20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2CFAF6679B5EA5BD408C4A1084C31A8 /* Pods-Marmot_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Marmot_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E120AA4158E99123F0A0AA9368EE2AD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E743193FDD06FD7819F68536E35773C /* Pods-Marmot_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-Marmot_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E574923E2959CFEF4FEBC7B272DBC6AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01C0B06B3818F6BC18DDDB2EE281FBA6 /* Build configuration list for PBXNativeTarget "Marmot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93378DF37CAF89239A74976813CDDE16 /* Debug */,
+				26D730E837A2394BC935DBE0E6A8551B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885072FBE917853E9C621EA32511C1DA /* Debug */,
+				E574923E2959CFEF4FEBC7B272DBC6AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8293422773784E4181D5932B4F57BD /* Build configuration list for PBXNativeTarget "Pods-Marmot_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				72112879131DF41BC62AFBA075158FDA /* Debug */,
+				E120AA4158E99123F0A0AA9368EE2AD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C98781C9EE68115E62F4D59AA548EB86 /* Build configuration list for PBXNativeTarget "Pods-Marmot_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9913D134ECD73C3D5436898BC75FC20 /* Debug */,
+				7BE6E82C1E17F76D9078A4A6A9F17B36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

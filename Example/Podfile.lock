@@ -1,0 +1,16 @@
+PODS:
+  - Marmot (0.1.0)
+
+DEPENDENCIES:
+  - Marmot (from `../`)
+
+EXTERNAL SOURCES:
+  Marmot:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Marmot: 18c83ed2af0a74ab43256461d5c5ea96544a0a5c
+
+PODFILE CHECKSUM: 0aa47a238d81b05a9fcae626b3e82091f6456f81
+
+COCOAPODS: 1.5.3
