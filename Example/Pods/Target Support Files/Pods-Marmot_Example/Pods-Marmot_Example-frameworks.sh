@@ -144,9 +144,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Marmot/Marmot.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RoutableAssist/RoutableAssist.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SPRoutable/SPRoutable.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Marmot/Marmot.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RoutableAssist/RoutableAssist.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SPRoutable/SPRoutable.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

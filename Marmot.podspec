@@ -40,5 +40,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'Cocoa'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SPRoutable', '0.9.9.alpha'
 end
