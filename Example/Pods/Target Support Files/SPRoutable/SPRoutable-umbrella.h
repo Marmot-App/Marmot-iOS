@@ -10,8 +10,8 @@
 #endif
 #endif
 
-#import "Marmot.h"
+#import "Routable.h"
 
-FOUNDATION_EXPORT double MarmotVersionNumber;
-FOUNDATION_EXPORT const unsigned char MarmotVersionString[];
+FOUNDATION_EXPORT double SPRoutableVersionNumber;
+FOUNDATION_EXPORT const unsigned char SPRoutableVersionString[];
 

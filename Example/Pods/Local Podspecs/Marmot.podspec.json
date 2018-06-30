@@ -19,7 +19,7 @@
     "osx": "10.10",
     "ios": "8.0"
   },
-  "source_files": "Marmot/Classes/**/*",
+  "source_files": "Marmot/Classes/*.{swift,h}",
   "dependencies": {
     "SPRoutable": [
       "0.9.9.alpha"

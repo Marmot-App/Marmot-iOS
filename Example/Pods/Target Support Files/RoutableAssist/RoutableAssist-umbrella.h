@@ -10,8 +10,10 @@
 #endif
 #endif
 
-#import "Marmot.h"
+#import "Invocation.h"
+#import "MethodSignature.h"
+#import "Proxy.h"
 
-FOUNDATION_EXPORT double MarmotVersionNumber;
-FOUNDATION_EXPORT const unsigned char MarmotVersionString[];
+FOUNDATION_EXPORT double RoutableAssistVersionNumber;
+FOUNDATION_EXPORT const unsigned char RoutableAssistVersionString[];
 

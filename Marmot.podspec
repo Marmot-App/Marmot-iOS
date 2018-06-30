@@ -32,7 +32,7 @@ TODO: Add long description of the pod here.
   s.osx.deployment_target = "10.10"
   s.ios.deployment_target = "8.0"
 
-  s.source_files = 'Marmot/Classes/**/*'
+  s.source_files = 'Marmot/Classes/*.{swift,h}'
 
   # s.resource_bundles = {
   #   'Marmot' => ['Marmot/Assets/*.png']
@@ -41,4 +41,7 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'Cocoa'
   s.dependency 'SPRoutable', '0.9.9.alpha'
+  # s.dependency 'AnyFormatProtocol', '0.5.2'
+  # s.dependency 'BLFoundation'
+
 end

@@ -1,15 +1,26 @@
 PODS:
-  - Marmot (0.1.0)
+  - Marmot (0.1.0):
+    - SPRoutable (= 0.9.9.alpha)
+  - RoutableAssist (0.2.2)
+  - SPRoutable (0.9.9.alpha):
+    - RoutableAssist (= 0.2.2)
 
 DEPENDENCIES:
   - Marmot (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RoutableAssist
+    - SPRoutable
 
 EXTERNAL SOURCES:
   Marmot:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Marmot: 18c83ed2af0a74ab43256461d5c5ea96544a0a5c
+  Marmot: 9e7a98eac1c6d01ea23008ece7059b1806638c26
+  RoutableAssist: fdc37e8b5cc44d323aa7668cbbbd3859c3faf89e
+  SPRoutable: 96f3257272c57b90e44c86d782389e5724fffd66
 
 PODFILE CHECKSUM: 0aa47a238d81b05a9fcae626b3e82091f6456f81
 
