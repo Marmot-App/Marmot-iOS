@@ -8,24 +8,24 @@
 
 import Cocoa
 import WebKit
-import SPRoutable
+import JavaScriptCore
+import Marmot
 
 class ViewController: NSViewController {
   
-  let webview = WKWebView()
-
+  let webview = MarmotWebView()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(webview)
     let url = URL(string: "https://m.baidu.com")!
     webview.load(URLRequest(url: url))
   }
-
+  
   override func viewDidAppear() {
     super.viewDidAppear()
     webview.frame = view.bounds
-
   }
-
+  
 }
 

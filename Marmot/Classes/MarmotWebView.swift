@@ -1,5 +1,5 @@
 //
-//  Routable
+//  Marmot
 //
 //  Copyright (c) 2017 linhay - https://github.com/linhay
 //
@@ -22,12 +22,6 @@
 
 import WebKit
 
-class MarmotWebView: WKWebView {
+open class MarmotWebView: WKWebView {
 
-    override func draw(_ dirtyRect: NSRect) {
-        super.draw(dirtyRect)
-
-        // Drawing code here.
-    }
-    
 }

@@ -1,11 +1,11 @@
 use_frameworks!
 
+target 'Marmot-iOS' do
+  pod 'Marmot', :path => '../'
+  pod 'SnapKit'
+end
+
 target 'Marmot_Example' do
   pod 'Marmot', :path => '../'
-
-  target 'Marmot_Tests' do
-    inherit! :search_paths
-
-    
-  end
+  pod 'SnapKit'
 end

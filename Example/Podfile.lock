@@ -2,15 +2,18 @@ PODS:
   - Marmot (0.1.0):
     - SPRoutable (= 0.9.9.alpha)
   - RoutableAssist (0.2.2)
+  - SnapKit (4.0.0)
   - SPRoutable (0.9.9.alpha):
     - RoutableAssist (= 0.2.2)
 
 DEPENDENCIES:
   - Marmot (from `../`)
+  - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - RoutableAssist
+    - SnapKit
     - SPRoutable
 
 EXTERNAL SOURCES:
@@ -18,10 +21,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Marmot: 9e7a98eac1c6d01ea23008ece7059b1806638c26
+  Marmot: 27ee9a02aec86f9b733f5d0c8b1d63e34a5a15c0
   RoutableAssist: fdc37e8b5cc44d323aa7668cbbbd3859c3faf89e
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SPRoutable: 96f3257272c57b90e44c86d782389e5724fffd66
 
-PODFILE CHECKSUM: 0aa47a238d81b05a9fcae626b3e82091f6456f81
+PODFILE CHECKSUM: 281377a11378b16068e0fa9e024e313fc762ea67
 
 COCOAPODS: 1.5.3

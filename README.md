@@ -2,7 +2,7 @@
 <img src="https://raw.githubusercontent.com/linhay/Marmot/master/Screenshot/logo.png" alt="Marmot" title="Marmot"/>
 </p>
 
-[![build](https://travis-ci.org/linhay/Marmot.svg?branch=master)](https://travis-ci.org/Marmot/Marmot)
+[![build](https://travis-ci.org/linhay/Marmot.svg?branch=master)](https://travis-ci.org/linhay/Marmot)
 ![language](https://img.shields.io/badge/language-swift-orange.svg)
 ![Platform](https://img.shields.io/cocoapods/p/Marmot.svg?style=flat)
 ![Version](https://img.shields.io/cocoapods/v/Marmot.svg?style=flat)

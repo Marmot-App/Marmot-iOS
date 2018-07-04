@@ -20,6 +20,11 @@
     "ios": "8.0"
   },
   "source_files": "Marmot/Classes/*.{swift,h}",
+  "resource_bundles": {
+    "Marmot": [
+      "Marmot/Assets/*.js"
+    ]
+  },
   "dependencies": {
     "SPRoutable": [
       "0.9.9.alpha"

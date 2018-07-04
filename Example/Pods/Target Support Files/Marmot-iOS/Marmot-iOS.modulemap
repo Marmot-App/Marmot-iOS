@@ -1,0 +1,6 @@
+framework module Marmot {
+  umbrella header "Marmot-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}
