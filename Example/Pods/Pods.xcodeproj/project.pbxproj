@@ -3,233 +3,244 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0115E2F7A92AE8E657BB4B18E95BD382 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A40FA11D87685A0629EA37E388A2D /* ConstraintDSL.swift */; };
+		02544E4E5BE7AE62E498384043A3B1D4 /* Marmot-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CD2968F68684C466732036AA8BE576E0 /* Marmot-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02ED3AF367C36656B3E559C2E2ACC98D /* Pods-Marmot-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9B7DBA7EFB1327D515E161D7F7FF5F9 /* Pods-Marmot-iOS-dummy.m */; };
-		0459C963801C0434CDB8FA4921637AFA /* MethodSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E1E28874AA85488A46D2B3892059E2 /* MethodSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07CD92307A81613CE9DC308BB06B975E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
-		09E0D8C82DFF255E8DAE3017C04FC136 /* RoutableAssist-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 506193DF0C94384FEC0A37CD578E82F5 /* RoutableAssist-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		02F85043BD9FA6C3845B643F199FB942 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
+		032C6FFCFE698E2A7ECF56444034FF6E /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFD901C95F1FC20D3233ED70EA88999 /* Proxy.m */; };
+		0364B1CB0EB18AC84F0B1C94624F0249 /* Marmot-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 864D66444D493734FBA93B9FD9505866 /* Marmot-macOS-dummy.m */; };
 		0ADB891D6041A81684BA6FED950628AC /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE05B2D5703746ABE025D9B255F49405 /* ConstraintAttributes.swift */; };
 		0C7C8DEDB7549EFB5574E1BA91F48824 /* SnapKit-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB525A2F4565C532FC2591102C609CAD /* SnapKit-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0F0F08743FDF93480D58A7BABF5DB8A2 /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8967209E1975E9C513E3971A1C5A4 /* ConstraintPriorityTarget.swift */; };
 		0FFD338C4D1203671F794584B8C6A8D2 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7E1607CD758D20363B37D329B8DA0 /* ConstraintRelatableTarget.swift */; };
 		1026B700E4240B9AB929F2D37EE30BE2 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD8E234D900B6439F1591977577AFC /* ConstraintMakerFinalizable.swift */; };
 		11E30E6040B8A97FA996382DE6F86EC4 /* SnapKit-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68133318D8DE317D1F4281BE33478BDD /* SnapKit-macOS-dummy.m */; };
-		13888B44DEA832288EE8CD5B50F6C465 /* SPRoutable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F11A35595C0B46465BF696F2717458 /* SPRoutable.framework */; };
 		13D82391A4E02562A014629E0094F2E2 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A62DCD91CD7C9C2C44E2BD58DC544 /* ConstraintMaker.swift */; };
-		159C010205BE4BAB8932E008A3790E66 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
 		15B6C3AEBFBD1060223938926F6BDA78 /* Pods-Marmot-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DFB4C9612B56EEE32401707F66966A7 /* Pods-Marmot-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		16B96CE368F7CEA1CA496DD40A0B5DEC /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3721EFBE4FE498D846C7D78D2D0C8 /* ConstraintRelation.swift */; };
 		16C0F67888B4C20C5008E3E265A78BFD /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88653024F0C05BEBA49736639DDC8D5 /* ConstraintMakerExtendable.swift */; };
-		18AB02DFA0C96A6B486EA601E1944F58 /* Marmot-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DBEF3ED850120E8096DDBBF8A45499 /* Marmot-macOS-dummy.m */; };
-		192251F073C067BA948E18B7F73000F2 /* Routable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A09932638D5384219B62DEF3DDC3A /* Routable+Data.swift */; };
-		195AB5EDFE1AD3448834AA21B7D3BEDA /* Routable+ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C805D0B800BED2041E183770556FC020 /* Routable+ObjectType.swift */; };
-		19F40E6C591B860577AD12C39216DF93 /* Marmot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BC3C168A4E72797B3BB9227A7078 /* Marmot.swift */; };
+		17C5535E58BF1FCFD59AB892BCF92093 /* SPRoutable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F11A35595C0B46465BF696F2717458 /* SPRoutable.framework */; };
 		1A8388D116DF513DA8CD52597E4A05FF /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD8967209E1975E9C513E3971A1C5A4 /* ConstraintPriorityTarget.swift */; };
 		1D6BCBF4635AD8A4571B5C09EE71E8AE /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981C32390BE4F289167C1ECDE3A1F87 /* Constraint.swift */; };
 		1D7BB4033FD311D718C99BA8117B55D3 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292EF152F65D51B38549D585C34B353 /* ConstraintConstantTarget.swift */; };
 		1DEF8276FF95CF7AFBBC30280E1BE59D /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4ADE37D76EBEEBFE456C8A7AC1FBB6 /* ConstraintInsetTarget.swift */; };
+		1FA574CF9D0B86F6BD6A2E9D479AD859 /* SPRoutable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F11A35595C0B46465BF696F2717458 /* SPRoutable.framework */; };
 		208727379702B6066109F6AB1C97746D /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C77D371B6F84C8C86232E866B4CFC /* ConstraintPriority.swift */; };
-		20C90F524411ACC8047F223A1B2516E7 /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
 		226C4D40282C9D6C494049F580B5F73B /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530EB01D549839F5B6A3BB52D7109A6B /* ConstraintMakerRelatable.swift */; };
 		22E22AD29E3555A9465E0A07359D4728 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE2917BE3FF26F413209CC364CEAB3 /* ConstraintInsets.swift */; };
-		2522FBA22F79CCCBA78FB7DA4E5ABF41 /* MethodSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = D716C56AB8B92E829A32C489B158852D /* MethodSignature.m */; };
-		2591AEAA3C68E64B3FDCB4543CC932FA /* RoutableAssist-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B17E8969C1BB764168059099DE281D80 /* RoutableAssist-iOS-dummy.m */; };
 		26819C815CB8A570D161D88BC5B0B6EF /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40EE2917BE3FF26F413209CC364CEAB3 /* ConstraintInsets.swift */; };
+		2739D08FD44322CC8C2B2D44A8ABC7A8 /* Marmot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F81B7E746486C75F913BCD00C151B /* Marmot.swift */; };
+		278BDEBD936072ACF973684F51575504 /* Routable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A09932638D5384219B62DEF3DDC3A /* Routable+Data.swift */; };
 		27A20CDCBFC2E914F2DD8F7D9EC6E3B5 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D431DB1C76A1E36C841D8C2A7EC4878 /* ConstraintConfig.swift */; };
-		29AC58994C2B5974D89D7DC36BEDCAC9 /* Routable+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85E78623D9F786154105B55804E23F /* Routable+URL.swift */; };
-		2AF176262B81AAD9C30365FBBF06C590 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
+		29AC169AF4858A6389030D382A00D33E /* Marmot.h in Headers */ = {isa = PBXBuildFile; fileRef = 04134F5137F9F921B32F6B4D606E68EE /* Marmot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A4A0C16EF3C1A625123830E99099EAD /* Routable+ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C805D0B800BED2041E183770556FC020 /* Routable+ObjectType.swift */; };
+		2D083D0756EF5CC25C5019438331607A /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
+		2D5938780E3FC9EC2D9C4BE047A9D917 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
 		2E32362EA9138AE4DE358503F42820D0 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2AB2247F89CC452E8F9FD52724658 /* ConstraintLayoutSupportDSL.swift */; };
+		2F9343504B3E61D7023691390DC22205 /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFD901C95F1FC20D3233ED70EA88999 /* Proxy.m */; };
 		30B7811A9901DF12848F36EEEC590A31 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670E7E8FFBD94482E3570B1087603A1 /* LayoutConstraint.swift */; };
 		33F874748A5C499EB1339EFB1542C5CB /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C292EF152F65D51B38549D585C34B353 /* ConstraintConstantTarget.swift */; };
 		3408F7CB87F4E8BC3FB30F66E25406E3 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBAF124B91BB6D9B84EDAC22F988B1 /* UILayoutSupport+Extensions.swift */; };
 		35E81272DA742F033A589E3225529D12 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FE0465EB26120664DB8C47179417EC /* Debugging.swift */; };
+		368505B2B0483AA986C5ADAB9D0635D3 /* SPRoutable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5977A17B66DF9508F972053A1E2782C0 /* SPRoutable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		384FB3000F2C6C71328912F057C0E6C6 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2FE0465EB26120664DB8C47179417EC /* Debugging.swift */; };
 		39BCB9D8B0258276B76424F5A058EBE8 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BBAF124B91BB6D9B84EDAC22F988B1 /* UILayoutSupport+Extensions.swift */; };
 		3D46884E8D2C6B489F32565EA4AA5C37 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0AD8714FEA8CFA99B7EF5037E6D045 /* ConstraintItem.swift */; };
-		40295B4D3C6065BC7AB650029295C015 /* Proxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E607225495407D8C9A50E141225E12A /* Proxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		405FB60E6211DD85F725DBFA232AE884 /* Marmot-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47570FF5A5D48B285274F2898D5B174F /* Marmot-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		467355985997E2FB7E7EF0362AFEE21E /* Marmot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C66FE942ED9632A8CC45E7DEA4DD /* Marmot.bundle */; };
-		4962E3FB3BC29D77BBCCE1CBF2AD9724 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB584E7C1B3C4A6EE14A9750FADA500 /* Routable.swift */; };
+		42D3E1F1AFFC051B68C58FF7AC99D8C1 /* MethodSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E1E28874AA85488A46D2B3892059E2 /* MethodSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43F88077244FA5C9A96D7E752E4BEF76 /* NativeHandle.js in Resources */ = {isa = PBXBuildFile; fileRef = 22DA4FB8344CE193B8CA4EBC636DE0D8 /* NativeHandle.js */; };
+		497F216F9CED6306FB555511FD251AE1 /* Proxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E607225495407D8C9A50E141225E12A /* Proxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49A154604EF06DBA3DEE3CA2C7A7817A /* Routable+Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D32E562A069712FB3D443CC2C3429 /* Routable+Perform.swift */; };
 		4A55208092BBE59E6F70B664F15BDD0F /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB316497587D72A69BE06AE29A04D1B /* ConstraintView.swift */; };
 		4ACE6B9B7A90776B60E453C865342ABD /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB89554F95FE216A589FA71AE31EF6 /* ConstraintLayoutGuide+Extensions.swift */; };
 		4C653C3444483E3203EFF8DB7CA6D9DD /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EC5666E1251EA12E52F0452626405C /* ConstraintOffsetTarget.swift */; };
-		4D0F05E6F3C0EBAA9D1942052BD32E85 /* Routable.h in Headers */ = {isa = PBXBuildFile; fileRef = FF45387F066D889E8EEC65F25C92FF58 /* Routable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4DC55ACF60468BF1EF965841A7803A55 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6D22BEE33C675C45A19D5C76A0EC8 /* ConstraintMultiplierTarget.swift */; };
 		5174A4DCDA28ABB4832FD02E4A6D32E8 /* SnapKit-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15EF2783FA8F616C655F7A606A104D26 /* SnapKit-iOS-dummy.m */; };
-		5232DAEE39E97EBE527A4669363E47B9 /* MarmotWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD199D3679104A6AA763E615803D /* MarmotWebView.swift */; };
-		52CF8E1ACDA8A99C0249F5F2DDD2095F /* Routable+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5185893F785B03E91681A3D90D66BE /* Routable+format.swift */; };
+		520CB76E9450076FC3E88FE36778B40A /* Marmot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 25A6C66FE942ED9632A8CC45E7DEA4DD /* Marmot.bundle */; };
 		53B72866F402C727A4FABDD3F9129224 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0AD8714FEA8CFA99B7EF5037E6D045 /* ConstraintItem.swift */; };
-		54922372B80C8F87281269D5DEB2C7D0 /* Marmot-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D49F411484FD0C26C3978C8BC1CE8215 /* Marmot-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		54D2939A2A71758C2165C2033D95C391 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE05B2D5703746ABE025D9B255F49405 /* ConstraintAttributes.swift */; };
 		5977B3B7A843628F59036B2933004A29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
 		59E538FD64DCC116BF33149F43420A29 /* Pods-Marmot_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 617E6436BDF6AF5A30392B5CF7383536 /* Pods-Marmot_Example-dummy.m */; };
 		5C9C663FB0A02B2A309EEFAE5FCF2F83 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F551C38A19E0B5BB52158D7C05452CD /* ConstraintMakerEditable.swift */; };
 		5C9CDDAD0CE38C15EB7D3D118DACF905 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88653024F0C05BEBA49736639DDC8D5 /* ConstraintMakerExtendable.swift */; };
-		5E924C5F0745540DE0862385537403AA /* Marmot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F93371FDD06AF5CA112B0A24643BFAA8 /* Marmot.bundle */; };
+		5FA8F8D7FDBFA784E96C98F72BC844F2 /* Routable+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5185893F785B03E91681A3D90D66BE /* Routable+format.swift */; };
+		5FC9E13902FA472EFB4C238B807CE67C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
+		60FEBBC7A53E152C00830229B1A97DBE /* Routable+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85E78623D9F786154105B55804E23F /* Routable+URL.swift */; };
+		61F03ADDC19ACDE4AD6CC7266C4759C0 /* Marmot.h in Headers */ = {isa = PBXBuildFile; fileRef = 04134F5137F9F921B32F6B4D606E68EE /* Marmot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65FABB059C4CB4F3F8AB184CB130E980 /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7E1607CD758D20363B37D329B8DA0 /* ConstraintRelatableTarget.swift */; };
+		662112FDD84E2B128333F51B92022DEF /* MarmotHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C3540FFB984A61AA768BC179CB2E8 /* MarmotHandler.swift */; };
 		666DC326DDBB6149D48ADC2BFF56903E /* SnapKit-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C61CACE410041F94F579F2E936C61289 /* SnapKit-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66B3DFE660425AB5E046F19BCF854062 /* MarmotWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB032C4DAA5FC0F6207DDC36B90F650 /* MarmotWebView.swift */; };
 		66FDFC546A49BCD38345B64153C64ACC /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2B6D07FFABE4A18136CF270A8EFA0 /* ConstraintDescription.swift */; };
 		6714875823FD702E3C52D85BDD6EFB18 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D981C32390BE4F289167C1ECDE3A1F87 /* Constraint.swift */; };
 		67BA0DD1E07721C83352ECF85FCCC1B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
 		67F2C49D6002BE7EB3738908BAD0DB7E /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582A40FA11D87685A0629EA37E388A2D /* ConstraintDSL.swift */; };
-		6B1482F7299C81C52EA81F9A31060BB1 /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
-		6EFF79805141FC08E5FC1988BC79CD2C /* RoutableAssist-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E1A3573D8A866144FA1AA8E2C203B8 /* RoutableAssist-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6FB7B13EEBEED7422109D7A61AEDE592 /* SPRoutable-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1859798CAF9395679F29C84EB617AFCD /* SPRoutable-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B3C98EA744F582D40633EA62D64AA62 /* MethodSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = D716C56AB8B92E829A32C489B158852D /* MethodSignature.m */; };
+		6B9DD369BDB76AD46641EBCB0C3E7953 /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93838EF2C3A83D1D0C91AD459382917F /* Invocation.m */; };
+		6C05940E2578D7910B4DEDFB0FDFFA58 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
+		6DEC868B11872EA7530DB4B0CCD18EA0 /* Invocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3583199384C03983127DCC82146D43EF /* Invocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724205E3FBF504C891FE7D44679A606B /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F6CA6982555524CFE62DDE456A2CF2 /* LayoutConstraintItem.swift */; };
+		733479AB0CAA1ED31C9897D3D2A7D00F /* RoutableAssist-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B17E8969C1BB764168059099DE281D80 /* RoutableAssist-iOS-dummy.m */; };
 		737A7DF61BEB7944C5DCA29F90AE40A2 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2629AE97A7205904B201CDFED5F8A6E /* Typealiases.swift */; };
-		746F1432BCE022E0B129681A3616A83F /* Proxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E607225495407D8C9A50E141225E12A /* Proxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7521255D6043D9D293635A4B4B426B1F /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5CE04899C96834F4737EA3C326B13 /* ConstraintView+Extensions.swift */; };
+		757890724CE4E7E8548D66BA987F6F21 /* Routable.h in Headers */ = {isa = PBXBuildFile; fileRef = FF45387F066D889E8EEC65F25C92FF58 /* Routable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78C1537873D219E09DE95271D3B3F520 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE5CE04899C96834F4737EA3C326B13 /* ConstraintView+Extensions.swift */; };
 		79B90139AF6D6C2386F74B748088C756 /* Pods-Marmot_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 742C1C350714C6E899B84F7846F24D96 /* Pods-Marmot_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A1B528272C20AAD74911EE72FF943DA /* SPRoutable-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5977A17B66DF9508F972053A1E2782C0 /* SPRoutable-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7E9D8508D5FF019837FDB2B122C7FEF3 /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFD901C95F1FC20D3233ED70EA88999 /* Proxy.m */; };
-		81B45F91088F85B6C2D830978F85A1E7 /* Marmot.h in Headers */ = {isa = PBXBuildFile; fileRef = FB07CE669B14C91E7DC9C49F4C6897D6 /* Marmot.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		855AE9764899D03660D4C8C32C9451D5 /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E3721EFBE4FE498D846C7D78D2D0C8 /* ConstraintRelation.swift */; };
 		8700E33FE0876B2F8FE07B145FC00C4E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
+		87A1EA98F0E9A30D41B7D53393B2B868 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
 		8CAF9AD1C1CD0AC8A49E4A3798CE3314 /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C77D371B6F84C8C86232E866B4CFC /* ConstraintPriority.swift */; };
-		9035573E9F13629A2B9C8472038E9A98 /* Marmot-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7630236245F506F053A868D1B1198907 /* Marmot-iOS-dummy.m */; };
+		8CEA74AC7A6298D5C354476F1BEAB65B /* Routable+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85E78623D9F786154105B55804E23F /* Routable+URL.swift */; };
+		8E3154A01443967673D7211EBAB64A00 /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93838EF2C3A83D1D0C91AD459382917F /* Invocation.m */; };
+		915C566B82EEBDE25FBB0E539DBE15DA /* RoutableAssist-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 506193DF0C94384FEC0A37CD578E82F5 /* RoutableAssist-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		935BE94395DFF2F11ED0B2397ED0E35C /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EC5666E1251EA12E52F0452626405C /* ConstraintOffsetTarget.swift */; };
+		93C7C3FD041CC682306B39E43A49B549 /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
 		93CDE61438CA8E982349C691F4EA865F /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F551C38A19E0B5BB52158D7C05452CD /* ConstraintMakerEditable.swift */; };
+		9580FD437ECD4346BFBF4BA374A91FAE /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB584E7C1B3C4A6EE14A9750FADA500 /* Routable.swift */; };
 		9666247F8553843B057BA3D7CD26C471 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95190824D74F87894CAE5CD4284D52A1 /* ConstraintLayoutGuideDSL.swift */; };
 		97C0B30A8C86129AE974A6BE99BD6526 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A710A85EE067DEAD3D4982F3CD9C0 /* ConstraintViewDSL.swift */; };
 		9809F192963FB7E1AB5380B0D6A27139 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95190824D74F87894CAE5CD4284D52A1 /* ConstraintLayoutGuideDSL.swift */; };
-		9891E1F0C88903DFDA0DD16684E6B894 /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93838EF2C3A83D1D0C91AD459382917F /* Invocation.m */; };
-		98FB6913DDDAFEE415D3531C1787D5A8 /* SPRoutable-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E091553035AF39ED6E76DE7303F9B /* SPRoutable-macOS-dummy.m */; };
-		9BBADAA48D373B6E02735E1810FD5624 /* Routable+Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D32E562A069712FB3D443CC2C3429 /* Routable+Perform.swift */; };
+		9A4FF234276BE723A7FCC073C610251B /* MarmotWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDB032C4DAA5FC0F6207DDC36B90F650 /* MarmotWebView.swift */; };
+		9DF163B6D4A6DC522C7927E7F161CF6F /* Marmot-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5393687193BE258BD72DB1DB5DE71209 /* Marmot-iOS-dummy.m */; };
 		9F07A17132078477E709CE26701DC4F6 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2629AE97A7205904B201CDFED5F8A6E /* Typealiases.swift */; };
-		A0A8626EEF636BEEB3333DC9EC6EF667 /* Invocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3583199384C03983127DCC82146D43EF /* Invocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A17D25764E28C49EBE8D90A168DBA14E /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4BA65B76E7D9B94E4BBDE6400F1BA /* ConstraintLayoutSupport.swift */; };
-		A9B8E06865BAE02915E9C89CB0FAE9EB /* Routable+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5185893F785B03E91681A3D90D66BE /* Routable+format.swift */; };
+		A2A058368AF334D85AFDA79E7CA4A561 /* NativeHandle.js in Resources */ = {isa = PBXBuildFile; fileRef = 22DA4FB8344CE193B8CA4EBC636DE0D8 /* NativeHandle.js */; };
+		A80A24B38AF7D1FE1185A69A29C73CDD /* Routable+Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D32E562A069712FB3D443CC2C3429 /* Routable+Perform.swift */; };
 		A9E68A3E653EF0566B5E5073C6289A1A /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4ADE37D76EBEEBFE456C8A7AC1FBB6 /* ConstraintInsetTarget.swift */; };
 		AACFB90401977EC0EDBD490ED833EBD3 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530EB01D549839F5B6A3BB52D7109A6B /* ConstraintMakerRelatable.swift */; };
 		AF1214454EFAA666DA815A0EA414B0C9 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D431DB1C76A1E36C841D8C2A7EC4878 /* ConstraintConfig.swift */; };
-		AF12C43233B1FE2A6604EEFABA7B2837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
+		AFE64C682B1DA44C0E236BC930F6CADF /* SPRoutable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F13E7A233157666716E9C3362140C3 /* SPRoutable-iOS-dummy.m */; };
 		B18805DFB00F7079DABD6ECCE8F393F9 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE95DDCBFFDAD9FC1DAAE0025559447 /* ConstraintMakerPriortizable.swift */; };
 		B1ECC5A1E9852BB468656BBD8B21FDF8 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB4BA65B76E7D9B94E4BBDE6400F1BA /* ConstraintLayoutSupport.swift */; };
-		B43B6240B566968D45FC71E3B418FBA0 /* Routable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A09932638D5384219B62DEF3DDC3A /* Routable+Data.swift */; };
-		B701D0AD2F81159C893DDC20B6D5E259 /* Invocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3583199384C03983127DCC82146D43EF /* Invocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B54EF93E96E2ACED2A16FE33793EBEED /* MethodSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = D716C56AB8B92E829A32C489B158852D /* MethodSignature.m */; };
 		B813D85C03B04234FE755421CDA7676C /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A670E7E8FFBD94482E3570B1087603A1 /* LayoutConstraint.swift */; };
-		BE4C506831D76C19382990A3D49A0AEB /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB584E7C1B3C4A6EE14A9750FADA500 /* Routable.swift */; };
+		B83FF23472CEE8F35C480F836E730E68 /* Marmot-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 925B21C696F2FEDFC9AA45B0E360F5DF /* Marmot-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA51137401F00AA2D11FA5752F32678D /* Routable+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 713A09932638D5384219B62DEF3DDC3A /* Routable+Data.swift */; };
+		BC84A86607B0D7EA9FD85704F273CB71 /* RoutableAssist-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5910D00F093C5F333C3A19D07AB1B9 /* RoutableAssist-macOS-dummy.m */; };
 		BEB3742B44287058713A180C103FA311 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B2B6D07FFABE4A18136CF270A8EFA0 /* ConstraintDescription.swift */; };
-		C3F8DF56397CCAB44DD75D623DEA28B9 /* Marmot.h in Headers */ = {isa = PBXBuildFile; fileRef = FB07CE669B14C91E7DC9C49F4C6897D6 /* Marmot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C16F115CC43D1A55E5E37DC32BC66F65 /* Marmot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676F81B7E746486C75F913BCD00C151B /* Marmot.swift */; };
 		C58D5BAEACB75A865BFC5ADBA2D9FFC2 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5A710A85EE067DEAD3D4982F3CD9C0 /* ConstraintViewDSL.swift */; };
-		C767D837D8BEE493A0247C6E56DD8004 /* SPRoutable-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 61F13E7A233157666716E9C3362140C3 /* SPRoutable-iOS-dummy.m */; };
+		C79F9B45D95ED566AE802C68F0E31372 /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB584E7C1B3C4A6EE14A9750FADA500 /* Routable.swift */; };
 		C848E9988946ED2852B50C9C34B48298 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF7BB0FC8A37A54227B9B43AA5E507 /* ConstraintLayoutGuide.swift */; };
-		C87394964C6BE15D18C0BB54B310ABF5 /* Proxy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFD901C95F1FC20D3233ED70EA88999 /* Proxy.m */; };
-		C960E69560314B963F6F64814673E709 /* Routable+Perform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800D32E562A069712FB3D443CC2C3429 /* Routable+Perform.swift */; };
 		CC07161FFA33D32A34AEB6361068B42F /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF2AB2247F89CC452E8F9FD52724658 /* ConstraintLayoutSupportDSL.swift */; };
 		CCA6320054CD2D7E075808709FA4409D /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFD8E234D900B6439F1591977577AFC /* ConstraintMakerFinalizable.swift */; };
 		D0542B04BE9AC65AFF7023607BC40F8E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB316497587D72A69BE06AE29A04D1B /* ConstraintView.swift */; };
 		D085B6E6137CADDBB04B7F7D2923558D /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE95DDCBFFDAD9FC1DAAE0025559447 /* ConstraintMakerPriortizable.swift */; };
-		D10413F48435B8C086CADDA506A8948E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
-		D1CD1EAD5FB52BAE72A54F370A57BF60 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
 		D20AD2CAC4E1564437C26F1AD7873648 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A62DCD91CD7C9C2C44E2BD58DC544 /* ConstraintMaker.swift */; };
 		D3FDCA6DFA6171153B07048E859FF76E /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CB89554F95FE216A589FA71AE31EF6 /* ConstraintLayoutGuide+Extensions.swift */; };
-		D4B02F573FD085C82B9418A1E878907A /* MethodSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E1E28874AA85488A46D2B3892059E2 /* MethodSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D590D96497CFA739FBDD01EC7744270C /* Routable+ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C805D0B800BED2041E183770556FC020 /* Routable+ObjectType.swift */; };
-		DC11BE31A636AA1FDEE27FB014ED8B30 /* RoutableAssist-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5910D00F093C5F333C3A19D07AB1B9 /* RoutableAssist-macOS-dummy.m */; };
-		DD3AACDD990BB5934C5B4E0757DB8FAF /* MethodSignature.m in Sources */ = {isa = PBXBuildFile; fileRef = D716C56AB8B92E829A32C489B158852D /* MethodSignature.m */; };
-		DF55D765E21EE24BB38EDF337BD65193 /* Marmot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D624BC3C168A4E72797B3BB9227A7078 /* Marmot.swift */; };
+		D6E134F25A06CD55642994C29B46DD0D /* Proxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E607225495407D8C9A50E141225E12A /* Proxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBB96FAB09DA418F99534FF1CDB08F7A /* Routable+format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5185893F785B03E91681A3D90D66BE /* Routable+format.swift */; };
+		DD38FAA530A0689F5CB2CEB9588F6FB5 /* Marmot.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F93371FDD06AF5CA112B0A24643BFAA8 /* Marmot.bundle */; };
 		E2550AF774298DFED4B96FAD24F35547 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */; };
-		E877FB53D8E086018E9B37DAAE658956 /* MarmotWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD199D3679104A6AA763E615803D /* MarmotWebView.swift */; };
+		E2C2F5D63C7A30E8CA110713DA417DF0 /* Routable.h in Headers */ = {isa = PBXBuildFile; fileRef = FF45387F066D889E8EEC65F25C92FF58 /* Routable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E38F4A2E1914D47B02F405666921FF18 /* RoutableAssist-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E1A3573D8A866144FA1AA8E2C203B8 /* RoutableAssist-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4D47DDEB378FFF484145FCE55DE4B23 /* MethodSignature.h in Headers */ = {isa = PBXBuildFile; fileRef = 67E1E28874AA85488A46D2B3892059E2 /* MethodSignature.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8B5EAD5FAA166F3EB0EB418C27CF75B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */; };
 		E907A168F338BE07A65EFAAE5AFA5C83 /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF7BB0FC8A37A54227B9B43AA5E507 /* ConstraintLayoutGuide.swift */; };
-		E9C4392A3D6ECD1A69838F87F95F10F0 /* Routable+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF85E78623D9F786154105B55804E23F /* Routable+URL.swift */; };
+		EDD11730DD2B0E8A8A7152263C48A558 /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
 		EE2FBDEE49FFC02539A0ABE0D3188A11 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F6CA6982555524CFE62DDE456A2CF2 /* LayoutConstraintItem.swift */; };
-		EED43B56B4E3BBF054CEB153D8FABA15 /* SPRoutable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38F11A35595C0B46465BF696F2717458 /* SPRoutable.framework */; };
-		EF0154991E58C2265CB7ABB917CED35E /* Invocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93838EF2C3A83D1D0C91AD459382917F /* Invocation.m */; };
-		F35C62A43E42FD845FF24671D57F3085 /* Routable.h in Headers */ = {isa = PBXBuildFile; fileRef = FF45387F066D889E8EEC65F25C92FF58 /* Routable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1ADCDCCB6F7269369B077E24D4EB54E /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
 		F4198535FF8757D0AC7FB1546A2DC31C /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D6D22BEE33C675C45A19D5C76A0EC8 /* ConstraintMultiplierTarget.swift */; };
-		F655D56226EA8B967D62F3EE73E18DAC /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
-		F77C984ADBE64918841EE32A87A9B51D /* RoutableAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */; };
+		F56AD00920DCB5C6C61219455EFF6B99 /* Routable+ObjectType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C805D0B800BED2041E183770556FC020 /* Routable+ObjectType.swift */; };
+		F7A1639C4A18F36501F94268C250FF3C /* SPRoutable-macOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C5E091553035AF39ED6E76DE7303F9B /* SPRoutable-macOS-dummy.m */; };
+		F92A12F48A8F78F71F797BCD40F227FA /* SPRoutable-macOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1859798CAF9395679F29C84EB617AFCD /* SPRoutable-macOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCCA3CBDCECF0331E9CD63B8B28BBCCD /* Invocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3583199384C03983127DCC82146D43EF /* Invocation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEEBC7ECEC84367DC227A3BEAFA80603 /* MarmotHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580C3540FFB984A61AA768BC179CB2E8 /* MarmotHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02FFCFC46D348201A5D39EBD763665DA /* PBXContainerItemProxy */ = {
+		024D2D359D419B8F6B7DAB9117BE85B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A3D6BD3376ED3BEF21C855FA693E0E62;
-			remoteInfo = "Marmot-iOS-Marmot";
-		};
-		15A0D7FB92F47AFEDD41FECDCB0CA6E3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E8087C0454B9121E786A15B41EDC30D;
-			remoteInfo = "RoutableAssist-iOS";
-		};
-		1F3A779AF5CB12A02C94D5145D22F67B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6E8087C0454B9121E786A15B41EDC30D;
-			remoteInfo = "RoutableAssist-iOS";
-		};
-		36259F066C6550CACB31520AD71CCAF4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3D3CB7F3392A46A812585713B8894AB5;
-			remoteInfo = "Marmot-macOS-Marmot";
-		};
-		4DAE3B376A7ECCFBD616BC9893BA9B4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1113D1B3EEA1ECD5AA7C6D1E6B842C2;
+			remoteGlobalIDString = 5AD9247EB650F2801F7DB42D4CB2CC4C;
 			remoteInfo = "RoutableAssist-macOS";
+		};
+		0E40C348725187FC9531D975C6A2DDDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18471EC1EDDC83879DAAD6D356ED73DC;
+			remoteInfo = "SPRoutable-iOS";
+		};
+		30FFB16171D9E11436544B0C0762040A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3280521EFD41ABC3761D9428A3866730;
+			remoteInfo = "SPRoutable-macOS";
+		};
+		49798236D581FA65BE14C8710DAEDB62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5AD9247EB650F2801F7DB42D4CB2CC4C;
+			remoteInfo = "RoutableAssist-macOS";
+		};
+		4A79EC00C79671A3FC18B16C9DE6CD40 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A62D0E89FC2F39A54CA38AB11D159D6B;
+			remoteInfo = "Marmot-macOS-Marmot";
 		};
 		772C5378D01C9261DD4C343B8074951E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = E1113D1B3EEA1ECD5AA7C6D1E6B842C2;
+			remoteGlobalIDString = 5AD9247EB650F2801F7DB42D4CB2CC4C;
 			remoteInfo = "RoutableAssist-macOS";
 		};
-		98F85277B7D781F9593EFBFE6CF2A7E5 /* PBXContainerItemProxy */ = {
+		91111F2A4CB4DC1013F1916D9D17C2E9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C388A8236E6F345178A62328339ED291;
-			remoteInfo = "SPRoutable-iOS";
+			remoteGlobalIDString = FB3315CBEA883BD9DA1260E2BC375271;
+			remoteInfo = "RoutableAssist-iOS";
 		};
 		A0BA342999D568504DDB288979294708 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 76191F4204A23D1C5A760A45973B1EEE;
+			remoteGlobalIDString = 88171F3ACE3E46B6612CC898A0CA1015;
 			remoteInfo = "Marmot-iOS";
+		};
+		B4BA7B67493697961B6A811951EBC073 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 29BD58E27400D3E20D3819718048C4D2;
+			remoteInfo = "Marmot-iOS-Marmot";
 		};
 		B5FE49F615E76516365106F792E9734C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BC3A74B394F08535FF01B73B1C4B2496;
+			remoteGlobalIDString = 3280521EFD41ABC3761D9428A3866730;
 			remoteInfo = "SPRoutable-macOS";
 		};
 		BE901C799569DB1D1624A800AFF28E0C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F7AD8562403B13D2DA4ACD0705D681A8;
+			remoteGlobalIDString = 9A2564631A14859F26D8FF53E72A2CCB;
 			remoteInfo = "Marmot-macOS";
-		};
-		C41A076BAD3E20FB5AD0012800133AE4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BC3A74B394F08535FF01B73B1C4B2496;
-			remoteInfo = "SPRoutable-macOS";
 		};
 		CDE81CFEDAC5E67982EE668329ADE31C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 6E8087C0454B9121E786A15B41EDC30D;
+			remoteGlobalIDString = FB3315CBEA883BD9DA1260E2BC375271;
+			remoteInfo = "RoutableAssist-iOS";
+		};
+		CE6030C78D292330000CE63000798943 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB3315CBEA883BD9DA1260E2BC375271;
 			remoteInfo = "RoutableAssist-iOS";
 		};
 		D595E102418144F44E84F79DFE885307 /* PBXContainerItemProxy */ = {
@@ -250,63 +261,55 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C388A8236E6F345178A62328339ED291;
+			remoteGlobalIDString = 18471EC1EDDC83879DAAD6D356ED73DC;
 			remoteInfo = "SPRoutable-iOS";
-		};
-		F1269E2C381E189788438A5A30A1CC96 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E1113D1B3EEA1ECD5AA7C6D1E6B842C2;
-			remoteInfo = "RoutableAssist-macOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		081CAD199D3679104A6AA763E615803D /* MarmotWebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarmotWebView.swift; path = Marmot/Classes/MarmotWebView.swift; sourceTree = "<group>"; };
+		03A0B59F2EACE6D808BD87F362C68147 /* Marmot.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Marmot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		04134F5137F9F921B32F6B4D606E68EE /* Marmot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Marmot.h; path = Marmot/Classes/Marmot.h; sourceTree = "<group>"; };
 		0A5077DA7B3D78BC7FFFBA88BC484AA8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C5E091553035AF39ED6E76DE7303F9B /* SPRoutable-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SPRoutable-macOS-dummy.m"; path = "../SPRoutable-macOS/SPRoutable-macOS-dummy.m"; sourceTree = "<group>"; };
 		0D431DB1C76A1E36C841D8C2A7EC4878 /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
+		1179AC2A1124EEA73072F04A44F1300D /* Marmot-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Marmot-iOS.xcconfig"; sourceTree = "<group>"; };
 		12D6D22BEE33C675C45A19D5C76A0EC8 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		1460E86DAE4B37FF22BA96BD2BCE8080 /* Pods-Marmot_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Marmot_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		149711AC227B3F75846F63424B8C95A1 /* RoutableAssist-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RoutableAssist-iOS-prefix.pch"; sourceTree = "<group>"; };
 		14CF90F021BAAB73055FB0EC0A043202 /* RoutableAssist-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "RoutableAssist-iOS.xcconfig"; sourceTree = "<group>"; };
 		15EF2783FA8F616C655F7A606A104D26 /* SnapKit-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-iOS-dummy.m"; sourceTree = "<group>"; };
-		17DBEF3ED850120E8096DDBBF8A45499 /* Marmot-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Marmot-macOS-dummy.m"; path = "../Marmot-macOS/Marmot-macOS-dummy.m"; sourceTree = "<group>"; };
 		1859798CAF9395679F29C84EB617AFCD /* SPRoutable-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPRoutable-macOS-umbrella.h"; path = "../SPRoutable-macOS/SPRoutable-macOS-umbrella.h"; sourceTree = "<group>"; };
 		1B0AD8714FEA8CFA99B7EF5037E6D045 /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
 		1CF2AB2247F89CC452E8F9FD52724658 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		1F4B83B2CA379DEF7816B32E6C383863 /* Marmot-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Marmot-macOS-prefix.pch"; path = "../Marmot-macOS/Marmot-macOS-prefix.pch"; sourceTree = "<group>"; };
 		1F5910D00F093C5F333C3A19D07AB1B9 /* RoutableAssist-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "RoutableAssist-macOS-dummy.m"; path = "../RoutableAssist-macOS/RoutableAssist-macOS-dummy.m"; sourceTree = "<group>"; };
 		1FDF1982DAB9171378355A6490E05BAB /* Pods-Marmot-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		22C23CE18B88A93CAC30EB4F070FF839 /* Pods-Marmot-iOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot-iOS-frameworks.sh"; sourceTree = "<group>"; };
-		257364547CC20B7233A0AC9B54533F21 /* Pods_Marmot_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		25A6C66FE942ED9632A8CC45E7DEA4DD /* Marmot.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Marmot.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		22DA4FB8344CE193B8CA4EBC636DE0D8 /* NativeHandle.js */ = {isa = PBXFileReference; includeInIndex = 1; name = NativeHandle.js; path = Marmot/Assets/NativeHandle.js; sourceTree = "<group>"; };
+		257364547CC20B7233A0AC9B54533F21 /* Pods_Marmot_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Marmot_iOS.framework; path = "Pods-Marmot-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A6C66FE942ED9632A8CC45E7DEA4DD /* Marmot.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Marmot.bundle; path = "Marmot-iOS-Marmot.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA1D9275D7308FADA219DDE1EBC286 /* SPRoutable-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPRoutable-iOS-prefix.pch"; sourceTree = "<group>"; };
 		2AB316497587D72A69BE06AE29A04D1B /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
 		2B8E92E934CD8DA7CBD54B36A8CB44BC /* Pods-Marmot_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot_Example-resources.sh"; sourceTree = "<group>"; };
 		2BE5CE04899C96834F4737EA3C326B13 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
 		2EFD8E234D900B6439F1591977577AFC /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		2F5D6288F8E8EB65C0E6D74562601AF6 /* Marmot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marmot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F5D6288F8E8EB65C0E6D74562601AF6 /* Marmot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Marmot.framework; path = "Marmot-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3583199384C03983127DCC82146D43EF /* Invocation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Invocation.h; path = RoutableAssist/Classes/Invocation.h; sourceTree = "<group>"; };
 		37659DD0FEECFAEA868BDBB71998EEFD /* SPRoutable-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SPRoutable-macOS-prefix.pch"; path = "../SPRoutable-macOS/SPRoutable-macOS-prefix.pch"; sourceTree = "<group>"; };
 		38F11A35595C0B46465BF696F2717458 /* SPRoutable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPRoutable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		391F137469E535C9812DB57C761601A6 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B3BD1E4A4EE06817F7244E6C7DDBF1C /* Marmot-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Marmot-iOS.modulemap"; sourceTree = "<group>"; };
-		3B9C8387E9E842E1F8BE3F40A0D725FF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		3FFF3953C2D576C876867C1395028CFE /* Marmot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Marmot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		391F137469E535C9812DB57C761601A6 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = "SnapKit-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FFF3953C2D576C876867C1395028CFE /* Marmot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Marmot.framework; path = "Marmot-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		40EE2917BE3FF26F413209CC364CEAB3 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
 		44C90552B7017D8916D02152205B40CF /* SnapKit-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SnapKit-iOS.xcconfig"; sourceTree = "<group>"; };
 		452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		464A62DCD91CD7C9C2C44E2BD58DC544 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		47570FF5A5D48B285274F2898D5B174F /* Marmot-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marmot-iOS-umbrella.h"; sourceTree = "<group>"; };
-		4BD5EBE4724E460004491B91C8FBB54C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Marmot-macOS/Info.plist"; sourceTree = "<group>"; };
 		4E607225495407D8C9A50E141225E12A /* Proxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Proxy.h; path = RoutableAssist/Classes/Proxy.h; sourceTree = "<group>"; };
 		506193DF0C94384FEC0A37CD578E82F5 /* RoutableAssist-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RoutableAssist-macOS-umbrella.h"; path = "../RoutableAssist-macOS/RoutableAssist-macOS-umbrella.h"; sourceTree = "<group>"; };
 		50FD43C7B5BDC25F512B9C65E7E055F6 /* RoutableAssist-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "RoutableAssist-macOS.xcconfig"; path = "../RoutableAssist-macOS/RoutableAssist-macOS.xcconfig"; sourceTree = "<group>"; };
 		51EC5666E1251EA12E52F0452626405C /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
 		530EB01D549839F5B6A3BB52D7109A6B /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		578303E702557207B24F14F0EAC7A645 /* ResourceBundle-Marmot-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Marmot-Info.plist"; sourceTree = "<group>"; };
+		5393687193BE258BD72DB1DB5DE71209 /* Marmot-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Marmot-iOS-dummy.m"; sourceTree = "<group>"; };
+		572A2ED21FA65E1115346199520CD7B0 /* Marmot-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Marmot-iOS.modulemap"; sourceTree = "<group>"; };
+		580C3540FFB984A61AA768BC179CB2E8 /* MarmotHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarmotHandler.swift; path = Marmot/Classes/MarmotHandler.swift; sourceTree = "<group>"; };
 		582A40FA11D87685A0629EA37E388A2D /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
 		5977A17B66DF9508F972053A1E2782C0 /* SPRoutable-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SPRoutable-iOS-umbrella.h"; sourceTree = "<group>"; };
 		5A5185893F785B03E91681A3D90D66BE /* Routable+format.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Routable+format.swift"; path = "Sources/Routable+format.swift"; sourceTree = "<group>"; };
@@ -315,31 +318,34 @@
 		5F551C38A19E0B5BB52158D7C05452CD /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
 		617E6436BDF6AF5A30392B5CF7383536 /* Pods-Marmot_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Marmot_Example-dummy.m"; sourceTree = "<group>"; };
 		61F13E7A233157666716E9C3362140C3 /* SPRoutable-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SPRoutable-iOS-dummy.m"; sourceTree = "<group>"; };
+		66DBC6FA03862F62A6332F221F1C45D0 /* Marmot-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Marmot-macOS-prefix.pch"; path = "../Marmot-macOS/Marmot-macOS-prefix.pch"; sourceTree = "<group>"; };
+		676F81B7E746486C75F913BCD00C151B /* Marmot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marmot.swift; path = Marmot/Classes/Marmot.swift; sourceTree = "<group>"; };
 		67E1E28874AA85488A46D2B3892059E2 /* MethodSignature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MethodSignature.h; path = RoutableAssist/Classes/MethodSignature.h; sourceTree = "<group>"; };
 		68133318D8DE317D1F4281BE33478BDD /* SnapKit-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SnapKit-macOS-dummy.m"; path = "../SnapKit-macOS/SnapKit-macOS-dummy.m"; sourceTree = "<group>"; };
 		695B6C6629265D1B63330B4F44AF2ABD /* Pods-Marmot-iOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Marmot-iOS-acknowledgements.plist"; sourceTree = "<group>"; };
 		699D2F2520448817E655267DF5D6E810 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		713A09932638D5384219B62DEF3DDC3A /* Routable+Data.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Routable+Data.swift"; path = "Sources/Routable+Data.swift"; sourceTree = "<group>"; };
 		742C1C350714C6E899B84F7846F24D96 /* Pods-Marmot_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Marmot_Example-umbrella.h"; sourceTree = "<group>"; };
-		745CB5287CBF0C8BD505C325AACD6794 /* SPRoutable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPRoutable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		745FA8029049DE1AB0E39550D5C8951C /* SPRoutable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SPRoutable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7630236245F506F053A868D1B1198907 /* Marmot-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Marmot-iOS-dummy.m"; sourceTree = "<group>"; };
+		745CB5287CBF0C8BD505C325AACD6794 /* SPRoutable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPRoutable.framework; path = "SPRoutable-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		745FA8029049DE1AB0E39550D5C8951C /* SPRoutable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SPRoutable.framework; path = "SPRoutable-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F6CA6982555524CFE62DDE456A2CF2 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		783386859D9ADAC53CF804DF9267655D /* SnapKit-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SnapKit-macOS.modulemap"; path = "../SnapKit-macOS/SnapKit-macOS.modulemap"; sourceTree = "<group>"; };
-		798AAD5ADB7567CE2F6E179C8ED29078 /* Marmot-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Marmot-macOS.modulemap"; path = "../Marmot-macOS/Marmot-macOS.modulemap"; sourceTree = "<group>"; };
 		7C0A9F0CA893C445DC0E8F9709576014 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SnapKit-macOS/Info.plist"; sourceTree = "<group>"; };
-		7C143D2196A78C19AE270CDB3BCF8844 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C4ADE37D76EBEEBFE456C8A7AC1FBB6 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
-		7F440963219D8D5D7BE873C8568F58F8 /* ResourceBundle-Marmot-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-Marmot-Info.plist"; path = "../Marmot-macOS/ResourceBundle-Marmot-Info.plist"; sourceTree = "<group>"; };
 		800D32E562A069712FB3D443CC2C3429 /* Routable+Perform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Routable+Perform.swift"; path = "Sources/Routable+Perform.swift"; sourceTree = "<group>"; };
+		864D66444D493734FBA93B9FD9505866 /* Marmot-macOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "Marmot-macOS-dummy.m"; path = "../Marmot-macOS/Marmot-macOS-dummy.m"; sourceTree = "<group>"; };
+		881E83050543A5B37C5FBC3191C3BADF /* Marmot-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Marmot-macOS.xcconfig"; path = "../Marmot-macOS/Marmot-macOS.xcconfig"; sourceTree = "<group>"; };
+		88A0E8B5B02F965555E4A84469BEC294 /* Marmot-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "Marmot-macOS.modulemap"; path = "../Marmot-macOS/Marmot-macOS.modulemap"; sourceTree = "<group>"; };
+		8A238E4AD2EEFA5B394C8A059C4456AD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		8CA4F7AE69CD94F367DF3D37D6B0647D /* Pods-Marmot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8DFB4C9612B56EEE32401707F66966A7 /* Pods-Marmot-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Marmot-iOS-umbrella.h"; sourceTree = "<group>"; };
 		8E45B0CAC96A02C2010DE71BA0665C3A /* Pods-Marmot_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9125BB9CB6395E5571ED12734A8DE08F /* Pods-Marmot-iOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Marmot-iOS-acknowledgements.markdown"; sourceTree = "<group>"; };
 		918290982ED2839B8CC3E8E38224D9F7 /* SnapKit-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "SnapKit-iOS.modulemap"; sourceTree = "<group>"; };
+		925B21C696F2FEDFC9AA45B0E360F5DF /* Marmot-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Marmot-macOS-umbrella.h"; path = "../Marmot-macOS/Marmot-macOS-umbrella.h"; sourceTree = "<group>"; };
 		92C591950BE4DF9FF76B6B53EE1ADBB1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../SPRoutable-macOS/Info.plist"; sourceTree = "<group>"; };
 		93838EF2C3A83D1D0C91AD459382917F /* Invocation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Invocation.m; path = RoutableAssist/Classes/Invocation.m; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		95190824D74F87894CAE5CD4284D52A1 /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
 		95B2B6D07FFABE4A18136CF270A8EFA0 /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
 		95D7E1607CD758D20363B37D329B8DA0 /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
@@ -347,18 +353,18 @@
 		9AB584E7C1B3C4A6EE14A9750FADA500 /* Routable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Routable.swift; path = Sources/Routable.swift; sourceTree = "<group>"; };
 		A04A45D9C115A86AAA20A84983D5F4F0 /* SnapKit-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SnapKit-macOS-prefix.pch"; path = "../SnapKit-macOS/SnapKit-macOS-prefix.pch"; sourceTree = "<group>"; };
 		A40A092B8092A3C1F7DF74D09040D565 /* RoutableAssist-macOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "RoutableAssist-macOS-prefix.pch"; path = "../RoutableAssist-macOS/RoutableAssist-macOS-prefix.pch"; sourceTree = "<group>"; };
-		A50E96F00B48CABBE2F419995D2E0B8C /* Pods_Marmot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A50E96F00B48CABBE2F419995D2E0B8C /* Pods_Marmot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Marmot_Example.framework; path = "Pods-Marmot_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58C77D371B6F84C8C86232E866B4CFC /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
+		A634EA4F18C642F7FDDD83E1D2ACA69D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A670E7E8FFBD94482E3570B1087603A1 /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
 		A772243CB080B8D0E254CD4790FF7186 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../RoutableAssist-macOS/Info.plist"; sourceTree = "<group>"; };
 		A88653024F0C05BEBA49736639DDC8D5 /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
-		AD90E5420F747E6EA20ED1F2F93CB052 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B05FBB68FD9496DC4838007154BA8A94 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		B17E8969C1BB764168059099DE281D80 /* RoutableAssist-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RoutableAssist-iOS-dummy.m"; sourceTree = "<group>"; };
-		B52E112D7D7350C9D025BEB2141F3901 /* Marmot.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = Marmot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B8E3721EFBE4FE498D846C7D78D2D0C8 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
 		B98C1ECB68BBEFBBFF6F288E19C5D7A8 /* SPRoutable-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "SPRoutable-iOS.xcconfig"; sourceTree = "<group>"; };
-		BB3F13C1197364B763C72585AF7BADAF /* RoutableAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoutableAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9D9EE1ECF89E50EC19BC24EC8088C73 /* ResourceBundle-Marmot-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-Marmot-Info.plist"; sourceTree = "<group>"; };
+		BB3F13C1197364B763C72585AF7BADAF /* RoutableAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RoutableAssist.framework; path = "RoutableAssist-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBFD901C95F1FC20D3233ED70EA88999 /* Proxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Proxy.m; path = RoutableAssist/Classes/Proxy.m; sourceTree = "<group>"; };
 		BCE95DDCBFFDAD9FC1DAAE0025559447 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
 		BF7886E163757B4C2D31C8290EE9E168 /* Pods-Marmot-iOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Marmot-iOS-resources.sh"; sourceTree = "<group>"; };
@@ -370,28 +376,27 @@
 		C6CA4C69A133981C17C0141976228D16 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C805D0B800BED2041E183770556FC020 /* Routable+ObjectType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Routable+ObjectType.swift"; path = "Sources/Routable+ObjectType.swift"; sourceTree = "<group>"; };
 		C8ED7B18A2B2214CA7C3D580983B8670 /* Pods-Marmot-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Marmot-iOS.modulemap"; sourceTree = "<group>"; };
-		C90FC0709AE24D764ED4D023DC72E4A0 /* Marmot-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Marmot-iOS.xcconfig"; sourceTree = "<group>"; };
+		C8F3E2E7C6C9D34A7D55E3793001FE33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = Info.plist; path = "../Marmot-macOS/Info.plist"; sourceTree = "<group>"; };
 		C92D79102ABE09906059D1B4FAB753EF /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
 		C9B7DBA7EFB1327D515E161D7F7FF5F9 /* Pods-Marmot-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Marmot-iOS-dummy.m"; sourceTree = "<group>"; };
 		CD20DA5342E924DBAE5D7E96AE80BE4C /* Pods-Marmot-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Marmot-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		CD2968F68684C466732036AA8BE576E0 /* Marmot-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marmot-iOS-umbrella.h"; sourceTree = "<group>"; };
 		CD2EF68DD545DE498DD3CB78563A5443 /* SPRoutable-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "SPRoutable-macOS.modulemap"; path = "../SPRoutable-macOS/SPRoutable-macOS.modulemap"; sourceTree = "<group>"; };
 		CDAD459027DDBFEAC8923D80B67650E6 /* RoutableAssist-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "RoutableAssist-iOS.modulemap"; sourceTree = "<group>"; };
+		CDB032C4DAA5FC0F6207DDC36B90F650 /* MarmotWebView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarmotWebView.swift; path = Marmot/Classes/MarmotWebView.swift; sourceTree = "<group>"; };
 		CF85E78623D9F786154105B55804E23F /* Routable+URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Routable+URL.swift"; path = "Sources/Routable+URL.swift"; sourceTree = "<group>"; };
-		D0CDB7CFCD6245C8FFFEB14444A91AC3 /* Marmot-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Marmot-macOS.xcconfig"; path = "../Marmot-macOS/Marmot-macOS.xcconfig"; sourceTree = "<group>"; };
 		D13C1A8A1CA14E9F75E113D34ADA988A /* SnapKit-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-iOS-prefix.pch"; sourceTree = "<group>"; };
 		D1E1A3573D8A866144FA1AA8E2C203B8 /* RoutableAssist-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RoutableAssist-iOS-umbrella.h"; sourceTree = "<group>"; };
 		D2FE0465EB26120664DB8C47179417EC /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
 		D4805F4CA279948837CF766805CAB726 /* SnapKit-macOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "SnapKit-macOS.xcconfig"; path = "../SnapKit-macOS/SnapKit-macOS.xcconfig"; sourceTree = "<group>"; };
-		D49F411484FD0C26C3978C8BC1CE8215 /* Marmot-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Marmot-macOS-umbrella.h"; path = "../Marmot-macOS/Marmot-macOS-umbrella.h"; sourceTree = "<group>"; };
-		D624BC3C168A4E72797B3BB9227A7078 /* Marmot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marmot.swift; path = Marmot/Classes/Marmot.swift; sourceTree = "<group>"; };
 		D716C56AB8B92E829A32C489B158852D /* MethodSignature.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MethodSignature.m; path = RoutableAssist/Classes/MethodSignature.m; sourceTree = "<group>"; };
 		D8CB89554F95FE216A589FA71AE31EF6 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		D981C32390BE4F289167C1ECDE3A1F87 /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
 		DDB4BA65B76E7D9B94E4BBDE6400F1BA /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		DE05B2D5703746ABE025D9B255F49405 /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		E2696306429089F9CED81448020D8600 /* RoutableAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoutableAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E3208365BDCA72D9B157C598130DD5F7 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E41B2322C951D5DCE8E48553B972504F /* Marmot-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marmot-iOS-prefix.pch"; sourceTree = "<group>"; };
+		E2696306429089F9CED81448020D8600 /* RoutableAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = RoutableAssist.framework; path = "RoutableAssist-macOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3208365BDCA72D9B157C598130DD5F7 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = "SnapKit-iOS.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E32CA72CEF7378C518F9D72E64C66DF4 /* ResourceBundle-Marmot-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = "ResourceBundle-Marmot-Info.plist"; path = "../Marmot-macOS/ResourceBundle-Marmot-Info.plist"; sourceTree = "<group>"; };
 		E7B0363E363E30F882021F1F7B609028 /* Pods-Marmot_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Marmot_Example.modulemap"; sourceTree = "<group>"; };
 		E9BBAF124B91BB6D9B84EDAC22F988B1 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		EB525A2F4565C532FC2591102C609CAD /* SnapKit-macOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SnapKit-macOS-umbrella.h"; path = "../SnapKit-macOS/SnapKit-macOS-umbrella.h"; sourceTree = "<group>"; };
@@ -399,19 +404,45 @@
 		F2629AE97A7205904B201CDFED5F8A6E /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
 		F2EA80EBEB35F3A710128C100BE41F80 /* Pods-Marmot_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Marmot_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F324CB2D585543C87DC701B5159CAB22 /* RoutableAssist-macOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; name = "RoutableAssist-macOS.modulemap"; path = "../RoutableAssist-macOS/RoutableAssist-macOS.modulemap"; sourceTree = "<group>"; };
-		F93371FDD06AF5CA112B0A24643BFAA8 /* Marmot.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Marmot.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		F93371FDD06AF5CA112B0A24643BFAA8 /* Marmot.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Marmot.bundle; path = "Marmot-macOS-Marmot.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9AB8E953F23E3DD51A05C480D7B1311 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		F9F2CB24F026AB317AF1668C1AE8585D /* RoutableAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RoutableAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FB07CE669B14C91E7DC9C49F4C6897D6 /* Marmot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Marmot.h; path = Marmot/Classes/Marmot.h; sourceTree = "<group>"; };
+		FD6B4857DE92E047E42060219A492EB4 /* Marmot-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Marmot-iOS-prefix.pch"; sourceTree = "<group>"; };
 		FF45387F066D889E8EEC65F25C92FF58 /* Routable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Routable.h; path = Sources/Routable.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		030BE88B4A5BF376995F50BF95BD0713 /* Frameworks */ = {
+		00C91536229FC3C1FC98097CB670F628 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF12C43233B1FE2A6604EEFABA7B2837 /* Foundation.framework in Frameworks */,
-				F655D56226EA8B967D62F3EE73E18DAC /* RoutableAssist.framework in Frameworks */,
+				2D5938780E3FC9EC2D9C4BE047A9D917 /* Foundation.framework in Frameworks */,
+				2D083D0756EF5CC25C5019438331607A /* RoutableAssist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		222CF1CDB00D532CE868965A1A407C89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8B5EAD5FAA166F3EB0EB418C27CF75B /* Foundation.framework in Frameworks */,
+				F1ADCDCCB6F7269369B077E24D4EB54E /* RoutableAssist.framework in Frameworks */,
+				1FA574CF9D0B86F6BD6A2E9D479AD859 /* SPRoutable.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2C0A7B049F40DA09960DA1F76FF3044E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36D1CFB9C904B10422457F6A86AAD752 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02F85043BD9FA6C3845B643F199FB942 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,36 +454,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		469E7F2C289561F5798154E08A335281 /* Frameworks */ = {
+		8DC62993E61692A2539E4B775A074F71 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C05940E2578D7910B4DEDFB0FDFFA58 /* Cocoa.framework in Frameworks */,
+				93C7C3FD041CC682306B39E43A49B549 /* RoutableAssist.framework in Frameworks */,
+				17C5535E58BF1FCFD59AB892BCF92093 /* SPRoutable.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56CDAED9B0E4E8381AFD8831A2E51B4A /* Frameworks */ = {
+		9005C9678FDEAD1B35C3FA607C333ABF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07CD92307A81613CE9DC308BB06B975E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		576D5A80343C4883B3DEC5DD5E673695 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2AF176262B81AAD9C30365FBBF06C590 /* Foundation.framework in Frameworks */,
-				20C90F524411ACC8047F223A1B2516E7 /* RoutableAssist.framework in Frameworks */,
-				EED43B56B4E3BBF054CEB153D8FABA15 /* SPRoutable.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8046452F35136A1022277B9BBD92CA48 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				159C010205BE4BAB8932E008A3790E66 /* Cocoa.framework in Frameworks */,
+				5FC9E13902FA472EFB4C238B807CE67C /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +477,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				67BA0DD1E07721C83352ECF85FCCC1B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		959E697E75E619214599527D3262DDB8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87A1EA98F0E9A30D41B7D53393B2B868 /* Cocoa.framework in Frameworks */,
+				EDD11730DD2B0E8A8A7152263C48A558 /* RoutableAssist.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9FC473591B14F6BFAC320D18D5DB876C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,51 +512,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E59BAB4B700B3A176609941C66AF6F75 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F72ABF3E11E34E312E5726EE3BCA734A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D10413F48435B8C086CADDA506A8948E /* Cocoa.framework in Frameworks */,
-				F77C984ADBE64918841EE32A87A9B51D /* RoutableAssist.framework in Frameworks */,
-				13888B44DEA832288EE8CD5B50F6C465 /* SPRoutable.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FECB28E803437F77C789B17A31BBCE3F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D1CD1EAD5FB52BAE72A54F370A57BF60 /* Cocoa.framework in Frameworks */,
-				6B1482F7299C81C52EA81F9A31060BB1 /* RoutableAssist.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0011799CE2B5F073FD66114F7352111B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				3B9C8387E9E842E1F8BE3F40A0D725FF /* LICENSE */,
-				B52E112D7D7350C9D025BEB2141F3901 /* Marmot.podspec */,
-				AD90E5420F747E6EA20ED1F2F93CB052 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		0B074D067C9C37074AC29821F36D4A7E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				452D6FF0AE21CBBBCFD7061392CB765F /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		17BB9D5581A3729DC33A063B81870FF3 /* Marmot */ = {
+			isa = PBXGroup;
+			children = (
+				04134F5137F9F921B32F6B4D606E68EE /* Marmot.h */,
+				676F81B7E746486C75F913BCD00C151B /* Marmot.swift */,
+				580C3540FFB984A61AA768BC179CB2E8 /* MarmotHandler.swift */,
+				CDB032C4DAA5FC0F6207DDC36B90F650 /* MarmotWebView.swift */,
+				A5AF3208FCFEA66A95512B3C1667C298 /* Pod */,
+				7A4D55BE2AEBAD55BED7E46EE402B632 /* Resources */,
+				2D21F9AC905CB6EC4D01883B6C1240AC /* Support Files */,
+			);
+			name = Marmot;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		1FBA1627CF093E89AA2F1F6E0B2F7C9B /* Pods */ = {
@@ -535,14 +546,6 @@
 				CA7627C42D48086FA6028B419D85FC04 /* SPRoutable */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		20396101191E435973667987BB010E0D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				B72402BAE912DD922BCFC0EBCB8CD0F8 /* Marmot */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		27D6A0F4ADE33C21300A4CB9A4B27717 /* Pods-Marmot-iOS */ = {
@@ -563,6 +566,28 @@
 			path = "Target Support Files/Pods-Marmot-iOS";
 			sourceTree = "<group>";
 		};
+		2D21F9AC905CB6EC4D01883B6C1240AC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A634EA4F18C642F7FDDD83E1D2ACA69D /* Info.plist */,
+				C8F3E2E7C6C9D34A7D55E3793001FE33 /* Info.plist */,
+				572A2ED21FA65E1115346199520CD7B0 /* Marmot-iOS.modulemap */,
+				1179AC2A1124EEA73072F04A44F1300D /* Marmot-iOS.xcconfig */,
+				5393687193BE258BD72DB1DB5DE71209 /* Marmot-iOS-dummy.m */,
+				FD6B4857DE92E047E42060219A492EB4 /* Marmot-iOS-prefix.pch */,
+				CD2968F68684C466732036AA8BE576E0 /* Marmot-iOS-umbrella.h */,
+				88A0E8B5B02F965555E4A84469BEC294 /* Marmot-macOS.modulemap */,
+				881E83050543A5B37C5FBC3191C3BADF /* Marmot-macOS.xcconfig */,
+				864D66444D493734FBA93B9FD9505866 /* Marmot-macOS-dummy.m */,
+				66DBC6FA03862F62A6332F221F1C45D0 /* Marmot-macOS-prefix.pch */,
+				925B21C696F2FEDFC9AA45B0E360F5DF /* Marmot-macOS-umbrella.h */,
+				E32CA72CEF7378C518F9D72E64C66DF4 /* ResourceBundle-Marmot-Info.plist */,
+				B9D9EE1ECF89E50EC19BC24EC8088C73 /* ResourceBundle-Marmot-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/Marmot-iOS";
+			sourceTree = "<group>";
+		};
 		3D30CDBF990F9EE32EEE4FA60ED16101 /* RoutableAssist */ = {
 			isa = PBXGroup;
 			children = (
@@ -574,29 +599,8 @@
 				BBFD901C95F1FC20D3233ED70EA88999 /* Proxy.m */,
 				FCFF270C5A73E629C9A06FE228F5DAEC /* Support Files */,
 			);
+			name = RoutableAssist;
 			path = RoutableAssist;
-			sourceTree = "<group>";
-		};
-		40393AA3E443C7F8F2BC37A4122DCB6A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C143D2196A78C19AE270CDB3BCF8844 /* Info.plist */,
-				4BD5EBE4724E460004491B91C8FBB54C /* Info.plist */,
-				3B3BD1E4A4EE06817F7244E6C7DDBF1C /* Marmot-iOS.modulemap */,
-				C90FC0709AE24D764ED4D023DC72E4A0 /* Marmot-iOS.xcconfig */,
-				7630236245F506F053A868D1B1198907 /* Marmot-iOS-dummy.m */,
-				E41B2322C951D5DCE8E48553B972504F /* Marmot-iOS-prefix.pch */,
-				47570FF5A5D48B285274F2898D5B174F /* Marmot-iOS-umbrella.h */,
-				798AAD5ADB7567CE2F6E179C8ED29078 /* Marmot-macOS.modulemap */,
-				D0CDB7CFCD6245C8FFFEB14444A91AC3 /* Marmot-macOS.xcconfig */,
-				17DBEF3ED850120E8096DDBBF8A45499 /* Marmot-macOS-dummy.m */,
-				1F4B83B2CA379DEF7816B32E6C383863 /* Marmot-macOS-prefix.pch */,
-				D49F411484FD0C26C3978C8BC1CE8215 /* Marmot-macOS-umbrella.h */,
-				7F440963219D8D5D7BE873C8568F58F8 /* ResourceBundle-Marmot-Info.plist */,
-				578303E702557207B24F14F0EAC7A645 /* ResourceBundle-Marmot-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/Marmot-iOS";
 			sourceTree = "<group>";
 		};
 		45ADE0C72BC890E84FB95410B221AA4B /* Support Files */ = {
@@ -658,6 +662,7 @@
 				E9BBAF124B91BB6D9B84EDAC22F988B1 /* UILayoutSupport+Extensions.swift */,
 				DAE5F89CACEA66AD021941E3564CB02C /* Support Files */,
 			);
+			name = SnapKit;
 			path = SnapKit;
 			sourceTree = "<group>";
 		};
@@ -697,11 +702,19 @@
 			name = "OS X";
 			sourceTree = "<group>";
 		};
+		7A4D55BE2AEBAD55BED7E46EE402B632 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				22DA4FB8344CE193B8CA4EBC636DE0D8 /* NativeHandle.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				20396101191E435973667987BB010E0D /* Development Pods */,
+				DCF81A6CF41DF93EF04C1EE897A16DFF /* Development Pods */,
 				BD51DEE068CE73CF272C0AE3EFCE04CF /* Frameworks */,
 				1FBA1627CF093E89AA2F1F6E0B2F7C9B /* Pods */,
 				67FDC3A716EB5ABB301BEBAF631860AF /* Products */,
@@ -709,17 +722,14 @@
 			);
 			sourceTree = "<group>";
 		};
-		B72402BAE912DD922BCFC0EBCB8CD0F8 /* Marmot */ = {
+		A5AF3208FCFEA66A95512B3C1667C298 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				FB07CE669B14C91E7DC9C49F4C6897D6 /* Marmot.h */,
-				D624BC3C168A4E72797B3BB9227A7078 /* Marmot.swift */,
-				081CAD199D3679104A6AA763E615803D /* MarmotWebView.swift */,
-				0011799CE2B5F073FD66114F7352111B /* Pod */,
-				40393AA3E443C7F8F2BC37A4122DCB6A /* Support Files */,
+				8A238E4AD2EEFA5B394C8A059C4456AD /* LICENSE */,
+				03A0B59F2EACE6D808BD87F362C68147 /* Marmot.podspec */,
+				F9AB8E953F23E3DD51A05C480D7B1311 /* README.md */,
 			);
-			name = Marmot;
-			path = ../..;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		BD51DEE068CE73CF272C0AE3EFCE04CF /* Frameworks */ = {
@@ -763,6 +773,7 @@
 				CF85E78623D9F786154105B55804E23F /* Routable+URL.swift */,
 				45ADE0C72BC890E84FB95410B221AA4B /* Support Files */,
 			);
+			name = SPRoutable;
 			path = SPRoutable;
 			sourceTree = "<group>";
 		};
@@ -784,6 +795,14 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SnapKit-iOS";
+			sourceTree = "<group>";
+		};
+		DCF81A6CF41DF93EF04C1EE897A16DFF /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17BB9D5581A3729DC33A063B81870FF3 /* Marmot */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		FCFF270C5A73E629C9A06FE228F5DAEC /* Support Files */ = {
@@ -809,17 +828,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		20D9AB7DC892403DE2F89B392075D27A /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A0A8626EEF636BEEB3333DC9EC6EF667 /* Invocation.h in Headers */,
-				D4B02F573FD085C82B9418A1E878907A /* MethodSignature.h in Headers */,
-				746F1432BCE022E0B129681A3616A83F /* Proxy.h in Headers */,
-				6EFF79805141FC08E5FC1988BC79CD2C /* RoutableAssist-iOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		25B255DE5A2E192A94CCEA38DC476497 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -828,23 +836,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A0CE66B03860152FFA8CEB52F83518A /* Headers */ = {
+		4D60E304AFC3CBA15EDE506022DCC105 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B701D0AD2F81159C893DDC20B6D5E259 /* Invocation.h in Headers */,
-				0459C963801C0434CDB8FA4921637AFA /* MethodSignature.h in Headers */,
-				40295B4D3C6065BC7AB650029295C015 /* Proxy.h in Headers */,
-				09E0D8C82DFF255E8DAE3017C04FC136 /* RoutableAssist-macOS-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		499A6B594066DE4E83BC2B2F44B4A259 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F35C62A43E42FD845FF24671D57F3085 /* Routable.h in Headers */,
-				6FB7B13EEBEED7422109D7A61AEDE592 /* SPRoutable-macOS-umbrella.h in Headers */,
+				6DEC868B11872EA7530DB4B0CCD18EA0 /* Invocation.h in Headers */,
+				E4D47DDEB378FFF484145FCE55DE4B23 /* MethodSignature.h in Headers */,
+				497F216F9CED6306FB555511FD251AE1 /* Proxy.h in Headers */,
+				915C566B82EEBDE25FBB0E539DBE15DA /* RoutableAssist-macOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -864,15 +863,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61681849332BF2D41F139303A0F766FF /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				405FB60E6211DD85F725DBFA232AE884 /* Marmot-iOS-umbrella.h in Headers */,
-				81B45F91088F85B6C2D830978F85A1E7 /* Marmot.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		95993EBDE8E52350DF730D10604DCA0E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -881,43 +871,125 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9E59F71A35BC5B946F35108FF776D9B /* Headers */ = {
+		AE5F3D401973EF2EF30BCA4CDBAE1BEB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D0F05E6F3C0EBAA9D1942052BD32E85 /* Routable.h in Headers */,
-				7A1B528272C20AAD74911EE72FF943DA /* SPRoutable-iOS-umbrella.h in Headers */,
+				FCCA3CBDCECF0331E9CD63B8B28BBCCD /* Invocation.h in Headers */,
+				42D3E1F1AFFC051B68C58FF7AC99D8C1 /* MethodSignature.h in Headers */,
+				D6E134F25A06CD55642994C29B46DD0D /* Proxy.h in Headers */,
+				E38F4A2E1914D47B02F405666921FF18 /* RoutableAssist-iOS-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F147FDE2EF1C27AFF98E8071A1BEFF2D /* Headers */ = {
+		BA9EB1C67521D4BD2499230139B4A705 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54922372B80C8F87281269D5DEB2C7D0 /* Marmot-macOS-umbrella.h in Headers */,
-				C3F8DF56397CCAB44DD75D623DEA28B9 /* Marmot.h in Headers */,
+				02544E4E5BE7AE62E498384043A3B1D4 /* Marmot-iOS-umbrella.h in Headers */,
+				61F03ADDC19ACDE4AD6CC7266C4759C0 /* Marmot.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEDD31BC3017ED7C053B9C176100553F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2C2F5D63C7A30E8CA110713DA417DF0 /* Routable.h in Headers */,
+				368505B2B0483AA986C5ADAB9D0635D3 /* SPRoutable-iOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF85AC16A796B85B35B44AAF7984148C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				757890724CE4E7E8548D66BA987F6F21 /* Routable.h in Headers */,
+				F92A12F48A8F78F71F797BCD40F227FA /* SPRoutable-macOS-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD4A50FAA004BABD6603E2BCF4AA1B5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B83FF23472CEE8F35C480F836E730E68 /* Marmot-macOS-umbrella.h in Headers */,
+				29AC169AF4858A6389030D382A00D33E /* Marmot.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3D3CB7F3392A46A812585713B8894AB5 /* Marmot-macOS-Marmot */ = {
+		18471EC1EDDC83879DAAD6D356ED73DC /* SPRoutable-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3C1B0E960124044B5163690D3ABE9D7 /* Build configuration list for PBXNativeTarget "Marmot-macOS-Marmot" */;
+			buildConfigurationList = E0165E39B10A97D9830E1AEFBE003313 /* Build configuration list for PBXNativeTarget "SPRoutable-iOS" */;
 			buildPhases = (
-				CCF17BF9E6D2ABBD4DB28AC8CE068FAB /* Sources */,
-				469E7F2C289561F5798154E08A335281 /* Frameworks */,
-				64A4948BEA804A51F749ADE0A7E4A42E /* Resources */,
+				24397279642B93186BA6BF549A2C0122 /* Sources */,
+				00C91536229FC3C1FC98097CB670F628 /* Frameworks */,
+				DEDD31BC3017ED7C053B9C176100553F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D908D3B1C529F26765B63C1980409060 /* PBXTargetDependency */,
+			);
+			name = "SPRoutable-iOS";
+			productName = "SPRoutable-iOS";
+			productReference = 745FA8029049DE1AB0E39550D5C8951C /* SPRoutable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		29BD58E27400D3E20D3819718048C4D2 /* Marmot-iOS-Marmot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F1E0087509443FE0AA230B8BD14F1763 /* Build configuration list for PBXNativeTarget "Marmot-iOS-Marmot" */;
+			buildPhases = (
+				DF132B7260B7461553FA09238E45EED7 /* Sources */,
+				2C0A7B049F40DA09960DA1F76FF3044E /* Frameworks */,
+				1D3F9FB5D2ABDA275388ED10FE1F9826 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Marmot-macOS-Marmot";
-			productName = "Marmot-macOS-Marmot";
-			productReference = F93371FDD06AF5CA112B0A24643BFAA8 /* Marmot.bundle */;
+			name = "Marmot-iOS-Marmot";
+			productName = "Marmot-iOS-Marmot";
+			productReference = 25A6C66FE942ED9632A8CC45E7DEA4DD /* Marmot.bundle */;
 			productType = "com.apple.product-type.bundle";
+		};
+		3280521EFD41ABC3761D9428A3866730 /* SPRoutable-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3586FDE663CF0B13CAA6B1890DAEE07F /* Build configuration list for PBXNativeTarget "SPRoutable-macOS" */;
+			buildPhases = (
+				1DAB69D98B47DC5A3FB7F80493C6E2F9 /* Sources */,
+				959E697E75E619214599527D3262DDB8 /* Frameworks */,
+				EF85AC16A796B85B35B44AAF7984148C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2238194E9BF3A1756173A29090395FAF /* PBXTargetDependency */,
+			);
+			name = "SPRoutable-macOS";
+			productName = "SPRoutable-macOS";
+			productReference = 745CB5287CBF0C8BD505C325AACD6794 /* SPRoutable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5AD9247EB650F2801F7DB42D4CB2CC4C /* RoutableAssist-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FD707CCC6D501F67EFC1896A2D7AC4B1 /* Build configuration list for PBXNativeTarget "RoutableAssist-macOS" */;
+			buildPhases = (
+				902245E2F2E8B3B8320F070FADF3EFE0 /* Sources */,
+				9005C9678FDEAD1B35C3FA607C333ABF /* Frameworks */,
+				4D60E304AFC3CBA15EDE506022DCC105 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RoutableAssist-macOS";
+			productName = "RoutableAssist-macOS";
+			productReference = E2696306429089F9CED81448020D8600 /* RoutableAssist.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		6B2778E42BF8C739A2DC71FFB2CF92CA /* Pods-Marmot-iOS */ = {
 			isa = PBXNativeTarget;
@@ -940,38 +1012,21 @@
 			productReference = 257364547CC20B7233A0AC9B54533F21 /* Pods_Marmot_iOS.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		6E8087C0454B9121E786A15B41EDC30D /* RoutableAssist-iOS */ = {
+		88171F3ACE3E46B6612CC898A0CA1015 /* Marmot-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 723F0A10482C1957A47E750837EB23D2 /* Build configuration list for PBXNativeTarget "RoutableAssist-iOS" */;
+			buildConfigurationList = 50DAFD6B40DA9E13AF7ADF3963C72289 /* Build configuration list for PBXNativeTarget "Marmot-iOS" */;
 			buildPhases = (
-				3188ACC36F12A500929B73D30B844FAE /* Sources */,
-				56CDAED9B0E4E8381AFD8831A2E51B4A /* Frameworks */,
-				20D9AB7DC892403DE2F89B392075D27A /* Headers */,
+				3D03DF9C0ED837341A486F5731B8D09A /* Sources */,
+				222CF1CDB00D532CE868965A1A407C89 /* Frameworks */,
+				9D2BDC5692132C1F6AA742BA388F597A /* Resources */,
+				BA9EB1C67521D4BD2499230139B4A705 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "RoutableAssist-iOS";
-			productName = "RoutableAssist-iOS";
-			productReference = BB3F13C1197364B763C72585AF7BADAF /* RoutableAssist.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		76191F4204A23D1C5A760A45973B1EEE /* Marmot-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5751640AED8FC83D0DB04EABEC9E5484 /* Build configuration list for PBXNativeTarget "Marmot-iOS" */;
-			buildPhases = (
-				57E177D81941469F7E91506CA4FA9030 /* Sources */,
-				576D5A80343C4883B3DEC5DD5E673695 /* Frameworks */,
-				A1EADC839ED60808B02BAC5FAD4AD9AE /* Resources */,
-				61681849332BF2D41F139303A0F766FF /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EF218721E55DB6D713FD251094F9C73A /* PBXTargetDependency */,
-				26EB64607D3045042B92462552F04D81 /* PBXTargetDependency */,
-				0BFDDDD9B9056715E9BEBB48B4AEC636 /* PBXTargetDependency */,
+				D652145A392441C71F6CC8DFFDFE410A /* PBXTargetDependency */,
+				3917E69F97E2FB4B7D5638CA844040AC /* PBXTargetDependency */,
+				C3E40FF0792EE5D0BBFBD64DBB225321 /* PBXTargetDependency */,
 			);
 			name = "Marmot-iOS";
 			productName = "Marmot-iOS";
@@ -1012,6 +1067,27 @@
 			productReference = E3208365BDCA72D9B157C598130DD5F7 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9A2564631A14859F26D8FF53E72A2CCB /* Marmot-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E580992126F6DEFBEB5C96830408ACEB /* Build configuration list for PBXNativeTarget "Marmot-macOS" */;
+			buildPhases = (
+				1C02133838A52BBA05DD6447102C27BE /* Sources */,
+				8DC62993E61692A2539E4B775A074F71 /* Frameworks */,
+				26136130122B41C26DBE4DED9D164F65 /* Resources */,
+				EFD4A50FAA004BABD6603E2BCF4AA1B5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBE5BAD1E15FCA0C40C642B0E523BBA0 /* PBXTargetDependency */,
+				3B6ACE37F7B880DC0B141279BDDBB37B /* PBXTargetDependency */,
+				0B30340A17B92B1A21E589245B470A46 /* PBXTargetDependency */,
+			);
+			name = "Marmot-macOS";
+			productName = "Marmot-macOS";
+			productReference = 3FFF3953C2D576C876867C1395028CFE /* Marmot.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		9EFF7F2C3C808B2D71CC25214924B852 /* Pods-Marmot_Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07A48A3BEC8D6D742EE3E51F48DB61BC /* Build configuration list for PBXNativeTarget "Pods-Marmot_Example" */;
@@ -1033,95 +1109,38 @@
 			productReference = A50E96F00B48CABBE2F419995D2E0B8C /* Pods_Marmot_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A3D6BD3376ED3BEF21C855FA693E0E62 /* Marmot-iOS-Marmot */ = {
+		A62D0E89FC2F39A54CA38AB11D159D6B /* Marmot-macOS-Marmot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F08C0EB37B88820C509FC6FB574ACEA /* Build configuration list for PBXNativeTarget "Marmot-iOS-Marmot" */;
+			buildConfigurationList = 4F296899C4CA245527B31DF1C1728807 /* Build configuration list for PBXNativeTarget "Marmot-macOS-Marmot" */;
 			buildPhases = (
-				FA778D75F8702B904AA3C34948D15BBE /* Sources */,
-				E59BAB4B700B3A176609941C66AF6F75 /* Frameworks */,
-				EA2DC89B05E2B249C623E252DCD96D7D /* Resources */,
+				FBD5514B790D2BC647301AD5E5E65B14 /* Sources */,
+				9FC473591B14F6BFAC320D18D5DB876C /* Frameworks */,
+				0ACAD1B0206B2268FC3D97A69CE8FAB9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Marmot-iOS-Marmot";
-			productName = "Marmot-iOS-Marmot";
-			productReference = 25A6C66FE942ED9632A8CC45E7DEA4DD /* Marmot.bundle */;
+			name = "Marmot-macOS-Marmot";
+			productName = "Marmot-macOS-Marmot";
+			productReference = F93371FDD06AF5CA112B0A24643BFAA8 /* Marmot.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		BC3A74B394F08535FF01B73B1C4B2496 /* SPRoutable-macOS */ = {
+		FB3315CBEA883BD9DA1260E2BC375271 /* RoutableAssist-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8C1674CB63197E0EC977D88D6AAA9EE /* Build configuration list for PBXNativeTarget "SPRoutable-macOS" */;
+			buildConfigurationList = 15A4FD6E285A2C3658E28D7A7C751312 /* Build configuration list for PBXNativeTarget "RoutableAssist-iOS" */;
 			buildPhases = (
-				2429265B1557422F6BE962C7F9193080 /* Sources */,
-				FECB28E803437F77C789B17A31BBCE3F /* Frameworks */,
-				499A6B594066DE4E83BC2B2F44B4A259 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DB9C9A8A155B720FE138E500805EC47F /* PBXTargetDependency */,
-			);
-			name = "SPRoutable-macOS";
-			productName = "SPRoutable-macOS";
-			productReference = 745CB5287CBF0C8BD505C325AACD6794 /* SPRoutable.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C388A8236E6F345178A62328339ED291 /* SPRoutable-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E9D211F071C87F964FBA513DB89AE6B3 /* Build configuration list for PBXNativeTarget "SPRoutable-iOS" */;
-			buildPhases = (
-				7F1DC045A12AF3C89F3667680D410572 /* Sources */,
-				030BE88B4A5BF376995F50BF95BD0713 /* Frameworks */,
-				C9E59F71A35BC5B946F35108FF776D9B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				324EAC0BC52F06CFF600E68F92506204 /* PBXTargetDependency */,
-			);
-			name = "SPRoutable-iOS";
-			productName = "SPRoutable-iOS";
-			productReference = 745FA8029049DE1AB0E39550D5C8951C /* SPRoutable.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		E1113D1B3EEA1ECD5AA7C6D1E6B842C2 /* RoutableAssist-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F6825DDCCDFD21C2D0228705FC18A9C4 /* Build configuration list for PBXNativeTarget "RoutableAssist-macOS" */;
-			buildPhases = (
-				45C3CE263461866819DDF670282BA260 /* Sources */,
-				8046452F35136A1022277B9BBD92CA48 /* Frameworks */,
-				3A0CE66B03860152FFA8CEB52F83518A /* Headers */,
+				80E13837C589B7830CC46ED5C542BDE3 /* Sources */,
+				36D1CFB9C904B10422457F6A86AAD752 /* Frameworks */,
+				AE5F3D401973EF2EF30BCA4CDBAE1BEB /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "RoutableAssist-macOS";
-			productName = "RoutableAssist-macOS";
-			productReference = E2696306429089F9CED81448020D8600 /* RoutableAssist.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F7AD8562403B13D2DA4ACD0705D681A8 /* Marmot-macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3FE4A55A090543B9B81A6CC6FE37BD44 /* Build configuration list for PBXNativeTarget "Marmot-macOS" */;
-			buildPhases = (
-				6B8610644E712FF74640701F1CFB4F5F /* Sources */,
-				F72ABF3E11E34E312E5726EE3BCA734A /* Frameworks */,
-				E74111B51AC12F9D1E32E53187A4713A /* Resources */,
-				F147FDE2EF1C27AFF98E8071A1BEFF2D /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				169946631F7BB772520C4EB13E769A9E /* PBXTargetDependency */,
-				E6E321A2609741003EE93BA9E6545C83 /* PBXTargetDependency */,
-				0BAE07926DB8F9ECECF47A5BB0778EDB /* PBXTargetDependency */,
-			);
-			name = "Marmot-macOS";
-			productName = "Marmot-macOS";
-			productReference = 3FFF3953C2D576C876867C1395028CFE /* Marmot.framework */;
+			name = "RoutableAssist-iOS";
+			productName = "RoutableAssist-iOS";
+			productReference = BB3F13C1197364B763C72585AF7BADAF /* RoutableAssist.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1131,7 +1150,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1145,50 +1164,52 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				76191F4204A23D1C5A760A45973B1EEE /* Marmot-iOS */,
-				A3D6BD3376ED3BEF21C855FA693E0E62 /* Marmot-iOS-Marmot */,
-				F7AD8562403B13D2DA4ACD0705D681A8 /* Marmot-macOS */,
-				3D3CB7F3392A46A812585713B8894AB5 /* Marmot-macOS-Marmot */,
+				88171F3ACE3E46B6612CC898A0CA1015 /* Marmot-iOS */,
+				29BD58E27400D3E20D3819718048C4D2 /* Marmot-iOS-Marmot */,
+				9A2564631A14859F26D8FF53E72A2CCB /* Marmot-macOS */,
+				A62D0E89FC2F39A54CA38AB11D159D6B /* Marmot-macOS-Marmot */,
 				6B2778E42BF8C739A2DC71FFB2CF92CA /* Pods-Marmot-iOS */,
 				9EFF7F2C3C808B2D71CC25214924B852 /* Pods-Marmot_Example */,
-				6E8087C0454B9121E786A15B41EDC30D /* RoutableAssist-iOS */,
-				E1113D1B3EEA1ECD5AA7C6D1E6B842C2 /* RoutableAssist-macOS */,
+				FB3315CBEA883BD9DA1260E2BC375271 /* RoutableAssist-iOS */,
+				5AD9247EB650F2801F7DB42D4CB2CC4C /* RoutableAssist-macOS */,
 				96E021E982DAA879A0A89BB3748B3CFB /* SnapKit-iOS */,
 				90211BC5AC3194A4FCEB686A08A94D6E /* SnapKit-macOS */,
-				C388A8236E6F345178A62328339ED291 /* SPRoutable-iOS */,
-				BC3A74B394F08535FF01B73B1C4B2496 /* SPRoutable-macOS */,
+				18471EC1EDDC83879DAAD6D356ED73DC /* SPRoutable-iOS */,
+				3280521EFD41ABC3761D9428A3866730 /* SPRoutable-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		64A4948BEA804A51F749ADE0A7E4A42E /* Resources */ = {
+		0ACAD1B0206B2268FC3D97A69CE8FAB9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43F88077244FA5C9A96D7E752E4BEF76 /* NativeHandle.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1EADC839ED60808B02BAC5FAD4AD9AE /* Resources */ = {
+		1D3F9FB5D2ABDA275388ED10FE1F9826 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				467355985997E2FB7E7EF0362AFEE21E /* Marmot.bundle in Resources */,
+				A2A058368AF334D85AFDA79E7CA4A561 /* NativeHandle.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E74111B51AC12F9D1E32E53187A4713A /* Resources */ = {
+		26136130122B41C26DBE4DED9D164F65 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E924C5F0745540DE0862385537403AA /* Marmot.bundle in Resources */,
+				DD38FAA530A0689F5CB2CEB9588F6FB5 /* Marmot.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA2DC89B05E2B249C623E252DCD96D7D /* Resources */ = {
+		9D2BDC5692132C1F6AA742BA388F597A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				520CB76E9450076FC3E88FE36778B40A /* Marmot.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1237,28 +1258,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2429265B1557422F6BE962C7F9193080 /* Sources */ = {
+		1C02133838A52BBA05DD6447102C27BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				192251F073C067BA948E18B7F73000F2 /* Routable+Data.swift in Sources */,
-				52CF8E1ACDA8A99C0249F5F2DDD2095F /* Routable+format.swift in Sources */,
-				D590D96497CFA739FBDD01EC7744270C /* Routable+ObjectType.swift in Sources */,
-				9BBADAA48D373B6E02735E1810FD5624 /* Routable+Perform.swift in Sources */,
-				29AC58994C2B5974D89D7DC36BEDCAC9 /* Routable+URL.swift in Sources */,
-				4962E3FB3BC29D77BBCCE1CBF2AD9724 /* Routable.swift in Sources */,
-				98FB6913DDDAFEE415D3531C1787D5A8 /* SPRoutable-macOS-dummy.m in Sources */,
+				0364B1CB0EB18AC84F0B1C94624F0249 /* Marmot-macOS-dummy.m in Sources */,
+				C16F115CC43D1A55E5E37DC32BC66F65 /* Marmot.swift in Sources */,
+				FEEBC7ECEC84367DC227A3BEAFA80603 /* MarmotHandler.swift in Sources */,
+				9A4FF234276BE723A7FCC073C610251B /* MarmotWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3188ACC36F12A500929B73D30B844FAE /* Sources */ = {
+		1DAB69D98B47DC5A3FB7F80493C6E2F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF0154991E58C2265CB7ABB917CED35E /* Invocation.m in Sources */,
-				2522FBA22F79CCCBA78FB7DA4E5ABF41 /* MethodSignature.m in Sources */,
-				7E9D8508D5FF019837FDB2B122C7FEF3 /* Proxy.m in Sources */,
-				2591AEAA3C68E64B3FDCB4543CC932FA /* RoutableAssist-iOS-dummy.m in Sources */,
+				278BDEBD936072ACF973684F51575504 /* Routable+Data.swift in Sources */,
+				5FA8F8D7FDBFA784E96C98F72BC844F2 /* Routable+format.swift in Sources */,
+				2A4A0C16EF3C1A625123830E99099EAD /* Routable+ObjectType.swift in Sources */,
+				49A154604EF06DBA3DEE3CA2C7A7817A /* Routable+Perform.swift in Sources */,
+				60FEBBC7A53E152C00830229B1A97DBE /* Routable+URL.swift in Sources */,
+				9580FD437ECD4346BFBF4BA374A91FAE /* Routable.swift in Sources */,
+				F7A1639C4A18F36501F94268C250FF3C /* SPRoutable-macOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		24397279642B93186BA6BF549A2C0122 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA51137401F00AA2D11FA5752F32678D /* Routable+Data.swift in Sources */,
+				DBB96FAB09DA418F99534FF1CDB08F7A /* Routable+format.swift in Sources */,
+				F56AD00920DCB5C6C61219455EFF6B99 /* Routable+ObjectType.swift in Sources */,
+				A80A24B38AF7D1FE1185A69A29C73CDD /* Routable+Perform.swift in Sources */,
+				8CEA74AC7A6298D5C354476F1BEAB65B /* Routable+URL.swift in Sources */,
+				C79F9B45D95ED566AE802C68F0E31372 /* Routable.swift in Sources */,
+				AFE64C682B1DA44C0E236BC930F6CADF /* SPRoutable-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1304,24 +1339,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45C3CE263461866819DDF670282BA260 /* Sources */ = {
+		3D03DF9C0ED837341A486F5731B8D09A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9891E1F0C88903DFDA0DD16684E6B894 /* Invocation.m in Sources */,
-				DD3AACDD990BB5934C5B4E0757DB8FAF /* MethodSignature.m in Sources */,
-				C87394964C6BE15D18C0BB54B310ABF5 /* Proxy.m in Sources */,
-				DC11BE31A636AA1FDEE27FB014ED8B30 /* RoutableAssist-macOS-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		57E177D81941469F7E91506CA4FA9030 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9035573E9F13629A2B9C8472038E9A98 /* Marmot-iOS-dummy.m in Sources */,
-				19F40E6C591B860577AD12C39216DF93 /* Marmot.swift in Sources */,
-				5232DAEE39E97EBE527A4669363E47B9 /* MarmotWebView.swift in Sources */,
+				9DF163B6D4A6DC522C7927E7F161CF6F /* Marmot-iOS-dummy.m in Sources */,
+				2739D08FD44322CC8C2B2D44A8ABC7A8 /* Marmot.swift in Sources */,
+				662112FDD84E2B128333F51B92022DEF /* MarmotHandler.swift in Sources */,
+				66B3DFE660425AB5E046F19BCF854062 /* MarmotWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1333,31 +1358,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6B8610644E712FF74640701F1CFB4F5F /* Sources */ = {
+		80E13837C589B7830CC46ED5C542BDE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18AB02DFA0C96A6B486EA601E1944F58 /* Marmot-macOS-dummy.m in Sources */,
-				DF55D765E21EE24BB38EDF337BD65193 /* Marmot.swift in Sources */,
-				E877FB53D8E086018E9B37DAAE658956 /* MarmotWebView.swift in Sources */,
+				6B9DD369BDB76AD46641EBCB0C3E7953 /* Invocation.m in Sources */,
+				6B3C98EA744F582D40633EA62D64AA62 /* MethodSignature.m in Sources */,
+				032C6FFCFE698E2A7ECF56444034FF6E /* Proxy.m in Sources */,
+				733479AB0CAA1ED31C9897D3D2A7D00F /* RoutableAssist-iOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F1DC045A12AF3C89F3667680D410572 /* Sources */ = {
+		902245E2F2E8B3B8320F070FADF3EFE0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43B6240B566968D45FC71E3B418FBA0 /* Routable+Data.swift in Sources */,
-				A9B8E06865BAE02915E9C89CB0FAE9EB /* Routable+format.swift in Sources */,
-				195AB5EDFE1AD3448834AA21B7D3BEDA /* Routable+ObjectType.swift in Sources */,
-				C960E69560314B963F6F64814673E709 /* Routable+Perform.swift in Sources */,
-				E9C4392A3D6ECD1A69838F87F95F10F0 /* Routable+URL.swift in Sources */,
-				BE4C506831D76C19382990A3D49A0AEB /* Routable.swift in Sources */,
-				C767D837D8BEE493A0247C6E56DD8004 /* SPRoutable-iOS-dummy.m in Sources */,
+				8E3154A01443967673D7211EBAB64A00 /* Invocation.m in Sources */,
+				B54EF93E96E2ACED2A16FE33793EBEED /* MethodSignature.m in Sources */,
+				2F9343504B3E61D7023691390DC22205 /* Proxy.m in Sources */,
+				BC84A86607B0D7EA9FD85704F273CB71 /* RoutableAssist-macOS-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CCF17BF9E6D2ABBD4DB28AC8CE068FAB /* Sources */ = {
+		DF132B7260B7461553FA09238E45EED7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1372,7 +1395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA778D75F8702B904AA3C34948D15BBE /* Sources */ = {
+		FBD5514B790D2BC647301AD5E5E65B14 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1385,49 +1408,43 @@
 		0809AE14DB8D337193A9D3382C6DBD56 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SPRoutable-iOS";
-			target = C388A8236E6F345178A62328339ED291 /* SPRoutable-iOS */;
+			target = 18471EC1EDDC83879DAAD6D356ED73DC /* SPRoutable-iOS */;
 			targetProxy = E4057F4056DA186CB2DAEC1F7BD3B6AB /* PBXContainerItemProxy */;
 		};
-		0BAE07926DB8F9ECECF47A5BB0778EDB /* PBXTargetDependency */ = {
+		0B30340A17B92B1A21E589245B470A46 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SPRoutable-macOS";
-			target = BC3A74B394F08535FF01B73B1C4B2496 /* SPRoutable-macOS */;
-			targetProxy = C41A076BAD3E20FB5AD0012800133AE4 /* PBXContainerItemProxy */;
+			target = 3280521EFD41ABC3761D9428A3866730 /* SPRoutable-macOS */;
+			targetProxy = 30FFB16171D9E11436544B0C0762040A /* PBXContainerItemProxy */;
 		};
-		0BFDDDD9B9056715E9BEBB48B4AEC636 /* PBXTargetDependency */ = {
+		2238194E9BF3A1756173A29090395FAF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "SPRoutable-iOS";
-			target = C388A8236E6F345178A62328339ED291 /* SPRoutable-iOS */;
-			targetProxy = 98F85277B7D781F9593EFBFE6CF2A7E5 /* PBXContainerItemProxy */;
+			name = "RoutableAssist-macOS";
+			target = 5AD9247EB650F2801F7DB42D4CB2CC4C /* RoutableAssist-macOS */;
+			targetProxy = 024D2D359D419B8F6B7DAB9117BE85B2 /* PBXContainerItemProxy */;
 		};
-		169946631F7BB772520C4EB13E769A9E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Marmot-macOS-Marmot";
-			target = 3D3CB7F3392A46A812585713B8894AB5 /* Marmot-macOS-Marmot */;
-			targetProxy = 36259F066C6550CACB31520AD71CCAF4 /* PBXContainerItemProxy */;
-		};
-		26EB64607D3045042B92462552F04D81 /* PBXTargetDependency */ = {
+		3917E69F97E2FB4B7D5638CA844040AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "RoutableAssist-iOS";
-			target = 6E8087C0454B9121E786A15B41EDC30D /* RoutableAssist-iOS */;
-			targetProxy = 15A0D7FB92F47AFEDD41FECDCB0CA6E3 /* PBXContainerItemProxy */;
+			target = FB3315CBEA883BD9DA1260E2BC375271 /* RoutableAssist-iOS */;
+			targetProxy = CE6030C78D292330000CE63000798943 /* PBXContainerItemProxy */;
 		};
-		324EAC0BC52F06CFF600E68F92506204 /* PBXTargetDependency */ = {
+		3B6ACE37F7B880DC0B141279BDDBB37B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "RoutableAssist-iOS";
-			target = 6E8087C0454B9121E786A15B41EDC30D /* RoutableAssist-iOS */;
-			targetProxy = 1F3A779AF5CB12A02C94D5145D22F67B /* PBXContainerItemProxy */;
+			name = "RoutableAssist-macOS";
+			target = 5AD9247EB650F2801F7DB42D4CB2CC4C /* RoutableAssist-macOS */;
+			targetProxy = 49798236D581FA65BE14C8710DAEDB62 /* PBXContainerItemProxy */;
 		};
 		76E7F3811A28ADBFA2108777CE14EC00 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "RoutableAssist-iOS";
-			target = 6E8087C0454B9121E786A15B41EDC30D /* RoutableAssist-iOS */;
+			target = FB3315CBEA883BD9DA1260E2BC375271 /* RoutableAssist-iOS */;
 			targetProxy = CDE81CFEDAC5E67982EE668329ADE31C /* PBXContainerItemProxy */;
 		};
 		86CE1D04EB905E0F3EFE7BC033885A96 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Marmot-iOS";
-			target = 76191F4204A23D1C5A760A45973B1EEE /* Marmot-iOS */;
+			target = 88171F3ACE3E46B6612CC898A0CA1015 /* Marmot-iOS */;
 			targetProxy = A0BA342999D568504DDB288979294708 /* PBXContainerItemProxy */;
 		};
 		AC61C0A10350C2D9F3368814DF21A981 /* PBXTargetDependency */ = {
@@ -1439,26 +1456,32 @@
 		B138176E90FEE9D243D86812DF0D9D62 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "RoutableAssist-macOS";
-			target = E1113D1B3EEA1ECD5AA7C6D1E6B842C2 /* RoutableAssist-macOS */;
+			target = 5AD9247EB650F2801F7DB42D4CB2CC4C /* RoutableAssist-macOS */;
 			targetProxy = 772C5378D01C9261DD4C343B8074951E /* PBXContainerItemProxy */;
 		};
-		DB9C9A8A155B720FE138E500805EC47F /* PBXTargetDependency */ = {
+		C3E40FF0792EE5D0BBFBD64DBB225321 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "RoutableAssist-macOS";
-			target = E1113D1B3EEA1ECD5AA7C6D1E6B842C2 /* RoutableAssist-macOS */;
-			targetProxy = 4DAE3B376A7ECCFBD616BC9893BA9B4E /* PBXContainerItemProxy */;
+			name = "SPRoutable-iOS";
+			target = 18471EC1EDDC83879DAAD6D356ED73DC /* SPRoutable-iOS */;
+			targetProxy = 0E40C348725187FC9531D975C6A2DDDD /* PBXContainerItemProxy */;
 		};
-		E6E321A2609741003EE93BA9E6545C83 /* PBXTargetDependency */ = {
+		CBE5BAD1E15FCA0C40C642B0E523BBA0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "RoutableAssist-macOS";
-			target = E1113D1B3EEA1ECD5AA7C6D1E6B842C2 /* RoutableAssist-macOS */;
-			targetProxy = F1269E2C381E189788438A5A30A1CC96 /* PBXContainerItemProxy */;
+			name = "Marmot-macOS-Marmot";
+			target = A62D0E89FC2F39A54CA38AB11D159D6B /* Marmot-macOS-Marmot */;
+			targetProxy = 4A79EC00C79671A3FC18B16C9DE6CD40 /* PBXContainerItemProxy */;
 		};
-		EF218721E55DB6D713FD251094F9C73A /* PBXTargetDependency */ = {
+		D652145A392441C71F6CC8DFFDFE410A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Marmot-iOS-Marmot";
-			target = A3D6BD3376ED3BEF21C855FA693E0E62 /* Marmot-iOS-Marmot */;
-			targetProxy = 02FFCFC46D348201A5D39EBD763665DA /* PBXContainerItemProxy */;
+			target = 29BD58E27400D3E20D3819718048C4D2 /* Marmot-iOS-Marmot */;
+			targetProxy = B4BA7B67493697961B6A811951EBC073 /* PBXContainerItemProxy */;
+		};
+		D908D3B1C529F26765B63C1980409060 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RoutableAssist-iOS";
+			target = FB3315CBEA883BD9DA1260E2BC375271 /* RoutableAssist-iOS */;
+			targetProxy = 91111F2A4CB4DC1013F1916D9D17C2E9 /* PBXContainerItemProxy */;
 		};
 		F3989E4396972414F2EA7AD6442D370F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1469,18 +1492,50 @@
 		FC7C92527D8BFB6FE898EF268F3E206C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Marmot-macOS";
-			target = F7AD8562403B13D2DA4ACD0705D681A8 /* Marmot-macOS */;
+			target = 9A2564631A14859F26D8FF53E72A2CCB /* Marmot-macOS */;
 			targetProxy = BE901C799569DB1D1624A800AFF28E0C /* PBXContainerItemProxy */;
 		};
 		FEBF5471A6BE5C8D16EA1B5541FC552C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "SPRoutable-macOS";
-			target = BC3A74B394F08535FF01B73B1C4B2496 /* SPRoutable-macOS */;
+			target = 3280521EFD41ABC3761D9428A3866730 /* SPRoutable-macOS */;
 			targetProxy = B5FE49F615E76516365106F792E9734C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		112C13275ED9DA293A510C23B9F2058D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1179AC2A1124EEA73072F04A44F1300D /* Marmot-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Marmot-iOS/Marmot-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marmot-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Marmot-iOS/Marmot-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Marmot;
+				PRODUCT_NAME = Marmot;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1193051E8C6F6D58726698BD832884F5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CD20DA5342E924DBAE5D7E96AE80BE4C /* Pods-Marmot-iOS.release.xcconfig */;
@@ -1510,6 +1565,38 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		271A60619DA76EA8B93102EA81CADE3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CF90F021BAAB73055FB0EC0A043202 /* RoutableAssist-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/RoutableAssist-iOS/RoutableAssist-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RoutableAssist-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/RoutableAssist-iOS/RoutableAssist-iOS.modulemap";
+				PRODUCT_MODULE_NAME = RoutableAssist;
+				PRODUCT_NAME = RoutableAssist;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1551,104 +1638,6 @@
 			};
 			name = Debug;
 		};
-		2EEED0C0216EC4F5BC02FF0117A95453 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0CDB7CFCD6245C8FFFEB14444A91AC3 /* Marmot-macOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Marmot-macOS/Marmot-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Marmot-macOS/Marmot-macOS.modulemap";
-				PRODUCT_MODULE_NAME = Marmot;
-				PRODUCT_NAME = Marmot;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		36A1E69A791BA0DA2BCE6CD3ADFB7DF5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C90FC0709AE24D764ED4D023DC72E4A0 /* Marmot-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Marmot-iOS/Marmot-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Marmot-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Marmot-iOS/Marmot-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Marmot;
-				PRODUCT_NAME = Marmot;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		36B2AE14EA551B13E49A613BC4A5DE12 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14CF90F021BAAB73055FB0EC0A043202 /* RoutableAssist-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/RoutableAssist-iOS/RoutableAssist-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RoutableAssist-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/RoutableAssist-iOS/RoutableAssist-iOS.modulemap";
-				PRODUCT_MODULE_NAME = RoutableAssist;
-				PRODUCT_NAME = RoutableAssist;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		417CCB39A337B3890F17A9E9FA4025FB /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D4805F4CA279948837CF766805CAB726 /* SnapKit-macOS.xcconfig */;
@@ -1673,90 +1662,6 @@
 				MODULEMAP_FILE = "Target Support Files/SnapKit-macOS/SnapKit-macOS.modulemap";
 				PRODUCT_MODULE_NAME = SnapKit;
 				PRODUCT_NAME = SnapKit;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4DB80B4365A56ACE12E9D861BF69CCE5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B98C1ECB68BBEFBBFF6F288E19C5D7A8 /* SPRoutable-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SPRoutable-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS.modulemap";
-				PRODUCT_MODULE_NAME = SPRoutable;
-				PRODUCT_NAME = SPRoutable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		56AE9D67C437CB04EDA795D145062D01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0CDB7CFCD6245C8FFFEB14444A91AC3 /* Marmot-macOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-macOS";
-				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/ResourceBundle-Marmot-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = Marmot;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		576C8F3FBDEEE042017D22151E55FC90 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C54C0671724D0EA147F78280DDA641BB /* SPRoutable-macOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SPRoutable-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS.modulemap";
-				PRODUCT_MODULE_NAME = SPRoutable;
-				PRODUCT_NAME = SPRoutable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1803,9 +1708,9 @@
 			};
 			name = Debug;
 		};
-		62886D7283143AEB1F36FA04ED27C28F /* Debug */ = {
+		6C3615D25558BEBC56E4F706099D6428 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0CDB7CFCD6245C8FFFEB14444A91AC3 /* Marmot-macOS.xcconfig */;
+			baseConfigurationReference = C54C0671724D0EA147F78280DDA641BB /* SPRoutable-macOS.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -1819,14 +1724,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/Marmot-macOS/Marmot-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPRoutable-macOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/Marmot-macOS/Marmot-macOS.modulemap";
-				PRODUCT_MODULE_NAME = Marmot;
-				PRODUCT_NAME = Marmot;
+				MODULEMAP_FILE = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS.modulemap";
+				PRODUCT_MODULE_NAME = SPRoutable;
+				PRODUCT_NAME = SPRoutable;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1836,55 +1741,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		7A12BBC90093D0C14F289A942AE69072 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C90FC0709AE24D764ED4D023DC72E4A0 /* Marmot-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-iOS";
-				INFOPLIST_FILE = "Target Support Files/Marmot-iOS/ResourceBundle-Marmot-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = Marmot;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		7D456C4CEB92EEF94758FB83E8034A63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50FD43C7B5BDC25F512B9C65E7E055F6 /* RoutableAssist-macOS.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RoutableAssist-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS.modulemap";
-				PRODUCT_MODULE_NAME = RoutableAssist;
-				PRODUCT_NAME = RoutableAssist;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		7DD72C80B99826047BDA2816728C9E07 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1954,9 +1810,9 @@
 			};
 			name = Debug;
 		};
-		9053C1D1D657FC90D62BEAE695D186F9 /* Debug */ = {
+		893A784D1D7CF2C1D841A12D821CA9B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C90FC0709AE24D764ED4D023DC72E4A0 /* Marmot-iOS.xcconfig */;
+			baseConfigurationReference = 1179AC2A1124EEA73072F04A44F1300D /* Marmot-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-iOS";
@@ -1969,6 +1825,73 @@
 				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
+		};
+		8C7441A07ECC3648BF70B7E96C2A4039 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1179AC2A1124EEA73072F04A44F1300D /* Marmot-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Marmot-iOS/Marmot-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marmot-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Marmot-iOS/Marmot-iOS.modulemap";
+				PRODUCT_MODULE_NAME = Marmot;
+				PRODUCT_NAME = Marmot;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8E7D5F014441BB71985537B7258EC75D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881E83050543A5B37C5FBC3191C3BADF /* Marmot-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Marmot-macOS/Marmot-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Marmot-macOS/Marmot-macOS.modulemap";
+				PRODUCT_MODULE_NAME = Marmot;
+				PRODUCT_NAME = Marmot;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		9517B9DD27E6EA02427148806661D4C4 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2003,9 +1926,9 @@
 			};
 			name = Release;
 		};
-		97B15CB2B9414DB6AF9DA31E2B37E238 /* Release */ = {
+		9A550E91937895428213EC8A3C7BACC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C90FC0709AE24D764ED4D023DC72E4A0 /* Marmot-iOS.xcconfig */;
+			baseConfigurationReference = B98C1ECB68BBEFBBFF6F288E19C5D7A8 /* SPRoutable-iOS.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -2016,14 +1939,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Marmot-iOS/Marmot-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Marmot-iOS/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPRoutable-iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Marmot-iOS/Marmot-iOS.modulemap";
-				PRODUCT_MODULE_NAME = Marmot;
-				PRODUCT_NAME = Marmot;
+				MODULEMAP_FILE = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS.modulemap";
+				PRODUCT_MODULE_NAME = SPRoutable;
+				PRODUCT_NAME = SPRoutable;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -2036,22 +1959,171 @@
 			};
 			name = Release;
 		};
-		9F5E5DCF5B0DB26247FAAE3583AFC6C3 /* Release */ = {
+		AFBB5F0D49CBE1958D22C44D5DF936E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D0CDB7CFCD6245C8FFFEB14444A91AC3 /* Marmot-macOS.xcconfig */;
+			baseConfigurationReference = 50FD43C7B5BDC25F512B9C65E7E055F6 /* RoutableAssist-macOS.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-macOS";
-				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/ResourceBundle-Marmot-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RoutableAssist-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS.modulemap";
+				PRODUCT_MODULE_NAME = RoutableAssist;
+				PRODUCT_NAME = RoutableAssist;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B001F2F4911C4DD3763E679BF740ADB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881E83050543A5B37C5FBC3191C3BADF /* Marmot-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Marmot-macOS/Marmot-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/Marmot-macOS/Marmot-macOS.modulemap";
+				PRODUCT_MODULE_NAME = Marmot;
 				PRODUCT_NAME = Marmot;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B16FD9EF9802A651D7CEE70A47A56520 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50FD43C7B5BDC25F512B9C65E7E055F6 /* RoutableAssist-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/RoutableAssist-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS.modulemap";
+				PRODUCT_MODULE_NAME = RoutableAssist;
+				PRODUCT_NAME = RoutableAssist;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B31F180B9F63BA9D3C49A241EDE7A054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54C0671724D0EA147F78280DDA641BB /* SPRoutable-macOS.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPRoutable-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MODULEMAP_FILE = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS.modulemap";
+				PRODUCT_MODULE_NAME = SPRoutable;
+				PRODUCT_NAME = SPRoutable;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		B5F9BA3549B7903E62855D81637A7D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B98C1ECB68BBEFBBFF6F288E19C5D7A8 /* SPRoutable-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SPRoutable-iOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS.modulemap";
+				PRODUCT_MODULE_NAME = SPRoutable;
+				PRODUCT_NAME = SPRoutable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		C0126F2AE817E580AD1988973957D4EB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2108,7 +2180,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
@@ -2150,68 +2221,20 @@
 			};
 			name = Debug;
 		};
-		C3317D7E2713401A9091E19DC9C7B1B4 /* Debug */ = {
+		C517FEC62C850181C14C9C7FA579A499 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50FD43C7B5BDC25F512B9C65E7E055F6 /* RoutableAssist-macOS.xcconfig */;
+			baseConfigurationReference = 881E83050543A5B37C5FBC3191C3BADF /* Marmot-macOS.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/RoutableAssist-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-macOS";
+				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/ResourceBundle-Marmot-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/RoutableAssist-macOS/RoutableAssist-macOS.modulemap";
-				PRODUCT_MODULE_NAME = RoutableAssist;
-				PRODUCT_NAME = RoutableAssist;
+				PRODUCT_NAME = Marmot;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		CB8F186EEB1C486A02F724E34BE44F30 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B98C1ECB68BBEFBBFF6F288E19C5D7A8 /* SPRoutable-iOS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SPRoutable-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SPRoutable-iOS/SPRoutable-iOS.modulemap";
-				PRODUCT_MODULE_NAME = SPRoutable;
-				PRODUCT_NAME = SPRoutable;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -2279,7 +2302,7 @@
 			};
 			name = Debug;
 		};
-		E8D27A52C857D1083537ED4AABB019F1 /* Debug */ = {
+		D99693645A90315EA7DD0CA0340A57CB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 14CF90F021BAAB73055FB0EC0A043202 /* RoutableAssist-iOS.xcconfig */;
 			buildSettings = {
@@ -2310,39 +2333,38 @@
 			};
 			name = Debug;
 		};
-		EE867DB4FB2F43AD903ECE2E35CEAAE0 /* Debug */ = {
+		DDC45D72EA3FC2EE158AC890B5751C6E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C54C0671724D0EA147F78280DDA641BB /* SPRoutable-macOS.xcconfig */;
+			baseConfigurationReference = 881E83050543A5B37C5FBC3191C3BADF /* Marmot-macOS.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
-				GCC_PREFIX_HEADER = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SPRoutable-macOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-macOS";
+				INFOPLIST_FILE = "Target Support Files/Marmot-macOS/ResourceBundle-Marmot-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MODULEMAP_FILE = "Target Support Files/SPRoutable-macOS/SPRoutable-macOS.modulemap";
-				PRODUCT_MODULE_NAME = SPRoutable;
-				PRODUCT_NAME = SPRoutable;
+				PRODUCT_NAME = Marmot;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
+		};
+		F53A19565C0E6ECF234985F68B9C3E2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1179AC2A1124EEA73072F04A44F1300D /* Marmot-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Marmot-iOS";
+				INFOPLIST_FILE = "Target Support Files/Marmot-iOS/ResourceBundle-Marmot-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = Marmot;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
@@ -2356,11 +2378,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1F08C0EB37B88820C509FC6FB574ACEA /* Build configuration list for PBXNativeTarget "Marmot-iOS-Marmot" */ = {
+		15A4FD6E285A2C3658E28D7A7C751312 /* Build configuration list for PBXNativeTarget "RoutableAssist-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9053C1D1D657FC90D62BEAE695D186F9 /* Debug */,
-				7A12BBC90093D0C14F289A942AE69072 /* Release */,
+				D99693645A90315EA7DD0CA0340A57CB /* Debug */,
+				271A60619DA76EA8B93102EA81CADE3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2374,29 +2396,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FE4A55A090543B9B81A6CC6FE37BD44 /* Build configuration list for PBXNativeTarget "Marmot-macOS" */ = {
+		3586FDE663CF0B13CAA6B1890DAEE07F /* Build configuration list for PBXNativeTarget "SPRoutable-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				62886D7283143AEB1F36FA04ED27C28F /* Debug */,
-				2EEED0C0216EC4F5BC02FF0117A95453 /* Release */,
+				6C3615D25558BEBC56E4F706099D6428 /* Debug */,
+				B31F180B9F63BA9D3C49A241EDE7A054 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5751640AED8FC83D0DB04EABEC9E5484 /* Build configuration list for PBXNativeTarget "Marmot-iOS" */ = {
+		4F296899C4CA245527B31DF1C1728807 /* Build configuration list for PBXNativeTarget "Marmot-macOS-Marmot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				36A1E69A791BA0DA2BCE6CD3ADFB7DF5 /* Debug */,
-				97B15CB2B9414DB6AF9DA31E2B37E238 /* Release */,
+				C517FEC62C850181C14C9C7FA579A499 /* Debug */,
+				DDC45D72EA3FC2EE158AC890B5751C6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		723F0A10482C1957A47E750837EB23D2 /* Build configuration list for PBXNativeTarget "RoutableAssist-iOS" */ = {
+		50DAFD6B40DA9E13AF7ADF3963C72289 /* Build configuration list for PBXNativeTarget "Marmot-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E8D27A52C857D1083537ED4AABB019F1 /* Debug */,
-				36B2AE14EA551B13E49A613BC4A5DE12 /* Release */,
+				112C13275ED9DA293A510C23B9F2058D /* Debug */,
+				8C7441A07ECC3648BF70B7E96C2A4039 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2419,29 +2441,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8C1674CB63197E0EC977D88D6AAA9EE /* Build configuration list for PBXNativeTarget "SPRoutable-macOS" */ = {
+		E0165E39B10A97D9830E1AEFBE003313 /* Build configuration list for PBXNativeTarget "SPRoutable-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EE867DB4FB2F43AD903ECE2E35CEAAE0 /* Debug */,
-				576C8F3FBDEEE042017D22151E55FC90 /* Release */,
+				B5F9BA3549B7903E62855D81637A7D13 /* Debug */,
+				9A550E91937895428213EC8A3C7BACC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3C1B0E960124044B5163690D3ABE9D7 /* Build configuration list for PBXNativeTarget "Marmot-macOS-Marmot" */ = {
+		E580992126F6DEFBEB5C96830408ACEB /* Build configuration list for PBXNativeTarget "Marmot-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				56AE9D67C437CB04EDA795D145062D01 /* Debug */,
-				9F5E5DCF5B0DB26247FAAE3583AFC6C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E9D211F071C87F964FBA513DB89AE6B3 /* Build configuration list for PBXNativeTarget "SPRoutable-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB8F186EEB1C486A02F724E34BE44F30 /* Debug */,
-				4DB80B4365A56ACE12E9D861BF69CCE5 /* Release */,
+				B001F2F4911C4DD3763E679BF740ADB2 /* Debug */,
+				8E7D5F014441BB71985537B7258EC75D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2455,11 +2468,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F6825DDCCDFD21C2D0228705FC18A9C4 /* Build configuration list for PBXNativeTarget "RoutableAssist-macOS" */ = {
+		F1E0087509443FE0AA230B8BD14F1763 /* Build configuration list for PBXNativeTarget "Marmot-iOS-Marmot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C3317D7E2713401A9091E19DC9C7B1B4 /* Debug */,
-				7D456C4CEB92EEF94758FB83E8034A63 /* Release */,
+				893A784D1D7CF2C1D841A12D821CA9B2 /* Debug */,
+				F53A19565C0E6ECF234985F68B9C3E2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FD707CCC6D501F67EFC1896A2D7AC4B1 /* Build configuration list for PBXNativeTarget "RoutableAssist-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B16FD9EF9802A651D7CEE70A47A56520 /* Debug */,
+				AFBB5F0D49CBE1958D22C44D5DF936E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

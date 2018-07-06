@@ -23,5 +23,25 @@
 import WebKit
 
 open class MarmotWebView: WKWebView {
-
+  
+  lazy var handler: MarmotHandler = { return MarmotHandler(webView: self) }()
+  
+  public override init(frame: CGRect, configuration: WKWebViewConfiguration) {
+    super.init(frame: frame, configuration: configuration)
+    self.configuration.userContentController.add(handler, name: Marmot.key)
+    do {
+      let file1 = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/NativeHandle.js"
+      let js = try String(contentsOfFile: "\(file1)", encoding: .utf8)
+      let script = WKUserScript(source: js, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+      self.configuration.userContentController.addUserScript(script)
+    } catch {
+      print(error.localizedDescription)
+    }
+    
+    
+  }
+  
+  required public init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
 }

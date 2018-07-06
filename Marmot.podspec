@@ -32,10 +32,10 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = "10.10"
   s.ios.deployment_target = "8.0"
   
-  s.source_files = 'Marmot/Classes/*.{swift,h}'
+  s.source_files = 'Marmot/Classes/*.{h,swift}'
   
   s.resource_bundles = {
-    'Marmot' => ['Marmot/Assets/*.js']
+    'Marmot' => ['Marmot/Assets/*.{png,js}']
   }
   
   # s.public_header_files = 'Pod/Classes/**/*.h'

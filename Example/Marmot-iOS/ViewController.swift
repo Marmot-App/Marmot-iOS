@@ -23,7 +23,7 @@ class ViewController: UIViewController {
       make.top.bottom.right.left.equalToSuperview()
     }
     
-    let url = URL(string: "https://m.baidu.com")!
+    let url = URL(string: "http://localhost:8080/#/device")!
     webview.load(URLRequest(url: url))
   }
 

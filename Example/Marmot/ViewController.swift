@@ -18,7 +18,7 @@ class ViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(webview)
-    let url = URL(string: "https://m.baidu.com")!
+    let url = URL(string: "http://localhost:8080/#/device")!
     webview.load(URLRequest(url: url))
   }
   
