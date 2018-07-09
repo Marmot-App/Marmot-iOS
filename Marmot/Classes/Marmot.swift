@@ -24,5 +24,5 @@ import Foundation
 
 struct Marmot {
   
-  static let key = "iOS"
+  static let key = "ios"
 }

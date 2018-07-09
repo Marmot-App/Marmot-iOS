@@ -29,6 +29,7 @@ open class MarmotWebView: WKWebView {
   public override init(frame: CGRect, configuration: WKWebViewConfiguration) {
     super.init(frame: frame, configuration: configuration)
     self.configuration.userContentController.add(handler, name: Marmot.key)
+    
     do {
       let file1 = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/NativeHandle.js"
       let js = try String(contentsOfFile: "\(file1)", encoding: .utf8)
@@ -39,9 +40,13 @@ open class MarmotWebView: WKWebView {
     }
     
     
+    self.uiDelegate = MarmotUIDelegate()
   }
   
   required public init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 }
+
+
+

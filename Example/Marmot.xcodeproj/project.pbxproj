@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF15721FE7B4C9AF098E21D3 /* Pods_Marmot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9CC48DC858E8B473D585C /* Pods_Marmot_Example.framework */; };
+		CD22999120EF81CD00AF440B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22999020EF81CD00AF440B /* Device.swift */; };
 		CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */; };
 		CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6820EC7CE300E2D642 /* ViewController.swift */; };
 		CDEC9D6E20EC7CE600E2D642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		89D9CC48DC858E8B473D585C /* Pods_Marmot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A78B45EF070788A01B1F481B /* Marmot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Marmot.podspec; path = ../Marmot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AC353ECB5BBB05154924250A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CD22999020EF81CD00AF440B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marmot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEC9D6820EC7CE300E2D642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */,
+				CD22999020EF81CD00AF440B /* Device.swift */,
 				CDEC9D6820EC7CE300E2D642 /* ViewController.swift */,
 				CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */,
 				CDEC9D6F20EC7CE600E2D642 /* LaunchScreen.storyboard */,
@@ -348,6 +351,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */,
+				CD22999120EF81CD00AF440B /* Device.swift in Sources */,
 				CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
