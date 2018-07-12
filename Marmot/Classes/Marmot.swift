@@ -23,6 +23,8 @@
 import Foundation
 
 struct Marmot {
-  
   static let key = "ios"
 }
+
+
+public protocol MarmotJsonValueProtocol { }

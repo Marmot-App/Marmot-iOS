@@ -1,7 +1,7 @@
-const JSBridge = function(url,data) {
+const JSBridge = function (url, data) {
     return new Promise((resolve, reject) => {
-        Native.post(url,data,resolve, reject)
-      });
+        Native.post(url, data, resolve, reject)
+    });
 }
 
 const Native = {
@@ -34,39 +34,40 @@ const Native = {
         };
     },
 
-    post: function (url, params, callBack) {
-        Native.id += 1;
-        let id = 'NativeEventId' + Native.id;
+    post: function (url, params, successCB, failCB) {
 
-        // params默认值
-        if (typeof params === "function" && (callBack === undefined || callBack == null)) {
-            callBack = params;
+        if (typeof url != 'string') { failCB('error: url 参数缺失') }
+
+        if (typeof params === 'function') {
+            successCB = params;
             params = {}
         }
 
         // url解析
         let urlObject = Native.parserURL(url);
+
         // 参数合并
         let dataObject = urlObject.params;
         for (let attr in params) {
             dataObject[attr] = params[attr];
         }
+        let message = {}
+        // https://stackoverflow.com/questions/679915/how-do-i-test-for-an-empty-javascript-object
+        if (Object.keys(dataObject).length === 0 && dataObject.constructor === Object) {
+            message.url = "marmot://" + urlObject.host + urlObject.path
+        } else {
+            let data = JSON.stringify(dataObject);
+            // 参数base64化
+            let value1 = Base64.encode(data).replace(/=/g, "*");
+            // 合并url
+            message.url = "marmot://" + urlObject.host + urlObject.path + "?data=" + value1;
+        }
 
-        let data = JSON.stringify(dataObject);
-        // 参数base64化
-        let value1 = Base64.encode(data);
-        value1 = value1.replace(/=/g, "*")
-        // iOS 合并url
-        let new_url = "marmot://" + urlObject.host + urlObject.path + "?data=" + value1;
-
-        let message = {
-            "url": new_url,
-            "id": id
-        };
-
-        if (typeof callBack == 'function') {
-            NativeEvent.addEvent(id, function (data) {
-                callBack(data);
+        if (typeof successCB == 'function') {
+            this.id += 1;
+            message.id = 'NativeEventId' + this.id
+            NativeEvent.addEvent(message.id, function (data) {
+                successCB(data);
             });
         }
         window.webkit.messageHandlers.ios.postMessage(message);

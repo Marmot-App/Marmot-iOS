@@ -1,14 +1,9 @@
 <template>
 <div>
-    <div><btn v-on:click="greet" value="">add 1</btn></div>
-    <div><btn v-on:click="greet" value="">add 2</btn></div>
-    <div><btn v-on:click="greet" value="">add 3</btn></div>
-    <div><btn v-on:click="greet" value="">add 4</btn></div>
-    <div><btn v-on:click="greet" value="">add 5</btn></div>
-    <div><btn v-on:click="greet" value="">add 6</btn></div>
-    <div><btn v-on:click="greet" value="">add 7</btn></div>
-    <div><btn v-on:click="greet" value="">add 8</btn></div>
-    <div><btn v-on:click="greet" value="">add 9</btn></div>
+    <div><btn value="">"device"</btn></div>
+    <div><btn v-on:click="getInfo" value="">"info: {{info}}"</btn></div>
+    <div><btn v-on:click="getName" value="">"id: {{name}}"</btn></div>
+
 </div>
 </template>
 
@@ -17,16 +12,28 @@ export default {
   name: "device",
   data() {
     return {
-      msg: "Welcome to Your Vue.js App"
+      info: "",
+      name: ""
     };
   },
   methods: {
-    greet: function(event) {
-      JSBridge('sp://device/id').then((result) => {
-        console.log(result);
-      }).catch((err) => {
-        console.log(err);
-      });
+    getInfo: function(event) {
+      JSBridge("sp://device/info")
+        .then(result => {
+          this.info = result;
+        })
+        .catch(err => {
+          this.info = err;
+        });
+    },
+    getName: function(event) {
+      JSBridge("sp://device/id")
+        .then(result => {
+          this.name = result;
+        })
+        .catch(err => {
+          this.name = err;
+        });
     }
   }
 };

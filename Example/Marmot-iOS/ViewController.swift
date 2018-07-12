@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     relaodBtn.snp.makeConstraints { (make) in
       make.left.equalToSuperview()
-      make.top.equalTo(bottom)
+      make.top.equalTo(topLayoutGuide.snp.bottom)
       make.width.height.equalTo(50)
     }
     

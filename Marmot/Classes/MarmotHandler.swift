@@ -11,7 +11,6 @@ import SPRoutable
 
 class MarmotHandler: NSObject, WKScriptMessageHandler {
   
-  
   weak var webView : WKWebView?
   
   init(webView: WKWebView) {
