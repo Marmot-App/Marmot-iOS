@@ -7,40 +7,67 @@
 //
 
 import UIKit
+import AnyFormatProtocol
 
 @objc(Router_push)
-class Router_push: NSObject {
+class Router_push: NSObject,AnyFormatProtocol {
   
-  @objc func router_schedule(params:[String: Any]) {
+  @objc func router_schedule(params:[String: Any]) -> [String: Any] {
     // 创建本地通知
     let note = UILocalNotification()
     // 设置通知发送的时间
-    note.fireDate = Date(timeIntervalSinceNow: 5)
+    
+    if params.keys.contains("date") {
+      let dateFormatter = DateFormatter()
+      dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+      note.fireDate = dateFormatter.date(from: format(params["date"]))
+    }else if params.keys.contains("delay") {
+      let date = Date(timeIntervalSinceNow: format(params["delay"]))
+      note.fireDate = date
+    }
+    
+    if #available(iOS 8.2, *), params.keys.contains("title") {
+      note.alertTitle = format(params["title"])
+    }
     // 设置通知内容
-    note.alertBody = "本地推送"
-    // 设置锁屏时,字体下方显示的一个文字
-    note.alertAction = "看我"
-    note.hasAction = true
-    // 设置启动图片(通过通知打开的)
-    note.alertLaunchImage = "../Documents/1.jpg"
+    note.alertBody = format(params["body"])
     // 设置通过到来的声音
     note.soundName = UILocalNotificationDefaultSoundName
     // 设置应用图标左上角显示的数字
-    note.applicationIconBadgeNumber = 1
+    note.applicationIconBadgeNumber = format(params["badge"])
     
-    // MARK: - 重复触发间隔
-    note.repeatInterval = NSCalendar.Unit.second
+    let id = String(describing: params.description.hashValue)
     // 设置一些额外的信息
-    note.userInfo = ["hello" : "how are you", "msg" : "success"]
+    note.userInfo = format(params["query"])
+    note.userInfo?["id"] = id
     // 2.执行通知
     UIApplication.shared.scheduleLocalNotification(note)
+    return ["id": id]
   }
   
-  
+  /// 取消计划内的推送消息
+  @objc func router_cancel(params:[String: Any]) {
+    let title: String = format(params["title"])
+    let body: String = format(params["body"])
+    let id: String = format(params["id"])
+    UIApplication.shared.scheduledLocalNotifications?.filter { (item) -> Bool in
+      if #available(iOS 8.2, *) {
+        return (item.alertTitle == title) || title.isEmpty
+      } else {
+        return true
+      }
+      }.filter({ (item) -> Bool in
+        return (item.alertBody == body) || body.isEmpty
+      }).filter({ (item) -> Bool in
+        return ((item.userInfo?["id"] as? String ?? "") == id) || id.isEmpty
+      }).forEach { (item) in
+        UIApplication.shared.cancelLocalNotification(item)
+    }
+  }
 }
 
 extension AppDelegate {
-
+  
   func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
     
   }
@@ -69,7 +96,7 @@ extension AppDelegate {
     
   }
   
-    /// app处于前台 / app处于后台时
+  /// app处于前台 / app处于后台时
   func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
     
   }
