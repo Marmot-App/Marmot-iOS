@@ -44,13 +44,21 @@ class Router_device: NSObject,AnyFormatProtocol {
   /// 获取当前 Wi-Fi 的 SSID 信息
   ///
   /// - Returns: SSID 信息
-  @objc func router_ssid() -> [[String: String]]? {
+  @objc func router_ssid() -> [[String: Any]]? {
     guard let interfaceNames = CNCopySupportedInterfaces() as? [String] else { return nil }
-    return interfaceNames.flatMap { (name) -> [String: String]? in
+    return interfaceNames.flatMap { (name) -> [String: Any]? in
       guard let info = CNCopyCurrentNetworkInfo(name as CFString) as? [String:Any] else { return nil }
-      return ["SSID": info[kCNNetworkInfoKeySSID as String] as! String,
-              "BSSID": info[kCNNetworkInfoKeyBSSID as String] as! String,
-              "SSIDDATA": info[kCNNetworkInfoKeySSIDData as String] as! String]
+      var dict = [String: Any]()
+      if let res = info[kCNNetworkInfoKeySSID as String] {
+        dict["SSID"] = res
+      }
+      if let res = info[kCNNetworkInfoKeyBSSID as String] {
+        dict["BSSID"] = res
+      }
+      if let res = info[kCNNetworkInfoKeySSIDData as String] as? Data {
+        dict["SSIDDATA"] = String(data: res, encoding: .utf8)
+      }
+      return dict
     }
   }
   
@@ -77,7 +85,6 @@ class Router_device: NSObject,AnyFormatProtocol {
       return ["bytes": size,
               "string": String(format: "%.2f B", Double(size))]
     }
-    
     do {
       let attrs = try FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory())
       return[
