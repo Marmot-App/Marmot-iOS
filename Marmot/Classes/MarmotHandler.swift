@@ -31,6 +31,7 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
       let data = Data(base64Encoded: dataStr) {
       params = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
     }
+    params["data"] = nil
     let res = Routable.object(url: url, params: params) {[weak self] (value) in
       self?.callbackToJS(callBackId: callBackId, response: value)
     }

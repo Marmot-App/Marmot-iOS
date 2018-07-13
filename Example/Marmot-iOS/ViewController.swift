@@ -11,6 +11,7 @@ import WebKit
 import JavaScriptCore
 import SnapKit
 import Marmot
+import AudioToolbox
 
 class ViewController: UIViewController {
   
@@ -38,12 +39,15 @@ class ViewController: UIViewController {
     
     relaodBtn.addTarget(self, action: #selector(reload), for: UIControlEvents.touchUpInside)
     
-    
-    let url = URL(string: "http://localhost:8080/#/device")!
+        let url = URL(string: "http://192.168.3.124:8080/#/device")!
+
+//    let url = URL(string: "http://localhost:8080/#/device")!
     webview.load(URLRequest(url: url))
   }
   
  @objc func reload() {
+  
+
     webview.reload()
   }
 

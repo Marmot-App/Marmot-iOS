@@ -3,6 +3,7 @@ use_frameworks!
 target 'Marmot-iOS' do
   pod 'Marmot', :path => '../'
   pod 'SnapKit'
+  pod 'AnyFormatProtocol'
 end
 
 target 'Marmot_Example' do

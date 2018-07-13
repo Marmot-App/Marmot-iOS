@@ -143,12 +143,14 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AnyFormatProtocol/AnyFormatProtocol.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Marmot-iOS/Marmot.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RoutableAssist-iOS/RoutableAssist.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SPRoutable-iOS/SPRoutable.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AnyFormatProtocol/AnyFormatProtocol.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Marmot-iOS/Marmot.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RoutableAssist-iOS/RoutableAssist.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SPRoutable-iOS/SPRoutable.framework"
