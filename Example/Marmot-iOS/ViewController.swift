@@ -12,6 +12,8 @@ import JavaScriptCore
 import SnapKit
 import Marmot
 import AudioToolbox
+import SystemConfiguration
+import SystemConfiguration.CaptiveNetwork
 
 class ViewController: UIViewController {
   
@@ -39,16 +41,15 @@ class ViewController: UIViewController {
     
     relaodBtn.addTarget(self, action: #selector(reload), for: UIControlEvents.touchUpInside)
     
-        let url = URL(string: "http://192.168.3.124:8080/#/device")!
+//        let url = URL(string: "http://192.168.3.124:8080/#/device")!
 
-//    let url = URL(string: "http://localhost:8080/#/device")!
+    let url = URL(string: "http://localhost:8080/#/home")!
     webview.load(URLRequest(url: url))
   }
   
  @objc func reload() {
-  
-
-    webview.reload()
+  Router_system().router_call(params: ["value": 18825030178])
+  webview.reload()
   }
 
 

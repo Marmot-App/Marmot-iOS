@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    window = UIWindow.init(frame: UIScreen.main.bounds)
+    
+    let settings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+    application.registerUserNotificationSettings(settings)
+    
+    
+    window = UIWindow(frame: UIScreen.main.bounds)
     window?.rootViewController = UINavigationController.init(rootViewController: ViewController())
     window?.makeKeyAndVisible()
     return true

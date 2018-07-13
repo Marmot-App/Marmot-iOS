@@ -10,6 +10,8 @@
 		BF15721FE7B4C9AF098E21D3 /* Pods_Marmot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9CC48DC858E8B473D585C /* Pods_Marmot_Example.framework */; };
 		CD22999120EF81CD00AF440B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22999020EF81CD00AF440B /* Device.swift */; };
 		CD726EED20F794DB00BA974F /* System.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726EEC20F794DB00BA974F /* System.swift */; };
+		CDE0434420F858DA00C773B6 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434320F858DA00C773B6 /* App.swift */; };
+		CDE0434620F8766900C773B6 /* Push.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434520F8766900C773B6 /* Push.swift */; };
 		CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */; };
 		CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6820EC7CE300E2D642 /* ViewController.swift */; };
 		CDEC9D6E20EC7CE600E2D642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 		AC353ECB5BBB05154924250A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		CD22999020EF81CD00AF440B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		CD726EEC20F794DB00BA974F /* System.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = System.swift; sourceTree = "<group>"; };
+		CDE0434320F858DA00C773B6 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		CDE0434520F8766900C773B6 /* Push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Push.swift; sourceTree = "<group>"; };
 		CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marmot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEC9D6820EC7CE300E2D642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CDE0434720F8767500C773B6 /* Box */ = {
+			isa = PBXGroup;
+			children = (
+				CD726EEC20F794DB00BA974F /* System.swift */,
+				CD22999020EF81CD00AF440B /* Device.swift */,
+				CDE0434320F858DA00C773B6 /* App.swift */,
+				CDE0434520F8766900C773B6 /* Push.swift */,
+			);
+			path = Box;
+			sourceTree = "<group>";
+		};
 		CDEC9D4120EC7B6800E2D642 /* html */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,13 +119,12 @@
 		CDEC9D6520EC7CE300E2D642 /* Marmot-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				CD726EEC20F794DB00BA974F /* System.swift */,
-				CD22999020EF81CD00AF440B /* Device.swift */,
 				CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */,
 				CDEC9D6820EC7CE300E2D642 /* ViewController.swift */,
 				CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */,
 				CDEC9D6F20EC7CE600E2D642 /* LaunchScreen.storyboard */,
 				CDEC9D7220EC7CE600E2D642 /* Info.plist */,
+				CDE0434720F8767500C773B6 /* Box */,
 			);
 			path = "Marmot-iOS";
 			sourceTree = "<group>";
@@ -356,8 +370,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD726EED20F794DB00BA974F /* System.swift in Sources */,
+				CDE0434620F8766900C773B6 /* Push.swift in Sources */,
 				CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */,
 				CD22999120EF81CD00AF440B /* Device.swift in Sources */,
+				CDE0434420F858DA00C773B6 /* App.swift in Sources */,
 				CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
