@@ -11,12 +11,7 @@
 export default {
   name: "home",
   data() {
-    return {
-
-    };
-  },
-  methods: {
-    
+    return {};
   }
 };
 </script>

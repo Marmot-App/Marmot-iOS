@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'Cocoa'
-  s.dependency 'SPRoutable', '0.9.9.alpha'
+  s.dependency 'SPRoutable', '0.9.9.1.alpha'
   # s.dependency 'AnyFormatProtocol', '0.5.2'
   # s.dependency 'BLFoundation'
   

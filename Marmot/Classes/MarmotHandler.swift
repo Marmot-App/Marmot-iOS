@@ -18,24 +18,10 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
     super.init()
   }
   
-  func actionHandler(callBackId: String,url: URL) {
-    let urlCom = URLComponents(url: url, resolvingAgainstBaseURL: true)
-    /// 参数提取
-    var params: [String: Any] = [:]
-    
-    urlCom?.queryItems?.forEach({ (item) in
-      params[item.name] = item.value
-    })
-    
-    if let dataStr = (params["data"] as? String)?.replacingOccurrences(of: "*", with: "="),
-      let data = Data(base64Encoded: dataStr) {
-      params = try! JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] ?? [:]
-    }
-    params["data"] = nil
-    let res = Routable.object(url: url, params: params) {[weak self] (value) in
+  func actionHandler(callBackId: String,url: URL,data: [String: Any]) {
+    let res = Routable.object(url: url, params: data) {[weak self] (value) in
       self?.callbackToJS(callBackId: callBackId, response: value)
     }
-    
     self.callbackToJS(callBackId: callBackId, response: res)
   }
   
@@ -66,7 +52,7 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
       let str = dict["url"] as? String,
       let id = dict["id"] as? String,
       let url = URL(string: str) else{ return }
-    actionHandler(callBackId: id, url: url)
+    actionHandler(callBackId: id, url: url, data: dict["data"] as? [String: Any] ?? [:])
   }
   
 }

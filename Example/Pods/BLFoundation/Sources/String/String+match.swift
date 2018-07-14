@@ -1,5 +1,5 @@
 //
-//  Routable
+//  BLFoundation
 //
 //  Copyright (c) 2017 linhay - https://github.com/linhay
 //
@@ -22,48 +22,36 @@
 
 import Foundation
 
-struct RoutableHelp {
-  /// JSON to dictionary
-  ///
-  /// - Returns: dictionary
-  static func dictionary(string: String) -> [String:Any] {
-    if let data = string.data(using: .utf8) {
-      do {
-        return try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] ?? [:]
-      } catch {
-        print(error.localizedDescription)
+// MARK: - Emoji
+public extension String{
+
+  /// 提取: Emojis
+ public var emojis: [String] {
+    let elements = unicodeScalars.flatMap { (scalar) -> String? in
+      switch scalar.value {
+      case 0x3030,
+           0x00AE,
+           0x00A9,
+           0x1D000...0x1F77F,
+           0x2100...0x278A,
+           0x2793...0x27BF,
+           0xFE00...0xFE0F,
+           0x1F900...0x1F9FF:
+        return String(scalar)
+      default: return nil
       }
     }
-    return [:]
+    return elements
   }
-
-  /// JSON to array
-  ///
-  /// - Returns: array
-  static func array(string: String) -> [Any] {
-    if let data = string.data(using: .utf8) {
-      do {
-        return try JSONSerialization.jsonObject(with: data, options: []) as? [Any] ?? []
-      } catch {
-        print(error.localizedDescription)
-      }
-    }
-    return []
+  
+ public func match(pattern: String) -> Bool {
+    return self =~ pattern
   }
-
-  /// 格式化为Json
-  ///
-  /// - Returns: Json字符串
-  static func formatJSON(data: Any) -> String {
-    guard JSONSerialization.isValidJSONObject(data) else { return String(describing: data) }
-    do {
-      let json = try JSONSerialization.data(withJSONObject: data, options: JSONSerialization.WritingOptions(rawValue: 0))
-      return String(data: json, encoding: .utf8) ?? String(describing: data)
-    } catch {
-      return String(describing: data)
-    }
+  
+ public func match(pattern: RegexPattern) -> Bool {
+    return self =~ pattern.pattern
   }
-
+  
 }
 
 

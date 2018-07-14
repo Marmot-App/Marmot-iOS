@@ -9,20 +9,27 @@ Vue.use(Router)
 
 export default new Router({
   routes: [{
-    path: '/home',
-    name: 'home',
-    component: Home
-  }, {
-    path: '/children/device',
-    name: 'device',
-    component: Device
-  }, {
-    path: '/children/system',
-    name: 'system',
-    component: System
-  }, {
-    path: '/children/push',
-    name: 'push',
-    component: Push
-  }]
+      path: '/home',
+      name: 'home',
+      component: Home
+    },
+    {
+      path: '/',
+      name: 'home',
+      component: Home
+    },
+    {
+        path: '/children/device',
+        name: 'device',
+        component: Device
+      }, {
+        path: '/children/system',
+        name: 'system',
+        component: System
+      }, {
+        path: '/children/push',
+        name: 'push',
+        component: Push
+      }
+  ]
 })

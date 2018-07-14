@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "SPRoutable": [
-      "0.9.9.alpha"
+      "0.9.9.1.alpha"
     ]
   }
 }

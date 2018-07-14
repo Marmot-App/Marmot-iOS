@@ -14,10 +14,10 @@ PODS:
   - BLFoundation/Tools (0.5.5)
   - BLFoundation/URL (0.5.5)
   - Marmot (0.1.0):
-    - SPRoutable (= 0.9.9.alpha)
+    - SPRoutable (= 0.9.9.1.alpha)
   - RoutableAssist (0.2.2)
   - SnapKit (4.0.0)
-  - SPRoutable (0.9.9.alpha):
+  - SPRoutable (0.9.9.1.alpha):
     - RoutableAssist (= 0.2.2)
 
 DEPENDENCIES:
@@ -41,10 +41,10 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AnyFormatProtocol: f056fdc0d570f7811dc5138dd6b47167420282e8
   BLFoundation: f6df2c1f6641c1a1d077521be07402d1af0c9958
-  Marmot: b900aa0d82840f9e5b4df78f4510492c2932585f
+  Marmot: 13179844bc9f5cd55e8c6cd9d39a47520bd911cd
   RoutableAssist: fdc37e8b5cc44d323aa7668cbbbd3859c3faf89e
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SPRoutable: 96f3257272c57b90e44c86d782389e5724fffd66
+  SPRoutable: 68887f8a34311d2f2b60db25af1393eb49bec99a
 
 PODFILE CHECKSUM: dc2b691f16a65b519aee5ffea6ec25461f086d1b
 

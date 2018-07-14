@@ -20,6 +20,10 @@ export default {
   },
   methods: {
     device_info: function(event) {
+      if (this.info) {
+        this.info = "";
+        return;
+      }
       JSBridge("sp://device/info")
         .then(result => {
           this.info = result;
@@ -29,15 +33,23 @@ export default {
         });
     },
     device_ssid: function(event) {
+      if (this.ssid) {
+        this.ssid = "";
+        return;
+      }
       JSBridge("sp://device/ssid")
         .then(result => {
-          this.name = result;
+          this.ssid = result;
         })
         .catch(err => {
-          this.name = err;
+          this.ssid = err;
         });
     },
     device_space: function(event) {
+      if (this.space) {
+        this.space = "";
+        return;
+      }
       JSBridge("sp://device/space")
         .then(result => {
           this.space = result;
