@@ -72,8 +72,8 @@ export default {
 </script>
 
 <style scoped>
-#btn {
-  background-color: cadetblue;
-  height: 20px;
+.btn {
+  color: cadetblue;
+
 }
 </style>
