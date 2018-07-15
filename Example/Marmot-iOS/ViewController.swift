@@ -19,7 +19,7 @@ class ViewController: UIViewController {
   
   let webview = MarmotWebView()
   let relaodBtn = UIButton()
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     view.addSubview(webview)
@@ -41,17 +41,16 @@ class ViewController: UIViewController {
     
     relaodBtn.addTarget(self, action: #selector(reload), for: UIControlEvents.touchUpInside)
     
-//        let url = URL(string: "http://192.168.3.124:8080/#/device")!
-
+    //        let url = URL(string: "http://192.168.3.124:8080/#/device")!
+    
     let url = URL(string: "http://localhost:8080/#/home")!
     webview.load(URLRequest(url: url))
   }
   
- @objc func reload() {
-  Router_system().router_call(params: ["value": 18825030178])
-  webview.reload()
-  }
-
-
+  @objc func reload() {
+    let url = URL(string: "http://localhost:8080/#/home")!
+    webview.load(URLRequest(url: url))  }
+  
+  
 }
 

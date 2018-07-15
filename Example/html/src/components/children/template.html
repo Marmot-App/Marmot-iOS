@@ -1,12 +1,27 @@
 <div>
-  <div>"push"</div>
+  <div>system</div>
   <el-collapse accordion>
 
-    <el-collapse-item title="$push.schedule">
+    <el-collapse-item title="$system.brightness">
       <div>
-        <el-button class="btn" type="danger" size="medium" v-on:click="push_schedule">点击运行</el-button>
+        <div class="block">
+          <span class="demonstration">默认</span>
+          <el-slider v-model="brightness_value" max=1 step=0.1 show-input=true></el-slider>
+        </div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="system_brightness">点击运行</el-button>
       </div>
-      <div>"返回示例: {{id}}"</div>
+      <div>"返回示例: {{brightness}}"</div>
+    </el-collapse-item>
+
+    <el-collapse-item title="$system.volume">
+      <div>
+        <div class="block">
+          <span class="demonstration">默认</span>
+          <el-slider v-model="volume_value" max=1 step=0.1 show-input=true></el-slider>
+        </div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="system_volume">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{volume}}"</div>
     </el-collapse-item>
 
   </el-collapse>

@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div>"device"</div>
+  <div>device</div>
   <el-collapse accordion>
     <el-collapse-item title="$device.info">
       <div>

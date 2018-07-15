@@ -1,9 +1,35 @@
 <template>
+
 <div>
-    <div><btn value="">"system"</btn></div>
-    <div><btn v-on:click="brightness" value="">"$system.brightness: {{brightness}}"</btn></div>
-    <div><btn v-on:click="system_volume" value="">"$system.volume: {{volume}}"</btn></div>
+  <div>system</div>
+  <el-collapse accordion>
+
+    <el-collapse-item title="$system.brightness">
+      <div>
+        <div class="block">
+          <span class="demonstration">默认</span>
+          <el-slider v-model="brightness_value" max=1 step=0.1 show-input=true></el-slider>
+        </div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="system_brightness">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{brightness}}"</div>
+    </el-collapse-item>
+
+    <el-collapse-item title="$system.volume">
+      <div>
+        <div class="block">
+          <span class="demonstration">默认</span>
+          <el-slider v-model="volume_value" max=1 step=0.1 show-input=true></el-slider>
+        </div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="system_volume">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{volume}}"</div>
+    </el-collapse-item>
+
+  </el-collapse>
 </div>
+
+
 </template>
 
 <script>
@@ -11,7 +37,10 @@ export default {
   name: "system",
   data() {
     return {
+      brightness_value: 0,
       brightness: "",
+
+      volume_value: 0,
       volume: ""
     };
   },
@@ -39,8 +68,7 @@ export default {
 </script>
 
 <style scoped>
-#btn {
-  background-color: cadetblue;
-  height: 20px;
+.btn {
+  width: 100%;
 }
 </style>
