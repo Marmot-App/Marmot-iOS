@@ -48,9 +48,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.btn {
-  width: 100%
-}
-</style>

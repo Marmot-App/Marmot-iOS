@@ -1,37 +1,37 @@
 <template>
 
 <div>
-  <div>device</div>
+  <div class="title">device</div>
   <el-collapse accordion>
-    <el-collapse-item title="$device.info">
-      <div>
-        <el-button class="btn" type="danger" size="medium" v-on:click="device_info">点击运行</el-button>
-      </div>
-      <div>"返回示例: {{info}}"</div>
+
+    <el-collapse-item class="subTitle" title="$device.info">
+      <el-button class="btn" type="danger" size="medium" v-on:click="device_info">点击运行</el-button>
+      <div class="result-tips">返回示例:</div>
+      <div class="result">{{info}}</div>
     </el-collapse-item>
 
-    <el-collapse-item title="$device.ssid">
+    <el-collapse-item class="subTitle" title="$device.ssid">
       <div>
         <el-button class="btn" type="danger" size="medium" v-on:click="device_ssid">点击运行</el-button>
       </div>
       <div>"返回示例: {{ssid}}"</div>
     </el-collapse-item>
 
-    <el-collapse-item title="$device.space">
+    <el-collapse-item class="subTitle" title="$device.space">
       <div>
         <el-button class="btn" type="danger" size="medium" v-on:click="device_space">点击运行</el-button>
       </div>
       <div>"返回示例: {{space}}"</div>
     </el-collapse-item>
 
-    <el-collapse-item title="$device.wlanAddress">
+    <el-collapse-item class="subTitle" title="$device.wlanAddress">
       <div>
         <el-button class="btn" type="danger" size="medium" v-on:click="device_wlanAddress">点击运行</el-button>
       </div>
       <div>"返回示例: {{wlanAddress}}"</div>
     </el-collapse-item>
 
-    <el-collapse-item title="$device.taptic">
+    <el-collapse-item class="subTitle" title="$device.taptic">
       <div>
         <div class="block">
           <span class="demonstration">默认</span>
@@ -112,8 +112,3 @@ export default {
 };
 </script>
 
-<style scoped>
-.btn {
-  width: 100%;
-}
-</style>
