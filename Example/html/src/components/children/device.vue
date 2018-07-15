@@ -25,6 +25,10 @@
 
     <el-collapse-item title="$device.taptic">
       <div>
+        <div class="block">
+          <span class="demonstration">默认</span>
+          <el-slider v-model="taptic" max=3 step=1 show-input=true></el-slider>
+        </div>
         <el-button class="btn" type="danger" size="medium" v-on:click="device_taptic">点击运行</el-button>
       </div>
       <div>"无返回示例"</div>
@@ -43,7 +47,8 @@ export default {
       activeName: "1",
       info: "",
       ssid: "",
-      space: ""
+      space: "",
+      taptic: 0
     };
   },
   methods: {
@@ -87,7 +92,7 @@ export default {
         });
     },
     device_taptic: function(event) {
-      JSBridge("sp://device/taptic?level=0")
+      JSBridge("sp://device/taptic?level=" + this.taptic)
         .then(result => {
           this.space = result;
         })

@@ -46,21 +46,21 @@ export default {
   },
   methods: {
     system_brightness: function(event) {
-      JSBridge("sp://system/brightness?value=0.1")
+      JSBridge("sp://system/brightness?value=" + this.brightness_value)
         .then(result => {
-          this.info = result;
+          this.brightness = JSON.stringify(result,null,2);
         })
         .catch(err => {
-          this.info = err;
+          this.brightness_value = err;
         });
     },
     system_volume: function(event) {
-      JSBridge("sp://system/volume?value=0.1")
+      JSBridge("sp://system/volume?value=" + this.volume_value)
         .then(result => {
-          this.info = result;
+          this.volume = result;
         })
         .catch(err => {
-          this.info = err;
+          this.volume = err;
         });
     }
   }
