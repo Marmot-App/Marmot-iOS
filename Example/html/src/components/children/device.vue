@@ -1,4 +1,5 @@
 <template>
+
 <div>
   <div>device</div>
   <el-collapse accordion>
@@ -21,6 +22,13 @@
         <el-button class="btn" type="danger" size="medium" v-on:click="device_space">点击运行</el-button>
       </div>
       <div>"返回示例: {{space}}"</div>
+    </el-collapse-item>
+
+    <el-collapse-item title="$device.wlanAddress">
+      <div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="device_wlanAddress">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{wlanAddress}}"</div>
     </el-collapse-item>
 
     <el-collapse-item title="$device.taptic">
@@ -48,15 +56,12 @@ export default {
       info: "",
       ssid: "",
       space: "",
-      taptic: 0
+      taptic: 0,
+      wlanAddress: ""
     };
   },
   methods: {
     device_info: function(event) {
-      if (this.info) {
-        this.info = "";
-        return;
-      }
       JSBridge("sp://device/info")
         .then(result => {
           this.info = result;
@@ -66,10 +71,6 @@ export default {
         });
     },
     device_ssid: function(event) {
-      if (this.ssid) {
-        this.ssid = "";
-        return;
-      }
       JSBridge("sp://device/ssid")
         .then(result => {
           this.ssid = result;
@@ -79,10 +80,6 @@ export default {
         });
     },
     device_space: function(event) {
-      if (this.space) {
-        this.space = "";
-        return;
-      }
       JSBridge("sp://device/space")
         .then(result => {
           this.space = result;
@@ -91,6 +88,17 @@ export default {
           this.space = err;
         });
     },
+
+    device_wlanAddress: function(event) {
+      JSBridge("sp://device/wlanAddress")
+        .then(result => {
+          this.wlanAddress = result;
+        })
+        .catch(err => {
+          this.wlanAddress = err;
+        });
+    },
+
     device_taptic: function(event) {
       JSBridge("sp://device/taptic?level=" + this.taptic)
         .then(result => {

@@ -39,6 +39,8 @@ open class MarmotWebView: WKWebView {
       print(error.localizedDescription)
     }
     
+    self.scrollView.contentMode = .scaleAspectFit
+    
     
     self.uiDelegate = MarmotUIDelegate()
   }
