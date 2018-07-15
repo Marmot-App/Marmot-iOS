@@ -19,6 +19,5 @@ export default {
 <style scoped>
 .btn {
   width:100%
-  
 }
 </style>

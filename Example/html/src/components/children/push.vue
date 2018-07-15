@@ -1,9 +1,18 @@
 <template>
 <div>
-    <div><btn value="">"push"</btn></div>
-    <div><btn v-on:click="push_schedule" value="">"$push.schedule: {{schedule}}"</btn></div>
-    <div><btn>"$push.id: {{id}}"</btn></div>
+  <div>"push"</div>
+  <el-collapse accordion>
+
+    <el-collapse-item title="$push.schedule">
+      <div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="push_schedule">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{schedule}}"</div>
+    </el-collapse-item>
+
+  </el-collapse>
 </div>
+
 </template>
 
 <script>
@@ -30,7 +39,7 @@ export default {
         badge: "2"
       })
         .then(result => {
-          this.id += result.id;
+          this.schedule = result;
         })
         .catch(err => {
           this.schedule = err;
@@ -41,8 +50,7 @@ export default {
 </script>
 
 <style scoped>
-#btn {
-  background-color: cadetblue;
-  height: 20px;
+.btn {
+  width: 100%
 }
 </style>

@@ -1,11 +1,38 @@
 <template>
 <div>
-    <div><btn value="">"device"</btn></div>
-    <div><btn v-on:click="device_info" value="">"$device.info: {{info}}"</btn></div>
-    <div><btn v-on:click="device_ssid" value="">"$device.ssid: {{ssid}}"</btn></div>
-    <div><btn v-on:click="device_space" value="">"$device.space: {{space}}"</btn></div>
-    <div><btn v-on:click="device_taptic" value="">"$device.taptic(1)"</btn></div>
+  <div>"device"</div>
+  <el-collapse accordion>
+    <el-collapse-item title="$device.info">
+      <div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="device_info">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{info}}"</div>
+    </el-collapse-item>
+
+    <el-collapse-item title="$device.ssid">
+      <div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="device_ssid">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{ssid}}"</div>
+    </el-collapse-item>
+
+    <el-collapse-item title="$device.space">
+      <div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="device_space">点击运行</el-button>
+      </div>
+      <div>"返回示例: {{space}}"</div>
+    </el-collapse-item>
+
+    <el-collapse-item title="$device.taptic">
+      <div>
+        <el-button class="btn" type="danger" size="medium" v-on:click="device_taptic">点击运行</el-button>
+      </div>
+      <div>"无返回示例"</div>
+    </el-collapse-item>
+
+  </el-collapse>
 </div>
+
 </template>
 
 <script>
@@ -13,6 +40,7 @@ export default {
   name: "device",
   data() {
     return {
+      activeName: "1",
       info: "",
       ssid: "",
       space: ""
@@ -73,7 +101,6 @@ export default {
 
 <style scoped>
 .btn {
-  color: cadetblue;
-
+  width: 100%;
 }
 </style>
