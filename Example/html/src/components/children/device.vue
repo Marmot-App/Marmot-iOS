@@ -1,114 +1,76 @@
 <template>
-
 <div>
-  <div class="title">device</div>
-  <el-collapse accordion>
+    <div class="title">{{name}}</div>
+    <el-collapse v-for="(item, index) in items" :key="item.index" accordion>
 
-    <el-collapse-item class="subTitle" title="$device.info">
-      <el-button class="btn" type="danger" size="medium" v-on:click="device_info">点击运行</el-button>
-      <div class="result-tips">返回示例:</div>
-      <div class="result">{{info}}</div>
-    </el-collapse-item>
+        <el-collapse-item class="subTitle" :title=item.title>
+            <div class="block" v-if="item.slider">
+                <span class="demonstration">默认</span>
+                <el-slider v-model=item.body.value :min=item.slider.min :max=item.slider.max :step=item.slider.step show-input=true></el-slider>
+            </div>
 
-    <el-collapse-item class="subTitle" title="$device.ssid">
-      <div>
-        <el-button class="btn" type="danger" size="medium" v-on:click="device_ssid">点击运行</el-button>
-      </div>
-      <div>"返回示例: {{ssid}}"</div>
-    </el-collapse-item>
+            <el-button class="btn" type="success" size="medium" v-on:click="event(index)">点击运行</el-button>
+            <div class="result-tips">返回示例:</div>
+            <div class="result">{{item.result}}</div>
+        </el-collapse-item>
 
-    <el-collapse-item class="subTitle" title="$device.space">
-      <div>
-        <el-button class="btn" type="danger" size="medium" v-on:click="device_space">点击运行</el-button>
-      </div>
-      <div>"返回示例: {{space}}"</div>
-    </el-collapse-item>
-
-    <el-collapse-item class="subTitle" title="$device.wlanAddress">
-      <div>
-        <el-button class="btn" type="danger" size="medium" v-on:click="device_wlanAddress">点击运行</el-button>
-      </div>
-      <div>"返回示例: {{wlanAddress}}"</div>
-    </el-collapse-item>
-
-    <el-collapse-item class="subTitle" title="$device.taptic">
-      <div>
-        <div class="block">
-          <span class="demonstration">默认</span>
-          <el-slider v-model="taptic" max=3 step=1 show-input=true></el-slider>
-        </div>
-        <el-button class="btn" type="danger" size="medium" v-on:click="device_taptic">点击运行</el-button>
-      </div>
-      <div>"无返回示例"</div>
-    </el-collapse-item>
-
-  </el-collapse>
+    </el-collapse>
 </div>
-
 </template>
 
 <script>
 export default {
-  name: "device",
-  data() {
-    return {
-      activeName: "1",
-      info: "",
-      ssid: "",
-      space: "",
-      taptic: 0,
-      wlanAddress: ""
-    };
-  },
-  methods: {
-    device_info: function(event) {
-      JSBridge("sp://device/info")
-        .then(result => {
-          this.info = result;
-        })
-        .catch(err => {
-          this.info = err;
-        });
-    },
-    device_ssid: function(event) {
-      JSBridge("sp://device/ssid")
-        .then(result => {
-          this.ssid = result;
-        })
-        .catch(err => {
-          this.ssid = err;
-        });
-    },
-    device_space: function(event) {
-      JSBridge("sp://device/space")
-        .then(result => {
-          this.space = result;
-        })
-        .catch(err => {
-          this.space = err;
-        });
-    },
-
-    device_wlanAddress: function(event) {
-      JSBridge("sp://device/wlanAddress")
-        .then(result => {
-          this.wlanAddress = result;
-        })
-        .catch(err => {
-          this.wlanAddress = err;
-        });
+    name: "device",
+    data() {
+        return {
+            name: "device",
+            items: [{
+                    title: "device.info",
+                    event: "sp://device/info",
+                    result: ""
+                },
+                {
+                    title: "device.ssid",
+                    event: "sp://device/ssid",
+                    result: ""
+                },
+                {
+                    title: "device.space",
+                    event: "sp://device/space",
+                    result: ""
+                },
+                {
+                    title: "device.wlanAddress",
+                    event: "sp://device/wlanAddress",
+                    result: ""
+                },
+                {
+                    title: "device.taptic",
+                    event: "sp://device/taptic",
+                    body: {
+                        value: 0
+                    },
+                    slider: {
+                        max: 2,
+                        min: 0,
+                        step: 1
+                    },
+                    result: ""
+                }
+            ],
+        };
     },
 
-    device_taptic: function(event) {
-      JSBridge("sp://device/taptic?level=" + this.taptic)
-        .then(result => {
-          this.space = result;
-        })
-        .catch(err => {
-          this.space = err;
-        });
+    methods: {
+        event: function (index) {
+            JSBridge(this.items[index].event, this.items[index].event.body)
+                .then(result => {
+                    this.items[index].result = result;
+                })
+                .catch(err => {
+                    this.items[index] = err;
+                });
+        }
     }
-  }
 };
 </script>
-

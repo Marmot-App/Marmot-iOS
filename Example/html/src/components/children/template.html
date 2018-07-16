@@ -1,0 +1,19 @@
+<template>
+    <div>
+        <div class="title">{{name}}</div>
+        <el-collapse v-for="(item, index) in items" :key="item.index" accordion>
+    
+            <el-collapse-item class="subTitle" :title=item.title>
+                <div class="block" v-if="item.slider">
+                    <span class="demonstration">默认</span>
+                    <el-slider v-model="taptic" :min=item.slider.min :max=item.slider.max :step=item.slider.step show-input=true></el-slider>
+                </div>
+    
+                <el-button class="btn" type="danger" size="medium" v-on:click="event(index)">点击运行</el-button>
+                <div class="result-tips">返回示例:</div>
+                <div class="result">{{item.result}}</div>
+            </el-collapse-item>
+    
+        </el-collapse>
+    </div>
+    </template>
