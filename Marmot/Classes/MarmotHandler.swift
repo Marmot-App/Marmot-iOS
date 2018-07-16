@@ -22,6 +22,8 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
     let res = Routable.object(url: url, params: data) {[weak self] (value) in
       self?.callbackToJS(callBackId: callBackId, response: value)
     }
+    
+    guard res != nil else{ return }
     self.callbackToJS(callBackId: callBackId, response: res)
   }
   

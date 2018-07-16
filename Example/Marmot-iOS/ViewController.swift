@@ -44,20 +44,20 @@ class ViewController: UIViewController {
     // let url = URL(string: "http://192.168.3.124:8080/#/device")!
     
     
-    let url = URL(string: "https://t.linhey.com/#/")!
+    let url = URL(string: "http://localhost:8080")!
     webview.load(URLRequest(url: url))
   }
   
   let locat = Router_location()
 
   @objc func reload() {
-    let url = URL(string: "https://t.linhey.com/#/")!
+    let url = URL(string: "http://localhost:8080")!
     webview.load(URLRequest(url: url))
     
     
-    locat.router_fetch { (dict) in
-      print(dict)
-    }
+//    locat.router_fetch { (dict) in
+//      print(dict)
+//    }
   }
   
   

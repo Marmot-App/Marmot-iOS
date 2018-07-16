@@ -9,8 +9,6 @@
 import UIKit
 import CoreLocation
 import SPRoutable
-@objc(Router_location)
-
 class LocationHelper: NSObject,CLLocationManagerDelegate {
   
   var updatesBlocks: [RoutableBlock] = []
@@ -43,6 +41,7 @@ class LocationHelper: NSObject,CLLocationManagerDelegate {
   
 }
 
+@objc(Router_location)
 class Router_location: NSObject {
   
   lazy var helper: LocationHelper = {
@@ -63,7 +62,6 @@ class Router_location: NSObject {
     } else {
       manager.startUpdatingLocation()
     }
-    return
   }
   
 }
