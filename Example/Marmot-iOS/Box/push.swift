@@ -48,7 +48,9 @@ class PushHelper: NSObject, UNUserNotificationCenterDelegate {
 class Router_push: NSObject,AnyFormatProtocol {
   
   static var isRegist = false
-  var pushHelper = PushHelper()
+  lazy var pushHelper: PushHelper = {
+    return PushHelper()
+  }()
   
   func regist() {
     if Router_push.isRegist { return }

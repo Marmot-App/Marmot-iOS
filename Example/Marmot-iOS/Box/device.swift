@@ -15,6 +15,22 @@ import AnyFormatProtocol
 @objc(Router_device)
 class Router_device: NSObject,AnyFormatProtocol {
   
+  func supportTaptic() -> Bool {
+    var systemInfo = utsname()
+    uname(&systemInfo)
+    let versionCode: String = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
+    
+    guard let version = versionCode
+      .replacingOccurrences(of: "iPhone", with: "")
+      .components(separatedBy: ",").first,
+      let num = NumberFormatter().number(from: version) else {
+        return false
+    }
+    
+    return num.intValue > 8
+  }
+  
+  
   /// 返回设备的基本信息
   ///
   /// - Returns: 设备的基本信息
@@ -103,23 +119,25 @@ class Router_device: NSObject,AnyFormatProtocol {
   /// - Parameter params: level  (number)  0 ~ 2 表示振动等级
   @objc func router_taptic(params: [String: Any]) {
     
-    if false {
-      AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-    }
-    
-    if false {
-      // 普通短震，3D Touch 中 Peek 震动反馈
-      AudioServicesPlaySystemSound(1519)
-      // 普通短震，3D Touch 中 Pop 震动反馈
-      AudioServicesPlaySystemSound(1520)
-      // 连续三次短震
-      AudioServicesPlaySystemSound(1521)
-    }
-    
-    if #available(iOS 10.0, *), let style = UIImpactFeedbackStyle(rawValue: format(params["level"])) {
+    let level: Int = format(params["value"])
+    if #available(iOS 10.0, *), supportTaptic(), let style = UIImpactFeedbackStyle(rawValue: level) {
       let tapticEngine = UIImpactFeedbackGenerator(style: style)
       tapticEngine.prepare()
       tapticEngine.impactOccurred()
+    }else{
+      switch level {
+      case 3:
+        // 连续三次短震
+        AudioServicesPlaySystemSound(1521)
+      case 2:
+        // 普通短震，3D Touch 中 Pop 震动反馈
+        AudioServicesPlaySystemSound(1520)
+      case 1:
+        // 普通短震，3D Touch 中 Peek 震动反馈
+        AudioServicesPlaySystemSound(1519)
+      default:
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+      }
     }
     
   }
