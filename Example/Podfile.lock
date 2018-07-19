@@ -1,18 +1,20 @@
 PODS:
   - AnyFormatProtocol (0.5.2)
-  - BLFoundation (0.5.5):
-    - BLFoundation/Data (= 0.5.5)
-    - BLFoundation/Date (= 0.5.5)
-    - BLFoundation/Number (= 0.5.5)
-    - BLFoundation/String (= 0.5.5)
-    - BLFoundation/Tools (= 0.5.5)
-    - BLFoundation/URL (= 0.5.5)
-  - BLFoundation/Data (0.5.5)
-  - BLFoundation/Date (0.5.5)
-  - BLFoundation/Number (0.5.5)
-  - BLFoundation/String (0.5.5)
-  - BLFoundation/Tools (0.5.5)
-  - BLFoundation/URL (0.5.5)
+  - BLFoundation (0.5.6):
+    - BLFoundation/Data (= 0.5.6)
+    - BLFoundation/Date (= 0.5.6)
+    - BLFoundation/Number (= 0.5.6)
+    - BLFoundation/String (= 0.5.6)
+    - BLFoundation/Thread (= 0.5.6)
+    - BLFoundation/Tools (= 0.5.6)
+    - BLFoundation/URL (= 0.5.6)
+  - BLFoundation/Data (0.5.6)
+  - BLFoundation/Date (0.5.6)
+  - BLFoundation/Number (0.5.6)
+  - BLFoundation/String (0.5.6)
+  - BLFoundation/Thread (0.5.6)
+  - BLFoundation/Tools (0.5.6)
+  - BLFoundation/URL (0.5.6)
   - Marmot (0.1.0):
     - SPRoutable (= 0.9.9.1.alpha)
   - RoutableAssist (0.2.2)
@@ -22,7 +24,7 @@ PODS:
 
 DEPENDENCIES:
   - AnyFormatProtocol
-  - BLFoundation
+  - BLFoundation (= 0.5.6)
   - Marmot (from `../`)
   - SnapKit
 
@@ -40,12 +42,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AnyFormatProtocol: f056fdc0d570f7811dc5138dd6b47167420282e8
-  BLFoundation: f6df2c1f6641c1a1d077521be07402d1af0c9958
+  BLFoundation: 84c0c4f163c0e5084673016b10f899d823495bd8
   Marmot: 13179844bc9f5cd55e8c6cd9d39a47520bd911cd
   RoutableAssist: fdc37e8b5cc44d323aa7668cbbbd3859c3faf89e
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SPRoutable: 68887f8a34311d2f2b60db25af1393eb49bec99a
 
-PODFILE CHECKSUM: dc2b691f16a65b519aee5ffea6ec25461f086d1b
+PODFILE CHECKSUM: fdbbbe84178b14207540dd7fe161c1752884bd6c
 
 COCOAPODS: 1.5.3

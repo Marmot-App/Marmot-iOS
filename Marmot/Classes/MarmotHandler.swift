@@ -20,24 +20,39 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
   
   func actionHandler(callBackId: String,url: URL,data: [String: Any]) {
     let res = Routable.object(url: url, params: data) {[weak self] (value) in
-      self?.callbackToJS(callBackId: callBackId, response: value)
+      self?.callback(to: callBackId, response: value)
     }
     
-    guard res != nil else{ return }
-    self.callbackToJS(callBackId: callBackId, response: res)
+    guard let value = res else{ return }
+    self.callback(to: callBackId, response: value)
   }
   
-  func callbackToJS(callBackId: String,response: Any?) {
+  
+  func listen(to id: String,response: Any?) {
+    
+  }
+  
+  
+  func callback(to id: String,response: Any?) {
+    var function = "Native.callBack"
+    
     guard let response = response else {
-      webView?.evaluateJavaScript("Native.callBack('\(callBackId)');")
+      webView?.evaluateJavaScript("\(function)('\(id)');")
       return
+    }
+    
+    /// 监听属性
+    if let dict = response as? [String: Any],
+      let isListen = dict["isListen"] as? Bool,
+      isListen {
+      function = "Native.listen"
     }
     
     if JSONSerialization.isValidJSONObject(response) {
       do {
         let jsonData = try JSONSerialization.data(withJSONObject: response, options: JSONSerialization.WritingOptions())
         if let json = String(data: jsonData, encoding: .utf8) {
-          webView?.evaluateJavaScript("Native.callBack('\(callBackId)','\(json)');")
+          webView?.evaluateJavaScript("Native.callBack('\(id)','\(json)');")
           return
         }
       } catch {
@@ -45,7 +60,7 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
       }
     }
     
-    webView?.evaluateJavaScript("Native.callBack('\(callBackId)','\(response)');")
+    webView?.evaluateJavaScript("Native.callBack('\(id)','\(response)');")
   }
   
   public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {

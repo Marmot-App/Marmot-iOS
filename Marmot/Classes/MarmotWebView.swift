@@ -39,6 +39,17 @@ open class MarmotWebView: WKWebView {
       print(error.localizedDescription)
     }
     
+    do {
+      let file1 = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/location.js"
+      let js = try String(contentsOfFile: "\(file1)", encoding: .utf8)
+      let script = WKUserScript(source: js, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+      self.configuration.userContentController.addUserScript(script)
+    } catch {
+      print(error.localizedDescription)
+    }
+    
+    
+    
     self.scrollView.contentMode = .scaleAspectFit
     
     

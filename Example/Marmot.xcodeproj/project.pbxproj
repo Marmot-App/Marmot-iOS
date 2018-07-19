@@ -12,6 +12,7 @@
 		CD46812620FB682B00C4D73E /* clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812520FB682B00C4D73E /* clipboard.swift */; };
 		CD46812820FCB22500C4D73E /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812720FCB22500C4D73E /* location.swift */; };
 		CD726EED20F794DB00BA974F /* system.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726EEC20F794DB00BA974F /* system.swift */; };
+		CDAB6CE820FD921100780E0E /* calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB6CE720FD921100780E0E /* calendar.swift */; };
 		CDE0434420F858DA00C773B6 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434320F858DA00C773B6 /* app.swift */; };
 		CDE0434620F8766900C773B6 /* push.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434520F8766900C773B6 /* push.swift */; };
 		CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */; };
@@ -41,6 +42,7 @@
 		CD46812520FB682B00C4D73E /* clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clipboard.swift; sourceTree = "<group>"; };
 		CD46812720FCB22500C4D73E /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
 		CD726EEC20F794DB00BA974F /* system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system.swift; sourceTree = "<group>"; };
+		CDAB6CE720FD921100780E0E /* calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendar.swift; sourceTree = "<group>"; };
 		CDE0434320F858DA00C773B6 /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
 		CDE0434520F8766900C773B6 /* push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = push.swift; sourceTree = "<group>"; };
 		CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marmot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,15 +114,9 @@
 				CDE0434520F8766900C773B6 /* push.swift */,
 				CD46812520FB682B00C4D73E /* clipboard.swift */,
 				CD46812720FCB22500C4D73E /* location.swift */,
+				CDAB6CE720FD921100780E0E /* calendar.swift */,
 			);
 			path = Box;
-			sourceTree = "<group>";
-		};
-		CDEC9D4120EC7B6800E2D642 /* html */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = html;
 			sourceTree = "<group>";
 		};
 		CDEC9D6520EC7CE300E2D642 /* Marmot-iOS */ = {
@@ -141,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				ED83F69A20348B650038D96B /* Podspec Metadata */,
-				CDEC9D4120EC7B6800E2D642 /* html */,
 				ED83F67A20348A760038D96B /* Marmot */,
 				CDEC9D6520EC7CE300E2D642 /* Marmot-iOS */,
 				ED83F67920348A760038D96B /* Products */,
@@ -235,6 +230,7 @@
 				TargetAttributes = {
 					CDEC9D6320EC7CE300E2D642 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -390,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDAB6CE820FD921100780E0E /* calendar.swift in Sources */,
 				CD726EED20F794DB00BA974F /* system.swift in Sources */,
 				CDE0434620F8766900C773B6 /* push.swift in Sources */,
 				CD46812820FCB22500C4D73E /* location.swift in Sources */,
@@ -437,6 +434,7 @@
 			baseConfigurationReference = F28D8787BB75538A21992683 /* Pods-Marmot-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
@@ -447,6 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Marmot.com.Marmot-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -457,6 +456,7 @@
 			baseConfigurationReference = E1FE5A56ABB21585B409FCC9 /* Pods-Marmot-iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;

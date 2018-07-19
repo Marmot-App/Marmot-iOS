@@ -127,16 +127,16 @@ class Router_device: NSObject,AnyFormatProtocol {
     }else{
       switch level {
       case 3:
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+      case 2:
         // 连续三次短震
         AudioServicesPlaySystemSound(1521)
-      case 2:
+      case 1:
         // 普通短震，3D Touch 中 Pop 震动反馈
         AudioServicesPlaySystemSound(1520)
-      case 1:
+      default:
         // 普通短震，3D Touch 中 Peek 震动反馈
         AudioServicesPlaySystemSound(1519)
-      default:
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
       }
     }
     

@@ -11,7 +11,7 @@
 
 ## Require
 
-- iOS 8
+- iOS 8.0+ / macOS 10.10+ / tvOS 9.0+ / watchOS 2.0+
 - Swift 4.0
 
 ## Install
@@ -25,11 +25,12 @@ or pod 'BLFoundation/Date'
 or pod 'BLFoundation/Number'
 or pod 'BLFoundation/Data'
 or pod 'BLFoundation/Tools'
+or pod 'BLFoundation/URL'
 ```
 
 ## Useage
 
-
+- [API Reference](https://linhay.github.io/BLFoundation/index.html) - Lastly, please remember to read the full whenever you may need a more detailed reference. 
 
 ## Author
 

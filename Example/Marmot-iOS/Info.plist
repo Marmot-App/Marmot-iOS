@@ -29,8 +29,6 @@
 	<string>Marmot想访问您的相册,这样可以为您提供各类优质服务</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Marmot想访问您的蓝牙,这样可以为您提供各类优质服务</string>
-	<key>NSCalendarsUsageDescription</key>
-	<string>Marmot想访问您的日历,这样可以为您提供各类优质服务</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Marmot想访问您的相机,这样可以为您提供各类优质服务</string>
 	<key>NSHealthShareUsageDescription</key>
@@ -49,6 +47,8 @@
 	<string>Marmot想访问您的相册,这样可以为您提供各类优质服务</string>
 	<key>NSRemindersUsageDescription</key>
 	<string>Marmot想访问您的提醒事项,这样可以为您提供各类优质服务</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Marmot想访问您的日历,这样可以为您提供各类优质服务</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

@@ -49,6 +49,12 @@ public extension Date {
     }
     return date
   }
+  
+  public static func initWith(json: String, mode: DateFormatMode) -> Date? {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+    return formatter.date(from: json)
+  }
 
   private static func setDateFormatter(mode: DateFormatMode) -> DateFormatter{
     let dateFormatter = DateFormatter()
