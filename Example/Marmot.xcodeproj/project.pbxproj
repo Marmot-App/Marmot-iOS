@@ -11,7 +11,9 @@
 		CD22999120EF81CD00AF440B /* device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22999020EF81CD00AF440B /* device.swift */; };
 		CD46812620FB682B00C4D73E /* clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812520FB682B00C4D73E /* clipboard.swift */; };
 		CD46812820FCB22500C4D73E /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812720FCB22500C4D73E /* location.swift */; };
+		CD5D7B4C2101DEA400CCFD49 /* MTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5D7B4B2101DEA400CCFD49 /* MTMapViewController.swift */; };
 		CD726EED20F794DB00BA974F /* system.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726EEC20F794DB00BA974F /* system.swift */; };
+		CD87BC7C2101FF3A00A9EC5A /* MTMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87BC7B2101FF3A00A9EC5A /* MTMapAnnotation.swift */; };
 		CDAB6CE820FD921100780E0E /* calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB6CE720FD921100780E0E /* calendar.swift */; };
 		CDE0434420F858DA00C773B6 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434320F858DA00C773B6 /* app.swift */; };
 		CDE0434620F8766900C773B6 /* push.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434520F8766900C773B6 /* push.swift */; };
@@ -41,7 +43,9 @@
 		CD46812020F89DF900C4D73E /* Marmot-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Marmot-iOS.entitlements"; sourceTree = "<group>"; };
 		CD46812520FB682B00C4D73E /* clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clipboard.swift; sourceTree = "<group>"; };
 		CD46812720FCB22500C4D73E /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
+		CD5D7B4B2101DEA400CCFD49 /* MTMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewController.swift; sourceTree = "<group>"; };
 		CD726EEC20F794DB00BA974F /* system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system.swift; sourceTree = "<group>"; };
+		CD87BC7B2101FF3A00A9EC5A /* MTMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapAnnotation.swift; sourceTree = "<group>"; };
 		CDAB6CE720FD921100780E0E /* calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendar.swift; sourceTree = "<group>"; };
 		CDE0434320F858DA00C773B6 /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
 		CDE0434520F8766900C773B6 /* push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = push.swift; sourceTree = "<group>"; };
@@ -113,8 +117,10 @@
 				CDE0434320F858DA00C773B6 /* app.swift */,
 				CDE0434520F8766900C773B6 /* push.swift */,
 				CD46812520FB682B00C4D73E /* clipboard.swift */,
-				CD46812720FCB22500C4D73E /* location.swift */,
 				CDAB6CE720FD921100780E0E /* calendar.swift */,
+				CD46812720FCB22500C4D73E /* location.swift */,
+				CD5D7B4B2101DEA400CCFD49 /* MTMapViewController.swift */,
+				CD87BC7B2101FF3A00A9EC5A /* MTMapAnnotation.swift */,
 			);
 			path = Box;
 			sourceTree = "<group>";
@@ -386,9 +392,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD87BC7C2101FF3A00A9EC5A /* MTMapAnnotation.swift in Sources */,
 				CDAB6CE820FD921100780E0E /* calendar.swift in Sources */,
 				CD726EED20F794DB00BA974F /* system.swift in Sources */,
 				CDE0434620F8766900C773B6 /* push.swift in Sources */,
+				CD5D7B4C2101DEA400CCFD49 /* MTMapViewController.swift in Sources */,
 				CD46812820FCB22500C4D73E /* location.swift in Sources */,
 				CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */,
 				CD22999120EF81CD00AF440B /* device.swift in Sources */,

@@ -60,8 +60,14 @@ var Native = {
     };
 
     if (typeof successCB == 'function') {
-      this.id += 1;
-      message.id = 'NativeEventId' + this.id;
+      if ((message) && (message.listenToken)) {
+        message.id = listenToken;
+        message.isListen = true
+      } else {
+        this.id += 1;
+        message.id = 'NativeEventId' + this.id;
+        message.isListen = false
+      }
       NativeEvent.addEvent(message.id, function (data) {
         successCB(data);
       });

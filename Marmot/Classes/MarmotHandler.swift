@@ -11,6 +11,11 @@ import SPRoutable
 
 class MarmotHandler: NSObject, WKScriptMessageHandler {
   
+  enum Event: String {
+    case callback = "Native.callBack"
+    case listen = "Native.listen"
+  }
+  
   weak var webView : WKWebView?
   
   init(webView: WKWebView) {
@@ -19,40 +24,26 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
   }
   
   func actionHandler(callBackId: String,url: URL,data: [String: Any]) {
+    let isListen = data["isListen"] as? Bool ?? false
+    let type: Event = isListen ? .listen : .callback
     let res = Routable.object(url: url, params: data) {[weak self] (value) in
-      self?.callback(to: callBackId, response: value)
+      self?.runJSEvent(to: callBackId, type: type, response: value)
     }
-    
     guard let value = res else{ return }
-    self.callback(to: callBackId, response: value)
+    self.runJSEvent(to: callBackId, type: type, response: value)
   }
   
-  
-  func listen(to id: String,response: Any?) {
-    
-  }
-  
-  
-  func callback(to id: String,response: Any?) {
-    var function = "Native.callBack"
-    
+  func runJSEvent(to id: String,type: Event,response: Any?) {
     guard let response = response else {
-      webView?.evaluateJavaScript("\(function)('\(id)');")
+      webView?.evaluateJavaScript("\(type.rawValue)('\(id)');")
       return
-    }
-    
-    /// 监听属性
-    if let dict = response as? [String: Any],
-      let isListen = dict["isListen"] as? Bool,
-      isListen {
-      function = "Native.listen"
     }
     
     if JSONSerialization.isValidJSONObject(response) {
       do {
         let jsonData = try JSONSerialization.data(withJSONObject: response, options: JSONSerialization.WritingOptions())
         if let json = String(data: jsonData, encoding: .utf8) {
-          webView?.evaluateJavaScript("Native.callBack('\(id)','\(json)');")
+          webView?.evaluateJavaScript("\(type.rawValue)('\(id)','\(json)');")
           return
         }
       } catch {
@@ -60,7 +51,7 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
       }
     }
     
-    webView?.evaluateJavaScript("Native.callBack('\(id)','\(response)');")
+    webView?.evaluateJavaScript("\(type.rawValue)('\(id)','\(response)');")
   }
   
   public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {

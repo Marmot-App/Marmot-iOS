@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import SPRoutable
+
 class LocationHelper: NSObject,CLLocationManagerDelegate {
   
   var updatesBlocks: [RoutableBlock] = []
@@ -78,16 +79,9 @@ class Router_location: NSObject {
   
   /// 监听地理位置变化
   @objc func router_startUpdates(block: @escaping RoutableBlock) {
-    let itemBlock: RoutableBlock = { (item) in
-      var item = item
-      item["isListen"] = true
-      block(item)
-    }
+    let itemBlock: RoutableBlock = block
     helper.updatesBlocks.append(itemBlock)
-    
-    
-    
-    // manager.startUpdatingLocation()
+    manager.startUpdatingLocation()
   }
   
   /// 监听地理位置变化
@@ -95,6 +89,11 @@ class Router_location: NSObject {
     helper.fetchBlocks.removeAll()
     helper.updatesBlocks.removeAll()
     manager.stopUpdatingLocation()
+  }
+  
+  @objc func router_select(block: @escaping RoutableBlock) {
+    let vc = MTMapViewController()
+    UIApplication.shared.keyWindow?.rootViewController?.present(vc, animated: true, completion: nil)
   }
   
   /// 监听罗盘数据变化
