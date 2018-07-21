@@ -57,6 +57,21 @@ class Router_location: NSObject {
     return manager
   }()
   
+  
+  /// 检测权限状态
+  func requestLocationAccess() {
+    let status = CLLocationManager.authorizationStatus()
+    switch status {
+    case .authorizedAlways, .authorizedWhenInUse:
+      return
+    case .denied, .restricted:
+      print("location access denied")
+    default:
+      manager.requestWhenInUseAuthorization()
+    }
+  }
+  
+  
   /// 获取地理位置
   @objc func router_fetch(block: @escaping RoutableBlock) {
     let itemBlock: RoutableBlock = {[weak self] (item) in
