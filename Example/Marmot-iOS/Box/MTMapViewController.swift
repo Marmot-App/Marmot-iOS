@@ -9,18 +9,16 @@
 import UIKit
 import MapKit
 import SPRoutable
+import SnapKit
+
 
 class MTMapViewController: UIViewController {
   
-  lazy var mapView: MKMapView = { [weak self] in
-    guard let base = self else { return MKMapView() }
+  lazy var mapView: MKMapView? = { [weak self] in
     let item = MKMapView()
+    guard let base = self else { return item }
     item.showsUserLocation = true
-    item.userTrackingMode = .follow
     item.delegate = base
-    item.frame = view.bounds
-    
-    
     // 设置地图的显示项
     // 建筑物
     item.showsBuildings = true
@@ -34,44 +32,78 @@ class MTMapViewController: UIViewController {
     }
     // poi兴趣点
     item.showsPointsOfInterest = true
-
     
     let tap = UITapGestureRecognizer(target: base, action: #selector(tapEvent))
     item.addGestureRecognizer(tap)
     return item
     }()
   
-  lazy var okBtn: UIButton = { [weak self] in
-    guard let base = self else { return UIButton() }
+  lazy var doneBtn: UIButton = { [weak self] in
     let item = UIButton()
+    guard let base = self else { return item }
     item.setTitle("确定", for: UIControlState.normal)
     item.addTarget(base, action: #selector(selectPoint), for: .touchUpInside)
-    item.frame = CGRect(x: 15,
-                        y: base.view.bounds.height - 15 - 45,
-                        width: base.view.bounds.width - 15 - 15,
-                        height: 45)
     item.backgroundColor = UIColor.blue
     return item
     }()
   
+  lazy var searchView: MTMapSearchView = { [weak self] in
+    let item = MTMapSearchView()
+    guard let base = self else { return item }
+    item.frame = view.bounds
+    return item
+  }()
+  
+  lazy var navView: UIView = {
+    let item = UIView()
+    item.backgroundColor = UIColor.red
+    return item
+  }()
+  
+  
+  lazy var annImageView: UIImageView = { [weak self] in
+    guard let base = self else { return UIImageView() }
+    let item = UIImageView(image: UIImage.init(named: "定位"))
+    return item
+    }()
+
+  
+  var mapZoomLevel = 0 {
+    didSet{
+      if mapZoomLevel == oldValue { return }
+      applyMapViewMemoryHotFix()
+    }
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.addSubview(mapView)
-    view.addSubview(okBtn)
+    view.addSubview(mapView!)
+    view.addSubview(doneBtn)
+    view.addSubview(navView)
+    
+    mapView!.snp.makeConstraints { (make) in
+      make.top.equalTo(navView.snp.bottom)
+      make.bottom.left.right.equalToSuperview()
+    }
+    
+    navView.snp.makeConstraints { (make) in
+      make.top.left.right.equalToSuperview()
+      make.height.equalTo(64)
+      
+    }
+    
+    doneBtn.snp.makeConstraints { (make) in
+      make.bottom.equalToSuperview().offset(-10)
+      make.right.equalToSuperview().offset(-15)
+      make.left.equalToSuperview().offset(15)
+      make.height.equalTo(45)
+    }
   }
   
   @objc func tapEvent(ges: UITapGestureRecognizer) {
-    mapView.removeAnnotations(mapView.annotations)
-    let touchPoint = ges.location(in: mapView)
-    let touchMapCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
-    let pointAnnotation = MKPointAnnotation()
-    pointAnnotation.coordinate = touchMapCoordinate
-    pointAnnotation.title = "a"
-    mapView.addAnnotation(pointAnnotation)
-    
-    mapView.removeOverlays(mapView.overlays)
-    let overlays = MKCircle(center: pointAnnotation.coordinate, radius: 100)
-    mapView.add(overlays)
+    //    mapView.removeOverlays(mapView.overlays)
+    //    let overlays = MKCircle(center: pointAnnotation.coordinate, radius: 100)
+    //    mapView.add(overlays)
   }
   
   @objc func selectPoint() {
@@ -82,17 +114,62 @@ class MTMapViewController: UIViewController {
     dismiss(animated: true, completion: nil)
   }
   
+  // 地图缩放时内存暴涨
+  func applyMapViewMemoryHotFix() {
+    switch mapView!.mapType {
+    case .hybrid:
+      mapView?.mapType = .standard
+    case .standard:
+      mapView?.mapType = .hybrid
+    default:
+      break
+    }
+    mapView?.mapType = .standard
+  }
+  
+  deinit {
+    // 内存释放
+    mapView = nil
+  }
   
 }
 
 extension MTMapViewController: MKMapViewDelegate {
   
   func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
+    if annImageView.superview != nil { return }
     // 设置地图显示区域
-    let center = (userLocation.coordinate)
-    let span = MKCoordinateSpanMake(0.0219952102009202, 0.0160932558432023)
-    let region: MKCoordinateRegion = MKCoordinateRegionMake(center, span)
-    mapView.setRegion(region, animated: true)
+    mapView.setRegion(center: userLocation.coordinate, zoomLevel: 19, animated: false)
+    mapView.addSubview(annImageView)
+
+    let item = UIView()
+    item.backgroundColor = UIColor.red
+    mapView.addSubview(item)
+    
+    item.snp.makeConstraints { (make) in
+      make.center.equalToSuperview()
+      make.width.height.equalTo(2)
+    }
+    
+    annImageView.snp.makeConstraints { (make) in
+      make.width.height.equalTo(30)
+      make.centerX.equalToSuperview()
+      make.bottom.equalTo(mapView.snp.centerY)
+    }
+    
+  }
+  
+  func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+    mapZoomLevel = mapView.currentZoomLevel
+    //    let anima = CABasicAnimation(keyPath: "position")
+//    anima.fromValue = 1
+//    anima.toValue = 0
+//    anima.duration = 1
+//    annImageView.layer.add(anima, forKey: "positionAnimation")
+  }
+  
+  func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
+    
   }
   
   func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

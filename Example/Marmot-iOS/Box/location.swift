@@ -44,33 +44,23 @@ class LocationHelper: NSObject,CLLocationManagerDelegate {
 @objc(Router_location)
 class Router_location: NSObject {
   
+ static var copyManager: CLLocationManager {
+    let manager = CLLocationManager()
+    manager.desiredAccuracy = kCLLocationAccuracyKilometer
+    manager.distanceFilter = 100
+    manager.requestWhenInUseAuthorization()
+    return manager
+  }
+  
   lazy var helper: LocationHelper = {
     return LocationHelper()
   }()
   
   lazy var manager: CLLocationManager = {
-    let manager = CLLocationManager()
+    let manager = Router_location.copyManager
     manager.delegate = helper
-    manager.desiredAccuracy = kCLLocationAccuracyBest
-    manager.distanceFilter = 10
-    manager.requestWhenInUseAuthorization()
     return manager
   }()
-  
-  
-  /// 检测权限状态
-  func requestLocationAccess() {
-    let status = CLLocationManager.authorizationStatus()
-    switch status {
-    case .authorizedAlways, .authorizedWhenInUse:
-      return
-    case .denied, .restricted:
-      print("location access denied")
-    default:
-      manager.requestWhenInUseAuthorization()
-    }
-  }
-  
   
   /// 获取地理位置
   @objc func router_fetch(block: @escaping RoutableBlock) {
