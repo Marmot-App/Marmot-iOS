@@ -104,8 +104,6 @@ class Router_device: NSObject,AnyFormatProtocol {
               "string": String(format: "%.2f B", Double(size))]
     }
     do {
-      
-      device_helper.availableMemory()
       let attrs = try FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory())
       let dict = [
         "disk": ["free": formatter(size: attrs[FileAttributeKey.systemFreeSize] as! Int),
