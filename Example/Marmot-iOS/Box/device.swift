@@ -78,6 +78,8 @@ class Router_device: NSObject,AnyFormatProtocol {
     }
   }
   
+  
+  
   /// 获取设备的内存/磁盘空间：
   ///
   /// - Returns: 设备的内存/磁盘空间
@@ -102,11 +104,17 @@ class Router_device: NSObject,AnyFormatProtocol {
               "string": String(format: "%.2f B", Double(size))]
     }
     do {
+      
+      device_helper.availableMemory()
       let attrs = try FileManager.default.attributesOfFileSystem(forPath: NSHomeDirectory())
-      return[
+      let dict = [
         "disk": ["free": formatter(size: attrs[FileAttributeKey.systemFreeSize] as! Int),
-                 "total": formatter(size: attrs[FileAttributeKey.systemSize] as! Int)]
+                 "total": formatter(size: attrs[FileAttributeKey.systemSize] as! Int)],
+        "memory": ["free": formatter(size: freeMemory()),
+                   "total": formatter(size: Int(ProcessInfo.processInfo.physicalMemory)),
+                   "used": formatter(size: usedMemory())]
       ]
+      return dict
       
     }catch {
       return ["error": error.localizedDescription]
@@ -142,27 +150,30 @@ class Router_device: NSObject,AnyFormatProtocol {
     
   }
   
-  
   @objc func router_wlanAddress() -> [String: Any]? {
-    var address : String?
+    return ["value": wlanAddress ?? ""]
+  }
+  
+  @objc func router_networkType() {
     
-    // Get list of all interfaces on the local machine:
+  }
+  
+}
+
+extension Router_device {
+  
+  /// 获取局域网IP
+  func wlanAddress() -> String? {
+    var address : String?
     var ifaddr : UnsafeMutablePointer<ifaddrs>?
     guard getifaddrs(&ifaddr) == 0 else { return nil }
     guard let firstAddr = ifaddr else { return nil }
-    
-    // For each interface ...
     for ifptr in sequence(first: firstAddr, next: { $0.pointee.ifa_next }) {
       let interface = ifptr.pointee
-      
-      // Check for IPv4 or IPv6 interface:
       let addrFamily = interface.ifa_addr.pointee.sa_family
       if addrFamily == UInt8(AF_INET) || addrFamily == UInt8(AF_INET6) {
-        
-        // Check interface name:
         let name = String(cString: interface.ifa_name)
         if  name == "en0" {
-          // Convert interface address to a human readable string:
           var addr = interface.ifa_addr.pointee
           var hostname = [CChar](repeating: 0, count: Int(NI_MAXHOST))
           getnameinfo(&addr, socklen_t(interface.ifa_addr.pointee.sa_len),
@@ -173,11 +184,31 @@ class Router_device: NSObject,AnyFormatProtocol {
       }
     }
     freeifaddrs(ifaddr)
-    return ["value": address ?? ""]
+    return address
   }
   
-  @objc func router_networkType() {
-    
+  // 获取当前设备可用内存(单位：B）
+  func freeMemory() -> Int {
+    var vmStats = vm_statistics_data_t()
+    var infoCount = mach_msg_type_number_t(MemoryLayout<vm_statistics_data_t>.stride / MemoryLayout<integer_t>.stride)
+    let kernReturn: kern_return_t = withUnsafeMutableBytes(of: &vmStats) {
+      let boundBuffer = $0.bindMemory(to: Int32.self)
+      return host_statistics(mach_host_self(), HOST_VM_INFO, boundBuffer.baseAddress, &infoCount)
+    }
+    if (kernReturn != KERN_SUCCESS) { return -1 }
+    return Int(vm_page_size) * Int(vmStats.free_count)
+  }
+  
+  // 获取当前任务所占用的内存（单位：B）
+  func usedMemory() -> Int {
+    var taskInfo = task_basic_info_data_t()
+    var infoCount = mach_msg_type_number_t(MemoryLayout<task_basic_info_data_t>.stride / MemoryLayout<natural_t>.stride)
+    let kernReturn: kern_return_t = withUnsafeMutableBytes(of: &taskInfo) {
+      let boundBuffer = $0.bindMemory(to: Int32.self)
+      return task_info(mach_task_self_, task_flavor_t(TASK_BASIC_INFO), boundBuffer.baseAddress, &infoCount)
+    }
+    if (kernReturn != KERN_SUCCESS) { return -1 }
+    return Int(taskInfo.resident_size)
   }
   
 }
