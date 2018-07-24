@@ -11,18 +11,19 @@
 		CD22999120EF81CD00AF440B /* device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22999020EF81CD00AF440B /* device.swift */; };
 		CD46812620FB682B00C4D73E /* clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812520FB682B00C4D73E /* clipboard.swift */; };
 		CD46812820FCB22500C4D73E /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812720FCB22500C4D73E /* location.swift */; };
-		CD5D7B4C2101DEA400CCFD49 /* MTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5D7B4B2101DEA400CCFD49 /* MTMapViewController.swift */; };
 		CD726EED20F794DB00BA974F /* system.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726EEC20F794DB00BA974F /* system.swift */; };
-		CD87BC7C2101FF3A00A9EC5A /* MTMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD87BC7B2101FF3A00A9EC5A /* MTMapAnnotation.swift */; };
 		CDAB6CE820FD921100780E0E /* calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB6CE720FD921100780E0E /* calendar.swift */; };
 		CDE0434420F858DA00C773B6 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434320F858DA00C773B6 /* app.swift */; };
 		CDE0434620F8766900C773B6 /* push.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434520F8766900C773B6 /* push.swift */; };
-		CDE060E321038A3300DCC913 /* MTMapSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE060E221038A3300DCC913 /* MTMapSearchView.swift */; };
-		CDE060E5210445F300DCC913 /* MKMapView+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE060E4210445F300DCC913 /* MKMapView+MT.swift */; };
 		CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */; };
 		CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6820EC7CE300E2D642 /* ViewController.swift */; };
 		CDEC9D6E20EC7CE600E2D642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */; };
 		CDEC9D7120EC7CE600E2D642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEC9D6F20EC7CE600E2D642 /* LaunchScreen.storyboard */; };
+		CDEE0CE82106C29F005ADF00 /* MTMapSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE32106C29F005ADF00 /* MTMapSearchView.swift */; };
+		CDEE0CE92106C29F005ADF00 /* MTMapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE42106C29F005ADF00 /* MTMapNavigationView.swift */; };
+		CDEE0CEA2106C29F005ADF00 /* MTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE52106C29F005ADF00 /* MTMapViewController.swift */; };
+		CDEE0CEB2106C29F005ADF00 /* MKMapView+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE62106C29F005ADF00 /* MKMapView+MT.swift */; };
+		CDEE0CEC2106C29F005ADF00 /* MTMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE72106C29F005ADF00 /* MTMapAnnotation.swift */; };
 		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
 		ED83F67E20348A760038D96B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* ViewController.swift */; };
 		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
@@ -45,20 +46,21 @@
 		CD46812020F89DF900C4D73E /* Marmot-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Marmot-iOS.entitlements"; sourceTree = "<group>"; };
 		CD46812520FB682B00C4D73E /* clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clipboard.swift; sourceTree = "<group>"; };
 		CD46812720FCB22500C4D73E /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
-		CD5D7B4B2101DEA400CCFD49 /* MTMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapViewController.swift; sourceTree = "<group>"; };
 		CD726EEC20F794DB00BA974F /* system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system.swift; sourceTree = "<group>"; };
-		CD87BC7B2101FF3A00A9EC5A /* MTMapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapAnnotation.swift; sourceTree = "<group>"; };
 		CDAB6CE720FD921100780E0E /* calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendar.swift; sourceTree = "<group>"; };
 		CDE0434320F858DA00C773B6 /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
 		CDE0434520F8766900C773B6 /* push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = push.swift; sourceTree = "<group>"; };
-		CDE060E221038A3300DCC913 /* MTMapSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTMapSearchView.swift; sourceTree = "<group>"; };
-		CDE060E4210445F300DCC913 /* MKMapView+MT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapView+MT.swift"; sourceTree = "<group>"; };
 		CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marmot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEC9D6820EC7CE300E2D642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDEC9D7020EC7CE600E2D642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDEC9D7220EC7CE600E2D642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDEE0CE32106C29F005ADF00 /* MTMapSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapSearchView.swift; sourceTree = "<group>"; };
+		CDEE0CE42106C29F005ADF00 /* MTMapNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapNavigationView.swift; sourceTree = "<group>"; };
+		CDEE0CE52106C29F005ADF00 /* MTMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapViewController.swift; sourceTree = "<group>"; };
+		CDEE0CE62106C29F005ADF00 /* MKMapView+MT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+MT.swift"; sourceTree = "<group>"; };
+		CDEE0CE72106C29F005ADF00 /* MTMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapAnnotation.swift; sourceTree = "<group>"; };
 		CDEF1E4D2105702C008CE576 /* Marmot-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marmot-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1FE5A56ABB21585B409FCC9 /* Pods-Marmot-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot-iOS/Pods-Marmot-iOS.release.xcconfig"; sourceTree = "<group>"; };
 		ED83F67820348A760038D96B /* Marmot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marmot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +119,7 @@
 		CDE0434720F8767500C773B6 /* Box */ = {
 			isa = PBXGroup;
 			children = (
+				CDEE0CE22106C29F005ADF00 /* Map */,
 				CD726EEC20F794DB00BA974F /* system.swift */,
 				CD22999020EF81CD00AF440B /* device.swift */,
 				CDE0434320F858DA00C773B6 /* app.swift */,
@@ -124,10 +127,6 @@
 				CD46812520FB682B00C4D73E /* clipboard.swift */,
 				CDAB6CE720FD921100780E0E /* calendar.swift */,
 				CD46812720FCB22500C4D73E /* location.swift */,
-				CDE060E4210445F300DCC913 /* MKMapView+MT.swift */,
-				CD5D7B4B2101DEA400CCFD49 /* MTMapViewController.swift */,
-				CDE060E221038A3300DCC913 /* MTMapSearchView.swift */,
-				CD87BC7B2101FF3A00A9EC5A /* MTMapAnnotation.swift */,
 				CDEF1E4D2105702C008CE576 /* Marmot-iOS-Bridging-Header.h */,
 			);
 			path = Box;
@@ -145,6 +144,18 @@
 				CDE0434720F8767500C773B6 /* Box */,
 			);
 			path = "Marmot-iOS";
+			sourceTree = "<group>";
+		};
+		CDEE0CE22106C29F005ADF00 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				CDEE0CE32106C29F005ADF00 /* MTMapSearchView.swift */,
+				CDEE0CE42106C29F005ADF00 /* MTMapNavigationView.swift */,
+				CDEE0CE52106C29F005ADF00 /* MTMapViewController.swift */,
+				CDEE0CE62106C29F005ADF00 /* MKMapView+MT.swift */,
+				CDEE0CE72106C29F005ADF00 /* MTMapAnnotation.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		ED83F66F20348A760038D96B = {
@@ -400,16 +411,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD87BC7C2101FF3A00A9EC5A /* MTMapAnnotation.swift in Sources */,
 				CDAB6CE820FD921100780E0E /* calendar.swift in Sources */,
 				CD726EED20F794DB00BA974F /* system.swift in Sources */,
 				CDE0434620F8766900C773B6 /* push.swift in Sources */,
-				CDE060E321038A3300DCC913 /* MTMapSearchView.swift in Sources */,
-				CD5D7B4C2101DEA400CCFD49 /* MTMapViewController.swift in Sources */,
+				CDEE0CEB2106C29F005ADF00 /* MKMapView+MT.swift in Sources */,
+				CDEE0CE82106C29F005ADF00 /* MTMapSearchView.swift in Sources */,
+				CDEE0CEC2106C29F005ADF00 /* MTMapAnnotation.swift in Sources */,
 				CD46812820FCB22500C4D73E /* location.swift in Sources */,
 				CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */,
+				CDEE0CEA2106C29F005ADF00 /* MTMapViewController.swift in Sources */,
 				CD22999120EF81CD00AF440B /* device.swift in Sources */,
-				CDE060E5210445F300DCC913 /* MKMapView+MT.swift in Sources */,
+				CDEE0CE92106C29F005ADF00 /* MTMapNavigationView.swift in Sources */,
 				CDE0434420F858DA00C773B6 /* app.swift in Sources */,
 				CD46812620FB682B00C4D73E /* clipboard.swift in Sources */,
 				CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */,

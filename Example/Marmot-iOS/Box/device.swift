@@ -19,17 +19,12 @@ class Router_device: NSObject,AnyFormatProtocol {
     var systemInfo = utsname()
     uname(&systemInfo)
     let versionCode: String = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
-    
     guard let version = versionCode
       .replacingOccurrences(of: "iPhone", with: "")
       .components(separatedBy: ",").first,
-      let num = NumberFormatter().number(from: version) else {
-        return false
-    }
-    
+      let num = NumberFormatter().number(from: version) else { return false }
     return num.intValue > 8
   }
-  
   
   /// 返回设备的基本信息
   ///

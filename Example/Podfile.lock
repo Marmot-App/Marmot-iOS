@@ -3,6 +3,7 @@ PODS:
   - BLFoundation (0.5.6):
     - BLFoundation/Data (= 0.5.6)
     - BLFoundation/Date (= 0.5.6)
+    - BLFoundation/Device (= 0.5.6)
     - BLFoundation/Number (= 0.5.6)
     - BLFoundation/String (= 0.5.6)
     - BLFoundation/Thread (= 0.5.6)
@@ -10,6 +11,7 @@ PODS:
     - BLFoundation/URL (= 0.5.6)
   - BLFoundation/Data (0.5.6)
   - BLFoundation/Date (0.5.6)
+  - BLFoundation/Device (0.5.6)
   - BLFoundation/Number (0.5.6)
   - BLFoundation/String (0.5.6)
   - BLFoundation/Thread (0.5.6)
@@ -24,30 +26,36 @@ PODS:
 
 DEPENDENCIES:
   - AnyFormatProtocol
-  - BLFoundation (= 0.5.6)
+  - BLFoundation (from `https://github.com/linhay/BLFoundation.git`)
   - Marmot (from `../`)
   - SnapKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AnyFormatProtocol
-    - BLFoundation
     - RoutableAssist
     - SnapKit
     - SPRoutable
 
 EXTERNAL SOURCES:
+  BLFoundation:
+    :git: https://github.com/linhay/BLFoundation.git
   Marmot:
     :path: "../"
 
+CHECKOUT OPTIONS:
+  BLFoundation:
+    :commit: f41b5de76d781894361bd34a6a26dd103346db69
+    :git: https://github.com/linhay/BLFoundation.git
+
 SPEC CHECKSUMS:
   AnyFormatProtocol: f056fdc0d570f7811dc5138dd6b47167420282e8
-  BLFoundation: 84c0c4f163c0e5084673016b10f899d823495bd8
+  BLFoundation: 69d680393531ecba461d6a450b1fc2d616ad0741
   Marmot: 13179844bc9f5cd55e8c6cd9d39a47520bd911cd
   RoutableAssist: fdc37e8b5cc44d323aa7668cbbbd3859c3faf89e
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SPRoutable: 68887f8a34311d2f2b60db25af1393eb49bec99a
 
-PODFILE CHECKSUM: fdbbbe84178b14207540dd7fe161c1752884bd6c
+PODFILE CHECKSUM: 00f62940594b0cd3bfaf7f1134d87860be775fea
 
 COCOAPODS: 1.5.3

@@ -4,7 +4,7 @@ target 'Marmot-iOS' do
   pod 'Marmot', :path => '../'
   pod 'SnapKit'
   pod 'AnyFormatProtocol'
-  pod 'BLFoundation', '0.5.6'
+  pod 'BLFoundation', :git => 'https://github.com/linhay/BLFoundation.git'
 end
 
 target 'Marmot_Example' do
