@@ -31,7 +31,7 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
     do {
       let data = try JSONSerialization.data(withJSONObject: dict, options: [])
       guard let json = String(data: data, encoding: .utf8) else { return }
-      webView?.evaluateJavaScript("mt.bridge(\(json))", completionHandler: { (result, error) in
+      webView?.evaluateJavaScript("MTBridge(\(json))", completionHandler: { (result, error) in
         if error != nil {
           print(error?.localizedDescription ?? "")
         }

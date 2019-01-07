@@ -1,28 +1,28 @@
+
 /**
  * 发送类型枚举
  *
  * @enum {number}
  */
-enum NativeMessageType {
+enum MTMessageType {
     post = 'post',
     listen = 'listen'
 }
 
-class NativeMessage {
+class MTMessage {
 
     /**
      * 发送至 app 端 url 链接.
      *
      * @type {string}
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
-
     public url: string;
     /**
      * message id
      *
      * @type {number}
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     public id: number;
 
@@ -30,67 +30,50 @@ class NativeMessage {
      *  message 携带参数, 需要可解析为json字符串类型
      *
      * @type {object}
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     public params: object;
 
     /**
      * 发送类型
      *
-     * @type {NativeMessageType}
-     * @memberof NativeMessage
+     * @type {MTMessageType}
+     * @memberof MTMessage
      */
-    public type: NativeMessageType;
+    public type: MTMessageType;
 
     /**
      * 发送app数据
      *
      * @type {object}
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     public message: object;
-
-    /**
-     * app 返回数据
-     *
-     * @type {object}
-     * @memberof NativeMessage
-     */
-    public value: object;
-
-    /**
-     * app 返回错误
-     *
-     * @type {Error}
-     * @memberof NativeMessage
-     */
-    public error: Error;
-
     /**
      * 成功回调
      *
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     public _success: (value: object) => void;
 
     /**
      * 失败回调
      *
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     public _failure: (error: Error) => void;
 
     /**
      * 执行完成回调
      *
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     public _complete: (value: object) => void;
 
     /** 初始化函数
      *Creates an instance of NativeMessage.
      * @param {string} url
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     constructor(url: string) {
         this.url = url;
@@ -100,10 +83,10 @@ class NativeMessage {
      * 设置参数
      *
      * @param {object} value
-     * @returns {NativeMessage}
-     * @memberof NativeMessage
+     * @returns {MTMessage}
+     * @memberof MTMessage
      */
-    setParam(value: object): NativeMessage {
+    setParam(value: object): MTMessage {
         this.params = value
         return this
     }
@@ -112,10 +95,10 @@ class NativeMessage {
      * 设置成功回调
      *
      * @param {(value: object) => void} cb
-     * @returns {NativeMessage}
-     * @memberof NativeMessage
+     * @returns {MTMessage}
+     * @memberof MTMessage
      */
-    success(cb: (value: object) => void): NativeMessage {
+    success(cb: (value: object) => void): MTMessage {
         this._success = cb
         return this
     }
@@ -124,10 +107,10 @@ class NativeMessage {
      * 设置失败回调
      *
      * @param {(error: Error) => void} cb
-     * @returns {NativeMessage}
-     * @memberof NativeMessage
+     * @returns {MTMessage}
+     * @memberof MTMessage
      */
-    failure(cb: (error: Error) => void): NativeMessage {
+    failure(cb: (error: Error) => void): MTMessage {
         this._failure = cb
         return this
     }
@@ -136,10 +119,10 @@ class NativeMessage {
      * 设置完成回调
      *
      * @param {(value: object) => void} cb
-     * @returns {NativeMessage}
-     * @memberof NativeMessage
+     * @returns {MTMessage}
+     * @memberof MTMessage
      */
-    complete(cb: (value: object) => void): NativeMessage {
+    complete(cb: (value: object) => void): MTMessage {
         this._complete = cb
         return this
     }
@@ -148,7 +131,7 @@ class NativeMessage {
      * 单次异步回调
      *
      * @returns {Promise<object>}
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     post(): Promise<object> {
 
@@ -160,8 +143,8 @@ class NativeMessage {
             });
         }
 
-        this.id = NativeEvent.shared.update(this).id
-        this.type = NativeMessageType.post
+        this.id = MTEvent.shared.update(this).id
+        this.type = MTMessageType.post
         this.message = {
             id: this.id,
             url: this.url,
@@ -176,12 +159,12 @@ class NativeMessage {
     /**
      * 监听
      *
-     * @returns {NativeMessage}
-     * @memberof NativeMessage
+     * @returns {MTMessage}
+     * @memberof MTMessage
      */
-    listen(): NativeMessage {
-        this.id = NativeEvent.shared.update(this).id
-        this.type = NativeMessageType.listen
+    listen(): MTMessage {
+        this.id = MTEvent.shared.update(this).id
+        this.type = MTMessageType.listen
         this.message = {
             id: this.id,
             url: this.url,
@@ -195,12 +178,10 @@ class NativeMessage {
     /**
      * 移除监听
      *
-     * @memberof NativeMessage
+     * @memberof MTMessage
      */
     removeListen() {
-        NativeEvent.shared.remove(this.url, this.id)
+        MTEvent.shared.remove(this.url, this.id)
     }
 
 }
-
-

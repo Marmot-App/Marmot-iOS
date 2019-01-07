@@ -14,6 +14,9 @@ class ViewController: UIViewController {
   
   lazy var webview: MarmotWebView = {
     let item = MarmotWebView()
+    if let path = Bundle.main.path(forResource: "MT", ofType: "js") {
+      item.injectJSFlie(path: path)
+    }
     return item
   }()
   

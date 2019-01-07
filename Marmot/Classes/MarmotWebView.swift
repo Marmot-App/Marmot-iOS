@@ -34,23 +34,26 @@ open class MarmotWebView: WKWebView {
     self.uiDelegate = marmotUIDelegate
 
     let bundlePath = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/"
-    try? FileManager.default.contentsOfDirectory(atPath: bundlePath).compactMap { (item) -> String? in
-      return item.hasSuffix(".js") ? bundlePath + item : nil
-      }.forEach { (item) in
-        do {
-          let js = try String(contentsOfFile: item, encoding: .utf8)
-          let script = WKUserScript(source: js, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-          self.configuration.userContentController.addUserScript(script)
-        } catch {
-          print(error.localizedDescription)
-        }
+    try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
+      .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
+      .forEach { self.injectJSFlie(path: $0) }
+  }
+  
+  public func injectJSFlie(path: String) {
+    do {
+      let js = try String(contentsOfFile: path, encoding: .utf8)
+      self.injectJS(js)
+    }catch {
+      print(error.localizedDescription)
     }
+  }
+  
+  public func injectJS(_ value: String) {
+    let script = WKUserScript(source: value, injectionTime: .atDocumentStart, forMainFrameOnly: false)
+    self.configuration.userContentController.addUserScript(script)
   }
   
   required public init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
 }
-
-
-
