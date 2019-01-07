@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED83F67720348A760038D96B"
+               BlueprintIdentifier = "607FACCF1AFB9204008FA782"
                BuildableName = "Marmot_Example.app"
                BlueprintName = "Marmot_Example"
+               ReferencedContainer = "container:Marmot.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
+               BuildableName = "Marmot_Tests.xctest"
+               BlueprintName = "Marmot_Tests"
                ReferencedContainer = "container:Marmot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "ED83F68920348A760038D96B"
+               BlueprintIdentifier = "607FACE41AFB9204008FA782"
                BuildableName = "Marmot_Tests.xctest"
                BlueprintName = "Marmot_Tests"
                ReferencedContainer = "container:Marmot.xcodeproj">
@@ -42,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED83F67720348A760038D96B"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Marmot_Example.app"
             BlueprintName = "Marmot_Example"
             ReferencedContainer = "container:Marmot.xcodeproj">
@@ -65,7 +79,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED83F67720348A760038D96B"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Marmot_Example.app"
             BlueprintName = "Marmot_Example"
             ReferencedContainer = "container:Marmot.xcodeproj">
@@ -84,7 +98,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "ED83F67720348A760038D96B"
+            BlueprintIdentifier = "607FACCF1AFB9204008FA782"
             BuildableName = "Marmot_Example.app"
             BlueprintName = "Marmot_Example"
             ReferencedContainer = "container:Marmot.xcodeproj">

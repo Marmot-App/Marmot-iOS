@@ -1,11 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
-CODE_SIGN_IDENTITY =
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/Marmot-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/RoutableAssist-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/SPRoutable-macOS" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-macOS"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DarkTemplar" "${PODS_CONFIGURATION_BUILD_DIR}/Khala" "${PODS_CONFIGURATION_BUILD_DIR}/Marmot" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/Marmot-macOS/Marmot.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/RoutableAssist-macOS/RoutableAssist.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SPRoutable-macOS/SPRoutable.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-macOS/SnapKit.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "Marmot" -framework "RoutableAssist" -framework "SPRoutable" -framework "SnapKit"
-OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/DarkTemplar/DarkTemplar.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Khala/Khala.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/Marmot/Marmot.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit/SnapKit.framework/Headers"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_LDFLAGS = $(inherited) -framework "DarkTemplar" -framework "Khala" -framework "Marmot" -framework "SnapKit"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.

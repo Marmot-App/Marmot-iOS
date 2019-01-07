@@ -1,0 +1,6 @@
+framework module Khala {
+  umbrella header "Khala-umbrella.h"
+
+  export *
+  module * { export * }
+}

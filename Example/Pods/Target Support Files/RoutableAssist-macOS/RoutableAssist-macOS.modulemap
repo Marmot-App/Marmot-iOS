@@ -1,6 +1,0 @@
-framework module RoutableAssist {
-  umbrella header "RoutableAssist-macOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

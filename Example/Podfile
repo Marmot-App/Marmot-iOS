@@ -1,13 +1,11 @@
 use_frameworks!
 
-target 'Marmot-iOS' do
-  pod 'Marmot', :path => '../'
-  pod 'SnapKit'
-  pod 'AnyFormatProtocol'
-  pod 'BLFoundation', :git => 'https://github.com/linhay/BLFoundation.git'
-end
-
 target 'Marmot_Example' do
   pod 'Marmot', :path => '../'
   pod 'SnapKit'
+  target 'Marmot_Tests' do
+    inherit! :search_paths
+
+    
+  end
 end

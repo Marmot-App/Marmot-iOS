@@ -7,14 +7,17 @@
 
 import Foundation
 import WebKit
-import SPRoutable
+import Khala
+
+struct MarmotMessage {
+  
+  var message: [String: Any] = [:]
+  var url: String = ""
+  var params: [String: Any]? = nil
+  
+}
 
 class MarmotHandler: NSObject, WKScriptMessageHandler {
-  
-  enum Event: String {
-    case callback = "Native.callBack"
-    case listen = "Native.listen"
-  }
   
   weak var webView : WKWebView?
   
@@ -23,44 +26,45 @@ class MarmotHandler: NSObject, WKScriptMessageHandler {
     super.init()
   }
   
-  func actionHandler(callBackId: String,url: URL,data: [String: Any]) {
-    let isListen = data["isListen"] as? Bool ?? false
-    let type: Event = isListen ? .listen : .callback
-    let res = Routable.object(url: url, params: data) {[weak self] (value) in
-      self?.runJSEvent(to: callBackId, type: type, response: value)
+  
+  func eval(dict: [String:Any]) {
+    do {
+      let data = try JSONSerialization.data(withJSONObject: dict, options: [])
+      guard let json = String(data: data, encoding: .utf8) else { return }
+      webView?.evaluateJavaScript("mt.bridge(\(json))", completionHandler: { (result, error) in
+        if error != nil {
+          print(error?.localizedDescription ?? "")
+        }
+      })
+    } catch {
+      print(error.localizedDescription)
     }
-    guard let value = res else{ return }
-    self.runJSEvent(to: callBackId, type: type, response: value)
   }
   
-  func runJSEvent(to id: String,type: Event,response: Any?) {
-    guard let response = response else {
-      webView?.evaluateJavaScript("\(type.rawValue)('\(id)');")
-      return
-    }
+  func actionHandler(message: MarmotMessage) {
+    var result = message.message
     
-    if JSONSerialization.isValidJSONObject(response) {
-      do {
-        let jsonData = try JSONSerialization.data(withJSONObject: response, options: JSONSerialization.WritingOptions())
-        if let json = String(data: jsonData, encoding: .utf8) {
-          webView?.evaluateJavaScript("\(type.rawValue)('\(id)','\(json)');")
-          return
-        }
-      } catch {
-        print("json format error:\(error)")
-      }
-    }
+    guard let value = Khala(str: message.url,params: message.params ?? [:])?.call(block: {
+      result["value"] = $0
+      self.eval(dict: result)
+    }) as? [String : Any] else { return }
     
-    webView?.evaluateJavaScript("\(type.rawValue)('\(id)','\(response)');")
+    result["value"] = value
+    self.eval(dict: result)
   }
   
   public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-    guard message.name == Marmot.key,
-      let dict = message.body as? [String: Any],
-      let str = dict["url"] as? String,
-      let id = dict["id"] as? String,
-      let url = URL(string: str) else{ return }
-    actionHandler(callBackId: id, url: url, data: dict["data"] as? [String: Any] ?? [:])
+    guard let body = message.body as? [String: Any] else { return }
+    var message = MarmotMessage()
+    message.message = body
+    guard let url = body["url"] as? String  else { return }
+    message.url = url
+    
+    if let params = body["params"] as? [String : Any] {
+      message.params = params
+    }
+    
+    actionHandler(message: message)
   }
   
 }

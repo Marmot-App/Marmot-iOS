@@ -2,30 +2,50 @@
 //  ViewController.swift
 //  Marmot
 //
-//  Created by is.linhay@outlook.com on 06/28/2018.
-//  Copyright (c) 2018 is.linhay@outlook.com. All rights reserved.
+//  Created by linhay on 01/05/2019.
+//  Copyright (c) 2019 linhay. All rights reserved.
 //
 
-import Cocoa
+import UIKit
 import WebKit
-import JavaScriptCore
 import Marmot
-
-class ViewController: NSViewController {
+import SnapKit
+class ViewController: UIViewController {
   
-  let webview = MarmotWebView()
+  lazy var webview: MarmotWebView = {
+    let item = MarmotWebView()
+    return item
+  }()
+  
+  lazy var btn = UIButton()
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.addSubview(webview)
-    let url = URL(string: "http://localhost:8080/#/device")!
+    
+    self.view.addSubview(webview)
+    self.view.addSubview(btn)
+    
+    btn.snp.makeConstraints { (make) in
+      make.top.equalTo(self.topLayoutGuide.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.height.equalTo(45)
+    }
+    
+    webview.snp.makeConstraints({ (make) in
+      make.top.equalTo(btn.snp.bottom)
+      make.left.right.equalToSuperview()
+      make.bottom.equalTo(self.bottomLayoutGuide.snp.top)
+    })
+    
+    btn.setTitle("reload", for: UIControl.State.normal)
+    btn.addTarget(self, action: #selector(tapEvent(_:)), for: UIControl.Event.touchUpInside)
+    
+  }
+  @IBAction func tapEvent(_ sender: UIButton) {
+    let url = URL(string: "http://127.0.0.1:8081/")!
     webview.load(URLRequest(url: url))
   }
   
-  override func viewDidAppear() {
-    super.viewDidAppear()
-    webview.frame = view.bounds
-  }
   
 }
 

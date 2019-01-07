@@ -1,6 +1,0 @@
-framework module SPRoutable {
-  umbrella header "SPRoutable-macOS-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,13 +1,9 @@
-<p align="center">
-<img src="https://raw.githubusercontent.com/linhay/Marmot/master/Screenshot/logo.png" alt="Marmot" title="Marmot"/>
-</p>
+# Marmot
 
-[![build](https://travis-ci.org/linhay/Marmot.svg?branch=master)](https://travis-ci.org/linhay/Marmot)
-![language](https://img.shields.io/badge/language-swift-orange.svg)
-![Platform](https://img.shields.io/cocoapods/p/Marmot.svg?style=flat)
-![Version](https://img.shields.io/cocoapods/v/Marmot.svg?style=flat)
-![CocoaPods](https://img.shields.io/badge/CocoaPods-supported-brightgreen.svg)
-[![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat)](http://mit-license.org)
+[![CI Status](https://img.shields.io/travis/linhay/Marmot.svg?style=flat)](https://travis-ci.org/linhay/Marmot)
+[![Version](https://img.shields.io/cocoapods/v/Marmot.svg?style=flat)](https://cocoapods.org/pods/Marmot)
+[![License](https://img.shields.io/cocoapods/l/Marmot.svg?style=flat)](https://cocoapods.org/pods/Marmot)
+[![Platform](https://img.shields.io/cocoapods/p/Marmot.svg?style=flat)](https://cocoapods.org/pods/Marmot)
 
 ## Example
 
@@ -26,7 +22,7 @@ pod 'Marmot'
 
 ## Author
 
-linhay: is.linhay@outlook.com
+linhay, is.linhey@outlook.com
 
 ## License
 

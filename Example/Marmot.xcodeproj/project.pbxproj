@@ -3,236 +3,177 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF15721FE7B4C9AF098E21D3 /* Pods_Marmot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D9CC48DC858E8B473D585C /* Pods_Marmot_Example.framework */; };
-		CD22999120EF81CD00AF440B /* device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22999020EF81CD00AF440B /* device.swift */; };
-		CD46812620FB682B00C4D73E /* clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812520FB682B00C4D73E /* clipboard.swift */; };
-		CD46812820FCB22500C4D73E /* location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD46812720FCB22500C4D73E /* location.swift */; };
-		CD726EED20F794DB00BA974F /* system.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD726EEC20F794DB00BA974F /* system.swift */; };
-		CDAB6CE820FD921100780E0E /* calendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB6CE720FD921100780E0E /* calendar.swift */; };
-		CDE0434420F858DA00C773B6 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434320F858DA00C773B6 /* app.swift */; };
-		CDE0434620F8766900C773B6 /* push.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDE0434520F8766900C773B6 /* push.swift */; };
-		CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */; };
-		CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEC9D6820EC7CE300E2D642 /* ViewController.swift */; };
-		CDEC9D6E20EC7CE600E2D642 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */; };
-		CDEC9D7120EC7CE600E2D642 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEC9D6F20EC7CE600E2D642 /* LaunchScreen.storyboard */; };
-		CDEE0CE82106C29F005ADF00 /* MTMapSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE32106C29F005ADF00 /* MTMapSearchView.swift */; };
-		CDEE0CE92106C29F005ADF00 /* MTMapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE42106C29F005ADF00 /* MTMapNavigationView.swift */; };
-		CDEE0CEA2106C29F005ADF00 /* MTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE52106C29F005ADF00 /* MTMapViewController.swift */; };
-		CDEE0CEB2106C29F005ADF00 /* MKMapView+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE62106C29F005ADF00 /* MKMapView+MT.swift */; };
-		CDEE0CEC2106C29F005ADF00 /* MTMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEE0CE72106C29F005ADF00 /* MTMapAnnotation.swift */; };
-		ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67B20348A760038D96B /* AppDelegate.swift */; };
-		ED83F67E20348A760038D96B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED83F67D20348A760038D96B /* ViewController.swift */; };
-		ED83F68020348A760038D96B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED83F67F20348A760038D96B /* Assets.xcassets */; };
-		ED83F68320348A760038D96B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED83F68120348A760038D96B /* Main.storyboard */; };
-		FA23FA8B8268DE453936730C /* Pods_Marmot_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE78C9FFA1324D37C09699C /* Pods_Marmot_iOS.framework */; };
+		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
+		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
+		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
+		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
+		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		827F9599750C82A7AF81EDB2 /* Pods_Marmot_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FE2E166AD3EF5EEA1D9ADD /* Pods_Marmot_Tests.framework */; };
+		CD503CE321E0B0FD0060D4F8 /* device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD503CE221E0B0FD0060D4F8 /* device.swift */; };
+		FA546B4B7E9BC1733498A1C0 /* Pods_Marmot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8498A7031BACB2E384B358F /* Pods_Marmot_Example.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		607FACE61AFB9204008FA782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 607FACC81AFB9204008FA782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 607FACCF1AFB9204008FA782;
+			remoteInfo = Marmot;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		0637C11587FB3E0C564E0114 /* Pods-Marmot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		14ABFC5B81B4A40561F85617 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		14B948E9521E2B3A14959082 /* Pods-Marmot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		1A2802231594E1C7DE2A0BB4 /* Pods_Marmot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42AF589E73A0A13374D4E6C3 /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
-		5EE78C9FFA1324D37C09699C /* Pods_Marmot_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		648E6438C65FE096B4E43FBB /* Pods-Marmot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		89D9CC48DC858E8B473D585C /* Pods_Marmot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A78B45EF070788A01B1F481B /* Marmot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Marmot.podspec; path = ../Marmot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AC353ECB5BBB05154924250A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		CD22999020EF81CD00AF440B /* device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = device.swift; sourceTree = "<group>"; };
-		CD46812020F89DF900C4D73E /* Marmot-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Marmot-iOS.entitlements"; sourceTree = "<group>"; };
-		CD46812520FB682B00C4D73E /* clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clipboard.swift; sourceTree = "<group>"; };
-		CD46812720FCB22500C4D73E /* location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = location.swift; sourceTree = "<group>"; };
-		CD726EEC20F794DB00BA974F /* system.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = system.swift; sourceTree = "<group>"; };
-		CDAB6CE720FD921100780E0E /* calendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendar.swift; sourceTree = "<group>"; };
-		CDE0434320F858DA00C773B6 /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
-		CDE0434520F8766900C773B6 /* push.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = push.swift; sourceTree = "<group>"; };
-		CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Marmot-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDEC9D6820EC7CE300E2D642 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CDEC9D7020EC7CE600E2D642 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		CDEC9D7220EC7CE600E2D642 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CDEE0CE32106C29F005ADF00 /* MTMapSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapSearchView.swift; sourceTree = "<group>"; };
-		CDEE0CE42106C29F005ADF00 /* MTMapNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapNavigationView.swift; sourceTree = "<group>"; };
-		CDEE0CE52106C29F005ADF00 /* MTMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapViewController.swift; sourceTree = "<group>"; };
-		CDEE0CE62106C29F005ADF00 /* MKMapView+MT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+MT.swift"; sourceTree = "<group>"; };
-		CDEE0CE72106C29F005ADF00 /* MTMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapAnnotation.swift; sourceTree = "<group>"; };
-		CDEF1E4D2105702C008CE576 /* Marmot-iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Marmot-iOS-Bridging-Header.h"; sourceTree = "<group>"; };
-		E1FE5A56ABB21585B409FCC9 /* Pods-Marmot-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot-iOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot-iOS/Pods-Marmot-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		ED83F67820348A760038D96B /* Marmot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marmot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED83F67B20348A760038D96B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED83F67D20348A760038D96B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED83F67F20348A760038D96B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED83F68220348A760038D96B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED83F68420348A760038D96B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED83F68520348A760038D96B /* Marmot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Marmot.entitlements; sourceTree = "<group>"; };
-		F28D8787BB75538A21992683 /* Pods-Marmot-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot-iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot-iOS/Pods-Marmot-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		5AD61EC4D1687F544D6893C7 /* Pods-Marmot_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Tests.release.xcconfig"; path = "Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		607FACD01AFB9204008FA782 /* Marmot_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marmot_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		607FACE51AFB9204008FA782 /* Marmot_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Marmot_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		A2A01E813488294E1ABFB0EA /* Pods-Marmot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.debug.xcconfig"; path = "Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		A8C9125E7D558CBA7EEDC656 /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.release.xcconfig"; path = "Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B7FE2E166AD3EF5EEA1D9ADD /* Pods_Marmot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD503CE221E0B0FD0060D4F8 /* device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = device.swift; sourceTree = "<group>"; };
+		D3DC09410A179C673FC5C33E /* Pods-Marmot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D64AD90DDDE832BE1B1AA178 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		E8498A7031BACB2E384B358F /* Pods_Marmot_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA24B85E2D4A406640CBE628 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F4E3A15F4F30782E687F842E /* Marmot.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Marmot.podspec; path = ../Marmot.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CDEC9D6120EC7CE300E2D642 /* Frameworks */ = {
+		607FACCD1AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA23FA8B8268DE453936730C /* Pods_Marmot_iOS.framework in Frameworks */,
+				FA546B4B7E9BC1733498A1C0 /* Pods_Marmot_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED83F67520348A760038D96B /* Frameworks */ = {
+		607FACE21AFB9204008FA782 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF15721FE7B4C9AF098E21D3 /* Pods_Marmot_Example.framework in Frameworks */,
+				827F9599750C82A7AF81EDB2 /* Pods_Marmot_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		748F1F71C8B07AD2EC6712BA /* Frameworks */ = {
+		0C47979FCB65AFB8A2C00075 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89D9CC48DC858E8B473D585C /* Pods_Marmot_Example.framework */,
-				1A2802231594E1C7DE2A0BB4 /* Pods_Marmot_Tests.framework */,
-				5EE78C9FFA1324D37C09699C /* Pods_Marmot_iOS.framework */,
+				E8498A7031BACB2E384B358F /* Pods_Marmot_Example.framework */,
+				B7FE2E166AD3EF5EEA1D9ADD /* Pods_Marmot_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BD6C83E5DB77188F879D07D2 /* Pods */ = {
+		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				0637C11587FB3E0C564E0114 /* Pods-Marmot_Example.debug.xcconfig */,
-				42AF589E73A0A13374D4E6C3 /* Pods-Marmot_Example.release.xcconfig */,
-				648E6438C65FE096B4E43FBB /* Pods-Marmot_Tests.debug.xcconfig */,
-				14B948E9521E2B3A14959082 /* Pods-Marmot_Tests.release.xcconfig */,
-				F28D8787BB75538A21992683 /* Pods-Marmot-iOS.debug.xcconfig */,
-				E1FE5A56ABB21585B409FCC9 /* Pods-Marmot-iOS.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		CDE0434720F8767500C773B6 /* Box */ = {
-			isa = PBXGroup;
-			children = (
-				CDEE0CE22106C29F005ADF00 /* Map */,
-				CD726EEC20F794DB00BA974F /* system.swift */,
-				CD22999020EF81CD00AF440B /* device.swift */,
-				CDE0434320F858DA00C773B6 /* app.swift */,
-				CDE0434520F8766900C773B6 /* push.swift */,
-				CD46812520FB682B00C4D73E /* clipboard.swift */,
-				CDAB6CE720FD921100780E0E /* calendar.swift */,
-				CD46812720FCB22500C4D73E /* location.swift */,
-				CDEF1E4D2105702C008CE576 /* Marmot-iOS-Bridging-Header.h */,
-			);
-			path = Box;
-			sourceTree = "<group>";
-		};
-		CDEC9D6520EC7CE300E2D642 /* Marmot-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CD46812020F89DF900C4D73E /* Marmot-iOS.entitlements */,
-				CDEC9D6620EC7CE300E2D642 /* AppDelegate.swift */,
-				CDEC9D6820EC7CE300E2D642 /* ViewController.swift */,
-				CDEC9D6D20EC7CE600E2D642 /* Assets.xcassets */,
-				CDEC9D6F20EC7CE600E2D642 /* LaunchScreen.storyboard */,
-				CDEC9D7220EC7CE600E2D642 /* Info.plist */,
-				CDE0434720F8767500C773B6 /* Box */,
-			);
-			path = "Marmot-iOS";
-			sourceTree = "<group>";
-		};
-		CDEE0CE22106C29F005ADF00 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				CDEE0CE32106C29F005ADF00 /* MTMapSearchView.swift */,
-				CDEE0CE42106C29F005ADF00 /* MTMapNavigationView.swift */,
-				CDEE0CE52106C29F005ADF00 /* MTMapViewController.swift */,
-				CDEE0CE62106C29F005ADF00 /* MKMapView+MT.swift */,
-				CDEE0CE72106C29F005ADF00 /* MTMapAnnotation.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		ED83F66F20348A760038D96B = {
-			isa = PBXGroup;
-			children = (
-				ED83F69A20348B650038D96B /* Podspec Metadata */,
-				ED83F67A20348A760038D96B /* Marmot */,
-				CDEC9D6520EC7CE300E2D642 /* Marmot-iOS */,
-				ED83F67920348A760038D96B /* Products */,
-				BD6C83E5DB77188F879D07D2 /* Pods */,
-				748F1F71C8B07AD2EC6712BA /* Frameworks */,
+				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				607FACD21AFB9204008FA782 /* Example for Marmot */,
+				607FACE81AFB9204008FA782 /* Tests */,
+				607FACD11AFB9204008FA782 /* Products */,
+				C5E838163363BD8D67B1FFA8 /* Pods */,
+				0C47979FCB65AFB8A2C00075 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		ED83F67920348A760038D96B /* Products */ = {
+		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED83F67820348A760038D96B /* Marmot_Example.app */,
-				CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */,
+				607FACD01AFB9204008FA782 /* Marmot_Example.app */,
+				607FACE51AFB9204008FA782 /* Marmot_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED83F67A20348A760038D96B /* Marmot */ = {
+		607FACD21AFB9204008FA782 /* Example for Marmot */ = {
 			isa = PBXGroup;
 			children = (
-				ED83F67B20348A760038D96B /* AppDelegate.swift */,
-				ED83F67D20348A760038D96B /* ViewController.swift */,
-				ED83F67F20348A760038D96B /* Assets.xcassets */,
-				ED83F68120348A760038D96B /* Main.storyboard */,
-				ED83F68420348A760038D96B /* Info.plist */,
-				ED83F68520348A760038D96B /* Marmot.entitlements */,
+				CD503CE221E0B0FD0060D4F8 /* device.swift */,
+				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
+				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
+			name = "Example for Marmot";
 			path = Marmot;
 			sourceTree = "<group>";
 		};
-		ED83F69A20348B650038D96B /* Podspec Metadata */ = {
+		607FACD31AFB9204008FA782 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A78B45EF070788A01B1F481B /* Marmot.podspec */,
-				14ABFC5B81B4A40561F85617 /* README.md */,
-				AC353ECB5BBB05154924250A /* LICENSE */,
+				607FACD41AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACE81AFB9204008FA782 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACE91AFB9204008FA782 /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		607FACE91AFB9204008FA782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEA1AFB9204008FA782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		607FACF51AFB993E008FA782 /* Podspec Metadata */ = {
+			isa = PBXGroup;
+			children = (
+				F4E3A15F4F30782E687F842E /* Marmot.podspec */,
+				EA24B85E2D4A406640CBE628 /* README.md */,
+				D64AD90DDDE832BE1B1AA178 /* LICENSE */,
 			);
 			name = "Podspec Metadata";
+			sourceTree = "<group>";
+		};
+		C5E838163363BD8D67B1FFA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A2A01E813488294E1ABFB0EA /* Pods-Marmot_Example.debug.xcconfig */,
+				A8C9125E7D558CBA7EEDC656 /* Pods-Marmot_Example.release.xcconfig */,
+				D3DC09410A179C673FC5C33E /* Pods-Marmot_Tests.debug.xcconfig */,
+				5AD61EC4D1687F544D6893C7 /* Pods-Marmot_Tests.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CDEC9D6320EC7CE300E2D642 /* Marmot-iOS */ = {
+		607FACCF1AFB9204008FA782 /* Marmot_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDEC9D7320EC7CE600E2D642 /* Build configuration list for PBXNativeTarget "Marmot-iOS" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Marmot_Example" */;
 			buildPhases = (
-				2AA91580C82197A36FE0D34E /* [CP] Check Pods Manifest.lock */,
-				CDEC9D6020EC7CE300E2D642 /* Sources */,
-				CDEC9D6120EC7CE300E2D642 /* Frameworks */,
-				CDEC9D6220EC7CE300E2D642 /* Resources */,
-				D975C74EA4BE73603F2A1E9C /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Marmot-iOS";
-			productName = "Marmot-iOS";
-			productReference = CDEC9D6420EC7CE300E2D642 /* Marmot-iOS.app */;
-			productType = "com.apple.product-type.application";
-		};
-		ED83F67720348A760038D96B /* Marmot_Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED83F69320348A760038D96B /* Build configuration list for PBXNativeTarget "Marmot_Example" */;
-			buildPhases = (
-				7119947BA44AD80C681FBCDE /* [CP] Check Pods Manifest.lock */,
-				ED83F67420348A760038D96B /* Sources */,
-				ED83F67520348A760038D96B /* Frameworks */,
-				ED83F67620348A760038D96B /* Resources */,
-				49EADE76FB3A033B7A7A4282 /* [CP] Embed Pods Frameworks */,
+				533184F4725AA2BBA4553FB4 /* [CP] Check Pods Manifest.lock */,
+				607FACCC1AFB9204008FA782 /* Sources */,
+				607FACCD1AFB9204008FA782 /* Frameworks */,
+				607FACCE1AFB9204008FA782 /* Resources */,
+				DC3407FC68227141CA76FC85 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,134 +181,104 @@
 			);
 			name = Marmot_Example;
 			productName = Marmot;
-			productReference = ED83F67820348A760038D96B /* Marmot_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* Marmot_Example.app */;
 			productType = "com.apple.product-type.application";
+		};
+		607FACE41AFB9204008FA782 /* Marmot_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Marmot_Tests" */;
+			buildPhases = (
+				787BC41E657C0273BAAF749B /* [CP] Check Pods Manifest.lock */,
+				607FACE11AFB9204008FA782 /* Sources */,
+				607FACE21AFB9204008FA782 /* Frameworks */,
+				607FACE31AFB9204008FA782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				607FACE71AFB9204008FA782 /* PBXTargetDependency */,
+			);
+			name = Marmot_Tests;
+			productName = Tests;
+			productReference = 607FACE51AFB9204008FA782 /* Marmot_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ED83F67020348A760038D96B /* Project object */ = {
+		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
-				LastUpgradeCheck = 0940;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					CDEC9D6320EC7CE300E2D642 = {
-						CreatedOnToolsVersion = 9.4.1;
-						LastSwiftMigration = 0940;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.BackgroundModes = {
-								enabled = 1;
-							};
-							com.apple.Maps.iOS = {
-								enabled = 0;
-							};
-							com.apple.Push = {
-								enabled = 0;
-							};
-						};
+					607FACCF1AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3L8RM3MDLS;
+						LastSwiftMigration = 1010;
 					};
-					ED83F67720348A760038D96B = {
-						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Automatic;
+					607FACE41AFB9204008FA782 = {
+						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
 			};
-			buildConfigurationList = ED83F67320348A760038D96B /* Build configuration list for PBXProject "Marmot" */;
-			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = en;
+			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Marmot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = ED83F66F20348A760038D96B;
-			productRefGroup = ED83F67920348A760038D96B /* Products */;
+			mainGroup = 607FACC71AFB9204008FA782;
+			productRefGroup = 607FACD11AFB9204008FA782 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED83F67720348A760038D96B /* Marmot_Example */,
-				CDEC9D6320EC7CE300E2D642 /* Marmot-iOS */,
+				607FACCF1AFB9204008FA782 /* Marmot_Example */,
+				607FACE41AFB9204008FA782 /* Marmot_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CDEC9D6220EC7CE300E2D642 /* Resources */ = {
+		607FACCE1AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDEC9D7120EC7CE600E2D642 /* LaunchScreen.storyboard in Resources */,
-				CDEC9D6E20EC7CE600E2D642 /* Assets.xcassets in Resources */,
+				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED83F67620348A760038D96B /* Resources */ = {
+		607FACE31AFB9204008FA782 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED83F68020348A760038D96B /* Assets.xcassets in Resources */,
-				ED83F68320348A760038D96B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2AA91580C82197A36FE0D34E /* [CP] Check Pods Manifest.lock */ = {
+		533184F4725AA2BBA4553FB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Marmot-iOS-checkManifestLockResult.txt",
+			outputFileListPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49EADE76FB3A033B7A7A4282 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Marmot-macOS/Marmot.framework",
-				"${BUILT_PRODUCTS_DIR}/RoutableAssist-macOS/RoutableAssist.framework",
-				"${BUILT_PRODUCTS_DIR}/SPRoutable-macOS/SPRoutable.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit-macOS/SnapKit.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marmot.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoutableAssist.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPRoutable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7119947BA44AD80C681FBCDE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Marmot_Example-checkManifestLockResult.txt",
 			);
@@ -376,142 +287,112 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D975C74EA4BE73603F2A1E9C /* [CP] Embed Pods Frameworks */ = {
+		787BC41E657C0273BAAF749B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Marmot-iOS/Pods-Marmot-iOS-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AnyFormatProtocol/AnyFormatProtocol.framework",
-				"${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework",
-				"${BUILT_PRODUCTS_DIR}/Marmot-iOS/Marmot.framework",
-				"${BUILT_PRODUCTS_DIR}/RoutableAssist-iOS/RoutableAssist.framework",
-				"${BUILT_PRODUCTS_DIR}/SPRoutable-iOS/SPRoutable.framework",
-				"${BUILT_PRODUCTS_DIR}/SnapKit-iOS/SnapKit.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Marmot_Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC3407FC68227141CA76FC85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DarkTemplar/DarkTemplar.framework",
+				"${BUILT_PRODUCTS_DIR}/Khala/Khala.framework",
+				"${BUILT_PRODUCTS_DIR}/Marmot/Marmot.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnyFormatProtocol.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLFoundation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkTemplar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Khala.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marmot.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RoutableAssist.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SPRoutable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Marmot-iOS/Pods-Marmot-iOS-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CDEC9D6020EC7CE300E2D642 /* Sources */ = {
+		607FACCC1AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDAB6CE820FD921100780E0E /* calendar.swift in Sources */,
-				CD726EED20F794DB00BA974F /* system.swift in Sources */,
-				CDE0434620F8766900C773B6 /* push.swift in Sources */,
-				CDEE0CEB2106C29F005ADF00 /* MKMapView+MT.swift in Sources */,
-				CDEE0CE82106C29F005ADF00 /* MTMapSearchView.swift in Sources */,
-				CDEE0CEC2106C29F005ADF00 /* MTMapAnnotation.swift in Sources */,
-				CD46812820FCB22500C4D73E /* location.swift in Sources */,
-				CDEC9D6920EC7CE300E2D642 /* ViewController.swift in Sources */,
-				CDEE0CEA2106C29F005ADF00 /* MTMapViewController.swift in Sources */,
-				CD22999120EF81CD00AF440B /* device.swift in Sources */,
-				CDEE0CE92106C29F005ADF00 /* MTMapNavigationView.swift in Sources */,
-				CDE0434420F858DA00C773B6 /* app.swift in Sources */,
-				CD46812620FB682B00C4D73E /* clipboard.swift in Sources */,
-				CDEC9D6720EC7CE300E2D642 /* AppDelegate.swift in Sources */,
+				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				CD503CE321E0B0FD0060D4F8 /* device.swift in Sources */,
+				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		ED83F67420348A760038D96B /* Sources */ = {
+		607FACE11AFB9204008FA782 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED83F67E20348A760038D96B /* ViewController.swift in Sources */,
-				ED83F67C20348A760038D96B /* AppDelegate.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		CDEC9D6F20EC7CE600E2D642 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDEC9D7020EC7CE600E2D642 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 607FACCF1AFB9204008FA782 /* Marmot_Example */;
+			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
-		ED83F68120348A760038D96B /* Main.storyboard */ = {
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED83F68220348A760038D96B /* Base */,
+				607FACDA1AFB9204008FA782 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				607FACDF1AFB9204008FA782 /* Base */,
+			);
+			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CDEC9D7420EC7CE600E2D642 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F28D8787BB75538A21992683 /* Pods-Marmot-iOS.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8H2PX2432F;
-				INFOPLIST_FILE = "Marmot-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Marmot.com.Marmot-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Marmot-iOS/Box/Marmot-iOS-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		CDEC9D7520EC7CE600E2D642 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E1FE5A56ABB21585B409FCC9 /* Pods-Marmot-iOS.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8H2PX2432F;
-				INFOPLIST_FILE = "Marmot-iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "Marmot.com.Marmot-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_OBJC_BRIDGING_HEADER = "Marmot-iOS/Box/Marmot-iOS-Bridging-Header.h";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		ED83F69120348A760038D96B /* Debug */ = {
+		607FACED1AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -521,7 +402,6 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -533,15 +413,14 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -549,29 +428,26 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		ED83F69220348A760038D96B /* Release */ = {
+		607FACEE1AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -581,7 +457,6 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
@@ -593,15 +468,14 @@
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -609,77 +483,115 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		ED83F69420348A760038D96B /* Debug */ = {
+		607FACF01AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0637C11587FB3E0C564E0114 /* Pods-Marmot_Example.debug.xcconfig */;
+			baseConfigurationReference = A2A01E813488294E1ABFB0EA /* Pods-Marmot_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Marmot/Marmot.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3L8RM3MDLS;
 				INFOPLIST_FILE = Marmot/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.Marmot;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		ED83F69520348A760038D96B /* Release */ = {
+		607FACF11AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 42AF589E73A0A13374D4E6C3 /* Pods-Marmot_Example.release.xcconfig */;
+			baseConfigurationReference = A8C9125E7D558CBA7EEDC656 /* Pods-Marmot_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Marmot/Marmot.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3L8RM3MDLS;
 				INFOPLIST_FILE = Marmot/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.cocoapods.demo.Marmot;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		607FACF31AFB9204008FA782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3DC09410A179C673FC5C33E /* Pods-Marmot_Tests.debug.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marmot_Example.app/Marmot_Example";
+			};
+			name = Debug;
+		};
+		607FACF41AFB9204008FA782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AD61EC4D1687F544D6893C7 /* Pods-Marmot_Tests.release.xcconfig */;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Marmot_Example.app/Marmot_Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CDEC9D7320EC7CE600E2D642 /* Build configuration list for PBXNativeTarget "Marmot-iOS" */ = {
+		607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "Marmot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CDEC9D7420EC7CE600E2D642 /* Debug */,
-				CDEC9D7520EC7CE600E2D642 /* Release */,
+				607FACED1AFB9204008FA782 /* Debug */,
+				607FACEE1AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED83F67320348A760038D96B /* Build configuration list for PBXProject "Marmot" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Marmot_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED83F69120348A760038D96B /* Debug */,
-				ED83F69220348A760038D96B /* Release */,
+				607FACF01AFB9204008FA782 /* Debug */,
+				607FACF11AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED83F69320348A760038D96B /* Build configuration list for PBXNativeTarget "Marmot_Example" */ = {
+		607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "Marmot_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED83F69420348A760038D96B /* Debug */,
-				ED83F69520348A760038D96B /* Release */,
+				607FACF31AFB9204008FA782 /* Debug */,
+				607FACF41AFB9204008FA782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ED83F67020348A760038D96B /* Project object */;
+	rootObject = 607FACC81AFB9204008FA782 /* Project object */;
 }

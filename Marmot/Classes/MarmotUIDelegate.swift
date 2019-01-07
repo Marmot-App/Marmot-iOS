@@ -6,6 +6,7 @@
 //
 
 import WebKit
+import UIKit
 
 class MarmotUIDelegate: NSObject,WKUIDelegate {
 

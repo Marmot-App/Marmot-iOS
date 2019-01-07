@@ -3,31 +3,30 @@
   "version": "0.1.0",
   "summary": "A short description of Marmot.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/is.linhay@outlook.com/Marmot",
+  "homepage": "https://github.com/linhay/Marmot",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "is.linhay@outlook.com": "is.linhay@outlook.com"
+    "linhay": "158179948@qq.com"
   },
   "source": {
-    "git": "https://github.com/is.linhay@outlook.com/Marmot.git",
+    "git": "https://github.com/linhay/Marmot.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "osx": "10.10",
     "ios": "8.0"
   },
-  "source_files": "Marmot/Classes/*.{h,swift}",
+  "source_files": "Marmot/Classes/**/*",
   "resource_bundles": {
     "Marmot": [
-      "Marmot/Assets/*.{png,js}"
+      "Marmot/Assets/*.js"
     ]
   },
   "dependencies": {
-    "SPRoutable": [
-      "0.9.9.1.alpha"
+    "Khala": [
+      "0.0.6"
     ]
   }
 }

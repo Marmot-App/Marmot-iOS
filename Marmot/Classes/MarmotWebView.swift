@@ -25,35 +25,26 @@ import WebKit
 open class MarmotWebView: WKWebView {
   
   lazy var handler: MarmotHandler = { return MarmotHandler(webView: self) }()
+  private var marmotUIDelegate: MarmotUIDelegate = MarmotUIDelegate()
   
   public override init(frame: CGRect, configuration: WKWebViewConfiguration) {
     super.init(frame: frame, configuration: configuration)
     self.configuration.userContentController.add(handler, name: Marmot.key)
-    
-    do {
-      let file1 = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/NativeHandle.js"
-      let js = try String(contentsOfFile: "\(file1)", encoding: .utf8)
-      let script = WKUserScript(source: js, injectionTime: .atDocumentStart, forMainFrameOnly: true)
-      self.configuration.userContentController.addUserScript(script)
-    } catch {
-      print(error.localizedDescription)
-    }
-    
-//    do {
-//      let file1 = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/location.js"
-//      let js = try String(contentsOfFile: "\(file1)", encoding: .utf8)
-//      let script = WKUserScript(source: js, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
-//      self.configuration.userContentController.addUserScript(script)
-//    } catch {
-//      print(error.localizedDescription)
-//    }
-    
-    
-    
     self.scrollView.contentMode = .scaleAspectFit
-    
-    
-    self.uiDelegate = MarmotUIDelegate()
+    self.uiDelegate = marmotUIDelegate
+
+    let bundlePath = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/"
+    try? FileManager.default.contentsOfDirectory(atPath: bundlePath).compactMap { (item) -> String? in
+      return item.hasSuffix(".js") ? bundlePath + item : nil
+      }.forEach { (item) in
+        do {
+          let js = try String(contentsOfFile: item, encoding: .utf8)
+          let script = WKUserScript(source: js, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+          self.configuration.userContentController.addUserScript(script)
+        } catch {
+          print(error.localizedDescription)
+        }
+    }
   }
   
   required public init?(coder: NSCoder) {
