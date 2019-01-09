@@ -29,7 +29,6 @@
 		3B82C1FCEE11573B78124A4334A8D97A /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC424458F15264DB8938E345DDCE9FA /* ConstraintDescription.swift */; };
 		3DB89E1F8118E18821B21E1398864C75 /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF65F77937D3B372C54B0C7708B47A5E /* ConstraintMakerPriortizable.swift */; };
 		3E90FF64ED53D1838C79B5EB463984A6 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5947DCE5E8BECE6844CE28A9B6EB42 /* ConstraintView+Extensions.swift */; };
-		3FBD6EB4AEF508BEDB3CFCA4F59E7490 /* MarmotUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64794BCA076B72A4469366137650C634 /* MarmotUIDelegate.swift */; };
 		40721CF4E09523943084E1BEB569461E /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFFD6B9F8AB6F28939C97A1B3208232 /* ConstraintView.swift */; };
 		44207B0140DC42B1772F1DAC37C1764D /* DarkTemplar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F58CE833DFB8D20DB57BF06D64B0BDE /* DarkTemplar-dummy.m */; };
 		476D56E5D271D7D79C708F7DE2D0E1F4 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9F6203E2E3657419CB0494D484628D /* ConstraintLayoutSupport.swift */; };
@@ -57,7 +56,6 @@
 		9DEF22131B55A5DAEE8AD45FB1923514 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FF7F33826F94634E99E76A7201FB52 /* Foundation.framework */; };
 		A072347C4782DA696567974A14FDFF0D /* MarmotWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43A633639233C52AE25AC3620BD03FF /* MarmotWebView.swift */; };
 		A0F317DB33C16583466B0A733C74A238 /* NSObject+DarkTemplar.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FD91B53D7F1F3829396222450BB16DF /* NSObject+DarkTemplar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A11CA03E18E5A463475D2F324C7400FD /* Marmot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68964BA661137B22944197570830CB1C /* Marmot.swift */; };
 		A13B57362141C40F11B093E2D4D2DDCC /* Pods-Marmot_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 079B5DB5F2B8DA756697F241256C2279 /* Pods-Marmot_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A420115E3B127C8715C6E3F762269FA5 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE86D1A7398FAB7D03FE62718E32CC4 /* ConstraintMakerFinalizable.swift */; };
 		A4C51331E42BAFFF07B3292DD9E5E199 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7ABD1CBB06FDBCE935236EDC05AC85C /* ConstraintMakerRelatable.swift */; };
@@ -198,10 +196,8 @@
 		5B02087D10E47BF03A504142BDF381E6 /* Pods-Marmot_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Marmot_Example.modulemap"; sourceTree = "<group>"; };
 		5E9F6203E2E3657419CB0494D484628D /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
 		60BC7285AA040BDB127A44E670D4AB1A /* Khala-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Khala-dummy.m"; sourceTree = "<group>"; };
-		64794BCA076B72A4469366137650C634 /* MarmotUIDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MarmotUIDelegate.swift; path = Marmot/Classes/MarmotUIDelegate.swift; sourceTree = "<group>"; };
 		64D800EA2372AF37A3FB09DA5310B950 /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
 		6784B5C419837F4B5EDEDBBFE7A7A647 /* MethodSignature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MethodSignature.h; path = Sources/MethodSignature.h; sourceTree = "<group>"; };
-		68964BA661137B22944197570830CB1C /* Marmot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marmot.swift; path = Marmot/Classes/Marmot.swift; sourceTree = "<group>"; };
 		6E519C446AC46DD4638E5EE5FF283D94 /* URLValue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLValue.swift; path = Sources/core/URLValue.swift; sourceTree = "<group>"; };
 		6FD91B53D7F1F3829396222450BB16DF /* NSObject+DarkTemplar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+DarkTemplar.h"; path = "Sources/NSObject+DarkTemplar.h"; sourceTree = "<group>"; };
 		70C199148C5D8B89620CA3064F3A0E8C /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
@@ -405,9 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				3F6B470B0CA0DB1F52BF05A13319124C /* Marmot.h */,
-				68964BA661137B22944197570830CB1C /* Marmot.swift */,
 				03543FE98E09D1AA67CD5511260A5028 /* MarmotHandler.swift */,
-				64794BCA076B72A4469366137650C634 /* MarmotUIDelegate.swift */,
 				D43A633639233C52AE25AC3620BD03FF /* MarmotWebView.swift */,
 				CF8C7A2E96E88D62D6A6968B99111BB0 /* Pod */,
 				1A108894910AE0283A331A9C27D2265A /* Resources */,
@@ -981,9 +975,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8587411E56A115CE5ADFB5DB9A21F4F2 /* Marmot-dummy.m in Sources */,
-				A11CA03E18E5A463475D2F324C7400FD /* Marmot.swift in Sources */,
 				FD9E3BDFB5A65C5B40E34F2A25DE7171 /* MarmotHandler.swift in Sources */,
-				3FBD6EB4AEF508BEDB3CFCA4F59E7490 /* MarmotUIDelegate.swift in Sources */,
 				A072347C4782DA696567974A14FDFF0D /* MarmotWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

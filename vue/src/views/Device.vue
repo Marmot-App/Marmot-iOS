@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import MtBase from "./MTBase";
+import MtBase from "../components/MTBase.vue";
 export default {
   components: {
     MtBase
@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     runEvent(index) {
-      var item = this.items[index];
+      const item = this.items[index];
       switch (item.title) {
         case "info":
           mt.device

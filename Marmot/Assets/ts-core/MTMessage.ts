@@ -152,7 +152,7 @@ class MTMessage {
             type: this.type
         }
 
-        window.webkit.messageHandlers.ios.postMessage(this.message);
+        window.webkit.messageHandlers.marmot.postMessage(this.message);
         return result
     }
 
@@ -171,7 +171,7 @@ class MTMessage {
             param: this.params,
             type: this.type
         }
-        window.webkit.messageHandlers.ios.postMessage(this.message);
+        window.webkit.messageHandlers.marmot.postMessage(this.message);
         return this
     }
 

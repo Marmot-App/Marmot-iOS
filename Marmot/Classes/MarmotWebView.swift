@@ -21,18 +21,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 import WebKit
+#if canImport(Khala)
+import Khala
+#endif
 
 open class MarmotWebView: WKWebView {
   
-  lazy var handler: MarmotHandler = { return MarmotHandler(webView: self) }()
-  private var marmotUIDelegate: MarmotUIDelegate = MarmotUIDelegate()
-  
+  let userContentKey = "marmot"
+    
   public override init(frame: CGRect, configuration: WKWebViewConfiguration) {
     super.init(frame: frame, configuration: configuration)
-    self.configuration.userContentController.add(handler, name: Marmot.key)
-    self.scrollView.contentMode = .scaleAspectFit
-    self.uiDelegate = marmotUIDelegate
-
+    self.configuration.userContentController.add(self, name: userContentKey)
     let bundlePath = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/"
     try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
       .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
@@ -56,4 +55,49 @@ open class MarmotWebView: WKWebView {
   required public init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
+}
+
+extension MarmotWebView: WKScriptMessageHandler {
+  
+  func eval(dict: [String:Any]) {
+    do {
+      let data = try JSONSerialization.data(withJSONObject: dict, options: [])
+      guard let json = String(data: data, encoding: .utf8) else { return }
+      self.evaluateJavaScript("MTBridge(\(json))", completionHandler: { (result, error) in
+        if error != nil {
+          print(error?.localizedDescription ?? "")
+        }
+      })
+    } catch {
+      print(error.localizedDescription)
+    }
+  }
+  
+  func actionHandler(message: MarmotMessage) {
+    var result = message.message
+    
+    guard let value = Khala(str: message.url,params: message.params ?? [:])?.call(block: {
+      result["value"] = $0
+      self.eval(dict: result)
+    }) as? [String : Any] else { return }
+    
+    result["value"] = value
+    self.eval(dict: result)
+  }
+  
+  public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
+    guard let body = message.body as? [String: Any] else { return }
+    var message = MarmotMessage()
+    message.message = body
+    guard let url = body["url"] as? String  else { return }
+    message.url = url
+    
+    if let params = body["params"] as? [String : Any] {
+      message.params = params
+    }
+    
+    actionHandler(message: message)
+  }
+  
+  
 }

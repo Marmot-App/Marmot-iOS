@@ -189,7 +189,7 @@ var MTMessage = /** @class */ (function () {
             param: this.params,
             type: this.type
         };
-        window.webkit.messageHandlers.ios.postMessage(this.message);
+        window.webkit.messageHandlers.marmot.postMessage(this.message);
         return result;
     };
     /**
@@ -207,7 +207,7 @@ var MTMessage = /** @class */ (function () {
             param: this.params,
             type: this.type
         };
-        window.webkit.messageHandlers.ios.postMessage(this.message);
+        window.webkit.messageHandlers.marmot.postMessage(this.message);
         return this;
     };
     /**

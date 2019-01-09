@@ -7,7 +7,14 @@
 //
 
 import UIKit
+import Khala
 
-class App: NSObject {
+@objc(notification) @objcMembers
+class notification: NSObject {
+  
 
+  func enterForeground(_ closure: KhalaClosure) {
+//    NotificationCenter.default.addObserver(forName: NSNotification.Name.NSBundleResourceRequestLowDiskSpace.rawValue, object: Any?, queue: <#T##OperationQueue?#>, using: <#T##(Notification) -> Void#>)
+  }
+  
 }
