@@ -1,19 +1,13 @@
-declare class MT_Device {
+declare class MT_device {
     private baseURL;
     info(): MTMessage;
 }
-declare class MT_Notification {
+declare class MT_clipboard {
     private baseURL;
-    /**
-     * 监听 app 进入前台事件
-     *
-     * @param {(object) => void} cb
-     * @returns {MTMessage}
-     * @memberof MT_Notification
-     */
-    enterForeground(cb: (object: any) => void): MTMessage;
+    text(): MTMessage;
+    setText(value: string): MTMessage;
 }
 declare class MT {
-    device: MT_Device;
-    notification: MT_Notification;
+    device: MT_device;
+    clipboard: MT_clipboard;
 }

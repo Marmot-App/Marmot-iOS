@@ -1,37 +1,51 @@
 
-class MT_Device {
+class MT_device {
 
     private baseURL: string = 'mt://device/'
 
+    /**
+     * 获取系统信息
+     *
+     * @returns {MTMessage}
+     * @memberof MT_device
+     */
     public info(): MTMessage {
         return new MTMessage(this.baseURL + 'info')
     }
 
 }
 
+class MT_clipboard {
 
-class MT_Notification {
-
-    private baseURL: string = 'mt://notification/'
+    private baseURL: string = 'mt://clipboard/'
 
     /**
-     * 监听 app 进入前台事件
+     * 获取剪切板上文本
      *
-     * @param {(object) => void} cb
      * @returns {MTMessage}
-     * @memberof MT_Notification
+     * @memberof MT_clipboard
      */
-    public enterForeground(cb: (object) => void): MTMessage {
-        return new MTMessage(this.baseURL + 'enterForeground')
+    public text(): MTMessage {
+        return new MTMessage(this.baseURL + 'text')
+    }
+
+    /**
+     * 设置剪切板上文本
+     *
+     * @param {string} value
+     * @returns {MTMessage}
+     * @memberof MT_clipboard
+     */
+    public setText(value: string): MTMessage {
+        return new MTMessage(this.baseURL + 'setText').setParam({ value: value })
     }
 
 }
 
-
 class MT {
 
-    public device: MT_Device = new MT_Device()
-    public notification: MT_Notification = new MT_Notification()
+    public device: MT_device = new MT_device()
+    public clipboard: MT_clipboard = new MT_clipboard()
 
 }
 

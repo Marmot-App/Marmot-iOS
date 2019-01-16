@@ -153,16 +153,20 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DarkTemplar/DarkTemplar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Khala/Khala.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Marmot/Marmot.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Stem/Stem.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/DarkTemplar/DarkTemplar.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Khala/Khala.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Marmot/Marmot.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Stem/Stem.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

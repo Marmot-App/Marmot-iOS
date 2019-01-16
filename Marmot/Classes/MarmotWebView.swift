@@ -75,13 +75,24 @@ extension MarmotWebView: WKScriptMessageHandler {
   
   func actionHandler(message: MarmotMessage) {
     var result = message.message
+    var params = message.params
     
-    guard let value = Khala(str: message.url,params: message.params ?? [:])?.call(block: {
-      result["value"] = $0
+  
+    if params == nil {
+      params = ["webview": self]
+    }else{
+      params?.updateValue(self, forKey: "webview")
+    }
+    
+    guard let value = Khala(str: message.url,params: params ?? [:])?.call(block: {
+      // 处理属性赋值
+      if $0["value"] == nil { result["value"] = $0 }
+      else{ result["value"] = $0["value"] }
       self.eval(dict: result)
     }) as? [String : Any] else { return }
-    
-    result["value"] = value
+    // 处理属性赋值
+    if value["value"] == nil { result["value"] = value }
+    else{ result["value"] = value["value"] }
     self.eval(dict: result)
   }
   
@@ -92,7 +103,7 @@ extension MarmotWebView: WKScriptMessageHandler {
     guard let url = body["url"] as? String  else { return }
     message.url = url
     
-    if let params = body["params"] as? [String : Any] {
+    if let params = body["param"] as? [String : Any] {
       message.params = params
     }
     

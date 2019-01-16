@@ -10,6 +10,8 @@ import UIKit
 import WebKit
 import Marmot
 import SnapKit
+import Khala
+
 class ViewController: UIViewController {
   
   lazy var webview: MarmotWebView = {
@@ -24,6 +26,17 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    Khala.rewrite.filters.append(RewriteFilter({ (item) -> KhalaURLValue in
+      if item.url.scheme == "mt" {
+        var urlComponents = URLComponents(url: item.url, resolvingAgainstBaseURL: true)
+        urlComponents?.host = "MT_" + (item.url.host ?? "")
+        item.url = urlComponents?.url ?? item.url
+        return item
+      }else{
+        return item
+      }
+    }))
     
     self.view.addSubview(webview)
     self.view.addSubview(btn)

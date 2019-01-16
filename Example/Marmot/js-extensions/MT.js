@@ -1,32 +1,28 @@
-var MT_Device = /** @class */ (function () {
-    function MT_Device() {
+var MT_device = /** @class */ (function () {
+    function MT_device() {
         this.baseURL = 'mt://device/';
     }
-    MT_Device.prototype.info = function () {
+    MT_device.prototype.info = function () {
         return new MTMessage(this.baseURL + 'info');
     };
-    return MT_Device;
+    return MT_device;
 }());
-var MT_Notification = /** @class */ (function () {
-    function MT_Notification() {
-        this.baseURL = 'mt://notification/';
+var MT_clipboard = /** @class */ (function () {
+    function MT_clipboard() {
+        this.baseURL = 'mt://clipboard/';
     }
-    /**
-     * 监听 app 进入前台事件
-     *
-     * @param {(object) => void} cb
-     * @returns {MTMessage}
-     * @memberof MT_Notification
-     */
-    MT_Notification.prototype.enterForeground = function (cb) {
-        return new MTMessage(this.baseURL + 'enterForeground');
+    MT_clipboard.prototype.text = function () {
+        return new MTMessage(this.baseURL + 'text');
     };
-    return MT_Notification;
+    MT_clipboard.prototype.setText = function (value) {
+        return new MTMessage(this.baseURL + 'setText').setParam({ value: value });
+    };
+    return MT_clipboard;
 }());
 var MT = /** @class */ (function () {
     function MT() {
-        this.device = new MT_Device();
-        this.notification = new MT_Notification();
+        this.device = new MT_device();
+        this.clipboard = new MT_clipboard();
     }
     return MT;
 }());

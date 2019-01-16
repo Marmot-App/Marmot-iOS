@@ -14,6 +14,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		827F9599750C82A7AF81EDB2 /* Pods_Marmot_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FE2E166AD3EF5EEA1D9ADD /* Pods_Marmot_Tests.framework */; };
+		CD8A862B21EF12AE00382BEF /* clipboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A862A21EF12AE00382BEF /* clipboard.swift */; };
 		CD93F1BB21E336C20008E8E2 /* device.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93F1B421E336C20008E8E2 /* device.swift */; };
 		CD93F1C221E353680008E8E2 /* app.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD93F1C121E353680008E8E2 /* app.swift */; };
 		CD93F1C421E4B6510008E8E2 /* MT.js in Resources */ = {isa = PBXBuildFile; fileRef = CD93F1C321E4B6510008E8E2 /* MT.js */; };
@@ -45,6 +46,7 @@
 		A2A01E813488294E1ABFB0EA /* Pods-Marmot_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.debug.xcconfig"; path = "Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A8C9125E7D558CBA7EEDC656 /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.release.xcconfig"; path = "Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B7FE2E166AD3EF5EEA1D9ADD /* Pods_Marmot_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Marmot_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD8A862A21EF12AE00382BEF /* clipboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clipboard.swift; sourceTree = "<group>"; };
 		CD93F1B421E336C20008E8E2 /* device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = device.swift; sourceTree = "<group>"; };
 		CD93F1C121E353680008E8E2 /* app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = app.swift; sourceTree = "<group>"; };
 		CD93F1C321E4B6510008E8E2 /* MT.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MT.js; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				CD93F1B421E336C20008E8E2 /* device.swift */,
+				CD8A862A21EF12AE00382BEF /* clipboard.swift */,
 				CD93F1C121E353680008E8E2 /* app.swift */,
 			);
 			path = extensions;
@@ -341,19 +344,23 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BLFoundation/BLFoundation.framework",
 				"${BUILT_PRODUCTS_DIR}/DarkTemplar/DarkTemplar.framework",
 				"${BUILT_PRODUCTS_DIR}/Khala/Khala.framework",
 				"${BUILT_PRODUCTS_DIR}/Marmot/Marmot.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Stem/Stem.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BLFoundation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DarkTemplar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Khala.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Marmot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stem.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -368,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				CD8A862B21EF12AE00382BEF /* clipboard.swift in Sources */,
 				CD93F1C221E353680008E8E2 /* app.swift in Sources */,
 				CD93F1BB21E336C20008E8E2 /* device.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
