@@ -22,6 +22,68 @@
 
 import UIKit
 
+#if canImport(AVFoundation)
+import AVFoundation
+public extension Stem where Base: UIDevice {
+  
+  /// 闪光灯 亮度等级
+  public var torchLevel: Double {
+    guard let device = AVCaptureDevice.default(for: .video) else { return 0 }
+    return Double(device.torchLevel)
+  }
+  
+  /// 开启/关闭 闪光灯
+  ///
+  /// - Parameter level: 亮度等级 0 ~ 1
+  public func torch(level: Double) {
+    guard level >= 0, level <= 1, let device = AVCaptureDevice.default(for: .video) else { return }
+    do {
+      try device.lockForConfiguration()
+      if level == 0 {
+        device.torchMode = .off
+      }else{
+        device.torchMode = .on
+        try device.setTorchModeOn(level: Float(level))
+      }
+      device.unlockForConfiguration()
+    }catch{
+      print(error.localizedDescription)
+    }
+  }
+  
+  /// 在有 Taptic Engine 的设备上触发一个轻微的振动
+  ///
+  /// - Parameter params: level  (number)  0 ~ 3 表示振动等级
+  public func taptic(level: Int, isSupportTaptic: Bool = true) {
+    if #available(iOS 10.0, *),
+      isSupportTaptic,
+      let style = UIImpactFeedbackGenerator.FeedbackStyle(rawValue: level) {
+      let tapticEngine = UIImpactFeedbackGenerator(style: style)
+      tapticEngine.prepare()
+      tapticEngine.impactOccurred()
+    }else{
+      switch level {
+      case 3:
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+      case 2:
+        // 连续三次短震
+        AudioServicesPlaySystemSound(1521)
+      case 1:
+        // 普通短震，3D Touch 中 Pop 震动反馈
+        AudioServicesPlaySystemSound(1520)
+      default:
+        // 普通短震，3D Touch 中 Peek 震动反馈
+        AudioServicesPlaySystemSound(1519)
+      }
+    }
+  }
+  
+}
+
+#endif
+
+
+
 public extension UIApplication {
   
   public static let info = Info()
@@ -40,8 +102,9 @@ public extension UIApplication {
   
 }
 
+
 // MARK: - open
-public extension UIApplication {
+public extension Stem where Base: UIApplication {
   
   /// 打开链接 (会判断 能否打开)
   ///
@@ -72,6 +135,7 @@ public extension UIApplication {
       UIApplication.shared.openURL(url)
     }
   }
+  
   
 }
 

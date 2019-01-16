@@ -10,7 +10,7 @@ import VueRouter from "vue-router";
 export default {
   data() {
     return {
-      items: ["device", "clipboard"]
+      items: ["device", "clipboard", "motion"]
     };
   }
 };

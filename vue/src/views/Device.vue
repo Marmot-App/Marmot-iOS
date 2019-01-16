@@ -13,11 +13,32 @@ export default {
       name: "device",
       items: [
         {
-          title: "info",
-          demo: [
-            "mt.device.info() \n .success((value) => {}) \n .failure((error) => {}) \n .complete((value) => {}) \n .post()",
-            "mt.device.info() \n .post() \n .then(value => {}) \n .catch(error => {})"
-          ],
+          title: "info - 系统信息",
+          id: "info",
+
+          demo:
+            "mt.device.info().post()\n.then(value => {})\n.catch(error => {})",
+          result: ""
+        },
+        {
+          title: "space - 系统空间信息",
+          id: "space",
+          demo:
+            "mt.device.space().post()\n.then(value => {})\n.catch(error => {})",
+          result: ""
+        },
+        {
+          title: "taptic - 震动",
+          id: "taptic",
+          demo: "mt.device.taptic(2).post()",
+          result: ""
+        },
+        {
+          title: "torch - 闪光灯",
+          id: "torch",
+          level: 0,
+          demo:
+            "mt.device.torch(2).post()\n.then(value => {})\n.catch(error => {})",
           result: ""
         }
       ]
@@ -26,7 +47,32 @@ export default {
   methods: {
     runEvent(index) {
       const item = this.items[index];
-      switch (item.title) {
+      switch (item.id) {
+        case "taptic":
+          mt.device.taptic(2).post(2);
+          break;
+        case "torch":
+          mt.device
+            .torch(0)
+            .post()
+            .then(value => {
+              this.items[index].result = value;
+            })
+            .catch(error => {
+              this.items[index].result = error.message;
+            });
+          break;
+        case "space":
+          mt.device
+            .space()
+            .post()
+            .then(value => {
+              this.items[index].result = value;
+            })
+            .catch(error => {
+              this.items[index].result = error.message;
+            });
+          break;
         case "info":
           mt.device
             .info()

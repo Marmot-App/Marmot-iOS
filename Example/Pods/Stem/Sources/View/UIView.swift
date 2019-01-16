@@ -128,7 +128,7 @@ public extension Stem where Base: UIView{
   }
   
   /// 设置LayerShadow,offset,radius
-  public func setShadow(color: UIColor, offset: CGSize,radius: CGFloat) {
+  public func setShadow(color: UIColor, offset: CGSize, radius: CGFloat) {
     base.layer.shadowColor = color.cgColor
     base.layer.shadowOffset = offset
     base.layer.shadowRadius = radius
@@ -143,6 +143,10 @@ public extension Stem where Base: UIView{
 // MARK: - UIView 函数扩展
 public extension Stem where Base: UIView{
   
+  
+  func snapshotImage(afterUpdates: Bool) -> UIImage? {
+   return base.snapshotView(afterScreenUpdates: true)?.st.snapshot
+  }
   
   /** 添加子控件
    

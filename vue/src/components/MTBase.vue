@@ -10,20 +10,14 @@
         </el-row>
 
         <el-row>
-          <el-col :span="12">
-            <div class="code">CallBack形式:</div>
-          </el-col>
-          <el-col :span="12">
-            <div class="code">Promise形式:</div>
+          <el-col :span="24">
+            <div class="code">Api调用示例:</div>
           </el-col>
         </el-row>
 
         <el-row>
           <el-col :span="12">
-            <div class="code">{{items[index].demo[0]}}</div>
-          </el-col>
-          <el-col :span="12">
-            <div class="code">{{items[index].demo[1]}}</div>
+            <div class="code">{{items[index].demo}}</div>
           </el-col>
         </el-row>
 

@@ -31,76 +31,76 @@ PODS:
   - Marmot (0.1.0):
     - Khala (= 0.0.6)
   - SnapKit (4.2.0)
-  - Stem (0.0.2):
-    - Stem/Application (= 0.0.2)
-    - Stem/Button (= 0.0.2)
-    - Stem/CALayer (= 0.0.2)
-    - Stem/Cell (= 0.0.2)
-    - Stem/CGRect (= 0.0.2)
-    - Stem/Color (= 0.0.2)
-    - Stem/Control (= 0.0.2)
-    - Stem/Core (= 0.0.2)
-    - Stem/Font (= 0.0.2)
-    - Stem/Foundation (= 0.0.2)
-    - Stem/GestureRecognizer (= 0.0.2)
-    - Stem/Image (= 0.0.2)
-    - Stem/ImageView (= 0.0.2)
-    - Stem/Label (= 0.0.2)
-    - Stem/NavigationBar (= 0.0.2)
-    - Stem/NSLayoutConstraint (= 0.0.2)
-    - Stem/Storyboard (= 0.0.2)
-    - Stem/TableView (= 0.0.2)
-    - Stem/TextField (= 0.0.2)
-    - Stem/View (= 0.0.2)
-    - Stem/ViewController (= 0.0.2)
-  - Stem/Application (0.0.2):
+  - Stem (0.0.3):
+    - Stem/Application (= 0.0.3)
+    - Stem/Button (= 0.0.3)
+    - Stem/CALayer (= 0.0.3)
+    - Stem/Cell (= 0.0.3)
+    - Stem/CGRect (= 0.0.3)
+    - Stem/Color (= 0.0.3)
+    - Stem/Control (= 0.0.3)
+    - Stem/Core (= 0.0.3)
+    - Stem/Font (= 0.0.3)
+    - Stem/Foundation (= 0.0.3)
+    - Stem/GestureRecognizer (= 0.0.3)
+    - Stem/Image (= 0.0.3)
+    - Stem/ImageView (= 0.0.3)
+    - Stem/Label (= 0.0.3)
+    - Stem/NavigationBar (= 0.0.3)
+    - Stem/NSLayoutConstraint (= 0.0.3)
+    - Stem/Storyboard (= 0.0.3)
+    - Stem/TableView (= 0.0.3)
+    - Stem/TextField (= 0.0.3)
+    - Stem/View (= 0.0.3)
+    - Stem/ViewController (= 0.0.3)
+  - Stem/Application (0.0.3):
     - Stem/Core
-  - Stem/Button (0.0.2):
+  - Stem/Button (0.0.3):
     - Stem/Control
     - Stem/Core
-  - Stem/CALayer (0.0.2):
+  - Stem/CALayer (0.0.3):
     - Stem/Core
-  - Stem/Cell (0.0.2):
+  - Stem/Cell (0.0.3):
     - Stem/Core
-  - Stem/CGRect (0.0.2):
+  - Stem/CGRect (0.0.3):
     - Stem/Core
-  - Stem/Color (0.0.2):
+  - Stem/Color (0.0.3):
     - Stem/Core
-  - Stem/Control (0.0.2):
+  - Stem/Control (0.0.3):
     - Stem/Core
-  - Stem/Core (0.0.2)
-  - Stem/Font (0.0.2):
+  - Stem/Core (0.0.3)
+  - Stem/Font (0.0.3):
     - Stem/Core
-  - Stem/Foundation (0.0.2):
+  - Stem/Foundation (0.0.3):
     - Stem/Core
-  - Stem/GestureRecognizer (0.0.2):
+  - Stem/GestureRecognizer (0.0.3):
     - Stem/Core
-  - Stem/Image (0.0.2):
+  - Stem/Image (0.0.3):
     - Stem/Core
-  - Stem/ImageView (0.0.2):
+  - Stem/ImageView (0.0.3):
     - Stem/Core
-  - Stem/Label (0.0.2):
+  - Stem/Label (0.0.3):
     - Stem/Core
-  - Stem/NavigationBar (0.0.2):
+  - Stem/NavigationBar (0.0.3):
     - Stem/Core
-  - Stem/NSLayoutConstraint (0.0.2):
+  - Stem/NSLayoutConstraint (0.0.3):
     - Stem/Core
-  - Stem/Storyboard (0.0.2):
+  - Stem/Storyboard (0.0.3):
     - Stem/Core
-  - Stem/TableView (0.0.2):
+  - Stem/TableView (0.0.3):
     - Stem/Core
-  - Stem/TextField (0.0.2):
+  - Stem/TextField (0.0.3):
     - Stem/Core
-  - Stem/View (0.0.2):
+  - Stem/View (0.0.3):
     - Stem/Core
-  - Stem/ViewController (0.0.2):
+  - Stem/ViewController (0.0.3):
     - Stem/Core
 
 DEPENDENCIES:
-  - BLFoundation
+  - BLFoundation (= 0.8.4)
   - Marmot (from `../`)
   - SnapKit
-  - Stem
+  - Stem (= 0.0.3)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -120,8 +120,8 @@ SPEC CHECKSUMS:
   Khala: 2e36843450b983aa7bfb5ededc3fe911965007a7
   Marmot: c05f507f1c44a3933fdec26de1ff06a52d3c4c11
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  Stem: b4a71c35cc123bf4d60b9f6cbb3dbc859e9b5df0
+  Stem: 9a70f86d0f49e90952e8fb1fb6af63230b7c7f5c
 
-PODFILE CHECKSUM: 828ae2085c3cf3568e2fe7e298f48114af6565dd
+PODFILE CHECKSUM: c94195a79aa2118b732fd3d1dd7aa7ad4600d954
 
 COCOAPODS: 1.6.0.beta.2

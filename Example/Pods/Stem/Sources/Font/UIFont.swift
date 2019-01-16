@@ -24,13 +24,21 @@ import UIKit
 
 extension UIFont {
   
-  convenience init?(_ ctFont: CTFont) {
+  /// Use CTFont to create UIFont
+  ///
+  /// - Parameter ctFont: CTFont
+  convenience init?(ctFont: CTFont) {
     let name = CTFontCopyPostScriptName(ctFont) as String
     guard !name.isEmpty else { return nil }
     let size = CTFontGetSize(ctFont)
     self.init(name: name, size: size)
   }
   
+  /// Use CTFont to create UIFont
+  ///
+  /// - Parameters:
+  ///   - cgFont: CGFont
+  ///   - size: font size
   convenience init?(cgFont: CGFont,size: CGFloat) {
     guard let cfName = cgFont.postScriptName else { return nil }
     let name = cfName as String
@@ -38,6 +46,9 @@ extension UIFont {
     self.init(name: name, size: size)
   }
   
+  /// Use Data to create UIFont
+  ///
+  /// - Parameter data: Data
   convenience init?(data: Data) {
     guard let provider = CGDataProvider(data: (data as CFData)), let cgFont = CGFont(provider) else { return nil }
     var error: Unmanaged<CFError>?

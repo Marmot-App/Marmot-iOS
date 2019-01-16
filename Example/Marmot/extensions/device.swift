@@ -19,29 +19,66 @@ class MT_device: NSObject {
   
   
   /// 获取系统信息
-  func info(_ info: [String: Any]) -> [String: Any] {
+  func info() -> [String: Any] {
+    var result = [String: Any]()
+    result["screen"] = [
+      "orientation": UIDevice.current.orientation.rawValue,
+      "width": UIScreen.main.bounds.width,
+      "height": UIScreen.main.bounds.height,
+      "scale": UIScreen.main.scale
+    ]
+    
+    result["battery"] = [
+      "state": UIDevice.current.batteryState.rawValue,
+      "level": UIDevice.current.batteryLevel
+    ]
+    
+    result["version"] = UIApplication.info.version
+    result["language"] = Locale.preferredLanguages.first
+    result["model"] = Device.version.rawValue
+    
+    return result
+  }
   
-    var result = [
-      "brand": Device.type.rawValue,
-      "model": Device.version.rawValue,
-      "screenWidth": UIScreen.main.bounds.width * UIScreen.main.scale,
-      "screenHeight": UIScreen.main.bounds.height * UIScreen.main.scale,
-      "statusBarHeight": UIApplication.shared.statusBarFrame.height,
-      "pixelRatio": UIScreen.main.bounds.width / UIScreen.main.bounds.height
-      ] as [String : Any]
-    
-    
-    if let webview = info["webview"] as? MarmotWebView {
-      result["windowWidth"] = webview.frame.width * UIScreen.main.scale
-      result["windowHeight"] = webview.frame.height * UIScreen.main.scale
-      result["language"] = "zh"
-      result["version"] = UIApplication.info.version
-      result["platform"] = Device.type.rawValue
-      result["system"] = UIDevice.current.systemName + "-" + UIDevice.current.systemVersion
-      // result["SDKVersion"] = UIApplication.info.version
-      result["benchmarkLevel"] = "40"
+  /// 在有 Taptic Engine 的设备上触发一个轻微的振动
+  ///
+  /// - Parameter _info: value: 0 ~ 2 表示振动等级
+  func taptic(_ info: [String: Any]) {
+    if let value = info["value"] as? Int {
+      UIDevice.current.st.taptic(level: value)
     }
-
+  }
+  
+  /// 打开/关闭 手电筒
+  ///
+  /// - Parameter info: value: 0 ~ 1
+  func torch(_ info: [String: Any]) -> [String: Any] {
+    if let value = info["value"] as? Double {
+      UIDevice.current.st.torch(level: value)
+    }
+    return ["value": UIDevice.current.st.torchLevel]
+  }
+  
+  /// 获取设备的内存/磁盘空间：
+  func space() -> [String: Any] {
+    var result = [String: Any]()
+    
+    result["disk"] = ["free": [
+      "bytes": 1,
+      "string": "1"
+      ],"total": [
+        "bytes": 1,
+        "string": "1"
+      ]]
+    
+    result["memory"] = ["free": [
+      "bytes": 1,
+      "string": "1"
+      ],"total": [
+        "bytes": 1,
+        "string": "1"
+      ]]
+    
     return result
   }
   
