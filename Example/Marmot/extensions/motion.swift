@@ -10,6 +10,7 @@ import UIKit
 import CoreMotion
 import Khala
 
+/// 用于与系统自带的传感器交互，例如获取加速度
 @objc(MT_motion) @objcMembers
 class MT_motion: NSObject {
   

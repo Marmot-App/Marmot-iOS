@@ -4,6 +4,7 @@ import Index from './views/Index.vue';
 import Device from './views/Device.vue';
 import Clipboard from './views/Clipboard.vue'
 import Motion from './views/Motion.vue'
+import Location from './views/Location.vue'
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
       path: '/motion',
       name: 'motion',
       component: Motion,
+    },
+    {
+      path: '/location',
+      name: 'location',
+      component: Location,
     }
   ],
 });

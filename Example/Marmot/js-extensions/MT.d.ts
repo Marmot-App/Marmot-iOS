@@ -113,11 +113,78 @@ declare class MT_motion {
      * @returns {MTMessage}
      * @memberof MT_motion
      */
-    stopUpdates(): MTMessage;
+    stopUpdates(message: MTMessage): Promise<object>;
+}
+declare class MT_location {
+    private baseURL;
+    /**
+     * 单次定位
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    fetch(): MTMessage;
+    /**
+     * 监听地理位置更新标识
+     *
+     * @type {number}
+     * @memberof MT_location
+     */
+    updatingLabel: number;
+    /**
+     * 监听地理位置更新
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    updating(): MTMessage;
+    /**
+     * 停止地理位置更新
+     *
+     * @param {MTMessage} message
+     * @memberof MT_location
+     */
+    stopUpdate(message: MTMessage): void;
+    /**
+     * 停止所有的地理位置更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    stopAllUpdates(): void;
+    /**
+    * 监听罗盘更新标识
+    *
+    * @type {number}
+    * @memberof MT_location
+    */
+    updatingHeadingLabel: number;
+    /**
+     * 监听罗盘更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    updatingHeading(): MTMessage;
+    /**
+     * 移除罗盘更新
+     *
+     * @param {MTMessage} message
+     * @memberof MT_location
+     */
+    stopHeadingUpdate(message: MTMessage): void;
+    /**
+     * 移除所有的罗盘更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    stopAllHeadingUpdate(): void;
 }
 declare class MT {
     device: MT_device;
     clipboard: MT_clipboard;
     system: MT_system;
     motion: MT_motion;
+    location: MT_location;
 }

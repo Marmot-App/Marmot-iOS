@@ -13,7 +13,7 @@ import SnapKit
 import Khala
 
 class ViewController: UIViewController {
-  
+
   lazy var webview: MarmotWebView = {
     let item = MarmotWebView()
     if let path = Bundle.main.path(forResource: "MT", ofType: "js") {
@@ -53,16 +53,20 @@ class ViewController: UIViewController {
       make.bottom.equalTo(self.bottomLayoutGuide.snp.top)
     })
     
+    btn.setTitleColor(UIColor.black, for: UIControl.State.normal)
+    btn.backgroundColor = UIColor.yellow
+    btn.layer.cornerRadius = 5
+    btn.layer.masksToBounds = true
+    
     btn.setTitle("reload", for: UIControl.State.normal)
     btn.addTarget(self, action: #selector(tapEvent(_:)), for: UIControl.Event.touchUpInside)
-    
   }
+  
   @IBAction func tapEvent(_ sender: UIButton) {
-//    let url = URL(string: "http://127.0.0.1:8081/")!
+    // let url = URL(string: "http://127.0.0.1:8081/")!
     let url = URL(string: "http://192.168.43.85:8081/")!
     webview.load(URLRequest(url: url))
   }
-  
   
 }
 

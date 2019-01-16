@@ -1,4 +1,9 @@
 
+/**
+ * 在这里可以获取和设备有关的一些信息，例如设备语言、设备型号等等。
+ *
+ * @class MT_device
+ */
 class MT_device {
 
     private baseURL: string = 'mt://device/'
@@ -43,6 +48,11 @@ class MT_device {
     }
 }
 
+/**
+ * 剪贴板对于 iOS 的数据分享和交换很重要
+ *
+ * @class MT_clipboard
+ */
 class MT_clipboard {
 
     private baseURL: string = 'mt://clipboard/'
@@ -70,6 +80,11 @@ class MT_clipboard {
 
 }
 
+/**
+ * 和 iOS 系统本身相关的接口
+ *
+ * @class MT_system
+ */
 class MT_system {
 
     private baseURL: string = 'mt://system/'
@@ -141,6 +156,11 @@ class MT_system {
     }
 }
 
+/**
+ * 用于与系统自带的传感器交互，例如获取加速度
+ *
+ * @class MT_motion
+ */
 class MT_motion {
     private baseURL: string = 'mt://motion/'
 
@@ -161,8 +181,103 @@ class MT_motion {
      * @returns {MTMessage}
      * @memberof MT_motion
      */
-    stopUpdates(): MTMessage {
-        return new MTMessage(this.baseURL + 'stopUpdates')
+    stopUpdates(message: MTMessage) {
+        message.removeListen()
+        return new MTMessage(this.baseURL + 'stopUpdates').post()
+    }
+
+}
+
+class MT_location {
+    private baseURL: string = 'mt://location/'
+
+    /**
+     * 单次定位
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    fetch(): MTMessage {
+        return new MTMessage(this.baseURL + 'fetch')
+    }
+
+    /**
+     * 监听地理位置更新标识
+     *
+     * @type {number}
+     * @memberof MT_location
+     */
+    updatingLabel: number = 0
+
+    /**
+     * 监听地理位置更新
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    updating(): MTMessage {
+        this.updatingLabel += 1
+        return new MTMessage(this.baseURL + 'updating').setParam({ label: this.updatingLabel })
+    }
+
+    /**
+     * 停止地理位置更新
+     *
+     * @param {MTMessage} message
+     * @memberof MT_location
+     */
+    stopUpdate(message: MTMessage) {
+        new MTMessage(this.baseURL + 'stopUpdate').setParam({ label: message.params["label"] }).post()
+    }
+
+    /**
+     * 停止所有的地理位置更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    stopAllUpdates() {
+        new MTMessage(this.baseURL + 'stopAllUpdates').post()
+    }
+
+
+    /**
+    * 监听罗盘更新标识
+    *
+    * @type {number}
+    * @memberof MT_location
+    */
+    updatingHeadingLabel: number = 0
+
+    /**
+     * 监听罗盘更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    updatingHeading() {
+        this.updatingLabel += 1
+        return new MTMessage(this.baseURL + 'updatingHeading').setParam({ label: this.updatingHeadingLabel })
+    }
+
+    /**
+     * 移除罗盘更新
+     *
+     * @param {MTMessage} message
+     * @memberof MT_location
+     */
+    stopHeadingUpdate(message: MTMessage) {
+        new MTMessage(this.baseURL + 'stopHeadingUpdate').setParam({ label: message.params["label"] }).post()
+    }
+
+    /**
+     * 移除所有的罗盘更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    stopAllHeadingUpdate() {
+        new MTMessage(this.baseURL + 'stopAllHeadingUpdate').post()
     }
 
 }
@@ -173,7 +288,7 @@ class MT {
     public clipboard: MT_clipboard = new MT_clipboard()
     public system: MT_system = new MT_system()
     public motion: MT_motion = new MT_motion()
-
+    public location: MT_location = new MT_location()
 }
 
 window.mt = new MT();

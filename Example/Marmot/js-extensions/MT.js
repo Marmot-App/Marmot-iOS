@@ -151,10 +151,96 @@ var MT_motion = /** @class */ (function () {
      * @returns {MTMessage}
      * @memberof MT_motion
      */
-    MT_motion.prototype.stopUpdates = function () {
-        return new MTMessage(this.baseURL + 'stopUpdates');
+    MT_motion.prototype.stopUpdates = function (message) {
+        message.removeListen();
+        return new MTMessage(this.baseURL + 'stopUpdates').post();
     };
     return MT_motion;
+}());
+var MT_location = /** @class */ (function () {
+    function MT_location() {
+        this.baseURL = 'mt://location/';
+        /**
+         * 监听地理位置更新标识
+         *
+         * @type {number}
+         * @memberof MT_location
+         */
+        this.updatingLabel = 0;
+        /**
+        * 监听罗盘更新标识
+        *
+        * @type {number}
+        * @memberof MT_location
+        */
+        this.updatingHeadingLabel = 0;
+    }
+    /**
+     * 单次定位
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    MT_location.prototype.fetch = function () {
+        return new MTMessage(this.baseURL + 'fetch');
+    };
+    /**
+     * 监听地理位置更新
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    MT_location.prototype.updating = function () {
+        this.updatingLabel += 1;
+        return new MTMessage(this.baseURL + 'updating').setParam({ label: this.updatingLabel });
+    };
+    /**
+     * 停止地理位置更新
+     *
+     * @param {MTMessage} message
+     * @memberof MT_location
+     */
+    MT_location.prototype.stopUpdate = function (message) {
+        new MTMessage(this.baseURL + 'stopUpdate').setParam({ label: message.params["label"] }).post();
+    };
+    /**
+     * 停止所有的地理位置更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    MT_location.prototype.stopAllUpdates = function () {
+        new MTMessage(this.baseURL + 'stopAllUpdates').post();
+    };
+    /**
+     * 监听罗盘更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    MT_location.prototype.updatingHeading = function () {
+        this.updatingLabel += 1;
+        return new MTMessage(this.baseURL + 'updatingHeading').setParam({ label: this.updatingHeadingLabel });
+    };
+    /**
+     * 移除罗盘更新
+     *
+     * @param {MTMessage} message
+     * @memberof MT_location
+     */
+    MT_location.prototype.stopHeadingUpdate = function (message) {
+        new MTMessage(this.baseURL + 'stopHeadingUpdate').setParam({ label: message.params["label"] }).post();
+    };
+    /**
+     * 移除所有的罗盘更新
+     *
+     * @returns
+     * @memberof MT_location
+     */
+    MT_location.prototype.stopAllHeadingUpdate = function () {
+        new MTMessage(this.baseURL + 'stopAllHeadingUpdate').post();
+    };
+    return MT_location;
 }());
 var MT = /** @class */ (function () {
     function MT() {
@@ -162,9 +248,8 @@ var MT = /** @class */ (function () {
         this.clipboard = new MT_clipboard();
         this.system = new MT_system();
         this.motion = new MT_motion();
+        this.location = new MT_location();
     }
     return MT;
 }());
 window.mt = new MT();
-
-

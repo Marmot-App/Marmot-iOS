@@ -5,18 +5,12 @@
       <el-collapse-item :title="item.title">
         <el-row>
           <el-col :span="24">
-            <div class="code">Api 调用:</div>
-          </el-col>
-        </el-row>
-
-        <el-row>
-          <el-col :span="24">
             <div class="code">Api调用示例:</div>
           </el-col>
         </el-row>
 
         <el-row>
-          <el-col :span="12">
+          <el-col :span="24">
             <div class="code">{{items[index].demo}}</div>
           </el-col>
         </el-row>

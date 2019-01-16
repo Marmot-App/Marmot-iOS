@@ -10,22 +10,18 @@ export default {
   },
   data() {
     return {
-      name: "device",
+      name: "clipboard",
       items: [
         {
           title: "text",
-          demo: [
-            "mt.device.text() \n .success((value) => {}) \n .failure((error) => {}) \n .complete((value) => {}) \n .post()",
-            "mt.device.text() \n .post() \n .then(value => {}) \n .catch(error => {})"
-          ],
+          demo:
+            "mt.device.text()\n.post()\n.then(value => {})\n.catch(error => {})",
           result: ""
         },
         {
           title: "setText",
-          demo: [
-            "mt.device.setText() \n .success((value) => {}) \n .failure((error) => {}) \n .complete((value) => {}) \n .post()",
-            "mt.device.setText() \n .post() \n .then(value => {}) \n .catch(error => {})"
-          ],
+          demo:
+            "mt.device.setText()\n.post()\n.then(value => {})\n.catch(error => {})",
           result: ""
         }
       ]
