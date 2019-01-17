@@ -15,6 +15,13 @@ export default {
       headingUpdateMessage: undefined,
       items: [
         {
+          title: "select - 从地图上选择一个点",
+          id: "select",
+          demo:
+            "mt.device.select().post()\n.then(value => {})\n.catch(error => {})",
+          result: ""
+        },
+        {
           title: "fetch - 单次定位",
           id: "fetch",
           demo:
@@ -85,6 +92,17 @@ export default {
         case "fetch":
           mt.location
             .fetch()
+            .post()
+            .then(value => {
+              this.items[index].result = value;
+            })
+            .catch(error => {
+              this.items[index].result = error.message;
+            });
+          break;
+        case "select":
+          mt.location
+            .select()
             .post()
             .then(value => {
               this.items[index].result = value;

@@ -53,7 +53,7 @@ export default {
           break;
         case "torch":
           mt.device
-            .torch(0)
+            .torch(0.5)
             .post()
             .then(value => {
               this.items[index].result = value;

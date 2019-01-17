@@ -1,3 +1,8 @@
+/**
+ * 在这里可以获取和设备有关的一些信息，例如设备语言、设备型号等等。
+ *
+ * @class MT_device
+ */
 var MT_device = /** @class */ (function () {
     function MT_device() {
         this.baseURL = 'mt://device/';
@@ -39,6 +44,11 @@ var MT_device = /** @class */ (function () {
     };
     return MT_device;
 }());
+/**
+ * 剪贴板对于 iOS 的数据分享和交换很重要
+ *
+ * @class MT_clipboard
+ */
 var MT_clipboard = /** @class */ (function () {
     function MT_clipboard() {
         this.baseURL = 'mt://clipboard/';
@@ -64,6 +74,11 @@ var MT_clipboard = /** @class */ (function () {
     };
     return MT_clipboard;
 }());
+/**
+ * 和 iOS 系统本身相关的接口
+ *
+ * @class MT_system
+ */
 var MT_system = /** @class */ (function () {
     function MT_system() {
         this.baseURL = 'mt://system/';
@@ -130,6 +145,11 @@ var MT_system = /** @class */ (function () {
     };
     return MT_system;
 }());
+/**
+ * 用于与系统自带的传感器交互，例如获取加速度
+ *
+ * @class MT_motion
+ */
 var MT_motion = /** @class */ (function () {
     function MT_motion() {
         this.baseURL = 'mt://motion/';
@@ -175,6 +195,15 @@ var MT_location = /** @class */ (function () {
         */
         this.updatingHeadingLabel = 0;
     }
+    /**
+     * 从地图上选择一个点
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    MT_location.prototype.select = function () {
+        return new MTMessage(this.baseURL + 'select');
+    };
     /**
      * 单次定位
      *
@@ -242,6 +271,15 @@ var MT_location = /** @class */ (function () {
     };
     return MT_location;
 }());
+var MT_qrcode = /** @class */ (function () {
+    function MT_qrcode() {
+        this.baseURL = 'mt://qrcode/';
+    }
+    MT_qrcode.prototype.scan = function () {
+        return new MTMessage(this.baseURL + 'scan');
+    };
+    return MT_qrcode;
+}());
 var MT = /** @class */ (function () {
     function MT() {
         this.device = new MT_device();
@@ -249,6 +287,7 @@ var MT = /** @class */ (function () {
         this.system = new MT_system();
         this.motion = new MT_motion();
         this.location = new MT_location();
+        this.qrcode = new MT_qrcode();
     }
     return MT;
 }());

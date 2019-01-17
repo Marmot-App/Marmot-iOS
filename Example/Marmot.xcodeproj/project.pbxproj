@@ -23,6 +23,13 @@
 		CD93F1C421E4B6510008E8E2 /* MT.js in Resources */ = {isa = PBXBuildFile; fileRef = CD93F1C321E4B6510008E8E2 /* MT.js */; };
 		CDCC29EE21EF8CCE00EBD120 /* file.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29ED21EF8CCE00EBD120 /* file.swift */; };
 		CDCC29F021EF8FD100EBD120 /* events.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29EF21EF8FD100EBD120 /* events.swift */; };
+		CDCC29F521F015A000EBD120 /* qrcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29F421F0159F00EBD120 /* qrcode.swift */; };
+		CDCC29F721F015C500EBD120 /* QrcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29F621F015C500EBD120 /* QrcodeViewController.swift */; };
+		CDCC29FE21F01E9700EBD120 /* MTMapSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29F921F01E9700EBD120 /* MTMapSearchView.swift */; };
+		CDCC29FF21F01E9700EBD120 /* MTMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29FA21F01E9700EBD120 /* MTMapViewController.swift */; };
+		CDCC2A0021F01E9700EBD120 /* MTMapNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29FB21F01E9700EBD120 /* MTMapNavigationView.swift */; };
+		CDCC2A0121F01E9700EBD120 /* MKMapView+MT.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29FC21F01E9700EBD120 /* MKMapView+MT.swift */; };
+		CDCC2A0221F01E9700EBD120 /* MTMapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCC29FD21F01E9700EBD120 /* MTMapAnnotation.swift */; };
 		FA546B4B7E9BC1733498A1C0 /* Pods_Marmot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8498A7031BACB2E384B358F /* Pods_Marmot_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +70,13 @@
 		CD93F1C321E4B6510008E8E2 /* MT.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = MT.js; sourceTree = "<group>"; };
 		CDCC29ED21EF8CCE00EBD120 /* file.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = file.swift; sourceTree = "<group>"; };
 		CDCC29EF21EF8FD100EBD120 /* events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = events.swift; sourceTree = "<group>"; };
+		CDCC29F421F0159F00EBD120 /* qrcode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qrcode.swift; sourceTree = "<group>"; };
+		CDCC29F621F015C500EBD120 /* QrcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeViewController.swift; sourceTree = "<group>"; };
+		CDCC29F921F01E9700EBD120 /* MTMapSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapSearchView.swift; sourceTree = "<group>"; };
+		CDCC29FA21F01E9700EBD120 /* MTMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapViewController.swift; sourceTree = "<group>"; };
+		CDCC29FB21F01E9700EBD120 /* MTMapNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapNavigationView.swift; sourceTree = "<group>"; };
+		CDCC29FC21F01E9700EBD120 /* MKMapView+MT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+MT.swift"; sourceTree = "<group>"; };
+		CDCC29FD21F01E9700EBD120 /* MTMapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MTMapAnnotation.swift; sourceTree = "<group>"; };
 		D272064AF284FD4D0083DCA3 /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D3DC09410A179C673FC5C33E /* Pods-Marmot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D64AD90DDDE832BE1B1AA178 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -192,6 +206,8 @@
 		CD93F1B321E336C20008E8E2 /* extensions */ = {
 			isa = PBXGroup;
 			children = (
+				CDCC29F821F01E9700EBD120 /* map */,
+				CDCC29F321F0159F00EBD120 /* qrcode */,
 				CD93F1B421E336C20008E8E2 /* device.swift */,
 				CD8A862A21EF12AE00382BEF /* clipboard.swift */,
 				CD93F1C121E353680008E8E2 /* system.swift */,
@@ -209,6 +225,27 @@
 				CD93F1C321E4B6510008E8E2 /* MT.js */,
 			);
 			path = "js-extensions";
+			sourceTree = "<group>";
+		};
+		CDCC29F321F0159F00EBD120 /* qrcode */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC29F421F0159F00EBD120 /* qrcode.swift */,
+				CDCC29F621F015C500EBD120 /* QrcodeViewController.swift */,
+			);
+			path = qrcode;
+			sourceTree = "<group>";
+		};
+		CDCC29F821F01E9700EBD120 /* map */ = {
+			isa = PBXGroup;
+			children = (
+				CDCC29F921F01E9700EBD120 /* MTMapSearchView.swift */,
+				CDCC29FA21F01E9700EBD120 /* MTMapViewController.swift */,
+				CDCC29FB21F01E9700EBD120 /* MTMapNavigationView.swift */,
+				CDCC29FC21F01E9700EBD120 /* MKMapView+MT.swift */,
+				CDCC29FD21F01E9700EBD120 /* MTMapAnnotation.swift */,
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,14 +435,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCC29FF21F01E9700EBD120 /* MTMapViewController.swift in Sources */,
 				CD173FA021EF610700B9A83B /* location.swift in Sources */,
+				CDCC2A0021F01E9700EBD120 /* MTMapNavigationView.swift in Sources */,
+				CDCC29F521F015A000EBD120 /* qrcode.swift in Sources */,
+				CDCC29F721F015C500EBD120 /* QrcodeViewController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				CDCC29FE21F01E9700EBD120 /* MTMapSearchView.swift in Sources */,
 				CD8A862B21EF12AE00382BEF /* clipboard.swift in Sources */,
 				CDCC29F021EF8FD100EBD120 /* events.swift in Sources */,
 				CD93F1C221E353680008E8E2 /* system.swift in Sources */,
+				CDCC2A0221F01E9700EBD120 /* MTMapAnnotation.swift in Sources */,
 				CD93F1BB21E336C20008E8E2 /* device.swift in Sources */,
 				CDCC29EE21EF8CCE00EBD120 /* file.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				CDCC2A0121F01E9700EBD120 /* MKMapView+MT.swift in Sources */,
 				CD173F9C21EF3EA000B9A83B /* motion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

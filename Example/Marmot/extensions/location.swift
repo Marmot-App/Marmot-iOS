@@ -9,9 +9,15 @@
 import UIKit
 import Khala
 import CoreLocation
+import Stem
 
 @objc(MT_location) @objcMembers
 class MT_location: NSObject, CLLocationManagerDelegate {
+  
+  func select(_ closure: @escaping KhalaClosure) {
+    let vc = MTMapViewController(closure: closure)
+    UIViewController.current?.st.push(vc: vc)
+  }
   
   private lazy var manager: CLLocationManager = {
     let manager = CLLocationManager()

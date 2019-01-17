@@ -5,6 +5,7 @@ import Device from './views/Device.vue';
 import Clipboard from './views/Clipboard.vue'
 import Motion from './views/Motion.vue'
 import Location from './views/Location.vue'
+import QRCode from './views/QRCode.vue'
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ export default new Router({
       path: '/location',
       name: 'location',
       component: Location,
+    },
+    {
+      path: '/qrcode',
+      name: 'qrcode',
+      component: QRCode,
     }
   ],
 });

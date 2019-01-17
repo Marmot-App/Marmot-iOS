@@ -1,3 +1,8 @@
+/**
+ * 在这里可以获取和设备有关的一些信息，例如设备语言、设备型号等等。
+ *
+ * @class MT_device
+ */
 declare class MT_device {
     private baseURL;
     /**
@@ -28,6 +33,11 @@ declare class MT_device {
     */
     torch(level: string): MTMessage;
 }
+/**
+ * 剪贴板对于 iOS 的数据分享和交换很重要
+ *
+ * @class MT_clipboard
+ */
 declare class MT_clipboard {
     private baseURL;
     /**
@@ -46,6 +56,11 @@ declare class MT_clipboard {
      */
     setText(value: string): MTMessage;
 }
+/**
+ * 和 iOS 系统本身相关的接口
+ *
+ * @class MT_system
+ */
 declare class MT_system {
     private baseURL;
     /**
@@ -97,6 +112,11 @@ declare class MT_system {
      */
     facetime(address: string): MTMessage;
 }
+/**
+ * 用于与系统自带的传感器交互，例如获取加速度
+ *
+ * @class MT_motion
+ */
 declare class MT_motion {
     private baseURL;
     /**
@@ -117,6 +137,13 @@ declare class MT_motion {
 }
 declare class MT_location {
     private baseURL;
+    /**
+     * 从地图上选择一个点
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    select(): MTMessage;
     /**
      * 单次定位
      *
@@ -181,10 +208,15 @@ declare class MT_location {
      */
     stopAllHeadingUpdate(): void;
 }
+declare class MT_qrcode {
+    private baseURL;
+    scan(): MTMessage;
+}
 declare class MT {
     device: MT_device;
     clipboard: MT_clipboard;
     system: MT_system;
     motion: MT_motion;
     location: MT_location;
+    qrcode: MT_qrcode;
 }

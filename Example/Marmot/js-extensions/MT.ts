@@ -192,6 +192,16 @@ class MT_location {
     private baseURL: string = 'mt://location/'
 
     /**
+     * 从地图上选择一个点
+     *
+     * @returns {MTMessage}
+     * @memberof MT_location
+     */
+    select(): MTMessage {
+        return new MTMessage(this.baseURL + 'select')
+    }
+
+    /**
      * 单次定位
      *
      * @returns {MTMessage}
@@ -282,6 +292,15 @@ class MT_location {
 
 }
 
+class MT_qrcode {
+    private baseURL: string = 'mt://qrcode/'
+
+    scan(): MTMessage {
+        return new MTMessage(this.baseURL + 'scan')
+    }
+
+}
+
 class MT {
 
     public device: MT_device = new MT_device()
@@ -289,6 +308,7 @@ class MT {
     public system: MT_system = new MT_system()
     public motion: MT_motion = new MT_motion()
     public location: MT_location = new MT_location()
+    public qrcode: MT_qrcode = new MT_qrcode()
 }
 
 window.mt = new MT();
