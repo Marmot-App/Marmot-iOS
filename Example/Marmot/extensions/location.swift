@@ -46,14 +46,8 @@ class MT_location: NSObject, CLLocationManagerDelegate {
       closure(["error": "locationServicesEnabled is false"])
       return
     }
-    
-    if CLLocationManager.significantLocationChangeMonitoringAvailable() {
-      self.manager.startMonitoringSignificantLocationChanges()
-    }else{
-      self.manager.startUpdatingLocation()
-    }
-    self.manager.requestLocation()
     self.fetchClosures.append(closure)
+    self.manager.requestLocation()
   }
   
   /// 持续更新定位
@@ -64,7 +58,17 @@ class MT_location: NSObject, CLLocationManagerDelegate {
     }
     self.updatingClosures[label] = closure
     self.manager.startUpdatingLocation()
-    self.manager.requestLocation()
+    
+    ///  优先返回上次定位结果
+    if let item = self.manager.location {
+      let result = [
+        "alt": item.altitude,
+        "lat": item.coordinate.latitude,
+        "lng": item.coordinate.longitude
+      ]
+      closure(result)
+    }
+    
   }
   
   /// 移除定位更新

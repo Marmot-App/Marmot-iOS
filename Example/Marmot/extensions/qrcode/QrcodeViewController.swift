@@ -158,7 +158,6 @@ extension QrcodeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
       let exifMetadata = dict[kCGImagePropertyExifDictionary as String] as? [String: Any],
       let brightnessValue = exifMetadata[kCGImagePropertyExifBrightnessValue as String] as? Double
       else { return }
-    print("当前亮度值 : \(brightnessValue)")
     let brightnessThresholdValue = -0.2
     DispatchQueue.main.async { self.turnTorch(on: brightnessValue < brightnessThresholdValue) }
   }
