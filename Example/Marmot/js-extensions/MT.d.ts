@@ -212,6 +212,10 @@ declare class MT_qrcode {
     private baseURL;
     scan(): MTMessage;
 }
+declare class MT_events {
+    private baseURL;
+    shakeDetected(): MTMessage;
+}
 declare class MT {
     device: MT_device;
     clipboard: MT_clipboard;
@@ -219,4 +223,5 @@ declare class MT {
     motion: MT_motion;
     location: MT_location;
     qrcode: MT_qrcode;
+    events: MT_events;
 }

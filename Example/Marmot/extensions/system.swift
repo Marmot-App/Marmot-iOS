@@ -8,6 +8,9 @@
 
 import UIKit
 import Khala
+import MessageUI
+import MediaPlayer
+import BLFoundation
 
 @objc(MT_system) @objcMembers
 class MT_system: NSObject {
@@ -19,16 +22,30 @@ class MT_system: NSObject {
   func brightness(_ info: [String: Any]) -> [String: Any] {
     if let value = info["value"] as? CGFloat {
       UIScreen.main.brightness = value
+      return ["value": value]
     }
-    return ["value": UIScreen.main.brightness]
+    return ["value": Double(UIScreen.main.brightness).round(places: 2)]
   }
+  
+  lazy var volumView = MPVolumeView(frame: CGRect(x: 0, y: 100, width: 100, height: 40))
   
   /// 设置系统音量
   ///
   /// - Parameter params: value(number) 0.0 ~ 1.0
-  /// - Returns: 亮度信息 { value: 0.1 ~ 1.0 }
-  func volume(_ info: [String: Any])  -> [String: Any] {
-    return ["value": "还没找到合理设置方式"]
+  /// - Returns: 音量信息 { value: 0.1 ~ 1.0 }
+  func volume(_ info: [String: Any]) -> [String: Any] {
+    let slider = volumView.subviews.first { (item) -> Bool in
+      return item.description.contains("MPVolumeSlider")
+      } as? UISlider
+    
+    volumView.removeFromSuperview()
+    UIViewController.current?.view.addSubview(volumView)
+    
+    if let value = info["value"] as? Double {
+      slider?.setValue(Float(value), animated: false)
+    }
+    volumView.removeFromSuperview()
+    return ["value": Double(slider?.value ?? 0)]
   }
   
   /// 拨打电话
@@ -51,7 +68,15 @@ class MT_system: NSObject {
   func sms(_ info: [String: Any]) -> [String: Any] {
     if let value = info["value"] as? String {
       UIApplication.shared.st.open(url: "sms:" + value)
-    }else{
+    } else if let value = info["value"] as? [String] {
+      if MFMessageComposeViewController.canSendText() {
+        let vc = MFMessageComposeViewController()
+        vc.recipients = value
+        vc.body = info["body"] as? String
+        vc.messageComposeDelegate = self
+        UIViewController.current?.st.present(vc: vc)
+      }
+    } else{
       return ["error": "号码:不能为空"]
     }
     return [:]
@@ -85,6 +110,22 @@ class MT_system: NSObject {
   
   func makeIcon(params: [String: Any]) -> [String: Any]? {
     return nil
+  }
+  
+}
+
+extension MT_system: MFMessageComposeViewControllerDelegate {
+  
+  func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+    controller.dismiss(animated: true, completion: nil)
+    switch result {
+    case .sent:
+      break
+    case .cancelled:
+      break
+    case .failed:
+      break
+    }
   }
   
 }

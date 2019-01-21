@@ -9,16 +9,32 @@
 import UIKit
 import Khala
 
+
+extension UIWindow {
+
+  open override func becomeFirstResponder() -> Bool {
+    return true
+  }
+  
+  
+}
+
+
 @objc(MT_events) @objcMembers
 class MT_events: UIResponder {
   
-  private var shakeEvents = [KhalaClosure]()
+  private var shakeEvents = [KhalaClosure](){
+    didSet{
+      print("----")
+    }
+  }
   
   func shakeDetected(_ closure: @escaping KhalaClosure) {
     UIApplication.shared.applicationSupportsShakeToEdit = true
     self.becomeFirstResponder()
     shakeEvents.append(closure)
   }
+  
   
   override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
     
@@ -30,9 +46,9 @@ class MT_events: UIResponder {
   
   override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
     shakeEvents.forEach { (closure) in
-      closure([:])
+      closure(["ans":"ok"])
     }
-    shakeEvents.removeAll()
+// shakeEvents.removeAll()
   }
   
 }

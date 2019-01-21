@@ -280,6 +280,15 @@ var MT_qrcode = /** @class */ (function () {
     };
     return MT_qrcode;
 }());
+var MT_events = /** @class */ (function () {
+    function MT_events() {
+        this.baseURL = 'mt://events/';
+    }
+    MT_events.prototype.shakeDetected = function () {
+        return new MTMessage(this.baseURL + 'shakeDetected');
+    };
+    return MT_events;
+}());
 var MT = /** @class */ (function () {
     function MT() {
         this.device = new MT_device();
@@ -288,6 +297,7 @@ var MT = /** @class */ (function () {
         this.motion = new MT_motion();
         this.location = new MT_location();
         this.qrcode = new MT_qrcode();
+        this.events = new MT_events();
     }
     return MT;
 }());

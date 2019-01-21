@@ -301,6 +301,15 @@ class MT_qrcode {
 
 }
 
+class MT_events {
+    private baseURL: string = 'mt://events/'
+
+    shakeDetected(): MTMessage {
+        return new MTMessage(this.baseURL + 'shakeDetected')
+    }
+
+}
+
 class MT {
 
     public device: MT_device = new MT_device()
@@ -309,6 +318,8 @@ class MT {
     public motion: MT_motion = new MT_motion()
     public location: MT_location = new MT_location()
     public qrcode: MT_qrcode = new MT_qrcode()
+    public events: MT_events = new MT_events()
+
 }
 
 window.mt = new MT();
