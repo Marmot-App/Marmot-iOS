@@ -25,43 +25,41 @@ import Foundation
 public extension Device {
   
   /// 是否支持 Taptic Engine 功能
-  ///
-  /// - Returns: Bool
-  func isSupportTaptic() -> Bool {
+  public var isSupportTaptic: Bool {
     guard let version = Device.versionCode.split(separator: ",").first?.filter ({ (item) -> Bool in
       return !("a"..."z").contains(item)
     }), let num = Int(version) else { return false }
     return num > 8
   }
   
-  
-  
-  
-  
-}
-
-#if canImport(SystemConfiguration)
-import SystemConfiguration.CaptiveNetwork
-
-public extension Device {
-  
-  public struct WIFI {
-    public var ssid: String? = nil
-    public var bssid: String? = nil
-    public var ssidData: Data? = nil
+  /// 是否越狱
+  public var isJailbroken: Bool {
+    if Device.type == .simulator { return false }
+    let paths = ["/Applications/Cydia.app",
+                 "/private/var/lib/apt/",
+                 "/private/var/lib/cydia",
+                 "/private/var/stash"]
     
-    public init?() {
-      guard let interfaceNames = CNCopySupportedInterfaces() as? [String] else { return nil }
-      interfaceNames.forEach{ (name) in
-        guard let info = CNCopyCurrentNetworkInfo(name as CFString) as? [String:Any] else { return }
-        if let res = info[kCNNetworkInfoKeySSID as String] as? String { ssid = res }
-        if let res = info[kCNNetworkInfoKeyBSSID as String]  as? String { bssid = res }
-        if let res = info[kCNNetworkInfoKeySSIDData as String] as? Data { ssidData = res }
+    if paths.first(where: { return FileManager.default.fileExists(atPath: $0) }) != nil { return true }
+    
+    if let bash = fopen("/bin/bash", "r") {
+      fclose(bash)
+      return true
+    }
+    
+    if let uuid = CFUUIDCreate(nil),
+      let string = CFUUIDCreateString(nil, uuid) {
+      let path = "/private/" + (string as String)
+      do{
+        try "test".write(toFile: path, atomically: true, encoding: String.Encoding.utf8)
+        try FileManager.default.removeItem(atPath: path)
+        return true
+      }catch{
+        
       }
     }
+    return false
   }
   
 }
 
-
-#endif

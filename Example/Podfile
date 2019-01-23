@@ -3,7 +3,7 @@ use_frameworks!
 target 'Marmot_Example' do
   pod 'Marmot', :path => '../'
   pod 'SnapKit'
-  pod 'BLFoundation', '0.8.4'
+  pod 'BLFoundation', '0.8.5'
   pod 'Stem', '0.0.3'
   target 'Marmot_Tests' do
     inherit! :search_paths

@@ -61,11 +61,9 @@ class MarmotHandler:NSObject, WKScriptMessageHandler {
     message.message = body
     guard let url = body["url"] as? String  else { return }
     message.url = url
-    
     if let params = body["param"] as? [String : Any] {
       message.params = params
     }
-    
     actionHandler(message: message)
   }
   

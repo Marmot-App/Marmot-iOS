@@ -1,35 +1,35 @@
 PODS:
-  - BLFoundation (0.8.4):
-    - BLFoundation/Coder (= 0.8.4)
-    - BLFoundation/Custom (= 0.8.4)
-    - BLFoundation/Data (= 0.8.4)
-    - BLFoundation/Date (= 0.8.4)
-    - BLFoundation/Device (= 0.8.4)
-    - BLFoundation/NSObject (= 0.8.4)
-    - BLFoundation/Stdlib (= 0.8.4)
-    - BLFoundation/String (= 0.8.4)
-    - BLFoundation/URL (= 0.8.4)
-  - BLFoundation/Coder (0.8.4)
-  - BLFoundation/Custom (0.8.4)
-  - BLFoundation/Data (0.8.4)
-  - BLFoundation/Date (0.8.4)
-  - BLFoundation/Device (0.8.4)
-  - BLFoundation/NSObject (0.8.4)
-  - BLFoundation/Stdlib (0.8.4)
-  - BLFoundation/String (0.8.4)
-  - BLFoundation/URL (0.8.4)
+  - BLFoundation (0.8.5):
+    - BLFoundation/Coder (= 0.8.5)
+    - BLFoundation/Custom (= 0.8.5)
+    - BLFoundation/Data (= 0.8.5)
+    - BLFoundation/Date (= 0.8.5)
+    - BLFoundation/Device (= 0.8.5)
+    - BLFoundation/NSObject (= 0.8.5)
+    - BLFoundation/Stdlib (= 0.8.5)
+    - BLFoundation/String (= 0.8.5)
+    - BLFoundation/URL (= 0.8.5)
+  - BLFoundation/Coder (0.8.5)
+  - BLFoundation/Custom (0.8.5)
+  - BLFoundation/Data (0.8.5)
+  - BLFoundation/Date (0.8.5)
+  - BLFoundation/Device (0.8.5)
+  - BLFoundation/NSObject (0.8.5)
+  - BLFoundation/Stdlib (0.8.5)
+  - BLFoundation/String (0.8.5)
+  - BLFoundation/URL (0.8.5)
   - DarkTemplar (0.0.5)
-  - Khala (0.0.6):
+  - Khala (0.0.7):
     - DarkTemplar (= 0.0.5)
-    - Khala/core (= 0.0.6)
-    - Khala/extension (= 0.0.6)
-  - Khala/core (0.0.6):
+    - Khala/core (= 0.0.7)
+    - Khala/extension (= 0.0.7)
+  - Khala/core (0.0.7):
     - DarkTemplar (= 0.0.5)
-  - Khala/extension (0.0.6):
+  - Khala/extension (0.0.7):
     - DarkTemplar (= 0.0.5)
     - Khala/core
   - Marmot (0.1.0):
-    - Khala (= 0.0.6)
+    - Khala (= 0.0.7)
   - SnapKit (4.2.0)
   - Stem (0.0.3):
     - Stem/Application (= 0.0.3)
@@ -97,7 +97,7 @@ PODS:
     - Stem/Core
 
 DEPENDENCIES:
-  - BLFoundation (= 0.8.4)
+  - BLFoundation (= 0.8.5)
   - Marmot (from `../`)
   - SnapKit
   - Stem (= 0.0.3)
@@ -115,13 +115,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLFoundation: 6d09ea16eb109f248329f529f26852dae3a84b09
+  BLFoundation: 167fd7877e456dabbe43d283fdf65da00e33ce2a
   DarkTemplar: 614482722e70f0ba08300dd473796833bf52e330
-  Khala: 2e36843450b983aa7bfb5ededc3fe911965007a7
-  Marmot: c05f507f1c44a3933fdec26de1ff06a52d3c4c11
+  Khala: 241f6184bfbc3b89edf5e2078354a5e980501a63
+  Marmot: a2d71d00854ebca9ad46e1754fe5f6ec9d7da793
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Stem: 9a70f86d0f49e90952e8fb1fb6af63230b7c7f5c
 
-PODFILE CHECKSUM: c94195a79aa2118b732fd3d1dd7aa7ad4600d954
+PODFILE CHECKSUM: 7a28674044985c9b4ad86f9b9d37edaacbd3255d
 
 COCOAPODS: 1.6.0.beta.2

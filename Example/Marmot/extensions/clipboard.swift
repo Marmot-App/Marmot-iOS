@@ -7,16 +7,17 @@
 //
 
 import UIKit
+import Khala
 
 @objc(MT_clipboard) @objcMembers
 class MT_clipboard: NSObject {
 
-  func setText(_ info: [String: Any]) {
+  func setText(_ info: KhalaInfo) {
     UIPasteboard.general.string = info["value"] as? String ?? ""
   }
   
   
-  func text() -> [String: Any] {
+  func text() -> KhalaInfo {
     return ["value": UIPasteboard.general.string ?? ""]
   }
   

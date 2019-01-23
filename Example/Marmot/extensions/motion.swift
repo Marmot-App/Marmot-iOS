@@ -18,7 +18,7 @@ class MT_motion: NSObject {
     return CMMotionManager()
   }()
   
-  func startUpdates(_ info: [String: Any], closure: @escaping KhalaClosure) -> [String: Any] {
+  func startUpdates(_ info: KhalaInfo, closure: @escaping KhalaClosure) -> KhalaInfo {
     guard manager.isDeviceMotionAvailable else { return ["error": "isDeviceMotionAvailable is false"] }
     if let updateInterval = info["updateInterval"] as? Double {
       manager.deviceMotionUpdateInterval = updateInterval
@@ -28,7 +28,7 @@ class MT_motion: NSObject {
         closure(["error": error?.localizedDescription ?? ""])
         return
       }
-      var result = [String: Any]()
+      var result = KhalaInfo()
       result["attitude"] = [
         "yaw": motion.attitude.yaw,
         "pitch": motion.attitude.pitch,

@@ -51,7 +51,7 @@ class MT_location: NSObject, CLLocationManagerDelegate {
   }
   
   /// 持续更新定位
-  func updating(_ info: [String: Any], closure: @escaping KhalaClosure) {
+  func updating(_ info: KhalaInfo, closure: @escaping KhalaClosure) {
     guard let label = info["label"] as? Int else {
       closure(["error": "缺少标识"])
       return
@@ -72,7 +72,7 @@ class MT_location: NSObject, CLLocationManagerDelegate {
   }
   
   /// 移除定位更新
-  func stopUpdate(_ info: [String: Any]) -> [String: Any] {
+  func stopUpdate(_ info: KhalaInfo) -> KhalaInfo {
     guard let label = info["label"] as? Int else {
       return ["error": "缺少标识"]
     }
@@ -81,13 +81,13 @@ class MT_location: NSObject, CLLocationManagerDelegate {
   }
   
   /// 移除所有的定位更新
-  func stopAllUpdates() -> [String: Any] {
+  func stopAllUpdates() -> KhalaInfo {
     self.updatingClosures.removeAll()
     return [:]
   }
   
   /// 持续更新罗盘
-  func updatingHeading(_ info: [String: Any], closure: @escaping KhalaClosure) {
+  func updatingHeading(_ info: KhalaInfo, closure: @escaping KhalaClosure) {
     guard CLLocationManager.headingAvailable() else {
       closure(["error": "not support heading"])
       return
@@ -102,7 +102,7 @@ class MT_location: NSObject, CLLocationManagerDelegate {
   }
   
   /// 移除罗盘更新
-  func stopHeadingUpdate(_ info: [String: Any]) -> [String: Any] {
+  func stopHeadingUpdate(_ info: KhalaInfo) -> KhalaInfo {
     guard let label = info["label"] as? Int else {
       return ["error": "缺少标识"]
     }
@@ -111,7 +111,7 @@ class MT_location: NSObject, CLLocationManagerDelegate {
   }
   
   /// 移除所有的罗盘更新
-  func stopAllHeadingUpdate() -> [String: Any] {
+  func stopAllHeadingUpdate() -> KhalaInfo {
     self.headingClosures.removeAll()
     return [:]
   }

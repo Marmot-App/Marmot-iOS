@@ -19,7 +19,7 @@ class MT_system: NSObject {
   ///
   /// - Parameter info: value(number) 0.0 ~ 1.0
   /// - Returns: 亮度信息 { value: 0.1 ~ 1.0 }
-  func brightness(_ info: [String: Any]) -> [String: Any] {
+  func brightness(_ info: KhalaInfo) -> KhalaInfo {
     if let value = info["value"] as? CGFloat {
       UIScreen.main.brightness = value
       return ["value": value]
@@ -33,7 +33,7 @@ class MT_system: NSObject {
   ///
   /// - Parameter params: value(number) 0.0 ~ 1.0
   /// - Returns: 音量信息 { value: 0.1 ~ 1.0 }
-  func volume(_ info: [String: Any]) -> [String: Any] {
+  func volume(_ info: KhalaInfo) -> KhalaInfo {
     let slider = volumView.subviews.first { (item) -> Bool in
       return item.description.contains("MPVolumeSlider")
       } as? UISlider
@@ -52,7 +52,7 @@ class MT_system: NSObject {
   ///
   /// - Parameter params: 号码: value(string)
   /// - Returns: 错误信息
-  func call(_ info: [String: Any]) -> [String: Any] {
+  func call(_ info: KhalaInfo) -> KhalaInfo {
     if let value = info["value"] as? String {
       UIApplication.shared.st.open(url: "tel:" + value)
     }else{
@@ -65,7 +65,7 @@ class MT_system: NSObject {
   ///
   /// - Parameter params: 号码: value(string)
   /// - Returns: 错误信息
-  func sms(_ info: [String: Any]) -> [String: Any] {
+  func sms(_ info: KhalaInfo) -> KhalaInfo {
     if let value = info["value"] as? String {
       UIApplication.shared.st.open(url: "sms:" + value)
     } else if let value = info["value"] as? [String] {
@@ -86,7 +86,7 @@ class MT_system: NSObject {
   ///
   /// - Parameter params: 目标邮箱: value(string)
   /// - Returns: 错误信息
-  func mailto(_ info: [String: Any]) -> [String: Any] {
+  func mailto(_ info: KhalaInfo) -> KhalaInfo {
     if let value = info["value"] as? String {
       UIApplication.shared.st.open(url: "mailto:" + value)
     }else{
@@ -99,7 +99,7 @@ class MT_system: NSObject {
   ///
   /// - Parameter params: 目标邮箱: value(string)
   /// - Returns: 错误信息
-  func facetime(_ info: [String: Any]) -> [String: Any]? {
+  func facetime(_ info: KhalaInfo) -> KhalaInfo? {
     if let value = info["value"] as? String {
       UIApplication.shared.st.open(url: "facetime:" + value)
     }else{
@@ -108,7 +108,7 @@ class MT_system: NSObject {
     return [:]
   }
   
-  func makeIcon(params: [String: Any]) -> [String: Any]? {
+  func makeIcon(params: KhalaInfo) -> KhalaInfo? {
     return nil
   }
   
