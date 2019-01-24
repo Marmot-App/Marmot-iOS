@@ -49,8 +49,8 @@ extension WKWebView: MarmotCompatible {
 
  public extension Marmot where Base: WKWebView {
 
- public func begin(key: String = "marmot") {
-    base.configuration.userContentController.add(base.handler, name: key)
+ public func begin() {
+    base.configuration.userContentController.add(base.handler, name: "marmot")
     let bundlePath = Bundle(for: MarmotHandler.self).bundlePath + "/Marmot.bundle/"
     try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
       .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
