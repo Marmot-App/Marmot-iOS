@@ -25,38 +25,50 @@ import WebKit
 import Khala
 #endif
 
-open class MarmotWebView: WKWebView {
+extension WKWebView: MarmotCompatible {
   
-  let userContentKey = "marmot"
-  lazy var handler: MarmotHandler = {
-    return MarmotHandler(webview: self)
-  }()
-    
-  public override init(frame: CGRect, configuration: WKWebViewConfiguration) {
-    super.init(frame: frame, configuration: configuration)
-    self.configuration.userContentController.add(handler, name: userContentKey)
-    let bundlePath = Bundle(for: MarmotWebView.self).bundlePath + "/Marmot.bundle/"
-    try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
-      .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
-      .forEach { self.injectJSFlie(path: $0) }
+  fileprivate struct ObjectKey {
+    static var handler = UnsafeRawPointer(bitPattern: "Marmot.WKWebView.handler".hashValue)!
   }
   
-  public func injectJSFlie(path: String) {
+ fileprivate var handler: MarmotHandler {
+    get {
+      if let value = objc_getAssociatedObject(self, ObjectKey.handler) as? MarmotHandler {
+        return value
+      }else {
+        self.handler = MarmotHandler(webview: self)
+        return self.handler
+      }
+    }
+    set {
+      objc_setAssociatedObject(self, ObjectKey.handler, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+    }
+  }
+  
+}
+
+ public extension Marmot where Base: WKWebView {
+
+ public func begin(key: String = "marmot") {
+    base.configuration.userContentController.add(base.handler, name: key)
+    let bundlePath = Bundle(for: MarmotHandler.self).bundlePath + "/Marmot.bundle/"
+    try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
+      .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
+      .forEach { self.injectJS(path: $0) }
+  }
+  
+ public func injectJS(path: String) {
     do {
       let js = try String(contentsOfFile: path, encoding: .utf8)
-      self.injectJS(js)
+      self.injectJS(value: js)
     }catch {
       print(error.localizedDescription)
     }
   }
   
-  public func injectJS(_ value: String) {
+ public func injectJS(value: String) {
     let script = WKUserScript(source: value, injectionTime: .atDocumentStart, forMainFrameOnly: false)
-    self.configuration.userContentController.addUserScript(script)
+    base.configuration.userContentController.addUserScript(script)
   }
   
-  required public init?(coder: NSCoder) {
-    fatalError("init(coder:) has not been implemented")
-  }
 }
-

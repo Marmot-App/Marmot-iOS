@@ -1,9 +1,24 @@
 //
-//  MarmotHandle.swift
-//  BLFoundation
+//  Marmot
 //
-//  Created by linhey on 2019/1/18.
+//  Copyright (c) 2017 linhay - https://github.com/linhay
 //
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in all
+//  copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 import UIKit
 import WebKit
@@ -33,37 +48,31 @@ class MarmotHandler:NSObject, WKScriptMessageHandler {
   }
   
   func actionHandler(message: MarmotMessage) {
-    var result = message.message
-    var params = message.params
+    var result = message.body
+    var params = message.params ?? [:]
+    params.updateValue(self, forKey: "webview")
+    params.updateValue(["id": message.id], forKey: "request")
     
-    
-    if params == nil {
-      params = ["webview": self]
-    }else{
-      params?.updateValue(self, forKey: "webview")
-    }
-    
-    guard let value = Khala(str: message.url,params: params ?? [:])?.call(block: {
+    guard let value = Khala(str: message.url,params: params)?.call(block: {
       // 处理属性赋值
       if $0["value"] == nil { result["value"] = $0 }
       else{ result["value"] = $0["value"] }
       self.eval(dict: result)
-    }) as? [String : Any] else { return }
+    }) else { return }
+    
     // 处理属性赋值
-    if value["value"] == nil { result["value"] = value }
-    else{ result["value"] = value["value"] }
+    if let value = value as? KhalaInfo, value["value"] != nil {
+      result["value"] = value["value"]
+    }else{
+      result["value"] = value
+    }
+    
     self.eval(dict: result)
+
   }
   
   public func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
-    guard let body = message.body as? [String: Any] else { return }
-    var message = MarmotMessage()
-    message.message = body
-    guard let url = body["url"] as? String  else { return }
-    message.url = url
-    if let params = body["param"] as? [String : Any] {
-      message.params = params
-    }
+    guard let message = MarmotMessage(body: message.body) else { return }
     actionHandler(message: message)
   }
   

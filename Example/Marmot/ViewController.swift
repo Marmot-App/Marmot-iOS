@@ -14,10 +14,12 @@ import Khala
 
 class ViewController: UIViewController {
   
-  lazy var webview: MarmotWebView = {
-    let item = MarmotWebView()
+  lazy var webview: WKWebView = {
+    let item = WKWebView()
+    item.mt.begin()
+    
     if let path = Bundle.main.path(forResource: "MT", ofType: "js") {
-      item.injectJSFlie(path: path)
+      item.mt.injectJS(path: path)
     }
     return item
   }()
@@ -64,7 +66,7 @@ class ViewController: UIViewController {
   
   @IBAction func tapEvent(_ sender: UIButton) {
     // let url = URL(string: "http://127.0.0.1:8081/")!
-     let url = URL(string: "http://192.168.3.125:8081/")!
+     let url = URL(string: "http://192.168.3.124:8081/")!
     // let url = URL(string: "https://ci.linhey.com/")!
     webview.load(URLRequest(url: url))
   }

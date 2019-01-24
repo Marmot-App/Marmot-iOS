@@ -68,14 +68,6 @@ class MT_system: NSObject {
   func sms(_ info: KhalaInfo) -> KhalaInfo {
     if let value = info["value"] as? String {
       UIApplication.shared.st.open(url: "sms:" + value)
-    } else if let value = info["value"] as? [String] {
-      if MFMessageComposeViewController.canSendText() {
-        let vc = MFMessageComposeViewController()
-        vc.recipients = value
-        vc.body = info["body"] as? String
-        vc.messageComposeDelegate = self
-        UIViewController.current?.st.present(vc: vc)
-      }
     } else{
       return ["error": "号码:不能为空"]
     }
@@ -110,22 +102,6 @@ class MT_system: NSObject {
   
   func makeIcon(params: KhalaInfo) -> KhalaInfo? {
     return nil
-  }
-  
-}
-
-extension MT_system: MFMessageComposeViewControllerDelegate {
-  
-  func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
-    controller.dismiss(animated: true, completion: nil)
-    switch result {
-    case .sent:
-      break
-    case .cancelled:
-      break
-    case .failed:
-      break
-    }
   }
   
 }
