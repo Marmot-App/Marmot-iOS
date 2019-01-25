@@ -7,9 +7,6 @@
 //
 
 import MapKit
-
-import MapKit
-
 extension MKMapView {
   open var currentZoomLevel: Int {
     let maxZoom: Double = 24
