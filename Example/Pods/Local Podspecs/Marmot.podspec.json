@@ -1,9 +1,8 @@
 {
   "name": "Marmot",
   "version": "0.1.0",
-  "summary": "A short description of Marmot.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/linhay/Marmot",
+  "summary": "A javascript bridge with khala.",
+  "homepage": "https://github.com/Marmot-App/Marmot-iOS",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,12 +11,13 @@
     "linhay": "is.linhey@outlook.com"
   },
   "source": {
-    "git": "https://github.com/linhay/Marmot.git",
+    "git": "https://github.com/Marmot-App/Marmot-iOS.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
+  "swift_version": "4.2",
   "source_files": "Marmot/Classes/**/*",
   "resource_bundles": {
     "Marmot": [

@@ -11,13 +11,16 @@ import WebKit
 import Marmot
 import SnapKit
 import Khala
+import BLFoundation
 
 class ViewController: UIViewController {
   
   lazy var webview: WKWebView = {
     let item = WKWebView()
     item.mt.begin()
-    
+    URLProtocol.registerClass(MarmotURLRequest.self)
+    item.mt.removeData(types: WKWebView.WebsiteDataTypes.allCases)
+    item.mt.registerSchemeForCustomProtocol(schemes: ["https"])
     if let path = Bundle.main.path(forResource: "MT", ofType: "js") {
       item.mt.injectJS(path: path)
     }
@@ -66,7 +69,7 @@ class ViewController: UIViewController {
   
   @IBAction func tapEvent(_ sender: UIButton) {
     // let url = URL(string: "http://127.0.0.1:8081/")!
-     let url = URL(string: "http://192.168.3.124:8081/")!
+     let url = URL(string: "https://m.3pzs.com/")!
     // let url = URL(string: "https://ci.linhey.com/")!
     webview.load(URLRequest(url: url))
   }

@@ -1,23 +1,23 @@
 PODS:
-  - BLFoundation (0.8.5):
-    - BLFoundation/Coder (= 0.8.5)
-    - BLFoundation/Custom (= 0.8.5)
-    - BLFoundation/Data (= 0.8.5)
-    - BLFoundation/Date (= 0.8.5)
-    - BLFoundation/Device (= 0.8.5)
-    - BLFoundation/NSObject (= 0.8.5)
-    - BLFoundation/Stdlib (= 0.8.5)
-    - BLFoundation/String (= 0.8.5)
-    - BLFoundation/URL (= 0.8.5)
-  - BLFoundation/Coder (0.8.5)
-  - BLFoundation/Custom (0.8.5)
-  - BLFoundation/Data (0.8.5)
-  - BLFoundation/Date (0.8.5)
-  - BLFoundation/Device (0.8.5)
-  - BLFoundation/NSObject (0.8.5)
-  - BLFoundation/Stdlib (0.8.5)
-  - BLFoundation/String (0.8.5)
-  - BLFoundation/URL (0.8.5)
+  - BLFoundation (0.8.6):
+    - BLFoundation/Coder (= 0.8.6)
+    - BLFoundation/Custom (= 0.8.6)
+    - BLFoundation/Data (= 0.8.6)
+    - BLFoundation/Date (= 0.8.6)
+    - BLFoundation/Device (= 0.8.6)
+    - BLFoundation/NSObject (= 0.8.6)
+    - BLFoundation/Stdlib (= 0.8.6)
+    - BLFoundation/String (= 0.8.6)
+    - BLFoundation/URL (= 0.8.6)
+  - BLFoundation/Coder (0.8.6)
+  - BLFoundation/Custom (0.8.6)
+  - BLFoundation/Data (0.8.6)
+  - BLFoundation/Date (0.8.6)
+  - BLFoundation/Device (0.8.6)
+  - BLFoundation/NSObject (0.8.6)
+  - BLFoundation/Stdlib (0.8.6)
+  - BLFoundation/String (0.8.6)
+  - BLFoundation/URL (0.8.6)
   - DarkTemplar (0.0.5)
   - Khala (0.0.7):
     - DarkTemplar (= 0.0.5)
@@ -97,7 +97,7 @@ PODS:
     - Stem/Core
 
 DEPENDENCIES:
-  - BLFoundation (= 0.8.5)
+  - BLFoundation (= 0.8.6)
   - Marmot (from `../`)
   - SnapKit
   - Stem (= 0.0.3)
@@ -115,13 +115,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLFoundation: 167fd7877e456dabbe43d283fdf65da00e33ce2a
+  BLFoundation: 7b59bd77d1b05e4b780181d9313fff2ea7fce18f
   DarkTemplar: 614482722e70f0ba08300dd473796833bf52e330
   Khala: 241f6184bfbc3b89edf5e2078354a5e980501a63
-  Marmot: a2d71d00854ebca9ad46e1754fe5f6ec9d7da793
+  Marmot: d2820d77aa1b5b3e33bd4a19c25512d56376d127
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   Stem: 9a70f86d0f49e90952e8fb1fb6af63230b7c7f5c
 
-PODFILE CHECKSUM: 7a28674044985c9b4ad86f9b9d37edaacbd3255d
+PODFILE CHECKSUM: 6e42fed51a7c2e6201c4942f08cdc516410993a7
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.6.0.rc.1

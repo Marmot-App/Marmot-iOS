@@ -33,6 +33,7 @@
 		CDF3B09821F86083003C784D /* wx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B09721F86083003C784D /* wx.swift */; };
 		CDF3B09A21F8699A003C784D /* network.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B09921F8699A003C784D /* network.swift */; };
 		CDF3B09C21F86A72003C784D /* message.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B09B21F86A72003C784D /* message.swift */; };
+		CDF3B0CF21FC4639003C784D /* MarmotURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF3B0CE21FC4639003C784D /* MarmotURLProtocol.swift */; };
 		FA546B4B7E9BC1733498A1C0 /* Pods_Marmot_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8498A7031BACB2E384B358F /* Pods_Marmot_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +84,7 @@
 		CDF3B09721F86083003C784D /* wx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wx.swift; sourceTree = "<group>"; };
 		CDF3B09921F8699A003C784D /* network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = network.swift; sourceTree = "<group>"; };
 		CDF3B09B21F86A72003C784D /* message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = message.swift; sourceTree = "<group>"; };
+		CDF3B0CE21FC4639003C784D /* MarmotURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarmotURLProtocol.swift; sourceTree = "<group>"; };
 		D272064AF284FD4D0083DCA3 /* Pods-Marmot_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Marmot_Example/Pods-Marmot_Example.release.xcconfig"; sourceTree = "<group>"; };
 		D3DC09410A179C673FC5C33E /* Pods-Marmot_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marmot_Tests.debug.xcconfig"; path = "Target Support Files/Pods-Marmot_Tests/Pods-Marmot_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D64AD90DDDE832BE1B1AA178 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
+				CDF3B0CE21FC4639003C784D /* MarmotURLProtocol.swift */,
 			);
 			name = "Example for Marmot";
 			path = Marmot;
@@ -445,6 +448,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDCC29FF21F01E9700EBD120 /* MTMapViewController.swift in Sources */,
+				CDF3B0CF21FC4639003C784D /* MarmotURLProtocol.swift in Sources */,
 				CDF3B09821F86083003C784D /* wx.swift in Sources */,
 				CD173FA021EF610700B9A83B /* location.swift in Sources */,
 				CDCC2A0021F01E9700EBD120 /* MTMapNavigationView.swift in Sources */,

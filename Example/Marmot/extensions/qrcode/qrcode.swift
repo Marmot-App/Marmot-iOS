@@ -13,9 +13,13 @@ import Stem
 @objc(MT_qrcode) @objcMembers
 class MT_qrcode: NSObject {
 
-  func scan(_ info:[String: Any], closure: @escaping KhalaClosure) {
+  func scan(_ info: KhalaInfo, closure: @escaping KhalaClosure) {
     let vc = QrcodeViewController(closure: closure)
     UIViewController.current?.st.push(vc: vc)
+  }
+  
+  func decode(_ info: KhalaInfo) {
+    let data = Data(bytes: [10,1,2])
   }
   
 }

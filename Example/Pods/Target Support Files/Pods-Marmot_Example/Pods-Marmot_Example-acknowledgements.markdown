@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## BLFoundation
 
-Copyright (c) 2018 158179948@qq.com <158179948@qq.com>
+Copyright (c) 2018 is.linhey@outlook.com <is.linhey@outlook.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

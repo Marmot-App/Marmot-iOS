@@ -27,11 +27,32 @@ import Khala
 
 extension WKWebView: MarmotCompatible {
   
+  /// 缓存数据类型
+  ///
+  /// - diskCache: 在磁盘缓存上
+  /// - offlineWebApplicationCache: html离线Web应用程序缓存
+  /// - memoryCache: 内存缓存
+  /// - localStorage: 本地存储
+  /// - cookies: Cookies
+  /// - sessionStorage: 会话存储
+  /// - indexedDBDatabases: IndexedDB数据库
+  /// - webSQLDatabases: 查询数据库
+  public enum WebsiteDataTypes: String, CaseIterable {
+    case diskCache = "WKWebsiteDataTypeDiskCache"
+    case offlineWebApplicationCache = "WKWebsiteDataTypeOfflineWebApplicationCache"
+    case memoryCache = "WKWebsiteDataTypeMemoryCache"
+    case localStorage = "WKWebsiteDataTypeLocalStorage"
+    case cookies = "WKWebsiteDataTypeCookies"
+    case sessionStorage = "WKWebsiteDataTypeSessionStorage"
+    case indexedDBDatabases = "WKWebsiteDataTypeIndexedDBDatabases"
+    case webSQLDatabases = "WKWebsiteDataTypeWebSQLDatabases"
+  }
+  
   fileprivate struct ObjectKey {
     static var handler = UnsafeRawPointer(bitPattern: "Marmot.WKWebView.handler".hashValue)!
   }
   
- fileprivate var handler: MarmotHandler {
+  fileprivate var handler: MarmotHandler {
     get {
       if let value = objc_getAssociatedObject(self, ObjectKey.handler) as? MarmotHandler {
         return value
@@ -47,9 +68,9 @@ extension WKWebView: MarmotCompatible {
   
 }
 
- public extension Marmot where Base: WKWebView {
-
- public func begin() {
+public extension Marmot where Base: WKWebView {
+  
+  public func begin() {
     base.configuration.userContentController.add(base.handler, name: "marmot")
     let bundlePath = Bundle(for: MarmotHandler.self).bundlePath + "/Marmot.bundle/"
     try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
@@ -57,7 +78,52 @@ extension WKWebView: MarmotCompatible {
       .forEach { self.injectJS(path: $0) }
   }
   
- public func injectJS(path: String) {
+  var customSchemes: [String]? {
+    guard let controller = NSClassFromString("WKBrowsingContextController") as? NSObject.Type else { return nil }
+    return controller.value(forKey: "customSchemes") as? [String]
+  }
+  
+  /// 移除 webview 缓存
+  ///
+  /// - Parameter types: 缓存类型
+  @available(iOS 9.0, *)
+  public func removeData(types: [WKWebView.WebsiteDataTypes]){
+    let set = Set(types.map({ $0.rawValue }))
+    let date = Date(timeIntervalSince1970: 0)
+    WKWebsiteDataStore.default().removeData(ofTypes: set, modifiedSince: date, completionHandler: { })
+  }
+  
+  /// 移除 webview 缓存
+  @available(iOS, introduced: 2.0, deprecated: 9.0, message: "please adopt removeData(types: [WKWebView.WebsiteDataTypes]).")
+  public func removeData(){
+    guard let libraryDir = NSSearchPathForDirectoriesInDomains(.libraryDirectory,.userDomainMask, true).first else { return }
+    let webkitFolderInLib = libraryDir + "/WebKit"
+    let webKitFolderInCaches = "\(libraryDir)/Caches/\(libraryDir)/WebKit"
+      /* iOS8.0 WebView Cache的存放路径 */
+      try? FileManager.default.removeItem(atPath: webKitFolderInCaches)
+      try? FileManager.default.removeItem(atPath: webkitFolderInLib)
+  }
+  
+  var browsingContextController: NSObject.Type? {
+    guard let inten = base.value(forKey: "browsingContextController") else { return nil }
+    return type(of: inten) as? NSObject.Type
+  }
+  
+  public func registerSchemeForCustomProtocol(schemes: [String]) {
+    let sel = Selector(("registerSchemeForCustomProtocol:"))
+    if let controller = browsingContextController, controller.responds(to: sel) {
+      schemes.forEach({ controller.perform(sel, with: $0) })
+    }
+  }
+  
+  public func unregisterSchemeForCustomProtocol(schemes: [String]) {
+    let sel = Selector(("unregisterSchemeForCustomProtocol:"))
+    if let controller = browsingContextController, controller.responds(to: sel) {
+      schemes.forEach({ controller.perform(sel, with: $0) })
+    }
+  }
+  
+  public func injectJS(path: String) {
     do {
       let js = try String(contentsOfFile: path, encoding: .utf8)
       self.injectJS(value: js)
@@ -66,7 +132,7 @@ extension WKWebView: MarmotCompatible {
     }
   }
   
- public func injectJS(value: String) {
+  public func injectJS(value: String) {
     let script = WKUserScript(source: value, injectionTime: .atDocumentStart, forMainFrameOnly: false)
     base.configuration.userContentController.addUserScript(script)
   }
