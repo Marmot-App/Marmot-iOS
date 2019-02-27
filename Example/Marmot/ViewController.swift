@@ -31,7 +31,6 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     Khala.rewrite.filters.append(RewriteFilter({ (item) -> KhalaURLValue in
       if item.url.scheme == "mt" {
         var urlComponents = URLComponents(url: item.url, resolvingAgainstBaseURL: true)
@@ -69,8 +68,8 @@ class ViewController: UIViewController {
   
   @IBAction func tapEvent(_ sender: UIButton) {
     // let url = URL(string: "http://127.0.0.1:8081/")!
-     let url = URL(string: "https://m.3pzs.com/")!
-    // let url = URL(string: "https://ci.linhey.com/")!
+    // let url = URL(string: "https://m.3pzs.com/")!
+     let url = URL(string: "https://ci.linhey.com/")!
     webview.load(URLRequest(url: url))
   }
   

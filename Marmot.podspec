@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'Marmot'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'A javascript bridge with khala.'
   s.homepage         = 'https://github.com/Marmot-App/Marmot-iOS'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

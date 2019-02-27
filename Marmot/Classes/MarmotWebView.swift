@@ -70,12 +70,14 @@ extension WKWebView: MarmotCompatible {
 
 public extension Marmot where Base: WKWebView {
   
-  public func begin() {
+  public func begin(injectJS: Bool = true) {
     base.configuration.userContentController.add(base.handler, name: "marmot")
-    let bundlePath = Bundle(for: MarmotHandler.self).bundlePath + "/Marmot.bundle/"
-    try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
-      .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
-      .forEach { self.injectJS(path: $0) }
+    if injectJS {
+      let bundlePath = Bundle(for: MarmotHandler.self).bundlePath + "/Marmot.bundle/"
+      try? FileManager.default.contentsOfDirectory(atPath: bundlePath)
+        .compactMap { $0.hasSuffix(".js") ? bundlePath + $0 : nil }
+        .forEach { self.injectJS(path: $0) }
+    }
   }
   
   var customSchemes: [String]? {
