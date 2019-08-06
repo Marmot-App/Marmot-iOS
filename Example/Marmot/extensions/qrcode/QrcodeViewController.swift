@@ -44,7 +44,7 @@ class QrcodeViewController: UIViewController {
     item.setTitle("轻触点亮", for: .normal)
     item.setTitle("轻触关闭", for: .selected)
     item.st.verticalCenterImageAndTitle(spacing: 5)
-    item.add(for: UIControl.Event.touchUpInside, action: {
+    item.st.add(for: UIControl.Event.touchUpInside, action: {_ in
       item.isSelected = !item.isSelected
       do{
         try self.device?.lockForConfiguration()

@@ -24,9 +24,9 @@ import Foundation
 
 public extension Device {
   
-  public static let cpu = CPU()
+    static let cpu = CPU()
   
-  public struct CPU {
+    struct CPU {
     /// cpu 核心数
     public var count: Int {
       return ProcessInfo.processInfo.activeProcessorCount

@@ -22,6 +22,7 @@
 
 import Foundation
 
+
 extension Data {
   // http://stackoverflow.com/questions/39248092/nsattributedstring-extension-in-swift-3
   @available(iOS 9.0,*)

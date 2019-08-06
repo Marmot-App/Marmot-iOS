@@ -22,16 +22,56 @@
 
 import UIKit
 
+// MARK: - convenience init
+public extension UIStoryboard {
+    
+    convenience init(name: String, in bundle: Bundle? = nil) {
+        self.init(name: name, bundle: bundle)
+    }
+
+    convenience init<T: UIViewController>(vc: T.Type, in bundle: Bundle? = nil) {
+        let name = String(describing: T.self)
+        self.init(name: name, in: bundle)
+    }
+
+}
+
 // MARK: - UIStoryboard 扩展
 public extension Stem where Base: UIStoryboard{
-  
-  /// 尝试使用 AnyClass 初始化视图控制器
-  ///
-  /// - Parameter with: 视图控制器类型
-  /// - Returns: 视图控制器 | nil
-  public static func viewController<T: UIViewController>(with: T.Type) -> T? {
-    let vcName = String(describing: T.self)
-    return UIStoryboard(name: vcName, bundle: nil).instantiateInitialViewController() as? T
-  }
-  
+
+    var bundle: Bundle? {
+        // set{ base.setValue(newValue, forKey: "bundle") }
+        get{ return base.value(forKey: "bundle") as? Bundle }
+    }
+
+    var name: String {
+        // set{ base.setValue(newValue, forKey: "storyboardFileName") }
+        get{ return base.value(forKey: "storyboardFileName") as? String ?? "" }
+    }
+
+    /// 尝试使用 AnyClass 初始化视图控制器
+    ///
+    /// - Parameter with: 视图控制器类型
+    /// - Returns: 视图控制器 | nil
+    static func viewController<T: UIViewController>(with: T.Type) -> T? {
+        let vcName = String(describing: T.self)
+        return UIStoryboard(name: vcName, bundle: nil).st.viewController(with: with)
+    }
+
+    /// 尝试使用 AnyClass 初始化视图控制器
+    ///
+    /// - Parameter with: 视图控制器类型
+    /// - Returns: 视图控制器 | nil
+    func viewController<T: UIViewController>(with: T.Type) -> T? {
+        let vcName = String(describing: T.self)
+        if let vc = base.instantiateViewController(withIdentifier: vcName) as? T { return vc }
+        if let vc = base.instantiateInitialViewController() as? T { return vc }
+        assertionFailure("""
+            can't find vc: [\(vcName)]
+            in storyboard: [\(base.st.name)]
+            in     bundle: [\(base.st.bundle.debugDescription)]
+            """)
+        return nil
+    }
+
 }

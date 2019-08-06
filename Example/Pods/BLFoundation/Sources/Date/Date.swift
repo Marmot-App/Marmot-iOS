@@ -23,51 +23,51 @@
 import Foundation
 
 public enum DateFormatMode : Int {
-  case time
-  case date
-  case dateAndTime
-  case countDownTimer
+    case time
+    case date
+    case dateAndTime
+    case countDownTimer
 }
 
 public extension Date {
-
-  public var now: Date{ return Date(timeIntervalSinceNow: 0) }
-
-  public static func format(toString date:Date,mode: DateFormatMode) -> String {
-    let dateFormatter = setDateFormatter(mode: mode)
-    return dateFormatter.string(from: date)
-  }
-
-  public func format(mode: DateFormatMode) -> String {
-    return Date.format(toString: self, mode: mode)
-  }
-
-  public static func initWith(string: String, mode: DateFormatMode) -> Date? {
-    let dateFormatter = setDateFormatter(mode: mode)
-    guard let date = dateFormatter.date(from: string) else {
-      return nil
+    
+    var now: Date{ return Date(timeIntervalSinceNow: 0) }
+    
+    static func format(toString date:Date,mode: DateFormatMode) -> String {
+        let dateFormatter = setDateFormatter(mode: mode)
+        return dateFormatter.string(from: date)
     }
-    return date
-  }
-  
-  public static func initWith(json: String, mode: DateFormatMode) -> Date? {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-    return formatter.date(from: json)
-  }
-
-  private static func setDateFormatter(mode: DateFormatMode) -> DateFormatter{
-    let dateFormatter = DateFormatter()
-    switch mode {
-    case .countDownTimer:
-      dateFormatter.dateFormat = "ss.A"
-    case .date:
-      dateFormatter.dateFormat = "yyyy-MM-dd"
-    case .dateAndTime:
-      dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.A"
-    case .time:
-      dateFormatter.dateFormat = "HH:mm:ss.A"
+    
+    func format(mode: DateFormatMode) -> String {
+        return Date.format(toString: self, mode: mode)
     }
-    return dateFormatter
-  }
+    
+    static func initWith(string: String, mode: DateFormatMode) -> Date? {
+        let dateFormatter = setDateFormatter(mode: mode)
+        guard let date = dateFormatter.date(from: string) else {
+            return nil
+        }
+        return date
+    }
+    
+    static func initWith(json: String, mode: DateFormatMode) -> Date? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter.date(from: json)
+    }
+    
+    private static func setDateFormatter(mode: DateFormatMode) -> DateFormatter{
+        let dateFormatter = DateFormatter()
+        switch mode {
+        case .countDownTimer:
+            dateFormatter.dateFormat = "ss.A"
+        case .date:
+            dateFormatter.dateFormat = "yyyy-MM-dd"
+        case .dateAndTime:
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.A"
+        case .time:
+            dateFormatter.dateFormat = "HH:mm:ss.A"
+        }
+        return dateFormatter
+    }
 }

@@ -15,11 +15,12 @@ Swift 路由和模块通信解耦工具和规范。 可以让模块间无耦合�
 ## 特性
 
 - [x] 支持 cocopods 组件化开发.
-- [x] 无需注册URL,采用runtime来实现`target-action`形式调用.
+- [x] 无需注册URL,采用runtime来实现`target-action`形式函数调用.
 - [x] 内置URL重定向模块.
 - [x] 内置日志模块.
 - [x] 支持模块自定义.
 - [x] 内置断言,可切换语言.
+- [x] 路由类支持`UIApplicationDelegate`管理.
 - [x] 优先支持swift.
 
 ## 要求
@@ -153,7 +154,7 @@ pod 'Khala'
      let vc = Khala(str: "kl://BModule/vc?style=0")?.viewController
      ```
 
-4. **路由通知 **[**KhalaNotify**](https://linhay.github.io/Khala/Classes/KhalaNotify.html)
+4. **路由通知  [KhalaNotify](https://linhay.github.io/Khala/Classes/KhalaNotify.html)**
 
    可以使用该类型来执行多个已缓存路由类中的同名函数.
 
@@ -169,26 +170,22 @@ pod 'Khala'
    // Print: [<BModule: 0x60000242f230>, <AModule: 0x600002419d10>]
    ```
 
-   > 通知只能发送至已被缓存的路由类中. 缓存路径: [**PseudoClass.cache**](https://linhay.github.io/Khala/Classes/PseudoClass.html#/c:@M@Khala@objc(cs)PseudoClass(cpy)cache)
+   > 通知只能发送至已被缓存的路由类中. 缓存路径:  [**KhalaClass.cache**](https://linhay.github.io/Khala/Classes/KhalaClass.html#/c:@M@Khala@objc(cs)KhalaClass(cpy)cache)
 
 5. **路由注册**
 
-   在 [**Khala**](https://linhay.github.io/Khala/Classes/Khala.html#/c:@CM@Khala@objc(cs)Khala(im)register)中我提供了以下接口来抽象  [**PseudoClass.cache**](https://linhay.github.io/Khala/Classes/PseudoClass.html#/c:@M@Khala@objc(cs)PseudoClass(cpy)cache):
+   在 [**Khala**](https://linhay.github.io/Khala/Classes/Khala.html#/c:@CM@Khala@objc(cs)Khala(im)register)中我提供了以下接口来抽象  [**KhalaClass.cache**](https://linhay.github.io/Khala/Classes/KhalaClass.html#/c:@M@Khala@objc(cs)KhalaClass(cpy)cache):
 
    ```swift
    /// 注册路由类, 等同于Khala(str: "kl://AModule/doSomething")
    func register() -> Bool
-   // 取消注册路由类, 等同于 PseudoClass.cache["AModule"] = nil
+   // 取消注册路由类, 等同于 KhalaClass.cache["AModule"] = nil
    func unregister() -> Bool
-   // 取消全部注册路由类, 等同于 PseudoClass.cache.removeAll()
+   // 取消全部注册路由类, 等同于 KhalaClass.cache.removeAll()
    func unregisterAll() -> Bool
-   // 批量注册遵守KhalaProtocol协议的路由类:
-   Khala.registWithKhalaProtocol()
+   // 批量注册遵守Protocol协议的路由类:
+   Khala.regist(protocol: Protocol)
    ```
-
-   > 作者个人建议, 请尽量避免使用.
-   >
-   > [**KhalaProtocol协议**](https://linhay.github.io/Khala/Protocols.html#/c:@M@Khala@objc(pl)KhalaProtocol)
 
 6. **URL重定向:** [**KhalaRewrite**](https://linhay.github.io/Khala/Protocols/KhalaRewrite.html)
 
@@ -221,7 +218,44 @@ pod 'Khala'
       /// Print: <BModule: 0x6000026e2800>
       ```
 
-7. **日志模块:** [**KhalaHistory**](https://linhay.github.io/Khala/Protocols/KhalaHistory.html)
+7.  **UIApplicationDelegate 生命周期分发**
+
+   部分组件往往依赖于主工程中的`AppDelegate`中部分函数.
+
+   1. 在`Khala`中,需要显式的在主工程中的`AppDelegate`调用与处理相关逻辑.
+   2. 服务类需要遵守`UIApplicationDelegate`协议.
+
+   主工程`AppDelegate`:
+
+   ```swift
+   @UIApplicationMain
+   class AppDelegate: UIResponder,UIApplicationDelegate {
+   
+     var window: UIWindow?
+   
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       let list = Khala.appDelegate.application(application, didFinishLaunchingWithOptions: launchOptions)
+       return true
+     }
+       
+   }
+   ```
+
+   组件中服务类:
+
+   ```swift
+   @objc(AModule) @objcMembers
+   class AModule: NSObject,UIApplicationDelegate {
+     
+     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+       print("AModule.didFinishLaunchingWithOptions")
+       return true
+     }
+     
+   }
+   ```
+
+8. **日志模块:** [**KhalaHistory**](https://linhay.github.io/Khala/Protocols/KhalaHistory.html)
 
    每一份url请求都将记录至日志文件中, 可以在适当的时候提供开发者便利.
 
@@ -242,7 +276,7 @@ pod 'Khala'
       2018-12-01 02:06:54  kl://SwiftClass/double  {"test":"666"}
       ```
 
-8. **扩展机制:**  [**KhalaStore**](https://linhay.github.io/Khala/Classes.html#/c:@M@Khala@objc(cs)KhalaStore)
+9. **扩展机制:**  [**KhalaStore**](https://linhay.github.io/Khala/Classes.html#/c:@M@Khala@objc(cs)KhalaStore)
 
    ***khala*** 库中提供了一个空置的类[***KhalaStore***]用于盛放**路由函数**对应的本地函数.来简化本地调用复杂度的问题.
 
@@ -265,7 +299,7 @@ pod 'Khala'
 
    > ps: KhalaStore 扩展文件建议统一放置.
 
-9. **断言机制**
+10. **断言机制**
 
    为方便开发者使用,添加了部分场景下断言机制,示例:
 
@@ -282,10 +316,10 @@ pod 'Khala'
    Khala.isEnabledAssert = false
    ```
 
-10. **缓存机制:** [**PseudoClass.cache**](https://linhay.github.io/Khala/Classes/PseudoClass.html#/c:@M@Khala@objc(cs)PseudoClass(cpy)cache)
+11. **缓存机制:** [**KhalaClass.cache**](https://linhay.github.io/Khala/Classes/KhalaClass.html#/c:@M@Khala@objc(cs)KhalaClass(cpy)cache)
 
-   - 当路由第一次调用/注册路由类时,该路由类将被缓存至 [**PseudoClass.cache**](https://linhay.github.io/Khala/Classes/PseudoClass.html#/c:@M@Khala@objc(cs)PseudoClass(cpy)cache) 中, 以提高二次查找性能.
-   - 当路由类实例化时,该路由类中的函数列表将被缓存至 [**PseudoClass().methodLists**](https://linhay.github.io/Khala/Classes/PseudoClass.html#/c:@M@Khala@objc(cs)PseudoClass(py)methodLists)中, 以提高查找性能.
+   - 当路由第一次调用/注册路由类时,该路由类将被缓存至 [**KhalaClass.cache**](https://linhay.github.io/Khala/Classes/KhalaClass.html#/c:@M@Khala@objc(cs)KhalaClass(cpy)cache) 中, 以提高二次查找性能.
+   - 当路由类实例化时,该路由类中的函数列表将被缓存至 [**KhalaClass().methodLists**](https://linhay.github.io/Khala/Classes/KhalaClass.html#/c:@M@Khala@objc(cs)KhalaClass(py)methodLists)中, 以提高查找性能.
 
 ## 注意事项
 
@@ -413,7 +447,7 @@ pod 'Khala'
 ## 文档
 
 - [**API Reference**](https://linhay.github.io/Khala/) - 更详细的参考api文档.
-- [**iOS路由(Khala)设计**](https://www.linhey.com/2018/12/10/[2018%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93]iOS%20%E8%B7%AF%E7%94%B1%E8%AE%BE%E8%AE%A1/) - khala的选型与模组化中的角色担当.
+- [**iOS路由(Khala)设计**](https://www.linhey.com/2019/02/20/[iOS]Khala%E8%B7%AF%E7%94%B1%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%84/) - khala的选型与模组化中的角色担当.
 
 ## 参考与致谢
 

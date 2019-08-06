@@ -34,7 +34,7 @@ extension UIFont {
     self.init(name: name, size: size)
   }
   
-  /// Use CTFont to create UIFont
+  /// Use CGFont to create UIFont
   ///
   /// - Parameters:
   ///   - cgFont: CGFont

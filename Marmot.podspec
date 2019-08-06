@@ -10,5 +10,5 @@ Pod::Spec.new do |s|
   s.swift_version = '4.2'
   s.source_files = 'Marmot/Classes/**/*'
   s.resource_bundles = { 'Marmot' => ['Marmot/Assets/*.js'] }
-  s.dependency 'Khala', '0.0.7'
+  s.dependency 'Khala', '0.1.0'
 end

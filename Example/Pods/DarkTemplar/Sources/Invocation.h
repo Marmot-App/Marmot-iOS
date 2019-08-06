@@ -23,26 +23,26 @@
 
 @interface Invocation : NSObject
 
-@property(nonatomic,strong) NSInvocation* instance;
+@property(nonatomic,strong) NSInvocation* _Nullable instance;
 
-+ (Invocation *)invocationWithMethodSignature:(MethodSignature *)sig;
-@property (readonly, retain) NSMethodSignature *methodSignature;
++ (Invocation *_Nullable)invocationWithMethodSignature:(MethodSignature *_Nullable)sig;
+@property (readonly, retain) NSMethodSignature * _Nullable methodSignature;
 
 - (void)retainArguments;
 @property (readonly) BOOL argumentsRetained;
 
 @property (nullable, assign) id target;
-@property SEL selector;
+@property SEL _Nullable selector;
 
 - (void)invoke;
-- (void)invokeWithTarget:(id)target;
+- (void)invokeWithTarget:(id _Nullable)target;
 
-- (id)getArgument:(NSInteger)offset;
-- (void)setArgument:(id)value atIndex:(NSInteger)idx;
-- (void)setArgument:(id)argument expectedTypeEncoding: (NSString *)typeEncoding atIndex:(NSInteger)idx;
+- (id _Nullable )getArgument:(NSInteger)offset;
+- (void)setArgument:(id _Nullable)value atIndex:(NSInteger)idx;
+- (void)setArgument:(id _Nullable)argument expectedTypeEncoding: (NSString *_Nullable)typeEncoding atIndex:(NSInteger)idx;
 
-- (id)getReturnObject;
-- (void)getReturnValue:(void *)retLoc;
-- (void)setReturnValue:(void *)retLoc;
-  
+- (id _Nullable)getReturnObject;
+- (void)getReturnValue:(void *_Nullable)retLoc;
+- (void)setReturnValue:(void *_Nullable)retLoc;
+
 @end

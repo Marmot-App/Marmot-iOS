@@ -22,120 +22,117 @@
 
 import UIKit
 
-#if canImport(AVFoundation)
-import AVFoundation
-public extension Stem where Base: UIDevice {
-  
-  /// 闪光灯 亮度等级
-  public var torchLevel: Double {
-    guard let device = AVCaptureDevice.default(for: .video) else { return 0 }
-    return Double(device.torchLevel)
-  }
-  
-  /// 开启/关闭 闪光灯
-  ///
-  /// - Parameter level: 亮度等级 0 ~ 1
-  public func torch(level: Double) {
-    guard level >= 0, level <= 1, let device = AVCaptureDevice.default(for: .video) else { return }
-    do {
-      try device.lockForConfiguration()
-      if level == 0 {
-        device.torchMode = .off
-      }else{
-        device.torchMode = .on
-        try device.setTorchModeOn(level: Float(level))
-      }
-      device.unlockForConfiguration()
-    }catch{
-      print(error.localizedDescription)
+
+public extension Stem where Base: UIApplication {
+
+    /// 是否已开启推送
+    var isOpenNotification: Bool {
+        if let type = UIApplication.shared.currentUserNotificationSettings?.types, type == .init(rawValue: 0) { return false}
+        else { return true }
     }
-  }
-  
-  /// 在有 Taptic Engine 的设备上触发一个轻微的振动
-  ///
-  /// - Parameter params: level  (number)  0 ~ 3 表示振动等级
-  public func taptic(level: Int, isSupportTaptic: Bool = true) {
-    if #available(iOS 10.0, *),
-      isSupportTaptic,
-      let style = UIImpactFeedbackGenerator.FeedbackStyle(rawValue: level) {
-      let tapticEngine = UIImpactFeedbackGenerator(style: style)
-      tapticEngine.prepare()
-      tapticEngine.impactOccurred()
-    }else{
-      switch level {
-      case 3:
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-      case 2:
-        // 连续三次短震
-        AudioServicesPlaySystemSound(1521)
-      case 1:
-        // 普通短震，3D Touch 中 Pop 震动反馈
-        AudioServicesPlaySystemSound(1520)
-      default:
-        // 普通短震，3D Touch 中 Peek 震动反馈
-        AudioServicesPlaySystemSound(1519)
-      }
-    }
-  }
-  
+
 }
-
-#endif
-
-
 
 public extension UIApplication {
-  
-  public static let info = Info()
-  
-  public struct Info {
-    /// 获取App版本号
-    public let version: String = {
-      return Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
-    }()
     
-    /// 获取App构建版本号
-    public let bundleVersion: String = {
-      return Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String ?? ""
-    }()
-  }
-  
+    struct Info {
+        /// App版本号
+         let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? ""
+        /// App构建版本号
+         let bundleVersion = Bundle.main.object(forInfoDictionaryKey: kCFBundleVersionKey as String) as? String ?? ""
+         let bundleName = Bundle.main.object(forInfoDictionaryKey: kCFBundleNameKey as String) as? String ?? ""
+         let bundleID = Bundle.main.object(forInfoDictionaryKey: kCFBundleIdentifierKey as String) as? String ?? ""
+    }
+    
+    struct Path {
+        var documentsURL: URL? { return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last }
+        var documentsPath: String? { return NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first }
+        var cachesURL: URL? { return FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask).last }
+        var cachesPath: String? { return NSSearchPathForDirectoriesInDomains(.cachesDirectory, .userDomainMask, true).first }
+        var libraryURL: URL? { return FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask).last }
+        var libraryPath: String? { return NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true).first }
+    }
+    
+    enum OpenURLType {
+        case tel(number: String)
+        case sms(number: String)
+        case telprompt(number: String)
+        case safari(url: URL)
+        case mailto(email: String)
+        case appSettings
+        
+        public var url: URL {
+            switch self {
+            case .tel(number: let value): return URL(string: "tel://" + value)!
+            case .sms(number: let value): return URL(string: "sms://" + value)!
+            case .telprompt(number: let value): return URL(string: "telprompt://" + value)!
+            case .safari(url: let value):  return value
+            case .mailto(email: let value): return URL(string: "mailto://" + value)!
+            case .appSettings: return URL(string: UIApplication.openSettingsURLString)!
+            }
+        }
+        
+    }
+    
 }
 
+public extension Stem where Base: UIApplication {
+    
+    var info: UIApplication.Info { return UIApplication.Info() }
+    var path: UIApplication.Path { return UIApplication.Path() }
+    
+}
 
 // MARK: - open
 public extension Stem where Base: UIApplication {
-  
-  /// 打开链接 (会判断 能否打开)
-  ///
-  /// - Parameter url: url
-  public func open(url: String) {
-    guard let str = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-      let url = URL(string: str),
-      UIApplication.shared.canOpenURL(url) else{ return }
-    unsafeOpen(url: url)
-  }
-  
-  /// 打开链接 (不会判断 能否打开)
-  ///
-  /// - Parameter url: url
-  public func unsafeOpen(url: String) {
-    guard let str = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-      let url = URL(string: str) else { return }
-    unsafeOpen(url: url)
-  }
-  
-  /// 打开链接 (不会判断 能否打开)
-  ///
-  /// - Parameter url: url
-  public func unsafeOpen(url: URL) {
-    if #available(iOS 10.0, *) {
-      UIApplication.shared.open(url, completionHandler: nil)
-    } else {
-      UIApplication.shared.openURL(url)
+    
+    /// 打开特定链接
+    ///
+    /// - Parameters:
+    ///   - url: url
+    ///   - completionHandler: 完成回调
+    func open(type: UIApplication.OpenURLType, completionHandler: ((Bool) -> Void)? = nil) {
+        open(url: type.url, completionHandler: completionHandler)
     }
-  }
-  
-  
+    
+    /// 打开链接
+    ///
+    /// - Parameters:
+    ///   - url: url
+    ///   - isSafe: 会判断 能否打开 | default: true
+    ///   - options: UIApplication.OpenExternalURLOptionsKey
+    ///   - completionHandler: 完成回调
+    func open(url: String,
+              isSafe: Bool = true,
+              options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:],
+              completionHandler: ((Bool) -> Void)? = nil) {
+        guard let str = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), let url = URL(string: str) else{ return }
+        open(url: url, isSafe: isSafe, options: options, completionHandler: completionHandler)
+    }
+    
+    /// 打开链接
+    ///
+    /// - Parameters:
+    ///   - url: url
+    ///   - isSafe: 会判断 能否打开 | default: true
+    ///   - options: UIApplication.OpenExternalURLOptionsKey
+    ///   - completionHandler: 完成回调
+    func open(url: URL,
+              isSafe: Bool = true,
+              options: [UIApplication.OpenExternalURLOptionsKey : Any] = [:],
+              completionHandler: ((Bool) -> Void)? = nil) {
+        if isSafe, !UIApplication.shared.canOpenURL(url) { return }
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: options, completionHandler: completionHandler)
+        } else {
+            // https://stackoverflow.com/questions/19356488/openurl-freezes-app-for-over-10-seconds
+            // 解决打开 其他 app 慢
+            DispatchQueue.main.async {
+                completionHandler?(UIApplication.shared.openURL(url))
+            }
+        }
+    }
+    
+    
 }
 

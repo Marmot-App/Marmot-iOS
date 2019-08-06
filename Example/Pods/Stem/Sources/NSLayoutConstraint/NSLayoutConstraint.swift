@@ -21,13 +21,14 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 
 import UIKit
-public extension NSLayoutConstraint {
+
+extension Stem where Base: NSLayoutConstraint {
   
   /// 改变Constant 增加或者减少
   /// - Parameter offSet: 变化量
   public func change(offest: CGFloat) {
-    let nowConstant = self.constant
-    self.constant = nowConstant + offest
+    let nowConstant = base.constant
+    base.constant = nowConstant + offest
   }
   
   /// 修改倍率
@@ -35,24 +36,23 @@ public extension NSLayoutConstraint {
   /// - Parameter multiplier: 新倍率
   /// - Returns: Constraint
   public func change(multiplier: CGFloat) -> NSLayoutConstraint {
-    NSLayoutConstraint.deactivate([self])
+    NSLayoutConstraint.deactivate([base])
     
     let newConstraint = NSLayoutConstraint(
-      item: self.firstItem as Any,
-      attribute: self.firstAttribute,
-      relatedBy: self.relation,
-      toItem: self.secondItem,
-      attribute: self.secondAttribute,
+      item: base.firstItem as Any,
+      attribute: base.firstAttribute,
+      relatedBy: base.relation,
+      toItem: base.secondItem,
+      attribute: base.secondAttribute,
       multiplier: multiplier,
-      constant: self.constant)
+      constant: base.constant)
     
-    newConstraint.priority = self.priority
-    newConstraint.shouldBeArchived = self.shouldBeArchived
-    newConstraint.identifier = self.identifier
+    newConstraint.priority = base.priority
+    newConstraint.shouldBeArchived = base.shouldBeArchived
+    newConstraint.identifier = base.identifier
     
     NSLayoutConstraint.activate([newConstraint])
     return newConstraint
   }
   
 }
-

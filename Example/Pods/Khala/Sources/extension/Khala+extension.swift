@@ -22,28 +22,29 @@
 
 import Foundation
 
-/// 路由类协议
-@objc
-public protocol KhalaProtocol: NSObjectProtocol { }
-
-
 // MARK: - extension
 public extension Khala {
-  
-  /// Unified registration of classes that follow the `KhalaProtocol` protocol.
-  public static func registWithKhalaProtocol() {
-    let typeCount = Int(objc_getClassList(nil, 0))
-    let types = UnsafeMutablePointer<AnyClass?>.allocate(capacity: typeCount)
-    let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
-    objc_getClassList(autoreleasingTypes, Int32(typeCount))
-    for index in 0..<typeCount {
-      if class_conformsToProtocol(types[index], KhalaProtocol.self) {
-        let name = String(cString: class_getName(types[index]))
-        _ = PseudoClass(name: name)
-      }
+
+    #if os(iOS)
+    static let appDelegate = KhalaAppDelegate()
+    #endif
+
+    /// Unified registration of classes that follow the `Protocol` protocol.
+    static func regist(protocol: Protocol) -> [String] {
+        let typeCount = Int(objc_getClassList(nil, 0))
+        let types = UnsafeMutablePointer<AnyClass?>.allocate(capacity: typeCount)
+        let autoreleasingTypes = AutoreleasingUnsafeMutablePointer<AnyClass>(types)
+        objc_getClassList(autoreleasingTypes, Int32(typeCount))
+
+        let names = (0..<typeCount).compactMap { (index) -> String? in
+            guard class_conformsToProtocol(types[index], `protocol`)  else { return nil }
+            return String(cString: class_getName(types[index]))
+        }
+
+        types.deinitialize(count: typeCount)
+        types.deallocate()
+
+        return names
     }
-    types.deinitialize(count: typeCount)
-    types.deallocate()
-  }
-  
+
 }

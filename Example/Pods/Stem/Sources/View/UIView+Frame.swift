@@ -25,69 +25,69 @@ import UIKit
 // MARK: - 设置ViewFarme相关属性
 public extension UIView{
 
-  /// view的x
-  public var x: CGFloat{
-    get{ return frame.origin.x }
-    set{ self.frame.origin.x = newValue }
-  }
+    /// view的x
+    var x: CGFloat{
+        get{ return frame.origin.x }
+        set{ self.frame.origin.x = newValue }
+    }
 
-  /// view的y
-  public var y: CGFloat{
-    get{ return frame.origin.y }
-    set{ self.frame.origin.y = newValue }
-  }
-  
-  public var minX: CGFloat {
-    get{ return self.frame.minX }
-    set{ self.x = newValue }
-  }
-  
-  public var midX: CGFloat {
-    get{ return self.frame.midX }
-    set{ self.x = newValue - self.width * 0.5 }
-  }
-  
-  public var maxX: CGFloat {
-    get{ return self.frame.maxX }
-    set{ self.x = newValue - self.width }
-  }
-  
-  public var minY: CGFloat {
-    get{ return self.frame.minY }
-    set{ self.y = newValue }
-  }
-  
-  public var midY: CGFloat {
-    get{ return self.frame.midY }
-    set{ self.y = newValue - self.height * 0.5 }
-  }
-  
-  public var maxY: CGFloat {
-    get{ return self.frame.maxY }
-    set{ self.y = newValue - self.height }
-  }
+    /// view的y
+    var y: CGFloat{
+        get{ return frame.origin.y }
+        set{ self.frame.origin.y = newValue }
+    }
 
-  /// view的宽度
-  public var width: CGFloat {
-    get{ return self.frame.size.width }
-    set{ self.frame.size.width = newValue }
-  }
+    var minX: CGFloat {
+        get{ return self.frame.minX }
+        set{ self.x = newValue }
+    }
 
-  /// view的高度
-  public var height: CGFloat {
-    get{ return self.frame.size.height }
-    set{ self.frame.size.height = newValue }
-  }
+    var midX: CGFloat {
+        get{ return self.frame.midX }
+        set{ self.x = newValue - self.width * 0.5 }
+    }
 
-  /// view的size
-  public var size: CGSize{
-    get{ return self.frame.size }
-    set{ self.frame.size = newValue }
-  }
+    var maxX: CGFloat {
+        get{ return self.frame.maxX }
+        set{ self.x = newValue - self.width }
+    }
 
-  /// view的origin
-  public var origin: CGPoint {
-    get{ return self.frame.origin }
-    set{ self.frame.origin = newValue }
-  }
+    var minY: CGFloat {
+        get{ return self.frame.minY }
+        set{ self.y = newValue }
+    }
+
+    var midY: CGFloat {
+        get{ return self.frame.midY }
+        set{ self.y = newValue - self.height * 0.5 }
+    }
+
+    var maxY: CGFloat {
+        get{ return self.frame.maxY }
+        set{ self.y = newValue - self.height }
+    }
+
+    /// view的宽度
+    var width: CGFloat {
+        get{ return self.frame.size.width }
+        set{ self.frame.size.width = newValue }
+    }
+
+    /// view的高度
+    var height: CGFloat {
+        get{ return self.frame.size.height }
+        set{ self.frame.size.height = newValue }
+    }
+
+    /// view的size
+    var size: CGSize{
+        get{ return self.frame.size }
+        set{ self.frame.size = newValue }
+    }
+
+    /// view的origin
+    var origin: CGPoint {
+        get{ return self.frame.origin }
+        set{ self.frame.origin = newValue }
+    }
 }

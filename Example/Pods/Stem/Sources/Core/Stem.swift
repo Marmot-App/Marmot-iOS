@@ -22,9 +22,11 @@
 
 import UIKit
 
-public struct Stem<Base> {
+public class Stem<Base> {
   public let base: Base
   public init(_ base: Base) {
     self.base = base
   }
 }
+
+

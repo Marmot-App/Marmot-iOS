@@ -1,6 +1,6 @@
 {
   "name": "Marmot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "summary": "A javascript bridge with khala.",
   "homepage": "https://github.com/Marmot-App/Marmot-iOS",
   "license": {
@@ -12,12 +12,12 @@
   },
   "source": {
     "git": "https://github.com/Marmot-App/Marmot-iOS.git",
-    "tag": "0.1.1"
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "swift_version": "4.2",
+  "swift_versions": "4.2",
   "source_files": "Marmot/Classes/**/*",
   "resource_bundles": {
     "Marmot": [
@@ -26,7 +26,8 @@
   },
   "dependencies": {
     "Khala": [
-      "0.0.7"
+      "0.1.0"
     ]
-  }
+  },
+  "swift_version": "4.2"
 }

@@ -31,7 +31,7 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    Khala.rewrite.filters.append(RewriteFilter({ (item) -> KhalaURLValue in
+    Khala.rewrite.filters.append(KhalaRewriteFilter({ (item) -> KhalaNode in
       if item.url.scheme == "mt" {
         var urlComponents = URLComponents(url: item.url, resolvingAgainstBaseURL: true)
         urlComponents?.host = "MT_" + (item.url.host ?? "")

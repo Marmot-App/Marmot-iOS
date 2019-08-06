@@ -25,20 +25,13 @@ import UIKit
 
 public final class StemRuntime {
   
-  
-  static var swizzingStore = Set<[Selector]>()
-  
   /// 交换方法
   ///
   /// - Parameters:
   ///   - selector: 被交换的方法
   ///   - replace: 用于交换的方法
   ///   - classType: 所属类型
-  public static func exchangeMethod(selector: Selector,
-                                    replace: Selector,
-                                    class classType: AnyClass) {
-    if swizzingStore.contains([selector,replace]) { return }
-    swizzingStore.update(with: [selector,replace])
+  public static func exchangeMethod(selector: Selector, replace: Selector, class classType: AnyClass) {
     let select1 = selector
     let select2 = replace
     let select1Method = class_getInstanceMethod(classType, select1)

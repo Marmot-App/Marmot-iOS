@@ -29,9 +29,7 @@ public final class STGestureRecognizer: UIGestureRecognizer {
   public var currentPoint: CGPoint { return _currentPoint }
   public var action: ((_ gesture: STGestureRecognizer, _ state: State) -> Void)?
   
-  private var   _startPoint = CGPoint.zero
-  private var    _lastPoint = CGPoint.zero
-  private var _currentPoint = CGPoint.zero
+  private var _startPoint = CGPoint.zero, _lastPoint = CGPoint.zero, _currentPoint = CGPoint.zero
   
   
   public override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent) {

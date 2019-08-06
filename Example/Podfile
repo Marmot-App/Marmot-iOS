@@ -1,11 +1,12 @@
 use_frameworks!
+install! 'cocoapods', :generate_multiple_pod_projects => true
 
 target 'Marmot_Example' do
-  
+
   pod 'Marmot', :path => '../'
   pod 'SnapKit'
-  pod 'BLFoundation', '0.8.6'
-  pod 'Stem', '0.0.3'
+  pod 'BLFoundation', '0.9.1'
+  pod 'Stem', '0.0.21'
   
   target 'Marmot_Tests' do
     inherit! :search_paths

@@ -23,8 +23,8 @@
 import Foundation
 
 public extension Bool {
-  /// Bool转Int  value: 1: 0
-  public var int: Int { return self ? 1: 0 }
-  /// Bool转String   value: "1": "0"
-  public var string: String { return description }
+    /// Bool转Int  value: 1: 0
+    var int: Int { return self ? 1: 0 }
+    /// Bool转String   value: "1": "0"
+    var string: String { return description }
 }

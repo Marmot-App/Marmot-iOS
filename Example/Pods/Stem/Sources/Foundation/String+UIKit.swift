@@ -22,79 +22,97 @@
 
 import UIKit
 
-// MARK: - 文本区域
-public extension String{
-  
- /// 解析HTML样式
- ///
- /// https://github.com/Luur/SwiftTips#57-render-html-within-a-uilabel
- ///
- /// - Parameters:
- ///   - fontName: 字体名称
- ///   - fontSize: 字体大小
- ///   - colorHex: 字体颜色
- /// - Returns: 富文本
- public func htmlAttributedString(with fontName: String, fontSize: Int, colorHex: String) -> NSAttributedString? {
-    do {
-      let cssPrefix = "<style>* { font-family: \(fontName); color: #\(colorHex); font-size: \(fontSize); }</style>"
-      let html = cssPrefix + self
-      guard let data = html.data(using: String.Encoding.utf8) else {  return nil }
-      return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
-    } catch {
-      return nil
+extension String: StemCompatible { }
+
+public extension Stem where Base == String {
+    
+    /// 解析HTML样式
+    ///
+    /// https://github.com/Luur/SwiftTips#57-render-html-within-a-uilabel
+    ///
+    /// - Parameters:
+    ///   - fontName: 字体名称
+    ///   - fontSize: 字体大小
+    ///   - colorHex: 字体颜色
+    /// - Returns: 富文本
+    func htmlAttributedString(font: UIFont, color hex: String) -> NSAttributedString? {
+        do {
+            let cssPrefix = "<style>* { font-family: \(font.fontName); color: #\(hex); font-size: \(font.pointSize); }</style>"
+            let html = cssPrefix + base
+            guard let data = html.data(using: String.Encoding.utf8) else {  return nil }
+            return try NSAttributedString(data: data, options: [.documentType: NSAttributedString.DocumentType.html, .characterEncoding: String.Encoding.utf8.rawValue], documentAttributes: nil)
+        } catch {
+            return nil
+        }
     }
-  }
-  
-  /// 获取字符串的Bounds
-  ///
-  /// - Parameters:
-  ///   - font: 字体大小
-  ///   - size: 字符串长宽限制
-  /// - Returns: 字符串的Bounds
-  public func bounds(font: UIFont,size: CGSize) -> CGRect {
-    if self.isEmpty { return CGRect.zero }
-    let attributes = [NSAttributedString.Key.font: font]
-    let option = NSStringDrawingOptions.usesLineFragmentOrigin
-    let rect = self.boundingRect(with: size, options: option, attributes: attributes, context: nil)
-    return rect
-  }
-  
-  
-  /// 获取字符串的Bounds
-  ///
-  /// - parameter font:    字体大小
-  /// - parameter size:    字符串长宽限制
-  /// - parameter margins: 头尾间距
-  /// - parameter space:   内部间距
-  ///
-  /// - returns: 字符串的Bounds
-  public func size(with font: UIFont,
-                   size: CGSize,
-                   margins: CGFloat = 0,
-                   space: CGFloat = 0) -> CGSize {
-    if self.isEmpty { return CGSize.zero }
-    var bound = self.bounds(font: font, size: size)
-    let rows = self.rows(font: font, width: size.width)
-    bound.size.height += margins * 2
-    bound.size.height += space * (rows - 1)
-    return bound.size
-  }
-  
-  /// 文本行数
-  ///
-  /// - Parameters:
-  ///   - font: 字体
-  ///   - width: 最大宽度
-  /// - Returns: 行数
-  public func rows(font: UIFont,width: CGFloat) -> CGFloat {
-    if self.isEmpty { return 0 }
-    // 获取单行时候的内容的size
-    let singleSize = (self as NSString).size(withAttributes: [NSAttributedString.Key.font:font])
-    // 获取多行时候,文字的size
-    let textSize = self.bounds(font: font, size: CGSize(width: width, height: CGFloat(MAXFLOAT))).size
-    // 返回计算的行数
-    return ceil(textSize.height / singleSize.height);
-  }
-  
+    
+    /// 获取字符串的Bounds
+    ///
+    /// - Parameters:
+    ///   - font: 字体大小
+    ///   - size: 字符串长宽限制
+    /// - Returns: 字符串的Bounds
+    func bounds(attributes: [NSAttributedString.Attribute], size: CGSize, option: NSStringDrawingOptions = []) -> CGRect {
+        if base.isEmpty { return CGRect.zero }
+        return base.boundingRect(with: size, options: option, attributes: attributes.attributes, context: nil)
+    }
+    
+    /// 获取字符串的CGSize
+    ///
+    /// - Parameters:
+    ///   - font: 字体大小
+    ///   - size: 字符串长宽限制
+    /// - Returns: 字符串的Bounds
+    func size(attributes: [NSAttributedString.Attribute],
+              size: CGSize = CGSize(width: CGFloat.greatestFiniteMagnitude,
+                                    height: CGFloat.greatestFiniteMagnitude),
+              option: NSStringDrawingOptions = []) -> CGSize {
+        return self.bounds(attributes: attributes, size: size, option: option).size
+    }
+    
+    /// 文本行数
+    ///
+    /// - Parameters:
+    ///   - font: 字体
+    ///   - width: 最大宽度
+    /// - Returns: 行数
+    func rows(font: UIFont, width: CGFloat) -> CGFloat {
+        if base.isEmpty { return 0 }
+        // 获取单行时候的内容的size
+        let singleSize = (base as NSString).size(withAttributes: [NSAttributedString.Key.font:font])
+        // 获取多行时候,文字的size
+        let textSize = self.size(attributes: [NSAttributedString.Attribute.font(font)],
+                                 size: CGSize(width: width,
+                                              height: CGFloat.greatestFiniteMagnitude))
+        // 返回计算的行数
+        return ceil(textSize.height / singleSize.height)
+    }
+    
 }
+
+
+
+
+
+
+public extension Stem where Base == String {
+    
+    ///  获取富文本类型字符串
+    ///
+    /// - Parameter attributes: 富文本属性
+    /// - Returns: 富文本类型字符串
+    func attributes(_ attributes: NSAttributedString.Attribute...) -> NSAttributedString {
+        return NSAttributedString(string: base, attributes: attributes)
+    }
+    
+    ///  获取富文本类型字符串
+    ///
+    /// - Parameter attributes: 富文本属性
+    /// - Returns: 富文本类型字符串
+    func attributes(_ attributes: [NSAttributedString.Attribute]) -> NSAttributedString {
+        return NSAttributedString(string: base, attributes: attributes)
+    }
+    
+}
+
 

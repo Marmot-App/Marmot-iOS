@@ -23,27 +23,27 @@
 import Foundation
 
 public extension Data {
-  
-  /// get json
-  public var jsonObject: Any? {
-    return try? JSONSerialization.jsonObject(with: self, options: [.allowFragments])
-  }
-  
-  /// 获取bytes 数组
-  ///
-  /// - Parameter _: 类型
-  /// - Returns: bytes
-  public func copyBytes<T>(as _: T.Type) -> [T] {
-    return withUnsafeBytes { (bytes: UnsafePointer<T>) in
-      Array(UnsafeBufferPointer(start: bytes, count: count / MemoryLayout<T>.stride))
+
+    /// get json
+    var jsonObject: Any? {
+        return try? JSONSerialization.jsonObject(with: self, options: [.allowFragments])
     }
-  }
-  
-  /// 获取对应编码类型字符串
-  ///
-  /// - Parameter using: 字符串编码类型 | default: utf8
-  /// - Returns: 字符串
-  public func toString(using: String.Encoding = .utf8) -> String? {
-    return String(data: self, encoding: using)
-  }
+
+    /// 获取bytes 数组
+    ///
+    /// - Parameter _: 类型
+    /// - Returns: bytes
+    func copyBytes<T>(as _: T.Type) -> [T] {
+        return withUnsafeBytes { (bytes: UnsafePointer<T>) in
+            Array(UnsafeBufferPointer(start: bytes, count: count / MemoryLayout<T>.stride))
+        }
+    }
+
+    /// 获取对应编码类型字符串
+    ///
+    /// - Parameter using: 字符串编码类型 | default: utf8
+    /// - Returns: 字符串
+    func toString(using: String.Encoding = .utf8) -> String? {
+        return String(data: self, encoding: using)
+    }
 }

@@ -34,7 +34,7 @@ class MT_device: NSObject {
       "level": UIDevice.current.batteryLevel
     ]
     
-    result["version"] = UIApplication.info.version
+    result["version"] = UIApplication.shared.st.info
     result["language"] = Locale.preferredLanguages.first
     result["model"] = Device.version.rawValue
     

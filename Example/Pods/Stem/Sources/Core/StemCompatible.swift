@@ -23,13 +23,13 @@
 import UIKit
 
 public protocol StemCompatible {
-  associatedtype CompatibleType
-  var st: CompatibleType { get }
+    associatedtype StemCompatibleType
+    var st: StemCompatibleType { get }
 }
 
 public extension StemCompatible {
-  public var st: Stem<Self> { return Stem(self) }
+    var st: Stem<Self> { return Stem(self) }
 }
 
-
 extension NSObject: StemCompatible { }
+

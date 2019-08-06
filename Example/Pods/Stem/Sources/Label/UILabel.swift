@@ -24,56 +24,57 @@ import UIKit
 
 // MARK: - runtime and swizzling
 fileprivate extension UILabel {
-  
-  private static let swizzing: Void = {
-    StemRuntime.exchangeMethod(selector: #selector(UILabel.drawText(in:)),
-                               replace: #selector(UILabel.st_drawText(in:)),
-                               class: UILabel.self)
-  }()
-  
-  fileprivate struct SwzzlingKeys {
-    static var textInset = UnsafeRawPointer(bitPattern: "label_textInset".hashValue)
-  }
+    
+    private static let swizzing: Void = {
+        StemRuntime.exchangeMethod(selector: #selector(UILabel.drawText(in:)),
+                                   replace: #selector(UILabel.st_drawText(in:)),
+                                   class: UILabel.self)
+    }()
+    
+    struct SwzzlingKeys {
+        static var textInset = UnsafeRawPointer(bitPattern: "label_textInset".hashValue)
+    }
 }
 
 // MARK: - UILabel 属性扩展
 extension UILabel {
-  
-  /// 调整文字绘制区域
-  public var textInset: UIEdgeInsets {
-    get{
-      if let eventInterval = objc_getAssociatedObject(self, UILabel.SwzzlingKeys.textInset!) as? UIEdgeInsets {
-        return eventInterval
-      }
-      return UIEdgeInsets.zero
+    
+    /// 调整文字绘制区域
+    public var textInset: UIEdgeInsets {
+        get{
+            if let eventInterval = objc_getAssociatedObject(self, UILabel.SwzzlingKeys.textInset!) as? UIEdgeInsets {
+                return eventInterval
+            }
+            return UIEdgeInsets.zero
+        }
+        set {
+            UILabel.swizzing
+            objc_setAssociatedObject(self,
+                                     UILabel.SwzzlingKeys.textInset!,
+                                     newValue as UIEdgeInsets,
+                                     .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            drawText(in: bounds)
+        }
     }
-    set {
-      UILabel.swizzing
-      objc_setAssociatedObject(self,
-                               UILabel.SwzzlingKeys.textInset!,
-                               newValue as UIEdgeInsets,
-                               .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
-      drawText(in: bounds)
+    
+    @objc fileprivate func st_drawText(in rect: CGRect) {
+        guard  textInset != .zero else { return }
+        let rect = CGRect(x: bounds.origin.x + textInset.left,
+                          y: bounds.origin.y + textInset.top,
+                          width: bounds.size.width - textInset.left - textInset.right,
+                          height: bounds.size.height - textInset.top - textInset.bottom)
+        st_drawText(in: rect)
     }
-  }
-  
-  @objc fileprivate func st_drawText(in rect: CGRect) {
-    let rect = CGRect(x: bounds.origin.x + textInset.left,
-                      y: bounds.origin.y + textInset.top,
-                      width: bounds.size.width - textInset.left - textInset.right,
-                      height: bounds.size.height - textInset.top - textInset.bottom)
-    st_drawText(in: rect)
-  }
-  
+    
 }
 
 // MARK: - UILabel 函数扩展
 public extension Stem where Base: UILabel {
-  
-  /// 改变字体大小 增加或者减少
-  public func change(font offSet: CGFloat) {
-    base.font = UIFont(name: base.font.fontName, size: base.font.pointSize + offSet)
-  }
-  
+    
+    /// 改变字体大小 增加或者减少
+    func change(font offSet: CGFloat) {
+        base.font = UIFont(name: base.font.fontName, size: base.font.pointSize + offSet)
+    }
+    
 }
 
